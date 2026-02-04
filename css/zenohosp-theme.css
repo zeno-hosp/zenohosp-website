@@ -1,0 +1,928 @@
+/* =============================================
+   ZENO HOSP - zenohosp-Inspired Design System
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* CSS Variables */
+:root {
+    /* Primary Colors - zenohosp Palette */
+    --zd-lime: #D1F470;
+    --zd-lime-hover: #C5E864;
+    --zd-lime-dark: #A8C35A;
+    --zd-obsidian: #11110D;
+    --zd-obsidian-light: #1A1A15;
+    --zd-cream: #F5F5F2;
+    --zd-cream-dark: #EAEAE6;
+    --zd-white: #FFFFFF;
+    --zd-muted-green: #323524;
+
+    /* Text Colors */
+    --zd-text-dark: #11110D;
+    --zd-text-light: #FFFFFF;
+    --zd-text-muted: #6B6B66;
+    --zd-text-body: #4A4A45;
+
+    /* Accent Colors */
+    --zd-cyan: #7DD3FC;
+    --zd-purple: #C4B5FD;
+    --zd-coral: #FDA4AF;
+
+    /* Geometry */
+    --zd-radius-sm: 8px;
+    --zd-radius-md: 12px;
+    --zd-radius-lg: 16px;
+    --zd-radius-xl: 24px;
+    --zd-radius-2xl: 32px;
+    --zd-radius-pill: 100px;
+
+    /* Shadows */
+    --zd-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --zd-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --zd-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --zd-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
+    --zd-shadow-glow: 0 0 40px rgba(209, 244, 112, 0.3);
+
+    /* Spacing */
+    --zd-section-py: 120px;
+    --zd-section-py-sm: 80px;
+
+    /* Typography */
+    --zd-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Transitions */
+    --zd-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --zd-transition-fast: 0.15s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--zd-font);
+    color: var(--zd-text-dark);
+    background-color: var(--zd-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--zd-text-dark);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 500;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    color: var(--zd-text-body);
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+}
+
+/* =============================================
+   BUTTONS - zenohosp Style
+   ============================================= */
+
+.zd-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-family: var(--zd-font);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--zd-radius-pill);
+    cursor: pointer;
+    transition: all var(--zd-transition);
+}
+
+.zd-btn-primary {
+    background: var(--zd-lime);
+    color: var(--zd-obsidian);
+}
+
+.zd-btn-primary:hover {
+    background: var(--zd-lime-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--zd-shadow-glow);
+}
+
+.zd-btn-secondary {
+    background: transparent;
+    color: var(--zd-obsidian);
+    border: 1.5px solid var(--zd-obsidian);
+}
+
+.zd-btn-secondary:hover {
+    background: var(--zd-obsidian);
+    color: var(--zd-white);
+}
+
+.zd-btn-dark {
+    background: var(--zd-obsidian);
+    color: var(--zd-white);
+}
+
+.zd-btn-dark:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+.zd-btn-lg {
+    padding: 18px 36px;
+    font-size: 1.1rem;
+}
+
+.zd-btn-sm {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+}
+
+/* =============================================
+   NAVIGATION - zenohosp Style
+   ============================================= */
+
+.zd-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all var(--zd-transition);
+}
+
+.zd-navbar.scrolled {
+    box-shadow: var(--zd-shadow-md);
+}
+
+.zd-nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.zd-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.zd-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--zd-obsidian);
+    color: var(--zd-lime);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--zd-radius-md);
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.zd-logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--zd-obsidian);
+}
+
+.zd-logo-accent {
+    color: var(--zd-muted-green);
+}
+
+.zd-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+.zd-nav-links a {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--zd-text-dark);
+    text-decoration: none;
+    border-radius: var(--zd-radius-md);
+    transition: all var(--zd-transition-fast);
+}
+
+.zd-nav-links a:hover {
+    background: var(--zd-cream);
+}
+
+.zd-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* =============================================
+   HERO SECTION - zenohosp Style
+   ============================================= */
+
+.zd-hero {
+    padding: 160px 0 100px;
+    background: var(--zd-cream);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.zd-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 70%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(209, 244, 112, 0.2) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.zd-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--zd-white);
+    padding: 10px 20px;
+    border-radius: var(--zd-radius-pill);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    border: 1px solid var(--zd-cream-dark);
+}
+
+.zd-hero-badge .ai-icon {
+    color: var(--zd-lime-dark);
+}
+
+.zd-hero h1 {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    color: var(--zd-obsidian);
+}
+
+.zd-hero p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.25rem;
+}
+
+.zd-hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.zd-hero-visual {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* =============================================
+   SECTIONS - zenohosp Style
+   ============================================= */
+
+.zd-section {
+    padding: var(--zd-section-py) 0;
+}
+
+.zd-section-cream {
+    background: var(--zd-cream);
+}
+
+.zd-section-dark {
+    background: var(--zd-obsidian);
+    color: var(--zd-white);
+}
+
+.zd-section-dark h2,
+.zd-section-dark h3,
+.zd-section-dark h4 {
+    color: var(--zd-white);
+}
+
+.zd-section-dark p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.zd-section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.zd-section-header h2 {
+    margin-bottom: 16px;
+}
+
+.zd-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(209, 244, 112, 0.2);
+    color: var(--zd-muted-green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--zd-radius-pill);
+    margin-bottom: 16px;
+}
+
+.zd-section-dark .zd-tag {
+    background: rgba(209, 244, 112, 0.15);
+    color: var(--zd-lime);
+}
+
+/* =============================================
+   CARDS - zenohosp Style
+   ============================================= */
+
+.zd-card {
+    background: var(--zd-white);
+    border-radius: var(--zd-radius-xl);
+    padding: 32px;
+    transition: all var(--zd-transition);
+}
+
+.zd-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--zd-shadow-lg);
+}
+
+.zd-card-dark {
+    background: var(--zd-obsidian-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.zd-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.zd-bento-wide {
+    grid-column: span 8;
+}
+
+.zd-bento-narrow {
+    grid-column: span 4;
+}
+
+.zd-bento-half {
+    grid-column: span 6;
+}
+
+@media (max-width: 992px) {
+
+    .zd-bento-wide,
+    .zd-bento-narrow,
+    .zd-bento-half {
+        grid-column: span 12;
+    }
+}
+
+/* =============================================
+   FEATURE SECTIONS
+   ============================================= */
+
+.zd-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.zd-feature-card {
+    padding: 32px;
+    background: var(--zd-white);
+    border-radius: var(--zd-radius-xl);
+    border: 1px solid var(--zd-cream-dark);
+    transition: all var(--zd-transition);
+}
+
+.zd-feature-card:hover {
+    border-color: var(--zd-lime);
+    box-shadow: var(--zd-shadow-md);
+}
+
+.zd-feature-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--zd-lime);
+    border-radius: var(--zd-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.zd-feature-card h4 {
+    margin-bottom: 12px;
+}
+
+/* =============================================
+   STATS SECTION
+   ============================================= */
+
+.zd-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.zd-stat-item .stat-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--zd-lime);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.zd-stat-item .stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* =============================================
+   FOOTER - zenohosp Style
+   ============================================= */
+
+.zd-footer {
+    background: var(--zd-obsidian);
+    color: var(--zd-white);
+    padding: 80px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.zd-footer::after {
+    content: 'ZenoHosp';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15vw;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.zd-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+    .zd-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .zd-footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.zd-footer-brand p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 20px 0;
+    max-width: 300px;
+}
+
+.zd-footer-links h4 {
+    color: var(--zd-white);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+
+.zd-footer-links ul {
+    list-style: none;
+}
+
+.zd-footer-links li {
+    margin-bottom: 12px;
+}
+
+.zd-footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color var(--zd-transition-fast);
+}
+
+.zd-footer-links a:hover {
+    color: var(--zd-lime);
+}
+
+.zd-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.zd-footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+}
+
+.zd-social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.zd-social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--zd-white);
+    transition: all var(--zd-transition-fast);
+}
+
+.zd-social-links a:hover {
+    background: var(--zd-lime);
+    color: var(--zd-obsidian);
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+@keyframes zd-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zd-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes zd-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes zd-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(209, 244, 112, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(209, 244, 112, 0.4);
+    }
+}
+
+.zd-float {
+    animation: zd-float 6s ease-in-out infinite;
+}
+
+.zd-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.zd-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger children */
+.zd-stagger>* {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.zd-stagger.active>*:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.zd-stagger.active>*:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.zd-stagger.active>*:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.zd-stagger.active>*:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.zd-stagger.active>*:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.zd-stagger.active>*:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.zd-stagger.active>* {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 768px) {
+    :root {
+        --zd-section-py: 80px;
+    }
+
+    .zd-hero {
+        padding: 120px 0 60px;
+    }
+
+    .zd-nav-links {
+        display: none;
+    }
+
+    .zd-btn-lg {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}
+
+/* =============================================
+   MOBILE NAVIGATION
+   ============================================= */
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--zd-obsidian, #11110D);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    max-width: 85vw;
+    height: 100vh;
+    background: #fff;
+    padding: 80px 24px 40px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-menu.active {
+    right: 0;
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-menu li {
+    border-bottom: 1px solid #EAEAE6;
+}
+
+.mobile-nav-menu a {
+    display: block;
+    padding: 16px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #11110D;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav-menu a:hover {
+    color: #D1F470;
+}
+
+.mobile-nav-menu .dropdown-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #11110D;
+}
+
+.mobile-nav-menu .dropdown-label svg {
+    transition: transform 0.2s ease;
+}
+
+.mobile-nav-menu .dropdown-label.active svg {
+    transform: rotate(180deg);
+}
+
+.mobile-nav-menu .mobile-dropdown {
+    display: none;
+    padding-left: 16px;
+    border-left: 2px solid #D1F470;
+    margin-left: 8px;
+}
+
+.mobile-nav-menu .mobile-dropdown.active {
+    display: block;
+}
+
+.mobile-nav-menu .mobile-dropdown a {
+    padding: 12px 0;
+    font-size: 0.95rem;
+}
+
+.mobile-nav-cta {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #EAEAE6;
+}
+
+.mobile-nav-cta .btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links,
+    .zd-nav-links {
+        display: none !important;
+    }
+
+    .nav-actions .btn,
+    .zd-nav-actions .btn {
+        display: none;
+    }
+
+    .nav-dropdown {
+        display: none !important;
+    }
+}
