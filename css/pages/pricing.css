@@ -1,0 +1,345 @@
+:root {
+    --pricing-card-border: rgba(17, 17, 13, 0.1);
+}
+
+.pricing-hero {
+    padding: 160px 0 72px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(209, 244, 112, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 20%, rgba(17, 17, 13, 0.05), transparent 35%),
+        var(--bg-hero-gradient);
+}
+
+.hero-pill {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    background: rgba(17, 17, 13, 0.06);
+    color: var(--color-text-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 18px;
+}
+
+.pricing-hero h1 {
+    max-width: 900px;
+    margin: 0 auto 16px;
+    font-size: clamp(2.1rem, 4.5vw, 3.6rem);
+}
+
+.pricing-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.billing-toggle {
+    margin: 32px auto 0;
+    width: max-content;
+    display: flex;
+    gap: 8px;
+    background: rgba(17, 17, 13, 0.08);
+    border-radius: var(--radius-pill);
+    padding: 6px;
+}
+
+.billing-btn {
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    padding: 10px 16px;
+    cursor: pointer;
+    color: var(--color-text-main);
+    background: transparent;
+    transition: all var(--transition-fast);
+}
+
+.billing-btn.active {
+    background: var(--color-dark);
+    color: #fff;
+}
+
+.bundle-section,
+.module-section,
+.comparison-section {
+    padding: 72px 0;
+}
+
+.pricing-cta {
+    padding: 72px 0 80px;
+    background: var(--bg-subtle);
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-head h2 {
+    margin-bottom: 10px;
+    font-size: clamp(1.7rem, 3.3vw, 2.6rem);
+}
+
+.bundle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.bundle-card {
+    position: relative;
+    border: 1px solid var(--pricing-card-border);
+    border-radius: var(--radius-xl);
+    background: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.bundle-card.featured {
+    border-color: rgba(209, 244, 112, 0.65);
+    box-shadow: var(--shadow-md);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--color-primary);
+    color: var(--color-dark);
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+}
+
+.card-top h3 {
+    margin-bottom: 8px;
+    font-size: 1.55rem;
+}
+
+.card-top p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.price-wrap {
+    border-top: 1px dashed rgba(17, 17, 13, 0.2);
+    border-bottom: 1px dashed rgba(17, 17, 13, 0.2);
+    padding: 18px 0;
+}
+
+.price {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: var(--color-text-main);
+    line-height: 1.1;
+}
+
+.price span,
+.module-price span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-dim);
+    margin-left: 4px;
+}
+
+.billing-caption {
+    margin: 6px 0 0;
+    font-size: 0.92rem;
+    color: var(--color-text-dim);
+}
+
+.card-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.card-list li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--color-text-main);
+}
+
+.card-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.module-card {
+    border: 1px solid var(--pricing-card-border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-white);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.module-card h3 {
+    font-size: 1.28rem;
+    margin: 0 0 10px;
+}
+
+.module-price {
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+    color: var(--color-text-main);
+}
+
+.module-note {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    color: var(--color-text-dim);
+}
+
+.module-card ul {
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
+
+.module-card li {
+    font-size: 0.96rem;
+    color: var(--color-text-main);
+    position: relative;
+    padding-left: 18px;
+}
+
+.module-card li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-text-dim);
+}
+
+.comparison-table-wrap {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(17, 17, 13, 0.08);
+}
+
+.comparison-table th {
+    font-size: 0.92rem;
+    color: var(--color-text-dim);
+    font-weight: 700;
+    background: rgba(17, 17, 13, 0.03);
+}
+
+.comparison-table td {
+    color: var(--color-text-main);
+}
+
+.pricing-footnote {
+    margin: 16px 0 0;
+    color: var(--color-text-dim);
+    font-size: 0.94rem;
+}
+
+.pricing-cta .container {
+    text-align: center;
+}
+
+.pricing-cta h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.pricing-cta p {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.cta-actions {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+html[data-billing="monthly"] .yearly {
+    display: none;
+}
+
+html[data-billing="yearly"] .monthly {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .module-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .bundle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bundle-card,
+    .module-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-hero {
+        padding: 140px 0 60px;
+    }
+
+    .billing-toggle {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .billing-btn {
+        width: 100%;
+    }
+
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        min-width: 180px;
+    }
+}

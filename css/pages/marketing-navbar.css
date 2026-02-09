@@ -1,0 +1,284 @@
+.marketing-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #ececec;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.marketing-navbar.scrolled {
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(17, 17, 13, 0.08);
+}
+
+.marketing-navbar .nav-container {
+    max-width: 1440px;
+    min-height: 84px;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: flex-start;
+    gap: 42px;
+}
+
+.marketing-navbar .logo {
+    gap: 12px;
+}
+
+.marketing-navbar .logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #11110D;
+    color: #D1F470;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.marketing-navbar .logo-text {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.marketing-navbar .logo-accent {
+    color: #A8D942;
+}
+
+.marketing-navbar .nav-links {
+    gap: 18px;
+    margin-left: 8px;
+}
+
+.marketing-navbar .nav-links > li > a {
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #11110D;
+}
+
+.marketing-navbar .nav-links > li > a:hover,
+.marketing-navbar .nav-links > li > a.active-page {
+    color: #11110D;
+    font-weight: 700;
+}
+
+.marketing-navbar .dropdown-trigger svg {
+    width: 14px;
+    height: 14px;
+}
+
+.marketing-navbar .nav-actions {
+    display: none;
+}
+
+.marketing-navbar .mobile-menu-toggle {
+    margin-left: auto;
+}
+
+.marketing-mobile-nav .mobile-dropdown {
+    padding-bottom: 8px;
+}
+
+.marketing-mobile-nav .dropdown-label,
+.marketing-mobile-nav a {
+    font-size: 1.02rem;
+}
+
+.marketing-page-hero {
+    padding: 156px 0 72px;
+    background: var(--bg-hero-gradient);
+    text-align: center;
+}
+
+.marketing-page-hero h1 {
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.marketing-page-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.marketing-content-section {
+    padding: 72px 0;
+}
+
+.marketing-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.marketing-content-card {
+    border: 1px solid rgba(17, 17, 13, 0.1);
+    border-radius: 18px;
+    background: #fff;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.marketing-content-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.marketing-content-card p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.marketing-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.marketing-list li {
+    position: relative;
+    padding-left: 18px;
+}
+
+.marketing-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+/* Match index footer styling on marketing pages */
+.footer {
+    background: #11110D;
+    color: #fff;
+    padding: 80px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::after {
+    content: "ZenoHosp";
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12vw;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.02);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.footer .logo-icon {
+    background: #D1F470;
+    color: #11110D;
+}
+
+.footer .logo-text {
+    color: #fff;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 20px 0;
+}
+
+.footer-links h4 {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #D1F470;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    background: #D1F470;
+    color: #11110D;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+    margin-top: 60px;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-legal a:hover {
+    color: #D1F470;
+}
+
+@media (min-width: 768px) {
+    .marketing-navbar .nav-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .marketing-navbar .logo-text {
+        font-size: 2.3rem;
+    }
+
+    .marketing-navbar .nav-links a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .marketing-navbar .nav-container {
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .marketing-navbar .logo-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        font-size: 1.3rem;
+    }
+
+    .marketing-navbar .logo-text {
+        font-size: 2rem;
+    }
+
+    .marketing-page-hero {
+        padding-top: 132px;
+    }
+
+    .marketing-content-grid {
+        grid-template-columns: 1fr;
+    }
+}

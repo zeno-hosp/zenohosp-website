@@ -79,329 +79,8 @@
     <link rel="stylesheet" href="css/zenohosp-theme.css">
     <link rel="stylesheet" href="css/product-pages.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/hms.css">
 
-    <style>
-        /* zenohosp Theme Overrides for HMS Page */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-        }
-
-        .logo-icon {
-            background: var(--zd-obsidian, #11110D);
-            color: var(--zd-lime, #D1F470);
-        }
-
-        .btn-primary {
-            background: var(--zd-lime, #D1F470);
-            color: var(--zd-obsidian, #11110D);
-            border-radius: 100px;
-        }
-
-        .btn-primary:hover {
-            background: #C5E864;
-            box-shadow: 0 0 40px rgba(209, 244, 112, 0.3);
-        }
-
-        /* HMS Hero */
-        .hms-hero {
-            padding: 160px 0 80px;
-            background: #F5F5F2;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hms-hero::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 50%;
-            height: 80%;
-            background: radial-gradient(circle, rgba(209, 244, 112, 0.2) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .hms-hero-content h1 {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            font-weight: 500;
-            color: #11110D;
-            max-width: 700px;
-            margin-bottom: 32px;
-            letter-spacing: -0.02em;
-        }
-
-        /* Feature Sections */
-        .hms-feature {
-            padding: 100px 0;
-        }
-
-        .hms-feature .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .hms-feature.feature-alt-left .container {
-            direction: rtl;
-        }
-
-        .hms-feature.feature-alt-left .container>* {
-            direction: ltr;
-        }
-
-        .hms-feature:nth-child(odd) {
-            background: #F5F5F2;
-        }
-
-        .feature-content h2 {
-            font-size: clamp(1.75rem, 3vw, 2.25rem);
-            font-weight: 600;
-            color: #11110D;
-            margin-bottom: 20px;
-        }
-
-        .feature-content p {
-            font-size: 1.1rem;
-            color: #4A4A45;
-            margin-bottom: 28px;
-        }
-
-        .feature-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 16px;
-            font-size: 1rem;
-            color: #4A4A45;
-        }
-
-        .feature-list li svg circle {
-            fill: rgba(209, 244, 112, 0.4);
-        }
-
-        .feature-list li svg path {
-            stroke: #323524;
-        }
-
-        /* Visual Cards */
-        .software-preview,
-        .form-preview,
-        .calendar-preview,
-        .invoice-preview,
-        .analytics-preview {
-            background: #fff;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-        }
-
-        .preview-header,
-        .form-header {
-            background: #F5F5F2;
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #EAEAE6;
-        }
-
-        .logo-icon-sm {
-            width: 28px;
-            height: 28px;
-            background: #D1F470;
-            color: #11110D;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            font-weight: 800;
-        }
-
-        /* Centered Feature */
-        .hms-feature-centered {
-            padding: 100px 0;
-            text-align: center;
-            background: #11110D;
-            color: #fff;
-        }
-
-        .hms-feature-centered h2 {
-            color: #fff;
-            font-size: clamp(1.75rem, 3vw, 2.25rem);
-            max-width: 700px;
-            margin: 0 auto 16px;
-        }
-
-        .hms-feature-centered p {
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 600px;
-            margin: 0 auto 48px;
-        }
-
-        .emr-flowchart {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .emr-node {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 24px;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .emr-node:hover {
-            background: rgba(209, 244, 112, 0.1);
-            border-color: rgba(209, 244, 112, 0.3);
-        }
-
-        .emr-node.center-node {
-            background: #D1F470;
-            border-color: #D1F470;
-        }
-
-        .emr-node.center-node span {
-            color: #11110D;
-        }
-
-        .node-icon {
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .emr-node span {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-        }
-
-        .emr-connector {
-            width: 40px;
-            height: 2px;
-            background: rgba(209, 244, 112, 0.3);
-        }
-
-        /* CTA Section */
-        .hms-cta {
-            background: linear-gradient(135deg, #11110D 0%, #1A1A15 100%);
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .hms-cta h2 {
-            color: #fff;
-            font-size: clamp(1.5rem, 3vw, 2.25rem);
-            max-width: 800px;
-            margin: 0 auto 32px;
-            font-weight: 500;
-        }
-
-        /* Footer */
-        .footer {
-            background: #11110D;
-            color: #fff;
-            padding: 80px 0 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer::after {
-            content: 'ZenoHosp';
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 12vw;
-            font-weight: 800;
-            color: rgba(255, 255, 255, 0.02);
-            white-space: nowrap;
-            pointer-events: none;
-        }
-
-        .footer .logo-icon {
-            background: #D1F470;
-            color: #11110D;
-        }
-
-        .footer .logo-text {
-            color: #fff;
-        }
-
-        .footer-brand p {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .footer-links h4 {
-            color: #fff;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .footer-links a:hover {
-            color: #D1F470;
-        }
-
-        .social-links a {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .social-links a:hover {
-            background: #D1F470;
-            color: #11110D;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-bottom p,
-        .footer-legal a {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .footer-legal a:hover {
-            color: #D1F470;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hms-feature .container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hms-feature.feature-alt-left .container {
-                direction: ltr;
-            }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
 
 <body>
@@ -452,6 +131,7 @@
                 </li>
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#why-us">Why Us</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-actions">
@@ -483,7 +163,8 @@
             </li>
             <li><a href="index.html#features">Features</a></li>
             <li><a href="index.html#why-us">Why Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="mobile-nav-cta">
             <a href="contact.html" class="btn btn-primary">Get Started</a>
@@ -1192,7 +873,8 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -1215,15 +897,7 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
-    <script>
-        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-        }, observerOptions);
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <script src="js/app.js" defer></script>
 </body>
 
 </html>
