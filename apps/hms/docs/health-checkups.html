@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Checkups | Zeno Hosp Docs</title>
+  <meta name="description" content="Health checkup packages and booking in ZenoHosp HMS.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html" class="active">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Health Checkups</h1>
+        <p>Create and manage preventive health checkup packages for patients and corporate clients.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Package Configuration</h2>
+        <p>Hospitals often bundle various lab tests, radiology scans, and specialist consultations into "Master Health Checkups". Instead of billing these individually, you create a Package.</p>
+        
+        <h3>Creating a New Package</h3>
+        <ol>
+          <li>Navigate to Health Checkups and click <strong>Create Package</strong>.</li>
+          <li>Give the package a name (e.g., "Comprehensive Cardiac Care").</li>
+          <li>Add the required components by searching the Services and Lab modules (e.g., Lipid Profile Test, ECG, Cardiologist Consult).</li>
+          <li>Set a fixed bundled price for the entire package. This price overrides the sum of the individual component prices.</li>
+        </ol>
+
+        <h2>Booking and Execution</h2>
+        <p>When a patient purchases a checkup package, the HMS orchestration engine kicks in:</p>
+        <ul>
+          <li>It automatically generates the single invoice for the package price.</li>
+          <li>It sends the lab test orders to the LIS (Lab Information System).</li>
+          <li>It creates pending appointments for the necessary doctors (e.g., a General Physician and a Cardiologist).</li>
+        </ul>
+        <p>This allows the patient to seamlessly walk from the Billing desk, to the Phlebotomy lab, and then to the doctor's cabin without needing additional paperwork.</p>
+
+        <h2>Corporate Bookings</h2>
+        <p>If your hospital has contracts with local corporations for annual employee health checkups, you can configure B2B Packages.</p>
+        <p>Instead of billing the patient (employee) at the front desk, the system will accumulate the checkup records and generate a consolidated invoice sent directly to the Corporate HR department at the end of the month.</p>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Dashboard | Zeno Hosp Docs</title>
+  <meta name="description" content="ZenoHosp Pharmacy documentation — complete user guide for hospital staff and administrators.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Pharmacy Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Pharmacy</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html" class="active">Dashboard</a></li>
+          <li><a href="pos.html">POS</a></li>
+          <li><a href="ward-dispensing.html">Ward Dispensing</a></li>
+          <li><a href="stock-dashboard.html">Stock Dashboard</a></li>
+          <li><a href="drug-master.html">Drug Master</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Reports</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="ledger-reports.html">Ledger & Reports</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Pharmacy Dashboard</h1>
+        <p>The operational center for dispensing medicines, monitoring drug expiry, and tracking pharmacy revenue.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Key Metrics</h2>
+        <p>The dashboard gives a real-time overview of your daily performance:</p>
+        <ul>
+          <li><strong>Today's Bills & Revenue:</strong> Shows the total number of dispensing records processed today and the total revenue collected, including GST.</li>
+          <li><strong>Expiry Alerts:</strong> Highlights batches of medicine that are expiring within the next 30 days. Clicking this card directs you to the Stock Dashboard to manage these soon-to-expire drugs.</li>
+          <li><strong>Low Stock:</strong> Flags drugs that have fallen below their configured reorder level, prompting a restock request to the main Inventory module.</li>
+        </ul>
+
+        <h2>Today's Transactions</h2>
+        <p>A rolling ledger of all sales made today. From here, you can quickly jump into the POS to "Start a sale" or click "Full Ledger" to see historical transactions across all dates.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

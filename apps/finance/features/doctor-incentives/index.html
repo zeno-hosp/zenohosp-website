@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Automated doctor incentive calculation for Indian hospitals. Revenue-based payouts, configurable structures, monthly statements, no disputes. Linked to People module. ZenoHosp Finance.">
+<link rel="icon" type="image/svg+xml" href="../../../../images/favicon.svg">
+<link rel="canonical" href="https://zenohosp.com/apps/finance/features/doctor-incentives/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://zenohosp.com/apps/finance/features/doctor-incentives/">
+<meta property="og:title" content="Doctor Incentive Management Software India | ZenoHosp Finance"><meta property="og:description" content="Automated doctor incentive calculation for Indian hospitals. Revenue-based payouts, configurable structures, monthly statements, no disputes. Linked to People module. ZenoHosp Finance.">
+<meta property="og:image" content="https://zenohosp.com/images/hero-doctors.png">
+<title>Doctor Incentive Management Software India | ZenoHosp Finance</title>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What incentive structures can be configured in ZenoHosp?", "acceptedAnswer": {"@type": "Answer", "text": "ZenoHosp supports flat fee per consultation, percentage of collections, tiered slabs (higher percentage above thresholds), and combinations. Each doctor can have a different structure."}}, {"@type": "Question", "name": "How does ZenoHosp calculate monthly incentives?", "acceptedAnswer": {"@type": "Answer", "text": "At month-end, ZenoHosp compiles all billing events attributed to each doctor, applies the configured incentive formula, and produces the monthly payout amount. The calculation is visible to both the doctor and finance."}}, {"@type": "Question", "name": "Is the incentive payout included in payroll?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After Finance approves the incentive statements, the payout amounts are passed to the People module for inclusion in the monthly payroll run."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../css/main.css">
+</head><body>
+            <div class="platform-strip">
+    <div class="nav-container">
+      <a href="../../../../index.html" class="ps-brand"><span class="logo-icon">Z</span>ZenoHosp</a>
+      <nav class="module-switcher">
+        <a href="../../../../apps/hms/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg> HMS</a>
+        <a href="../../../../apps/inventory/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7M12 11v10"/></svg> Inventory</a>
+        <a href="../../../../apps/asset/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6"/></svg> Asset</a>
+        <a href="../../../../apps/ot-room/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7 4 7-4M6 20h12"/></svg> OT Room</a>
+        <a href="../../../../apps/finance/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg> Finance</a>
+        <a href="../../../../apps/pharmacy/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg> Pharmacy</a>
+        <a href="../../../../apps/lab/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10"/></svg> Lab</a>
+        <a href="../../../../apps/people/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6"/></svg> People</a>
+      </nav>
+      <div class="ps-right">
+        <a href="#">Sign In</a>
+        <a href="../../../../contact-us/index.html" class="btn btn-primary ps-cta" style="padding:7px 16px;font-size:.82rem">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <header class="module-head" id="main-nav"><div class="nav-container">
+    <a href="../../index.html" class="mlogo"><span class="logo-icon">Z</span>ZenoHosp <span class="mod">Finance</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown"><a href="javascript:void(0)" class="dropdown-trigger">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-feat-dropdown"><a href="../billing-invoicing/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Billing & Invoicing</strong><span>GST-compliant bills from clinical modules</span></div></a><a href="../tpa-claims/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>TPA & Claims</strong><span>Insurance claims, submission to settlement</span></div></a><a href="../revenue-analytics/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Revenue Analytics</strong><span>Department P&L, doctor revenue</span></div></a><a href="../gst-compliance/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>GST Compliance</strong><span>Correct rates, GSTR reports, audit-ready</span></div></a><a href="../doctor-incentives/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Doctor Incentives</strong><span>Auto-calculated monthly payouts</span></div></a></div></li>
+      <li><a href="../../solutions/index.html">Solutions</a></li>
+      <li><a href="../../resources/index.html">Resources</a></li>
+      <li><a href="../../../../pricing/index.html">Pricing</a></li>
+      <li><a href="../../docs/index.html">Knowledge Base</a></li>
+      </ul>
+    <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+  </div></header>
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu"><ul>
+    <li><div class="dropdown-label" id="solutions-toggle">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+      <div class="mobile-dropdown" id="solutions-dropdown">
+        <a href="../../../../apps/hms/index.html">HMS</a><a href="../../../../apps/inventory/index.html">Inventory</a>
+        <a href="../../../../apps/ot-room/index.html">OT Room</a><a href="../../../../apps/finance/index.html">Finance</a>
+        <a href="../../../../apps/pharmacy/index.html">Pharmacy</a><a href="../../../../apps/lab/index.html">Lab</a>
+        <a href="../../../../apps/people/index.html">People</a>
+      </div></li>
+    <li><a href="../../solutions/index.html">Solutions</a></li>
+    <li><a href="../../resources/index.html">Resources</a></li>
+    <li><a href="../../../../pricing/index.html">Pricing</a></li>
+  </ul></div>
+  <nav class="feat-subnav"><div class="feat-subnav-inner"><a href="../billing-invoicing/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Billing & Invoicing</a><a href="../tpa-claims/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>TPA & Claims</a><a href="../revenue-analytics/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Revenue Analytics</a><a href="../gst-compliance/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>GST Compliance</a><a href="../doctor-incentives/index.html" class="feat-subnav-link  active"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Doctor Incentives</a></div></nav>
+  <section class="fp-hero"><div class="fp-hero-grid">
+    <div class="fp-hero-text">
+      <div class="fp-hero-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Doctor Incentives</div>
+      <h1>Doctor payouts calculated
+automatically from
+actual revenue.</h1><p>Configure each doctor's incentive structure once — flat fee, percentage of collections, or tiered slab. ZenoHosp calculates their monthly payout from actual revenue data. Statements are generated automatically. No spreadsheets. No disputes.</p>
+      <ul class="fp-hero-bullets"><li>Configurable incentive structure per doctor: flat, %, or tiered</li><li>Monthly payout calculated from actual revenue — no manual input</li><li>Incentive statement generated and sent to doctor automatically</li><li>Linked to People module payroll — payout included in salary</li><li>Dispute-free: based on system-verified revenue data</li></ul>
+      <div class="fp-hero-ctas">
+        <a href="../../../../contact-us/index.html" class="fp-btn-primary">Request Demo</a>
+        <a href="../../solutions/index.html" class="fp-btn-ghost">See all Finance solutions</a>
+      </div>
+    </div>
+    <div class="fp-hero-visual"><div class="fp-screenshot"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:420px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Doctor Incentive Calculation Dashboard</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div>
+  </div></section>
+  <section style="padding:56px 0;background:#fff;border-bottom:1px solid #eee;"><div class="container"><div class="fp-icon-cards"><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h4>Auto Calculation</h4><p>Monthly payout from actual revenue — no manual input.</p></div><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h4>Per-Doctor Config</h4><p>Flat fee, percentage, or tiered slab per doctor.</p></div><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><h4>Monthly Statement</h4><p>Generated and sent to doctor automatically.</p></div><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h4>Payroll Integration</h4><p>Incentive included in People module payroll run.</p></div></div></div></section>
+  <section class="fp-section bg-light"><div class="fp-section-grid container"><div><div class="fp-section-label">Incentive Structure Configuration</div><h2>Configure once. Applied every month automatically.</h2><p>Each doctor's incentive structure is configured in ZenoHosp — flat fee per consultation, percentage of OPD or IPD collections, tiered slab (higher percentage above a threshold), or a combination. The configuration is applied automatically to every revenue event attributed to that doctor.</p><ul class="fp-check-list"><li>Flat fee: fixed amount per consultation or procedure</li><li>Percentage: defined % of collections generated</li><li>Tiered slab: higher % above revenue threshold</li><li>Combination: flat fee plus percentage for procedures</li></ul></div><div><div class="fp-screen-inline"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:300px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Incentive Structure Configuration</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div></div></section><section class="fp-section bg-white"><div class="fp-section-grid flip container"><div><div class="fp-section-label">Monthly Calculation</div><h2>Every collection attributed. Every payout calculated. No disputes.</h2><p>At the end of each month, ZenoHosp calculates each doctor's incentive from their actual revenue data. The calculation is transparent — each doctor can see the collections attributed to them and the incentive formula applied. No surprises. No spreadsheet errors.</p><ul class="fp-check-list"><li>Revenue per doctor compiled from all billing events</li><li>Incentive formula applied to actual collections</li><li>Deductions for advances or loans applied automatically</li><li>Final payout amount calculated before payroll approval</li></ul></div><div><div class="fp-screen-inline"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:300px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Doctor Incentive Monthly Calculation</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div></div></section><section class="fp-section bg-light"><div class="fp-section-grid container"><div><div class="fp-section-label">Statement & Payroll</div><h2>Incentive statement sent to doctor. Payout included in payroll.</h2><p>Each doctor receives an incentive statement via WhatsApp — showing their collections, the formula applied, and the payout amount. The amount is passed to the People module for inclusion in the monthly payroll run. Finance approves. HR runs payroll.</p><ul class="fp-check-list"><li>Incentive statement sent to doctor via WhatsApp or email</li><li>Statement shows collections, formula, and payout calculation</li><li>Payout passed to People module for payroll inclusion</li><li>Finance approval step before payroll is processed</li></ul></div><div><div class="fp-screen-inline"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:300px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Doctor Incentive Statement View</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div></div></section>
+  <section style="background:#11110d;padding:72px 0;text-align:center;color:#fff;">
+    <div class="container" style="max-width:820px;">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;"><div><div style="font-size:2.4rem;font-weight:800;color:#d1f470;letter-spacing:-.03em;margin-bottom:6px;">0</div><div style="font-size:.82rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;">Incentive disputes at hospitals using ZenoHosp calculation</div></div><div><div style="font-size:2.4rem;font-weight:800;color:#d1f470;letter-spacing:-.03em;margin-bottom:6px;">100%</div><div style="font-size:.82rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;">Payouts based on verified revenue data — not estimates</div></div><div><div style="font-size:2.4rem;font-weight:800;color:#d1f470;letter-spacing:-.03em;margin-bottom:6px;">1 day</div><div style="font-size:.82rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;">Time to calculate incentives for all doctors at month-end</div></div></div>
+      <blockquote style="font-size:1.05rem;font-weight:500;color:rgba(255,255,255,.85);font-style:italic;line-height:1.65;margin:0 0 20px;">"We used to have monthly arguments about incentives. Doctors thought they were owed more. Finance thought numbers were inflated. Since ZenoHosp, both sides see the same system data. Disputes stopped."</blockquote>
+      <div style="font-size:.8rem;color:rgba(255,255,255,.4);">HR Director, 300-bed multi-specialty hospital, Bengaluru</div>
+    </div>
+  </section>
+  <section class="fp-section bg-white"><div class="container">
+    <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:-.03em;color:#11110d;margin-bottom:8px;">Everything included</h2>
+    <p style="color:#666;font-size:.97rem;margin-bottom:40px;max-width:500px;">Every capability — built for Indian hospital workflows.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #eee;border-radius:14px;overflow:hidden;"><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Flat fee incentive structure</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Fixed amount per consultation or procedure.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Percentage-based structure</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Defined percentage of collections generated.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Tiered slab structure</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Higher percentage above revenue threshold.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Combination structures</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Flat plus percentage for complex arrangements.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Per-speciality configuration</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Different structures for different departments.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Revenue attribution</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Collections linked to the generating doctor.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Monthly auto-calculation</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Payout calculated from actual data at month-end.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Incentive statement generation</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Sent to doctor via WhatsApp or email.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Finance approval workflow</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Approval step before payroll inclusion.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Payroll integration</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Incentive passed to People module automatically.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Advance deduction</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Loans and advances deducted from incentive payout.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Historical comparison</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Doctor incentive trend over 12 months.</span></div></div>
+  </div></section>
+  <section class="feat-page-faq" style="background:#f8f9fb;"><div class="container">
+    <h2>Frequently asked questions</h2>
+    <div class="feat-faq-list" style="max-width:760px;"><div class="feat-faq-item"><h4>What incentive structures can be configured in ZenoHosp?</h4><p>ZenoHosp supports flat fee per consultation, percentage of collections, tiered slabs (higher percentage above thresholds), and combinations. Each doctor can have a different structure.</p></div><div class="feat-faq-item"><h4>How does ZenoHosp calculate monthly incentives?</h4><p>At month-end, ZenoHosp compiles all billing events attributed to each doctor, applies the configured incentive formula, and produces the monthly payout amount. The calculation is visible to both the doctor and finance.</p></div><div class="feat-faq-item"><h4>Is the incentive payout included in payroll?</h4><p>Yes. After Finance approves the incentive statements, the payout amounts are passed to the People module for inclusion in the monthly payroll run.</p></div></div>
+  </div></section>
+  <section class="fp-related"><div class="container"><h3>Other Finance features</h3>
+    <div class="fp-related-grid"><a href="../billing-invoicing/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>Billing & Invoicing</strong><span>GST-compliant bills from clinical modules</span></div></a><a href="../tpa-claims/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>TPA & Claims</strong><span>Insurance claims, submission to settlement</span></div></a><a href="../revenue-analytics/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>Revenue Analytics</strong><span>Department P&L, doctor revenue</span></div></a><a href="../gst-compliance/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>GST Compliance</strong><span>Correct rates, GSTR reports, audit-ready</span></div></a></div>
+  </div></section>
+  <section class="feat-page-cta"><div class="container">
+    <h2>See it in action.</h2><p>45-minute demo. Your hospital type, your workflows.</p>
+    <a href="../../../../contact-us/index.html" class="btn btn-primary">Request Demo</a>
+  </div></section>
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../../../index.html" class="logo">
+            <span class="logo-icon">Z</span>
+            <span class="logo-text">Zeno<span class="logo-accent">Hosp</span></span>
+          </a>
+          <p>Hospital software built in Chennai, used by 500+ facilities across India.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg></a>
+            <a href="#" aria-label="Twitter"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></a>
+            <a href="#" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a>
+            <a href="mailto:hi@zenohosp.com" aria-label="Email"><svg width="20" height="20" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="../../../../apps/hms/index.html">Hospital Management</a></li>
+            <li><a href="../../../../apps/ot-room/index.html">Operation Theatre</a></li>
+            <li><a href="../../../../apps/pharmacy/index.html">Pharmacy</a></li>
+            <li><a href="../../../../apps/inventory/index.html">Inventory</a></li>
+            <li><a href="../../../../apps/asset/index.html">Asset Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../../../../about-us/index.html">About Us</a></li>
+            <li><a href="../../../../careers/index.html">Careers</a></li>
+            <li><a href="../../../../blog/index.html">Blog</a></li>
+            <li><a href="../../../../contact-us/index.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="../../../../help/index.html">Help Center</a></li>
+            <li><a href="../../../../help/index.html">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="../../../../status/index.html">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zeno Hosp. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="../../../../privacy-policy/index.html">Privacy Policy</a>
+          <a href="../../../../terms-of-service/index.html">Terms of Service</a>
+          <a href="../../../../cookie-policy/index.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="../../../../js/app.js" defer></script>
+</body></html>

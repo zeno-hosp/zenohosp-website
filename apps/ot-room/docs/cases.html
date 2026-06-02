@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cases (New OT Booking) | Zeno Hosp Docs</title>
+  <meta name="description" content="OT case management and scheduling in ZenoHosp OT Room.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp OT Help Docs
+      </a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title">Main</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="live-board.html">Live Board</a></li>
+          <li><a href="schedules.html">Schedules</a></li>
+          <li><a href="cases.html" class="active">Cases</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Cases: Creating a New OT Booking</h1>
+        <p>The end-to-end workflow for scheduling a surgical procedure, assigning surgeons, and preparing equipment.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>1. Patient & Procedure Linking</h2>
+        <p>To create a New OT Booking, start by searching for the Patient. Since ZenoHosp is integrated, you can search by Name, MRN, or Phone. The system will pull their details from the HMS. Next, select the specific surgical <strong>Procedure</strong> (e.g., Appendectomy, CABG) from your hospital's predefined Master list. The procedure selection often dictates default expected durations and required inventory.</p>
+
+        <h2>2. Scheduling & OT Room Assignment</h2>
+        <p>Select the proposed <strong>Start time</strong> and <strong>End time</strong>. Once the timeframe is set, the system will filter and display only the OT Rooms that are vacant and sterilized during that window.</p>
+
+        <h2>3. Assigning the Surgical Team</h2>
+        <p>Filter by specialization to assign the primary <strong>Surgeon</strong>. You can optionally add Anesthesiologists, Assistant Surgeons, and Scrub Nurses to the case. The system checks their availability against the main calendar to prevent double-booking.</p>
+
+        <h2>4. Requesting Inventory Kits</h2>
+        <p>Before confirming the booking, the surgeon or coordinator can request specific <strong>Inventory Kits</strong> (e.g., "Standard Ortho Implant Kit", "Cardiac Bypass Consumables"). This sends a direct, automated indent to the Inventory/Central Sterile Services Department (CSSD) so the equipment is prepped and carted to the theatre well before the start time.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

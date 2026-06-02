@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Laboratory Information System India | Zeno Hosp Lab</title>
+    <meta name="description"
+        content="Zeno Hosp Lab — complete LIS software for Indian hospitals. Manage test orders, sample tracking, result entry, and automated report delivery with digital signatures.">
+    <meta name="keywords"
+        content="laboratory information system India, LIS software India, hospital lab management software, pathology lab software India, sample tracking software, lab result management India, diagnostic lab software India">
+
+    <!-- Geo-targeting for India -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <meta name="geo.position" content="20.5937;78.9629" />
+    <meta name="ICBM" content="20.5937, 78.9629" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://zenohosp.com/lab/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zenohosp.com/lab/">
+    <meta property="og:title" content="Hospital Lab Information System - Zeno Hosp">
+    <meta property="og:description"
+        content="From test orders to automated report delivery. Complete LIS built into the ZenoHosp platform for Indian hospitals.">
+    <meta property="og:image" content="https://zenohosp.com/images/hero-doctors.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zenohosp.com/lab/">
+    <meta property="twitter:title" content="Hospital Lab Information System - Zeno Hosp">
+    <meta property="twitter:description"
+        content="From test orders to automated report delivery. Complete LIS built into the ZenoHosp platform for Indian hospitals.">
+    <meta property="twitter:image" content="https://zenohosp.com/images/hero-doctors.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Zeno Hosp Lab - Hospital Laboratory Information System",
+      "applicationCategory": "HealthcareBusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "description": "Free demo available for hospitals in India"
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "India"},
+        {"@type": "State", "name": "Tamil Nadu"},
+        {"@type": "State", "name": "Karnataka"},
+        {"@type": "State", "name": "Kerala"}
+      ],
+      "featureList": [
+        "Test Order Management",
+        "Sample Tracking & Barcode Generation",
+        "Result Entry & Validation",
+        "Equipment Integration",
+        "Automated Report Delivery",
+        "Digital Signatures for Pathologists"
+      ]
+    }
+    </script>
+
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+      <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+                          <div class="platform-strip">
+    <div class="nav-container">
+      <a href="../../index.html" class="ps-brand"><span class="logo-icon">Z</span>ZenoHosp</a>
+      <nav class="module-switcher">
+        <a href="../../apps/hms/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg> HMS</a>
+        <a href="../../apps/inventory/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7M12 11v10"/></svg> Inventory</a>
+        <a href="../../apps/asset/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6"/></svg> Asset</a>
+        <a href="../../apps/ot-room/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7 4 7-4M6 20h12"/></svg> OT Room</a>
+        <a href="../../apps/finance/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg> Finance</a>
+        <a href="../../apps/pharmacy/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg> Pharmacy</a>
+        <a href="../../apps/lab/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10"/></svg> Lab</a>
+        <a href="../../apps/people/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6"/></svg> People</a>
+      </nav>
+      <div class="ps-right">
+        <a href="#">Sign In</a>
+        <a href="../../contact-us/index.html" class="btn btn-primary ps-cta" style="padding:7px 16px;font-size:.82rem">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <header class="module-head" id="main-nav">
+    <div class="nav-container">
+      <a href="../lab/index.html" class="mlogo">
+        <span class="logo-icon">Z</span>ZenoHosp <span class="mod">Lab</span>
+      </a>
+            <ul class="nav-links">
+        <li class="has-dropdown">
+          <a href="javascript:void(0)" class="dropdown-trigger">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-feat-dropdown"><a href="features/test-orders/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Test Orders &amp; Worklist</strong><span>Lab tests from HMS EMR, auto-worklist</span></div></a><a href="features/sample-tracking/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Sample Tracking</strong><span>Barcode tracking, zero lost samples</span></div></a><a href="features/result-entry/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Result Entry &amp; Validation</strong><span>Maker-checker, auto-flag abnormals</span></div></a><a href="features/report-delivery/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Report Delivery</strong><span>WhatsApp, SMS, EMR delivery</span></div></a><a href="features/analyser-integration/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Analyser Integration</strong><span>HL7/ASTM bidirectional interface</span></div></a></div>
+        </li>
+        <li><a href="solutions/index.html">Solutions</a></li>
+        <li><a href="resources/index.html">Resources</a></li>
+        <li><a href="docs/index.html">Docs</a></li>
+        <li><a href="../../pricing/index.html">Pricing</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+
+  
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu">
+    <ul>
+      <li>
+        <div class="dropdown-label" id="solutions-toggle">
+          Products
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="mobile-dropdown" id="solutions-dropdown">
+          <a href="../hms/index.html">HMS</a>
+          <a href="../inventory/index.html">Inventory</a>
+          <a href="../asset/index.html">Asset</a>
+          <a href="../ot-room/index.html">OT Room</a>
+          <a href="../finance/index.html">Finance</a>
+          <a href="../pharmacy/index.html">Pharmacy</a>
+          <a href="../lab/index.html">Lab</a>
+          <a href="../people/index.html">People</a>
+        </div>
+      </li>
+      <li><a href="#">Solutions</a></li>
+      <li><a href="#">Customers</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+  </div>
+  <!-- Hero -->
+  <section class="hms-hero reveal">
+    <div class="container">
+      <div class="hms-hero-content">
+        <h1>Diagnostics, ordered to reported</h1>
+        <p style="font-size:1.1rem;color:#555;margin-bottom:2rem;max-width:500px;">Test orders land from the EMR, samples are tracked by barcode, results are validated, and reports reach the patient — without a single paper slip.</p>
+        <a href="../../contact-us/index.html" class="btn btn-primary btn-lg">Request Demo</a>
+      </div>
+      <div class="hms-hero-image reveal zeno-delay-200">
+        <div class="software-preview zeno-float">
+          <div class="preview-header">
+            <div class="preview-logo">
+              <span class="logo-icon-sm">Z</span>
+              <span>ZenoHosp Lab</span>
+            </div>
+            <div class="preview-tabs">
+              <span class="tab active">Worklist</span>
+              <span class="tab">Samples</span>
+              <span class="tab">Results</span>
+              <span class="tab">Reports</span>
+            </div>
+          </div>
+          <div class="preview-body" style="padding:14px;display:flex;flex-direction:column;gap:10px;">
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+              <div style="background:#f0faf6;border-radius:8px;padding:10px;text-align:center;">
+                <div style="font-size:1.3rem;font-weight:700;color:#2D8A6E;">42</div>
+                <div style="font-size:.68rem;color:#666;">Pending</div>
+              </div>
+              <div style="background:#fef9f0;border-radius:8px;padding:10px;text-align:center;">
+                <div style="font-size:1.3rem;font-weight:700;color:#d97706;">18</div>
+                <div style="font-size:.68rem;color:#666;">In Process</div>
+              </div>
+              <div style="background:#f0f4ff;border-radius:8px;padding:10px;text-align:center;">
+                <div style="font-size:1.3rem;font-weight:700;color:#4f46e5;">97</div>
+                <div style="font-size:.68rem;color:#666;">Reported Today</div>
+              </div>
+            </div>
+            <div style="background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:7px 10px;background:#f9fafb;font-size:.68rem;font-weight:600;color:#888;">
+                <span>ID</span><span>Patient / Test</span><span>Status</span><span>TAT</span>
+              </div>
+              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:8px 10px;font-size:.72rem;border-top:1px solid #f3f4f6;align-items:center;">
+                <span style="color:#888;">SMP-0841</span>
+                <div><div style="font-weight:600;color:#333;">Karthik Raj</div><div style="color:#888;font-size:.68rem;">CBC + LFT</div></div>
+                <span style="background:#fef3c7;color:#92400e;padding:2px 7px;border-radius:20px;font-size:.65rem;white-space:nowrap;">Collecting</span>
+                <span style="color:#555;">2h</span>
+              </div>
+              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:8px 10px;font-size:.72rem;border-top:1px solid #f3f4f6;align-items:center;">
+                <span style="color:#888;">SMP-0839</span>
+                <div><div style="font-weight:600;color:#333;">Meena Suresh</div><div style="color:#888;font-size:.68rem;">HbA1c</div></div>
+                <span style="background:#dbeafe;color:#1e40af;padding:2px 7px;border-radius:20px;font-size:.65rem;white-space:nowrap;">Processing</span>
+                <span style="color:#555;">4h</span>
+              </div>
+              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:8px 10px;font-size:.72rem;border-top:1px solid #f3f4f6;align-items:center;">
+                <span style="color:#888;">SMP-0835</span>
+                <div><div style="font-weight:600;color:#333;">Arun Pillai</div><div style="color:#888;font-size:.68rem;">Lipid Profile</div></div>
+                <span style="background:#d1fae5;color:#065f46;padding:2px 7px;border-radius:20px;font-size:.65rem;white-space:nowrap;">Reported</span>
+                <span style="color:#2D8A6E;font-weight:600;">3h 12m</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 1: Test Orders & Sample Tracking -->
+  <section class="hms-feature feature-alt-right reveal" id="features">
+    <div class="container">
+      <div class="feature-content">
+        <h2>Test orders & sample tracking</h2>
+        <p>Orders placed by doctors in the EMR instantly appear in the phlebotomy queue. Samples get a barcode the moment they're collected, and every movement — from collection bench to analyser — is tracked in real time.</p>
+        <ul class="feature-list">
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Direct integration with doctor's EMR orders</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Barcode generation at collection — no manual labelling</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Phlebotomy queue with priority flags</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Sample rejection tracking with reason codes</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="analytics-preview">
+          <div class="analytics-header">
+            <span>🧪 Phlebotomy Queue</span>
+            <span class="period">01 Jun · 9:42 AM</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-top:6px;">
+            <div style="display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:8px 10px;background:#fef3c7;border-radius:8px;border-left:3px solid #d97706;">
+              <span style="font-size:.68rem;font-weight:700;color:#92400e;background:#fde68a;padding:2px 6px;border-radius:4px;">STAT</span>
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">Vijay Anand · CBC, Troponin</div><div style="font-size:.68rem;color:#888;">ICU — Bed 3 · Dr. Ramesh</div></div>
+              <span style="font-size:.68rem;font-weight:600;color:#92400e;">URGENT</span>
+            </div>
+            <div style="display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:8px 10px;background:#f9fafb;border-radius:8px;border-left:3px solid #2D8A6E;">
+              <span style="font-size:.68rem;font-weight:700;color:#065f46;background:#d1fae5;padding:2px 6px;border-radius:4px;">ROUT</span>
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">Karthik Raj · CBC + LFT</div><div style="font-size:.68rem;color:#888;">OPD — Token 14 · Dr. Priya</div></div>
+              <span style="font-size:.68rem;color:#888;">9:30</span>
+            </div>
+            <div style="display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:8px 10px;background:#f9fafb;border-radius:8px;border-left:3px solid #2D8A6E;">
+              <span style="font-size:.68rem;font-weight:700;color:#065f46;background:#d1fae5;padding:2px 6px;border-radius:4px;">ROUT</span>
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">Meena Suresh · HbA1c</div><div style="font-size:.68rem;color:#888;">OPD — Token 16 · Dr. Priya</div></div>
+              <span style="font-size:.68rem;color:#888;">9:28</span>
+            </div>
+            <div style="display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:8px 10px;background:#f9fafb;border-radius:8px;border-left:3px solid #0891b2;">
+              <span style="font-size:.68rem;font-weight:700;color:#0e7490;background:#cffafe;padding:2px 6px;border-radius:4px;">IPD</span>
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">Priya Nair · RFT + Electrolytes</div><div style="font-size:.68rem;color:#888;">Ward B — Bed 12 · Dr. Suresh</div></div>
+              <span style="font-size:.68rem;color:#888;">9:15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 2: Result Entry & Validation -->
+  <section class="hms-feature feature-alt-left reveal">
+    <div class="container">
+      <div class="feature-visual">
+        <div class="analytics-preview">
+          <div class="analytics-header">
+            <span>🔬 Result Entry — SMP-0841</span>
+            <span class="period">CBC</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;font-size:.68rem;font-weight:600;color:#888;padding:0 4px;">
+              <span>Parameter</span><span>Value</span><span>Reference</span><span>Flag</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;font-size:.74rem;padding:7px 8px;background:#f9fafb;border-radius:6px;align-items:center;">
+              <span style="color:#333;">Haemoglobin</span><span style="font-weight:600;color:#dc2626;">9.2</span><span style="color:#888;">12–17 g/dL</span><span style="background:#fee2e2;color:#991b1b;padding:1px 6px;border-radius:20px;font-size:.65rem;font-weight:600;">LOW ↓</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;font-size:.74rem;padding:7px 8px;background:#f9fafb;border-radius:6px;align-items:center;">
+              <span style="color:#333;">WBC Count</span><span style="font-weight:600;color:#d97706;">12,400</span><span style="color:#888;">4,000–11,000</span><span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:20px;font-size:.65rem;font-weight:600;">HIGH ↑</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;font-size:.74rem;padding:7px 8px;background:#f9fafb;border-radius:6px;align-items:center;">
+              <span style="color:#333;">Platelets</span><span style="font-weight:600;color:#2D8A6E;">1,98,000</span><span style="color:#888;">1.5–4.5 Lac</span><span style="background:#d1fae5;color:#065f46;padding:1px 6px;border-radius:20px;font-size:.65rem;font-weight:600;">NORMAL</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;font-size:.74rem;padding:7px 8px;background:#f9fafb;border-radius:6px;align-items:center;">
+              <span style="color:#333;">MCV</span><span style="font-weight:600;color:#2D8A6E;">84</span><span style="color:#888;">80–100 fL</span><span style="background:#d1fae5;color:#065f46;padding:1px 6px;border-radius:20px;font-size:.65rem;font-weight:600;">NORMAL</span>
+            </div>
+            <div style="border-top:1px solid #eee;padding-top:8px;display:flex;gap:8px;">
+              <button style="flex:1;background:#2D8A6E;color:#fff;border:none;border-radius:6px;padding:7px;font-size:.74rem;font-weight:600;">Validate & Sign</button>
+              <button style="flex:1;background:#f3f4f6;color:#333;border:none;border-radius:6px;padding:7px;font-size:.74rem;">Send to Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-content">
+        <h2>Result entry & pathologist validation</h2>
+        <p>Enter results manually or pull them directly from connected analysers. Abnormal values are auto-flagged with colour coding. A maker-checker workflow ensures every report is reviewed before it reaches the patient.</p>
+        <ul class="feature-list">
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Auto-flagging of abnormal results in red / amber</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Maker-checker validation with digital sign-off</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Side-by-side historical result comparison</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Bulk result entry for high-volume panels</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 3: Automated Report Delivery (centered) -->
+  <section class="hms-feature-centered reveal" id="solutions">
+    <div class="container">
+      <div class="centered-content">
+        <h2>Reports delivered the moment they're signed</h2>
+        <p>Once a pathologist validates results, ZenoHosp Lab generates a branded PDF, attaches the digital signature, and delivers it to the patient and ordering doctor — all without a single manual step.</p>
+      </div>
+      <div class="emr-visual">
+        <div class="emr-flowchart">
+          <div class="emr-node">
+            <div class="node-icon">📋</div>
+            <span>Doctor Orders Test</span>
+          </div>
+          <div class="emr-connector"></div>
+          <div class="emr-node">
+            <div class="node-icon">🧪</div>
+            <span>Sample Collected & Barcoded</span>
+          </div>
+          <div class="emr-connector"></div>
+          <div class="emr-node center-node">
+            <div class="node-icon large">🔬</div>
+            <span>Result Validated</span>
+          </div>
+          <div class="emr-connector"></div>
+          <div class="emr-node">
+            <div class="node-icon">📄</div>
+            <span>PDF Report Generated</span>
+          </div>
+          <div class="emr-connector"></div>
+          <div class="emr-node">
+            <div class="node-icon">📲</div>
+            <span>Delivered via WhatsApp / SMS / EMR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 4: Equipment Integration -->
+  <section class="hms-feature feature-alt-right reveal">
+    <div class="container">
+      <div class="feature-content">
+        <h2>Analyser & equipment integration</h2>
+        <p>Connect your lab analysers directly to ZenoHosp Lab for bidirectional data transfer. Results flow in automatically, eliminating manual transcription errors and cutting turnaround time by hours.</p>
+        <ul class="feature-list">
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Bidirectional interface with major analysers</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> HL7 / ASTM protocol support</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Auto-mapping of analyser codes to test master</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Real-time connection status monitoring</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="analytics-preview">
+          <div class="analytics-header">
+            <span>⚙️ Equipment Connections</span>
+            <span class="period">Live</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:9px 10px;background:#f9fafb;border-radius:8px;">
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">Sysmex XN-450</div><div style="font-size:.68rem;color:#888;">Haematology · Bidirectional</div></div>
+              <span style="font-size:.68rem;color:#555;">48 results today</span>
+              <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:9px 10px;background:#f9fafb;border-radius:8px;">
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">Roche Cobas c311</div><div style="font-size:.68rem;color:#888;">Biochemistry · Bidirectional</div></div>
+              <span style="font-size:.68rem;color:#555;">112 results today</span>
+              <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:9px 10px;background:#f9fafb;border-radius:8px;">
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">BioMérieux Vitek 2</div><div style="font-size:.68rem;color:#888;">Microbiology · Unidirectional</div></div>
+              <span style="font-size:.68rem;color:#555;">9 results today</span>
+              <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:9px 10px;background:#f9fafb;border-radius:8px;">
+              <div><div style="font-size:.78rem;font-weight:600;color:#333;">Mindray BS-240</div><div style="font-size:.68rem;color:#888;">Chemistry · Bidirectional</div></div>
+              <span style="font-size:.68rem;color:#555;">Calibrating…</span>
+              <span style="width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 5: TAT & Lab Analytics -->
+  <section class="hms-feature feature-alt-left reveal">
+    <div class="container">
+      <div class="feature-visual">
+        <div class="analytics-preview">
+          <div class="analytics-header">
+            <span>📊 TAT Analytics — Jun 2026</span>
+            <span class="period">Avg. 3h 28m</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.74rem;color:#555;margin-bottom:4px;"><span>CBC (Haematology)</span><span style="font-weight:600;color:#2D8A6E;">1h 12m</span></div>
+              <div style="background:#e5e7eb;border-radius:4px;height:7px;"><div style="background:#2D8A6E;width:22%;height:100%;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.74rem;color:#555;margin-bottom:4px;"><span>LFT / RFT (Biochemistry)</span><span style="font-weight:600;color:#4f46e5;">2h 45m</span></div>
+              <div style="background:#e5e7eb;border-radius:4px;height:7px;"><div style="background:#4f46e5;width:50%;height:100%;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.74rem;color:#555;margin-bottom:4px;"><span>HbA1c</span><span style="font-weight:600;color:#0891b2;">4h 05m</span></div>
+              <div style="background:#e5e7eb;border-radius:4px;height:7px;"><div style="background:#0891b2;width:74%;height:100%;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.74rem;color:#555;margin-bottom:4px;"><span>Culture & Sensitivity</span><span style="font-weight:600;color:#d97706;">48h 00m</span></div>
+              <div style="background:#e5e7eb;border-radius:4px;height:7px;"><div style="background:#d97706;width:100%;height:100%;border-radius:4px;"></div></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;border-top:1px solid #eee;padding-top:12px;">
+            <div style="text-align:center;">
+              <div style="font-size:1rem;font-weight:700;color:#2D8A6E;">97.4%</div>
+              <div style="font-size:.65rem;color:#888;">On-time Reports</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:1rem;font-weight:700;color:#4f46e5;">1,284</div>
+              <div style="font-size:.65rem;color:#888;">Tests This Month</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:1rem;font-weight:700;color:#dc2626;">0.8%</div>
+              <div style="font-size:.65rem;color:#888;">Rejection Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-content">
+        <h2>Turnaround time tracking & lab analytics</h2>
+        <p>Know exactly where delays happen. Track TAT for every test category, monitor pending worklists in real time, and benchmark your lab's performance to continuously reduce report delivery times.</p>
+        <ul class="feature-list">
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Per-test TAT tracking and SLA alerts</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Pending worklist with escalation flags</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Sample rejection analysis by reason</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Monthly MIS reports exportable to Excel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- External Integrations -->
+  <section class="app-ext-integrations">
+    <div class="container">
+      <p class="ext-int-label">Also integrates with</p>
+      <div class="ext-int-badges">
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Sysmex Analysers</span>
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Roche Cobas</span>
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Mindray</span>
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Abbott Architect</span>
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>BioMérieux Vitek</span>
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>HL7 / ASTM Protocol</span>
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>WhatsApp / SMS</span>
+        <span class="ext-int-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>ABHA / ABDM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="resources">
+    <div class="container">
+      <h2>Frequently asked questions about hospital LIS software in India</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Does ZenoHosp Lab integrate with the HMS module?</h3>
+          <p>Yes. Lab is built into the ZenoHosp platform. When a doctor orders a test in the EMR, it appears instantly on the phlebotomy worklist. Completed reports are pushed back to the patient's record automatically — no re-entry required.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which lab analysers does it support?</h3>
+          <p>ZenoHosp Lab supports HL7 and ASTM protocols, which cover most major analysers — including Sysmex, Roche Cobas, Mindray, Abbott Architect, and BioMérieux. Both unidirectional and bidirectional interfaces are supported. Contact us for a specific compatibility check.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How does the pathologist sign-off workflow work?</h3>
+          <p>After a lab technician enters results, they are queued for pathologist review. The pathologist sees a colour-coded view of abnormal values, can compare with historical results, and approves with a digital signature. The report is only released for delivery after sign-off.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How are reports delivered to patients?</h3>
+          <p>Once validated, ZenoHosp Lab automatically generates a branded PDF and delivers it via the patient's preferred channel — SMS link, WhatsApp, or email. Reports are also attached directly to the patient's EMR record in HMS.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can the lab module handle microbiology and culture reports?</h3>
+          <p>Yes. ZenoHosp Lab supports culture and sensitivity reports with multi-day TAT tracking. You can configure organism templates, antibiotic sensitivity panels, and multi-stage result entry for micro reports that go through different processing stages.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is there support for outsourced / external lab tests?</h3>
+          <p>Yes. Tests that are outsourced to external reference labs can be tracked within the same worklist. You can record the external lab name, expected TAT, and upload scanned reports — keeping the patient's full diagnostic history in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ZenoHosp Lab integrate with the HMS module?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Lab is built into the ZenoHosp platform. When a doctor orders a test in the EMR, it appears instantly on the phlebotomy worklist. Completed reports are pushed back to the patient's record automatically — no re-entry required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which lab analysers does it support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ZenoHosp Lab supports HL7 and ASTM protocols, which cover most major analysers including Sysmex, Roche Cobas, Mindray, Abbott Architect, and BioMérieux. Both unidirectional and bidirectional interfaces are supported."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the pathologist sign-off workflow work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After a lab technician enters results, they are queued for pathologist review. The pathologist sees a colour-coded view of abnormal values, can compare with historical results, and approves with a digital signature. The report is only released for delivery after sign-off."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are reports delivered to patients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Once validated, ZenoHosp Lab automatically generates a branded PDF and delivers it via SMS link, WhatsApp, or email. Reports are also attached directly to the patient's EMR record in HMS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the lab module handle microbiology and culture reports?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ZenoHosp Lab supports culture and sensitivity reports with multi-day TAT tracking. You can configure organism templates, antibiotic sensitivity panels, and multi-stage result entry for micro reports."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there support for outsourced / external lab tests?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Tests outsourced to external reference labs can be tracked within the same worklist. You can record the external lab name, expected TAT, and upload scanned reports — keeping the patient's full diagnostic history in one place."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- CTA Section -->
+  <section class="hms-cta">
+    <div class="container">
+      <h2>Reduce turnaround times. Eliminate manual errors.</h2>
+      <a href="../../contact-us/index.html" class="btn btn-primary btn-lg">Request Demo</a>
+    </div>
+  </section>
+
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../index.html" class="logo">
+            <span class="logo-icon">Z</span>
+            <span class="logo-text">Zeno<span class="logo-accent">Hosp</span></span>
+          </a>
+          <p>Hospital software built in Chennai, used by 500+ facilities across India.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg></a>
+            <a href="#" aria-label="Twitter"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></a>
+            <a href="#" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a>
+            <a href="mailto:hi@zenohosp.com" aria-label="Email"><svg width="20" height="20" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="../../apps/hms/index.html">Hospital Management</a></li>
+            <li><a href="../../apps/ot-room/index.html">Operation Theatre</a></li>
+            <li><a href="../../apps/pharmacy/index.html">Pharmacy</a></li>
+            <li><a href="../../apps/inventory/index.html">Inventory</a></li>
+            <li><a href="../../apps/asset/index.html">Asset Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../../about-us/index.html">About Us</a></li>
+            <li><a href="../../careers/index.html">Careers</a></li>
+            <li><a href="../../blog/index.html">Blog</a></li>
+            <li><a href="../../contact-us/index.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="../../help/index.html">Help Center</a></li>
+            <li><a href="../../help/index.html">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="../../status/index.html">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zeno Hosp. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="../../privacy-policy/index.html">Privacy Policy</a>
+          <a href="../../terms-of-service/index.html">Terms of Service</a>
+          <a href="../../cookie-policy/index.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+<script src="../../js/app.js" defer></script>
+</body>
+</html>

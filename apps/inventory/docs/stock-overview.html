@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Overview | Zeno Hosp Docs</title>
+  <meta name="description" content="Real-time stock overview and levels in ZenoHosp Inventory.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Inventory Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Inventory</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Products</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="items.html">Items</a></li>
+          <li><a href="item-types.html">Item Types</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="kits.html">Kits</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Inventory</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="stock-overview.html" class="active">Stock Overview</a></li>
+          <li><a href="stock-log.html">Stock Log</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Purchase</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="purchase-orders.html">Purchase Orders</a></li>
+          <li><a href="grn.html">GRN</a></li>
+          <li><a href="po-bills.html">PO Bills</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-bottom: 16px;">
+          <li><a href="stores.html">Stores</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Stock Overview</h1>
+        <p>A real-time snapshot of your physical inventory across all locations.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Understanding the Stock Grid</h2>
+        <p>The Stock Overview is your master ledger for what is physically available in the hospital right now. It aggregates data across all batches and sub-stores.</p>
+        
+        <h3>Searching and Filtering</h3>
+        <ul>
+          <li><strong>By Location:</strong> You can filter to see the stock only in the "Main Pharmacy" versus the "ICU Ward Store".</li>
+          <li><strong>By Batch/Expiry:</strong> Click into an item to see the breakdown of different batches. The system operates on a FEFO (First Expiring, First Out) principle to prevent wastage.</li>
+        </ul>
+
+        <h2>Physical Stock Takes (Auditing)</h2>
+        <p>At the end of every month, stores must reconcile their system stock with physical counts.</p>
+        <ol>
+          <li>Click <strong>+ Adjust Stock</strong> if the physical count differs from the system count (e.g., due to breakage or theft).</li>
+          <li>Select the Item and Batch.</li>
+          <li>Enter the precise variance (-2 pieces).</li>
+          <li>The system requires a <strong>Reason Code</strong> (e.g., "Expired", "Broken", "Miscount") for financial auditing.</li>
+        </ol>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

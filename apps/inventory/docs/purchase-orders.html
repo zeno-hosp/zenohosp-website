@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase Orders | Zeno Hosp Docs</title>
+  <meta name="description" content="Creating and tracking purchase orders in ZenoHosp Inventory.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Inventory Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Inventory</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Products</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="items.html">Items</a></li>
+          <li><a href="item-types.html">Item Types</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="kits.html">Kits</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Inventory</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="stock-overview.html">Stock Overview</a></li>
+          <li><a href="stock-log.html">Stock Log</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Purchase</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="purchase-orders.html" class="active">Purchase Orders</a></li>
+          <li><a href="grn.html">GRN</a></li>
+          <li><a href="po-bills.html">PO Bills</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-bottom: 16px;">
+          <li><a href="stores.html">Stores</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Purchase Orders (PO)</h1>
+        <p>The formal request sent to vendors to supply inventory items to the hospital.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Raising a Purchase Order</h2>
+        <p>A Purchase Order acts as a legally binding document between the hospital and the supplier.</p>
+        <ol>
+          <li>Navigate to Purchase Orders and click <strong>+ Create PO</strong>.</li>
+          <li>Select the <strong>Vendor</strong> from your directory.</li>
+          <li>Add the required Items. The system will auto-populate the estimated purchase price based on the Item Master, but this can be negotiated and edited.</li>
+          <li>Specify the Expected Delivery Date.</li>
+        </ol>
+
+        <h2>Approval Workflows</h2>
+        <p>To prevent unauthorized spending, POs often require multi-level approvals:</p>
+        <ul>
+          <li><strong>Draft:</strong> The PO is being prepared by the Store Manager.</li>
+          <li><strong>Pending Approval:</strong> Based on the total value of the PO, it may automatically route to the Hospital Administrator or CFO for digital sign-off.</li>
+          <li><strong>Approved/Sent:</strong> The PO is finalized and automatically emailed to the vendor.</li>
+        </ul>
+
+        <div style="background-color: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 16px; margin: 24px 0; border-radius: 0 8px 8px 0;">
+          <strong>Note:</strong> Raising a PO <em>does not</em> increase your physical stock. Stock only increases when the items physically arrive and a GRN is processed against the PO.
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

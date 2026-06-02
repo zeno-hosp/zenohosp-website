@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS Billing | Zeno Hosp Docs</title>
+  <meta name="description" content="HMS billing integration in ZenoHosp Finance.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Finance Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Finance</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Finance</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="bank-accounts.html">Bank Accounts</a></li>
+          <li><a href="hms-billing.html" class="active">HMS Billing</a></li>
+          <li><a href="vendor-payments.html">Vendor Payments</a></li>
+          <li><a href="vendor-ledger.html">Vendor Ledger</a></li>
+          <li><a href="daily-expenses.html">Daily Expenses</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>HMS Billing</h1>
+        <p>The centralized clearinghouse for all patient-facing revenue generated in the Hospital Management System.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Understanding the Billing Queue</h2>
+        <p>When a doctor orders a lab test, or a receptionist books an appointment in the HMS module, an invoice is automatically generated and pushed to the Finance module's <strong>HMS Billing</strong> queue.</p>
+        
+        <p>The interface is split into two primary queues:</p>
+        <ul>
+          <li><strong>OPD Billing:</strong> Outpatient invoices (consultation fees, one-off lab tests, health checkups). These are usually settled immediately.</li>
+          <li><strong>IPD Billing:</strong> Inpatient folios. These are running bills that accumulate daily room charges, nursing fees, and surgical costs, typically settled upon discharge.</li>
+        </ul>
+
+        <h2>Completing a Bill</h2>
+        <ol>
+          <li>Navigate to the <strong>Unpaid</strong> or <strong>Partial</strong> tab.</li>
+          <li>Locate the patient's invoice and click <strong>Complete Billing</strong>.</li>
+          <li>Select the payment mode (Cash, UPI, Credit Card, Insurance).</li>
+          <li>Confirm the amount. If paid via Cash, the funds will be added to the configured "Billing Cash" account.</li>
+        </ol>
+        <p>Once settled, the invoice moves to the <strong>Paid</strong> tab and the revenue is reflected in the main Dashboard.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

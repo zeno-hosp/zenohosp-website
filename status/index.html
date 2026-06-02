@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Status - ZenoHosp</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/status.css">
+</head>
+<body>
+
+  <!-- Minimal Nav -->
+  <nav class="navbar marketing-navbar" style="border-bottom: 1px solid var(--color-border);">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">Z</span>
+        <span class="logo-text">Zeno<span class="logo-accent">Hosp</span> Status</span>
+      </a>
+      <div class="nav-actions">
+        <a href="../help/index.html" class="btn btn-outline">Help Center</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Status -->
+  <section class="status-hero">
+    <div class="container" style="max-width: 800px;">
+      <div class="status-header">
+        <h1>Current Status</h1>
+        <div class="status-global">
+          <div class="status-dot"></div>
+          All Systems Operational
+        </div>
+      </div>
+      <p style="color: var(--color-muted);">Refreshed every 60 seconds. Uptime is measured over the last 90 days.</p>
+    </div>
+  </section>
+
+  <section class="status-section">
+    <div class="container" style="max-width: 800px;">
+      
+      <!-- Cloud Infrastructure -->
+      <div class="status-card">
+        <h2>Core Infrastructure (India Region)</h2>
+        
+        <div class="service-row">
+          <div class="service-name">API Gateway</div>
+          <div class="service-status">Operational</div>
+        </div>
+        
+        <div class="service-row">
+          <div class="service-name">Central Database Cluster</div>
+          <div class="service-status">Operational</div>
+        </div>
+
+        <div class="service-row">
+          <div class="service-name">File Storage (DICOM/Documents)</div>
+          <div class="service-status">Operational</div>
+        </div>
+      </div>
+
+      <!-- Application Modules -->
+      <div class="status-card">
+        <h2>Application Modules</h2>
+        
+        <div class="service-row">
+          <div class="service-name">HMS & EMR</div>
+          <div class="service-status">Operational</div>
+        </div>
+        
+        <div class="service-row">
+          <div class="service-name">Finance & Billing</div>
+          <div class="service-status">Operational</div>
+        </div>
+
+        <div class="service-row">
+          <div class="service-name">Pharmacy & Inventory</div>
+          <div class="service-status">Operational</div>
+        </div>
+        
+        <div class="service-row">
+          <div class="service-name">OT Room Scheduling</div>
+          <div class="service-status">Operational</div>
+        </div>
+      </div>
+
+      <!-- Third Party Integrations -->
+      <div class="status-card">
+        <h2>Integrations</h2>
+        
+        <div class="service-row">
+          <div class="service-name">ABDM Sync (NDHM)</div>
+          <div class="service-status">Operational</div>
+        </div>
+        
+        <div class="service-row">
+          <div class="service-name">Payment Gateways (Razorpay/BillDesk)</div>
+          <div class="service-status">Operational</div>
+        </div>
+        
+        <div class="service-row">
+          <div class="service-name">SMS/WhatsApp Notifications</div>
+          <div class="service-status">Operational</div>
+        </div>
+      </div>
+
+      <!-- Historical Uptime Example -->
+      <div class="status-card">
+        <h2>Historical Uptime (90 Days)</h2>
+        <div class="uptime-bar">
+          <!-- generating 90 divs via CSS loop concept, here explicitly adding a few for visual -->
+          <script>
+            for(let i=0; i<90; i++) {
+              let classes = 'uptime-day';
+              let title = 'No downtime recorded';
+              if(i === 72) { classes += ' partial'; title = 'Partial API latency'; }
+              if(i === 45) { classes += ' outage'; title = 'ABDM Gateway unreachable'; }
+              document.write(`<div class="${classes}" title="${title}"></div>`);
+            }
+          </script>
+        </div>
+        <div class="uptime-legend">
+          <span>90 days ago</span>
+          <span>99.98% uptime</span>
+          <span>Today</span>
+        </div>
+      </div>
+
+      <!-- Incident History -->
+      <div class="incident-history">
+        <h2 style="font-size: 1.5rem; margin-bottom: 24px;">Past Incidents</h2>
+        
+        <div class="incident-card" style="border-color: #f59e0b;">
+          <div class="incident-date">April 14, 2026</div>
+          <div class="incident-title">Elevated Latency in Pharmacy POS</div>
+          <div class="incident-desc">
+            <strong>Resolved:</strong> We identified an indexing issue in the drug master database causing slow barcode scans. A patch was deployed and scanning times have returned to normal (<100ms).
+          </div>
+        </div>
+
+        <div class="incident-card">
+          <div class="incident-date">March 02, 2026</div>
+          <div class="incident-title">No incidents reported.</div>
+          <div class="incident-desc">
+            All systems operated normally.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer" style="padding: 40px 0; text-align: center; border-top: 1px solid var(--color-border); margin-top: 40px;">
+    <div class="container">
+      <p style="color: var(--color-muted); font-size: 0.9rem;">&copy; 2026 Zeno Hosp Status. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

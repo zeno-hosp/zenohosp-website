@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stores | Zeno Hosp Docs</title>
+  <meta name="description" content="Store locations and multi-store management in ZenoHosp Inventory.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Inventory Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Inventory</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Products</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="items.html">Items</a></li>
+          <li><a href="item-types.html">Item Types</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="kits.html">Kits</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Inventory</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="stock-overview.html">Stock Overview</a></li>
+          <li><a href="stock-log.html">Stock Log</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Purchase</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="purchase-orders.html">Purchase Orders</a></li>
+          <li><a href="grn.html">GRN</a></li>
+          <li><a href="po-bills.html">PO Bills</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-bottom: 16px;">
+          <li><a href="stores.html" class="active">Stores</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Stores (Locations)</h1>
+        <p>Manage the physical and logical locations where inventory is held across the hospital.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Main Store vs Sub-Stores</h2>
+        <p>Large hospitals operate a hub-and-spoke model for inventory to ensure departments don't run out of critical supplies during the night.</p>
+        <ul>
+          <li><strong>Main Store (Hub):</strong> This is usually where all external vendor deliveries (GRNs) arrive. It holds bulk stock.</li>
+          <li><strong>Sub-Stores (Spokes):</strong> These are localized storage closets on specific floors or departments (e.g., ICU Store, 2nd Floor Pharmacy, OT Store).</li>
+        </ul>
+
+        <h2>Inter-Store Transfers (Indents)</h2>
+        <p>When the ICU Store runs low on syringes, the Head Nurse raises an <strong>Indent Request</strong> to the Main Store.</p>
+        <p>The Main Store manager reviews the request, picks the stock, and processes a <strong>Stock Transfer</strong>. The system automatically deducts the items from the Main Store ledger and adds them to the ICU Store ledger, maintaining perfect traceability without affecting the global hospital stock count.</p>
+
+        <div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; margin: 24px 0; border-radius: 0 8px 8px 0;">
+          <strong>Warning:</strong> You cannot delete a Store if it currently holds active stock. You must transfer the stock out or write it off to zero before archiving the location.
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR & Access Settings | Zeno Hosp Docs</title>
+  <meta name="description" content="HR configuration and settings in ZenoHosp People.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp People Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to People</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Employees</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Employee Directory</a></li>
+          <li><a href="attendance-leaves.html">Time & Absence</a></li>
+          <li><a href="performance.html">Performance Management</a></li>
+          <li><a href="hr-settings.html" class="active">HR & Access Settings</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Payroll</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="payroll-ops.html">Payroll Operations</a></li>
+          <li><a href="salary-config.html">Salary Configuration</a></li>
+          <li><a href="loans-advances.html">Advances & Loans</a></li>
+          <li><a href="tax-compliance.html">Tax & Compliance</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>HR & Access Settings</h1>
+        <p>The foundational configuration for your hospital's organizational structure and security.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Organizational Structure</h2>
+        <p>Before adding employees, you must define your hospital's hierarchy:</p>
+        <ul>
+          <li><strong>Departments:</strong> e.g., Cardiology, Orthopedics, Front Desk, Billing, Pharmacy.</li>
+          <li><strong>Designations:</strong> e.g., Head Nurse, Junior Resident, Senior Consultant, Pharmacist.</li>
+        </ul>
+        <p>This structure dictates reporting lines and approval workflows for leaves and appraisals.</p>
+
+        <h2>Roles & Permissions (Security)</h2>
+        <p>ZenoHosp uses a robust Role-Based Access Control (RBAC) system. Here, you define what different roles can see and do across the entire software suite.</p>
+        <p>For example, you can create a "Cashier" role that only has access to the POS in the Pharmacy app, but cannot view the Finance Dashboard. A "Surgeon" role might have access to the OT Room schedules and HMS patient records, but not the HR Payroll data.</p>
+        <p>Assigning the <strong>Company Admin</strong> role grants unrestricted access to all modules and billing settings.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Help Docs | Zeno Hosp</title>
+  <meta name="description" content="ZenoHosp Lab documentation — complete user guide for hospital staff and administrators.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) {
+      el.parentElement.classList.toggle('expanded');
+    }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Lab Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Lab</a>
+      <div style="color: #fff; font-size: 0.85rem; display: flex; align-items: center; gap: 4px; margin-left: 16px; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; cursor: pointer;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        EN
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </div>
+    
+    <div class="doc-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      Search Documents
+      <span style="margin-left: auto; background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.7rem;">/</span>
+    </div>
+
+    <div class="doc-nav-right">
+      <a href="#" class="doc-nav-link">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;"><path d="m6 9 6 6 6-6"/></svg></a>
+      <a href="https://lap.zenohosp.com" class="doc-nav-link">Sign In</a>
+      <a href="#" class="doc-btn-primary">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="#" class="active">Welcome</a></li>
+          <li><a href="#">How LIS Works</a></li>
+          <li><a href="#">Lab Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="doc-sidebar-group">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Core Modules</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="#">Test Orders</a></li>
+          <li><a href="#">Sample Collection</a></li>
+          <li><a href="#">Results Entry</a></li>
+        </ul>
+      </div>
+
+      <div class="doc-sidebar-group">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Settings</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="#">Test Master</a></li>
+          <li><a href="#">Normal Ranges</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card">
+        <h1>Welcome to ZenoHosp Lab</h1>
+        <p>Demystify ZenoHosp Laboratory Information System (LIS) with our help resources. Learn how to manage samples and clinical tests.</p>
+        
+        <div class="doc-video-placeholder">
+          <div class="doc-video-play">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+          </div>
+          <div style="font-weight: 600; color: #334155; margin-top: 16px;">ZenoHosp Lab Overview</div>
+        </div>
+      </div>
+
+      <div class="doc-section-title">Features</div>
+      <div class="doc-features-grid">
+        <a href="#" class="doc-feature-card">Test Orders</a>
+        <a href="#" class="doc-feature-card">Phlebotomy Queue</a>
+        <a href="#" class="doc-feature-card">Results Approval</a>
+        <a href="#" class="doc-feature-card">Analyzer Integration</a>
+      </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="doc-right-sidebar">
+      <a href="#" class="doc-community-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Join the Community Forum
+      </a>
+    </aside>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedules | Zeno Hosp Docs</title>
+  <meta name="description" content="OT scheduling and calendar management.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp OT Help Docs
+      </a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title">Main</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="live-board.html">Live Board</a></li>
+          <li><a href="schedules.html" class="active">Schedules</a></li>
+          <li><a href="cases.html">Cases</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Schedules</h1>
+        <p>A comprehensive calendar view for resolving conflicts and optimizing theatre block allocations.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Block Booking Strategy</h2>
+        <p>OT Managers use the Schedules view to allocate specific time blocks to different surgical departments. For example, "OT-1" might be blocked exclusively for Orthopedics on Monday mornings, and General Surgery on Monday afternoons. This ensures equitable access to surgical facilities.</p>
+
+        <h2>Conflict Resolution</h2>
+        <p>The scheduling engine automatically flags conflicts. If a surgeon attempts to book a case that overlaps with an existing booking in the same room, or if the surgeon themselves is double-booked across two different theatres, the system will highlight the collision in red on the calendar.</p>
+
+        <h2>Drag-and-Drop Reallocation</h2>
+        <p>If a surgery runs long (overtime) or finishes early, the OT Manager can simply click and drag subsequent cases on the calendar to delay them or move them to a different available theatre, instantly notifying the assigned surgical teams via the ZenoHosp mobile app.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

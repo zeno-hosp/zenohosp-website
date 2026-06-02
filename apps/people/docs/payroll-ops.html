@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll Operations | Zeno Hosp Docs</title>
+  <meta name="description" content="Payroll processing and operations in ZenoHosp People.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp People Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to People</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Employees</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Employee Directory</a></li>
+          <li><a href="attendance-leaves.html">Time & Absence</a></li>
+          <li><a href="performance.html">Performance Management</a></li>
+          <li><a href="hr-settings.html">HR & Access Settings</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Payroll</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="payroll-ops.html" class="active">Payroll Operations</a></li>
+          <li><a href="salary-config.html">Salary Configuration</a></li>
+          <li><a href="loans-advances.html">Advances & Loans</a></li>
+          <li><a href="tax-compliance.html">Tax & Compliance</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Payroll Operations</h1>
+        <p>Execute the monthly payroll cycle, review historical data, and manage payslips.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Running the Monthly Payroll</h2>
+        <p>The <strong>Run Payroll</strong> wizard is the heart of this module. When initiated, it automatically:</p>
+        <ol>
+          <li>Pulls Loss of Pay (LOP) days from the Attendance & Leaves module.</li>
+          <li>Calculates pro-rated salaries based on the employee's defined Salary Structure.</li>
+          <li>Deducts any active loan EMIs or Salary Advances.</li>
+          <li>Computes and deducts statutory taxes (TDS, PF, PT, ESI).</li>
+        </ol>
+        <p>Before finalizing, HR is presented with a "Payroll Register" draft for a final sanity check. Once approved, the payroll is locked for that month.</p>
+
+        <h2>Payslips & Distribution</h2>
+        <p>Upon finalizing the payroll, professional PDF payslips are generated instantly. You can choose to automatically email them to employees or make them available for download via the Employee Self-Service portal.</p>
+
+        <h2>Payroll History</h2>
+        <p>The system maintains an immutable ledger of all past payroll runs. This is critical for generating annual Form 16s and resolving historical pay disputes.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

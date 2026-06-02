@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patients | Zeno Hosp Docs</title>
+  <meta name="description" content="How to register, search, and manage patient records in ZenoHosp HMS.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html" class="active">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Patient Management</h1>
+        <p>Register and manage all patient demographics, historical records, and portal access.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Step-by-Step Patient Registration</h2>
+        <p>Every clinical workflow begins with registration. Capturing accurate demographic data reduces billing errors and improves patient communication.</p>
+        <ol>
+          <li>Navigate to the <strong>Patients</strong> list and click <strong>+ New Patient</strong> in the top right corner.</li>
+          <li>Fill out the <strong>Mandatory Fields</strong> (marked with an asterisk *):
+            <ul>
+              <li><strong>First and Last Name</strong></li>
+              <li><strong>Date of Birth / Age</strong></li>
+              <li><strong>Gender</strong></li>
+              <li><strong>Primary Mobile Number</strong> (Required for SMS notifications)</li>
+            </ul>
+          </li>
+          <li>Fill out <strong>Optional Fields</strong> as needed:
+            <ul>
+              <li>Blood Group</li>
+              <li>Emergency Contact Name & Relation</li>
+              <li>Primary Insurance Provider & Policy ID</li>
+            </ul>
+          </li>
+          <li>Click <strong>Save & Generate MRN</strong>. The system will auto-generate a unique <strong>Medical Record Number (MRN)</strong>.</li>
+        </ol>
+
+        <div style="background-color: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 16px; margin: 24px 0; border-radius: 0 8px 8px 0;">
+          <strong>Tip:</strong> You can instantly jump into booking an appointment immediately after saving by clicking "Save & Book Appointment".
+        </div>
+
+        <h2>Managing Patient Records</h2>
+        <p>Patient profiles hold longitudinal data. Clicking on a patient in the list opens their comprehensive profile.</p>
+        
+        <h3>Merging Duplicate Records</h3>
+        <p>Sometimes receptionists accidentally register the same patient twice. To fix this:</p>
+        <ol>
+          <li>Select the two duplicate records from the Patients list.</li>
+          <li>Click the <strong>Merge</strong> button on the top action bar.</li>
+          <li>Select which MRN is the "Primary" record to keep. All historical appointments, lab results, and bills from the secondary record will be migrated to the primary one.</li>
+        </ol>
+
+        <h2>Patient Portal Access</h2>
+        <p>Patients can access their own lab reports and prescriptions online.</p>
+        <ul>
+          <li><strong>Generating Credentials:</strong> On the patient's profile, click the <strong>Generate Portal Password</strong> button. An SMS with a secure link and temporary password will be sent to their primary mobile number.</li>
+          <li><strong>Revoking Access:</strong> If a phone is lost or compromised, you can revoke portal access immediately from their profile settings.</li>
+        </ul>
+
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <dl>
+          <dt style="font-weight: 600; margin-top: 16px;">What if a patient forgets their MRN?</dt>
+          <dd style="margin-left: 0; margin-top: 8px; color: #475569;">You do not need the MRN to search for a patient. The global search bar supports searching by First Name, Last Name, or Mobile Number.</dd>
+          
+          <dt style="font-weight: 600; margin-top: 16px;">Can I register a patient without a phone number?</dt>
+          <dd style="margin-left: 0; margin-top: 8px; color: #475569;">By default, a mobile number is required to prevent duplicate records and enable SMS notifications. However, Administrators can make this field optional via the <em>Settings &gt; Registration Forms</em> menu.</dd>
+        </dl>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

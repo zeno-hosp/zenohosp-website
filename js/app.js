@@ -295,34 +295,151 @@
     update();
   }
 
-  function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number, .zd-stat-number');
+  function animateCounters(counters) {
+    counters = counters || document.querySelectorAll('.stat-number, .zd-stat-number');
 
     counters.forEach((counter) => {
-      const rawText = counter.textContent || '';
-      const target = Number.parseInt(rawText.replace(/[^0-9]/g, ''), 10);
+      const rawText = (counter.textContent || '').trim();
+
+      // Skip values that aren't simple counts (e.g. "24/7")
+      if (rawText.includes('/')) return;
+
+      // Extract optional prefix, numeric value (inc. decimal), and suffix
+      const match = rawText.match(/^([^0-9]*)(\d+(?:\.\d+)?)(.*)$/);
+      if (!match) return;
+
+      const prefix = match[1];
+      const target = Number.parseFloat(match[2]);
+      const suffix = match[3];
+      const isDecimal = rawText.includes('.');
 
       if (Number.isNaN(target)) return;
 
-      const suffix = rawText.replace(/[0-9]/g, '');
-      const duration = 2000;
-      const step = target / (duration / 16);
+      const step = target / (2000 / 16);
       let current = 0;
 
       const update = () => {
-        current += step;
-
-        if (current < target) {
-          counter.textContent = `${Math.floor(current)}${suffix}`;
-          window.requestAnimationFrame(update);
-          return;
-        }
-
-        counter.textContent = `${target}${suffix}`;
+        current = Math.min(current + step, target);
+        const display = isDecimal ? current.toFixed(1) : Math.floor(current);
+        counter.textContent = `${prefix}${display}${suffix}`;
+        if (current < target) window.requestAnimationFrame(update);
       };
 
       update();
     });
+  }
+
+  function initCounterAnimation() {
+    const section = document.querySelector('.home-stats-section, .zd-stats-section');
+    if (!section) return;
+
+    if (typeof IntersectionObserver !== 'function') {
+      animateCounters(section.querySelectorAll('.stat-number, .zd-stat-number'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          observer.unobserve(entry.target);
+          animateCounters(entry.target.querySelectorAll('.stat-number, .zd-stat-number'));
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(section);
+  }
+
+  function initPlatformStrip() {
+    const switcher = document.querySelector('.module-switcher');
+    if (!switcher) return;
+
+    // Derive the active module from the URL path, e.g. /apps/hms/ → 'hms'
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    const module = segments[1]; // apps/<module>/
+    if (!module) return;
+
+    switcher.querySelectorAll('a').forEach((link) => {
+      const href = link.getAttribute('href') || '';
+      if (href.includes(`apps/${module}`)) link.classList.add('active');
+    });
+  }
+
+  function initScrollExpand() {
+    const expandSection = document.querySelector('.home-integration-section');
+    if (!expandSection) return;
+
+    let ticking = false;
+    const update = () => {
+      const rect = expandSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      const start = windowHeight; 
+      const end = windowHeight * 0.3; 
+      
+      let progress = (start - rect.top) / (start - end);
+      progress = Math.max(0, Math.min(1, progress));
+      
+      expandSection.style.setProperty('--expand-progress', progress.toFixed(3));
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    update();
+  }
+
+  function initJourneyScroll() {
+    const container = document.querySelector('.patient-journey-container');
+    const progressBar = document.getElementById('journey-progress');
+    const steps = document.querySelectorAll('.journey-step');
+    
+    if (!container || !progressBar || !steps.length) return;
+
+    let ticking = false;
+
+    const update = () => {
+      const rect = container.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Start progress when container is near middle of screen
+      const startTrigger = windowHeight * 0.7;
+      
+      let progressRaw = (startTrigger - rect.top) / rect.height;
+      let progress = Math.max(0, Math.min(1, progressRaw));
+      
+      progressBar.style.height = `${progress * 100}%`;
+      
+      steps.forEach((step, index) => {
+        // Threshold based on even spacing
+        const threshold = index / (steps.length > 1 ? steps.length - 1 : 1);
+        if (progress >= threshold - 0.1) {
+          step.classList.add('active');
+        } else {
+          step.classList.remove('active');
+        }
+      });
+      
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    update();
   }
 
   function init() {
@@ -335,6 +452,10 @@
     initHeroSwitcher();
     initHoverEffects();
     initParallax();
+    initPlatformStrip();
+    initCounterAnimation();
+    initScrollExpand();
+    initJourneyScroll();
   }
 
   window.ZenoApp = {

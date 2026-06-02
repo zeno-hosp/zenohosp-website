@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax & Compliance | Zeno Hosp Docs</title>
+  <meta name="description" content="Tax compliance and statutory deductions in ZenoHosp People.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp People Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to People</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Employees</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Employee Directory</a></li>
+          <li><a href="attendance-leaves.html">Time & Absence</a></li>
+          <li><a href="performance.html">Performance Management</a></li>
+          <li><a href="hr-settings.html">HR & Access Settings</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Payroll</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="payroll-ops.html">Payroll Operations</a></li>
+          <li><a href="salary-config.html">Salary Configuration</a></li>
+          <li><a href="loans-advances.html">Advances & Loans</a></li>
+          <li><a href="tax-compliance.html" class="active">Tax & Compliance</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Tax & Compliance</h1>
+        <p>Manage statutory Indian payroll deductions and seamlessly sync expenses with the Finance ledger.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Income Tax (TDS)</h2>
+        <p>ZenoHosp features a built-in Indian tax engine. It allows employees to declare their investments (Section 80C, 80D, HRA rent receipts) via the self-service portal.</p>
+        <p>The system automatically projects their annual income, calculates their tax liability under the chosen regime (Old vs. New), and deducts the appropriate monthly Tax Deducted at Source (TDS).</p>
+
+        <h2>Statutory Settings</h2>
+        <p>Ensure compliance by configuring employer and employee contributions for:</p>
+        <ul>
+          <li><strong>EPF (Employee Provident Fund):</strong> Typically 12% of Basic pay.</li>
+          <li><strong>ESI (Employee State Insurance):</strong> For employees falling under the wage limit threshold.</li>
+          <li><strong>Professional Tax (PT):</strong> Automatically applied based on state-specific tax slabs (e.g., Karnataka vs. Maharashtra slabs).</li>
+        </ul>
+
+        <h2>General Ledger (GL) Mapping</h2>
+        <p>Because ZenoHosp is an integrated ERP, payroll isn't isolated. GL Mapping dictates how payroll expenses hit the main hospital ledger in the Finance app. You map components like "Basic Pay" to the "Salaries Expense Account", and "TDS" to the "TDS Payable Liability Account", automating journal entries when payroll is run.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

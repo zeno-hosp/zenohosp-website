@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Directory | Zeno Hosp Docs</title>
+  <meta name="description" content="ZenoHosp People documentation — complete user guide for hospital staff and administrators.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp People Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to People</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Employees</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html" class="active">Employee Directory</a></li>
+          <li><a href="attendance-leaves.html">Time & Absence</a></li>
+          <li><a href="performance.html">Performance Management</a></li>
+          <li><a href="hr-settings.html">HR & Access Settings</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Payroll</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="payroll-ops.html">Payroll Operations</a></li>
+          <li><a href="salary-config.html">Salary Configuration</a></li>
+          <li><a href="loans-advances.html">Advances & Loans</a></li>
+          <li><a href="tax-compliance.html">Tax & Compliance</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Employee Directory</h1>
+        <p>The central database for managing hospital staff, from doctors to administrative personnel.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Onboarding a New Employee</h2>
+        <p>When a new staff member joins the hospital, their profile must be created here. You'll need to capture their Personal Details, Emergency Contacts, and Statutory Information (PAN, Aadhaar, UAN for PF).</p>
+        <p>Once the profile is created, the system auto-generates an Employee ID, which is used across all other ZenoHosp modules (like assigning them as a surgeon in the OT Room or scheduling them in HMS).</p>
+
+        <h2>Document Management</h2>
+        <p>You can securely upload and store employee documents such as Medical Council Registration certificates for doctors, educational degrees, and signed employment contracts directly within their profile.</p>
+
+        <h2>Offboarding & Full and Final (F&F)</h2>
+        <p>When an employee resigns or is terminated, initiating the offboarding workflow here will freeze their access to the ZenoHosp system on their last working day and flag their profile for the Payroll team to process the F&F settlement.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

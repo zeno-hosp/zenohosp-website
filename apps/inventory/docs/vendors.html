@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendors | Zeno Hosp Docs</title>
+  <meta name="description" content="Vendor management and supplier records in ZenoHosp.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Inventory Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Inventory</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Products</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="items.html">Items</a></li>
+          <li><a href="item-types.html">Item Types</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="kits.html">Kits</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Inventory</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="stock-overview.html">Stock Overview</a></li>
+          <li><a href="stock-log.html">Stock Log</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Purchase</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="vendors.html" class="active">Vendors</a></li>
+          <li><a href="purchase-orders.html">Purchase Orders</a></li>
+          <li><a href="grn.html">GRN</a></li>
+          <li><a href="po-bills.html">PO Bills</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-bottom: 16px;">
+          <li><a href="stores.html">Stores</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Vendors (Suppliers)</h1>
+        <p>Manage the directory of suppliers, pharmaceutical distributors, and manufacturers.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Onboarding a Vendor</h2>
+        <p>Before you can raise a Purchase Order for supplies, the vendor must exist in the system.</p>
+        <ol>
+          <li>Click <strong>+ Add Vendor</strong>.</li>
+          <li>Enter their Legal Company Name and Contact Details.</li>
+          <li>Critically, enter their <strong>Tax/GST Registration Number</strong>. The system will validate this during bill processing.</li>
+          <li>Define the default <strong>Payment Terms</strong> (e.g., Net 30, Cash on Delivery).</li>
+        </ol>
+
+        <h2>Vendor Ledgers</h2>
+        <p>Clicking on a vendor reveals their complete interaction history with your hospital. This includes all historical Purchase Orders, Goods Receipts, and pending Payments, bridging the gap between Inventory and the Finance module.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

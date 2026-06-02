@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Categories | Zeno Hosp Docs</title>
+  <meta name="description" content="Asset categories and classification in ZenoHosp Asset.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Assets Help Docs
+      </a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Assets</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="asset-inventory.html">Asset Inventory</a></li>
+          <li><a href="room-allocation.html">Room Allocation</a></li>
+          <li><a href="transfer-logs.html">Transfer Logs</a></li>
+          <li><a href="maintenance.html">Maintenance</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Masters</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="asset-categories.html" class="active">Asset Categories</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Asset Categories</h1>
+        <p>Organize your hardware for easier depreciation calculations and financial auditing.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Why Categorize Assets?</h2>
+        <p>Different types of physical assets depreciate at different rates according to tax laws. Categorization allows the finance team to bulk-calculate depreciation at the end of the fiscal year.</p>
+        
+        <h3>Common Categories</h3>
+        <ul>
+          <li><strong>Medical & Surgical Equipment:</strong> High-value items like MRI machines, Ventilators, and Surgical tables.</li>
+          <li><strong>IT & Electronics:</strong> Computers, printers, networking gear, and patient room TVs.</li>
+          <li><strong>Furniture & Fixtures:</strong> Hospital beds, waiting room chairs, and doctor's desks.</li>
+          <li><strong>Vehicles:</strong> The ambulance fleet and administrative cars.</li>
+        </ul>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

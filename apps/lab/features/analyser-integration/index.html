@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bidirectional analyser integration for Indian hospital labs. HL7 and ASTM protocol support. Sysmex, Roche Cobas, Mindray, Abbott, BioMérieux. Results auto-post to patient record. ZenoHosp Lab.">
+<link rel="icon" type="image/svg+xml" href="../../../../images/favicon.svg">
+<link rel="canonical" href="https://zenohosp.com/apps/lab/features/analyser-integration/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://zenohosp.com/apps/lab/features/analyser-integration/">
+<meta property="og:title" content="Lab Analyser Integration Software India | HL7 ASTM | ZenoHosp Lab"><meta property="og:description" content="Bidirectional analyser integration for Indian hospital labs. HL7 and ASTM protocol support. Sysmex, Roche Cobas, Mindray, Abbott, BioMérieux. Results auto-post to patient record. ZenoHosp Lab.">
+<meta property="og:image" content="https://zenohosp.com/images/hero-doctors.png">
+<title>Lab Analyser Integration Software India | HL7 ASTM | ZenoHosp Lab</title>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which analyser brands does ZenoHosp support?", "acceptedAnswer": {"@type": "Answer", "text": "ZenoHosp supports HL7 and ASTM protocols, covering Sysmex, Roche Cobas, Mindray, Abbott Architect, and BioM\u00e9rieux Vitek 2, among others. For specific model compatibility, contact our lab integration team."}}, {"@type": "Question", "name": "How does bidirectional integration reduce transcription errors?", "acceptedAnswer": {"@type": "Answer", "text": "With bidirectional integration, results are transmitted electronically from the analyser to ZenoHosp. There is no manual transcription of values. The technician reviews the electronically received result and confirms \u2014 no typing involved."}}, {"@type": "Question", "name": "Does ZenoHosp support unidirectional connections?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. For analysers that support only result transmission (not order receipt), ZenoHosp supports unidirectional integration. Results are received and posted automatically; orders are entered manually on the analyser side."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../css/main.css">
+</head><body>
+            <div class="platform-strip">
+    <div class="nav-container">
+      <a href="../../../../index.html" class="ps-brand"><span class="logo-icon">Z</span>ZenoHosp</a>
+      <nav class="module-switcher">
+        <a href="../../../../apps/hms/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg> HMS</a>
+        <a href="../../../../apps/inventory/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7M12 11v10"/></svg> Inventory</a>
+        <a href="../../../../apps/asset/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6"/></svg> Asset</a>
+        <a href="../../../../apps/ot-room/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7 4 7-4M6 20h12"/></svg> OT Room</a>
+        <a href="../../../../apps/finance/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg> Finance</a>
+        <a href="../../../../apps/pharmacy/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg> Pharmacy</a>
+        <a href="../../../../apps/lab/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10"/></svg> Lab</a>
+        <a href="../../../../apps/people/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6"/></svg> People</a>
+      </nav>
+      <div class="ps-right">
+        <a href="#">Sign In</a>
+        <a href="../../../../contact-us/index.html" class="btn btn-primary ps-cta" style="padding:7px 16px;font-size:.82rem">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <header class="module-head" id="main-nav"><div class="nav-container">
+    <a href="../../index.html" class="mlogo"><span class="logo-icon">Z</span>ZenoHosp <span class="mod">Lab</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown"><a href="javascript:void(0)" class="dropdown-trigger">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-feat-dropdown"><a href="../test-orders/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Test Orders & Worklist</strong><span>Lab tests from HMS EMR, auto-worklist</span></div></a><a href="../sample-tracking/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Sample Tracking</strong><span>Barcode tracking, zero lost samples</span></div></a><a href="../result-entry/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Result Entry & Validation</strong><span>Maker-checker, auto-flag abnormals</span></div></a><a href="../report-delivery/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Report Delivery</strong><span>WhatsApp, SMS, EMR delivery</span></div></a><a href="../analyser-integration/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="feat-dd-info"><strong>Analyser Integration</strong><span>HL7/ASTM bidirectional interface</span></div></a></div></li>
+      <li><a href="../../solutions/index.html">Solutions</a></li>
+      <li><a href="../../resources/index.html">Resources</a></li>
+      <li><a href="../../../../pricing/index.html">Pricing</a></li>
+    </ul>
+    <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+  </div></header>
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu"><ul>
+    <li><div class="dropdown-label" id="solutions-toggle">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+      <div class="mobile-dropdown" id="solutions-dropdown">
+        <a href="../../../../apps/hms/index.html">HMS</a><a href="../../../../apps/inventory/index.html">Inventory</a>
+        <a href="../../../../apps/ot-room/index.html">OT Room</a><a href="../../../../apps/finance/index.html">Finance</a>
+        <a href="../../../../apps/pharmacy/index.html">Pharmacy</a><a href="../../../../apps/lab/index.html">Lab</a>
+        <a href="../../../../apps/people/index.html">People</a>
+      </div></li>
+    <li><a href="../../solutions/index.html">Solutions</a></li>
+    <li><a href="../../resources/index.html">Resources</a></li>
+    <li><a href="../../../../pricing/index.html">Pricing</a></li>
+  </ul></div>
+  <nav class="feat-subnav"><div class="feat-subnav-inner"><a href="../test-orders/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Test Orders & Worklist</a><a href="../sample-tracking/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Sample Tracking</a><a href="../result-entry/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Result Entry & Validation</a><a href="../report-delivery/index.html" class="feat-subnav-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Report Delivery</a><a href="../analyser-integration/index.html" class="feat-subnav-link  active"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Analyser Integration</a></div></nav>
+  <section class="fp-hero"><div class="fp-hero-grid">
+    <div class="fp-hero-text">
+      <div class="fp-hero-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Analyser Integration</div>
+      <h1>Sysmex. Roche. Mindray.
+Connected bidirectionally.</h1><p>ZenoHosp connects to your existing lab analysers via HL7 and ASTM protocols. Sample IDs are sent to the analyser. Results are received and posted directly to the patient's record — no manual result transcription. Turnaround time drops by up to 89%.</p>
+      <ul class="fp-hero-bullets"><li>Bidirectional interface: sample ID sent, results received automatically</li><li>HL7 and ASTM protocol support — major analysers covered</li><li>Sysmex, Roche Cobas, Mindray, Abbott, BioMérieux supported</li><li>Results post directly to patient record — zero transcription</li><li>Equipment connection status monitored in real time</li></ul>
+      <div class="fp-hero-ctas">
+        <a href="../../../../contact-us/index.html" class="fp-btn-primary">Request Demo</a>
+        <a href="../../solutions/index.html" class="fp-btn-ghost">See all Lab solutions</a>
+      </div>
+    </div>
+    <div class="fp-hero-visual"><div class="fp-screenshot"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:420px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Analyser Integration Status Dashboard</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div>
+  </div></section>
+  <section style="padding:56px 0;background:#fff;border-bottom:1px solid #eee;"><div class="container"><div class="fp-icon-cards"><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h4>Bidirectional</h4><p>Sample ID sent, results received automatically.</p></div><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg></div><h4>HL7 / ASTM</h4><p>Standard protocols — all major analysers covered.</p></div><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg></div><h4>Zero Transcription</h4><p>Results post to patient record without manual entry.</p></div><div class="fp-icon-card"><div class="fp-icon-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div><h4>Live Status</h4><p>Equipment connection status monitored in real time.</p></div></div></div></section>
+  <section class="fp-section bg-light"><div class="fp-section-grid container"><div><div class="fp-section-label">How the Interface Works</div><h2>Sample barcode sent to analyser. Result received back. Automatically.</h2><p>When a sample is collected and registered in ZenoHosp, the sample barcode and test order are sent to the connected analyser via the bidirectional interface. The analyser processes the sample. When analysis is complete, results are sent back to ZenoHosp and posted to the patient's record — no manual entry at any step.</p><ul class="fp-check-list"><li>Sample barcode and test order sent to analyser on collection</li><li>Analyser processes sample using received order</li><li>Results returned to ZenoHosp when analysis complete</li><li>Results posted to patient record — technician reviews before sign-off</li></ul></div><div><div class="fp-screen-inline"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:300px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Analyser Interface Flow Diagram</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div></div></section><section class="fp-section bg-white"><div class="fp-section-grid flip container"><div><div class="fp-section-label">Supported Analysers</div><h2>HL7 and ASTM cover the major analyser brands used in Indian hospitals.</h2><p>ZenoHosp's lab interface supports HL7 (LIS-2) and ASTM protocols, which cover the majority of analysers used in Indian hospitals. Haematology, biochemistry, immunology, and microbiology analysers from major manufacturers are supported. Both unidirectional and bidirectional modes are available.</p><ul class="fp-check-list"><li>Sysmex (haematology): XN series, XS series</li><li>Roche Cobas (biochemistry and immunology): c311, e411, e601</li><li>Mindray (haematology and biochemistry): BC series, BS series</li><li>Abbott Architect (immunology and chemistry)</li><li>BioMérieux Vitek 2 (microbiology and blood culture)</li></ul></div><div><div class="fp-screen-inline"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:300px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Supported Analyser List</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div></div></section><section class="fp-section bg-light"><div class="fp-section-grid container"><div><div class="fp-section-label">Connection Monitoring</div><h2>Real-time status of every analyser connection — visible on screen.</h2><p>The lab dashboard shows the connection status of every integrated analyser — Connected, Calibrating, Error, or Disconnected. If an analyser loses connection, an alert is generated immediately. Daily result counts per analyser are tracked for workload analysis.</p><ul class="fp-check-list"><li>Live connection status per analyser: Connected / Calibrating / Error</li><li>Alert generated immediately when an analyser loses connection</li><li>Daily result count per analyser for workload tracking</li><li>Connection history: downtime and reconnection events logged</li></ul></div><div><div class="fp-screen-inline"><div class="fp-screenshot-bar"><div class="fp-screenshot-dots"><span></span><span></span><span></span></div><div class="fp-screenshot-bar-url"></div></div><div class="fp-screenshot-body" style="min-height:300px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span class="fp-screenshot-label">Analyser Connection Monitoring</span><span class="fp-screenshot-sub">Add app screenshot here</span></div></div></div></div></section>
+  <section style="background:#11110d;padding:72px 0;text-align:center;color:#fff;">
+    <div class="container" style="max-width:820px;">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;"><div><div style="font-size:2.4rem;font-weight:800;color:#d1f470;letter-spacing:-.03em;margin-bottom:6px;">89%</div><div style="font-size:.82rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;">Reduction in report TAT with bidirectional analyser integration</div></div><div><div style="font-size:2.4rem;font-weight:800;color:#d1f470;letter-spacing:-.03em;margin-bottom:6px;">0</div><div style="font-size:.82rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;">Manual transcription errors after analyser integration</div></div><div><div style="font-size:2.4rem;font-weight:800;color:#d1f470;letter-spacing:-.03em;margin-bottom:6px;">5</div><div style="font-size:.82rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;">Major analyser brands supported out of the box</div></div></div>
+      <blockquote style="font-size:1.05rem;font-weight:500;color:rgba(255,255,255,.85);font-style:italic;line-height:1.65;margin:0 0 20px;">"Before ZenoHosp, technicians manually typed results from the analyser printout. Transcription errors were a regular problem. Since integration, results flow directly. We've had zero transcription errors in 8 months."</blockquote>
+      <div style="font-size:.8rem;color:rgba(255,255,255,.4);">Chief Pathologist, Precision Diagnostics Group, Bengaluru</div>
+    </div>
+  </section>
+  <section class="fp-section bg-white"><div class="container">
+    <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:-.03em;color:#11110d;margin-bottom:8px;">Everything included</h2>
+    <p style="color:#666;font-size:.97rem;margin-bottom:40px;max-width:500px;">Every capability — built for Indian hospital workflows.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #eee;border-radius:14px;overflow:hidden;"><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Bidirectional HL7 interface</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Sample ID sent, results received automatically.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">ASTM protocol support</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Alternative protocol for older analysers.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Unidirectional support</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Results-only interface for non-bidirectional analysers.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Sysmex haematology</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">XN and XS series connected.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Roche Cobas</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Biochemistry, immunology: c311, e411, e601.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Mindray</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">BC and BS series haematology and biochemistry.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Abbott Architect</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Immunology and chemistry analysers.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">BioMérieux Vitek 2</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Microbiology and blood culture.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Auto result posting</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Results posted to patient record without manual entry.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Technician review before sign-off</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Technician confirms before pathologist validation.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;border-right:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Live connection monitoring</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Analyser status visible on lab dashboard.</span></div><div style="padding:20px 24px;border-bottom:1px solid #f3f4f6;"><strong style="font-size:.88rem;font-weight:700;color:#11110d;display:block;margin-bottom:4px;">Disconnection alerts</strong><span style="font-size:.8rem;color:#666;line-height:1.55;">Immediate alert when analyser loses connection.</span></div></div>
+  </div></section>
+  <section class="feat-page-faq" style="background:#f8f9fb;"><div class="container">
+    <h2>Frequently asked questions</h2>
+    <div class="feat-faq-list" style="max-width:760px;"><div class="feat-faq-item"><h4>Which analyser brands does ZenoHosp support?</h4><p>ZenoHosp supports HL7 and ASTM protocols, covering Sysmex, Roche Cobas, Mindray, Abbott Architect, and BioMérieux Vitek 2, among others. For specific model compatibility, contact our lab integration team.</p></div><div class="feat-faq-item"><h4>How does bidirectional integration reduce transcription errors?</h4><p>With bidirectional integration, results are transmitted electronically from the analyser to ZenoHosp. There is no manual transcription of values. The technician reviews the electronically received result and confirms — no typing involved.</p></div><div class="feat-faq-item"><h4>Does ZenoHosp support unidirectional connections?</h4><p>Yes. For analysers that support only result transmission (not order receipt), ZenoHosp supports unidirectional integration. Results are received and posted automatically; orders are entered manually on the analyser side.</p></div></div>
+  </div></section>
+  <section class="fp-related"><div class="container"><h3>Other Lab features</h3>
+    <div class="fp-related-grid"><a href="../test-orders/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>Test Orders & Worklist</strong><span>Lab tests from HMS EMR, auto-worklist</span></div></a><a href="../sample-tracking/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>Sample Tracking</strong><span>Barcode tracking, zero lost samples</span></div></a><a href="../result-entry/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>Result Entry & Validation</strong><span>Maker-checker, auto-flag abnormals</span></div></a><a href="../report-delivery/index.html" class="fp-related-card"><div class="fp-related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><strong>Report Delivery</strong><span>WhatsApp, SMS, EMR delivery</span></div></a></div>
+  </div></section>
+  <section class="feat-page-cta"><div class="container">
+    <h2>See it in action.</h2><p>45-minute demo. Your hospital type, your workflows.</p>
+    <a href="../../../../contact-us/index.html" class="btn btn-primary">Request Demo</a>
+  </div></section>
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../../../index.html" class="logo">
+            <span class="logo-icon">Z</span>
+            <span class="logo-text">Zeno<span class="logo-accent">Hosp</span></span>
+          </a>
+          <p>Hospital software built in Chennai, used by 500+ facilities across India.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg></a>
+            <a href="#" aria-label="Twitter"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></a>
+            <a href="#" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a>
+            <a href="mailto:hi@zenohosp.com" aria-label="Email"><svg width="20" height="20" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="../../../../apps/hms/index.html">Hospital Management</a></li>
+            <li><a href="../../../../apps/ot-room/index.html">Operation Theatre</a></li>
+            <li><a href="../../../../apps/pharmacy/index.html">Pharmacy</a></li>
+            <li><a href="../../../../apps/inventory/index.html">Inventory</a></li>
+            <li><a href="../../../../apps/asset/index.html">Asset Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../../../../about-us/index.html">About Us</a></li>
+            <li><a href="../../../../careers/index.html">Careers</a></li>
+            <li><a href="../../../../blog/index.html">Blog</a></li>
+            <li><a href="../../../../contact-us/index.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="../../../../help/index.html">Help Center</a></li>
+            <li><a href="../../../../help/index.html">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="../../../../status/index.html">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zeno Hosp. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="../../../../privacy-policy/index.html">Privacy Policy</a>
+          <a href="../../../../terms-of-service/index.html">Terms of Service</a>
+          <a href="../../../../cookie-policy/index.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="../../../../js/app.js" defer></script>
+</body></html>

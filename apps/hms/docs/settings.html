@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Zeno Hosp Docs</title>
+  <meta name="description" content="System settings and configuration in ZenoHosp HMS.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html" class="active">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Global Settings</h1>
+        <p>Configure hospital-wide defaults, integrations, and system parameters. <em>Restricted to Administrators only.</em></p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Hospital Branding & Profile</h2>
+        <p>Ensure your hospital's Name, Address, Contact, and Registration Number are correctly filled out.</p>
+        <p>You can also upload your Hospital Logo here. This information and logo are pulled automatically when printing physical documents like Invoices, Prescriptions, Lab Reports, and Discharge Summaries.</p>
+        
+        <h2>General Settings (Module Toggles)</h2>
+        <p>Your hospital may not need every feature on day one. The General Settings page allows Administrators to enable or disable entire modules across the hospital.</p>
+        <p>Disabling a module only hides it from the sidebar for all staff members—any existing data and API endpoints remain safely preserved. Common modules you can toggle include:</p>
+        <ul>
+          <li><strong>Ambulance:</strong> Enables ambulance booking, tracking status, and automated billing.</li>
+          <li><strong>Radiology:</strong> Shows the imaging queue and radiology reports module for X-Rays and MRI scans.</li>
+          <li><strong>Health Checkups:</strong> Enables packaged health-checkup bookings in the sidebar.</li>
+          <li><strong>Blood Bank:</strong> Turns on blood stock tracking and cross-matching requests.</li>
+          <li><strong>IPD Management:</strong> Enables room allocation, room logs, and inpatient admissions.</li>
+        </ul>
+
+        
+        <h2>Hospital Infrastructure Master</h2>
+        <p>The Infrastructure Master is where administrators define the physical layout of the hospital. This structural data is shared across multiple modules.</p>
+        <ul>
+          <li><strong>Blocks & Floors:</strong> Define the main buildings (e.g., Main Block, Outpatient Wing) and their respective floors.</li>
+          <li><strong>Wards & Rooms:</strong> Create specific wards (General, ICU, Private) and assign individual rooms or beds to them.</li>
+          <li><strong>Operating Theatres (OT):</strong> OTs created here are automatically mapped and synced to the <a href="https://ot.zenohosp.com" target="_blank" style="color: var(--doc-accent); font-weight: 500;">ot.zenohosp.com</a> module for surgical scheduling.</li>
+          <li><strong>Stores & Inventory:</strong> Store rooms defined here are linked directly to the <a href="https://inventory.zenohosp.com" target="_blank" style="color: var(--doc-accent); font-weight: 500;">inventory.zenohosp.com</a> module to track physical stock locations.</li>
+        </ul>
+        
+        <h2>Patient Services (Automated Billing)</h2>
+        <p>This section allows administrators to configure recurring services, such as daily meals (Breakfast, Lunch, Dinner) or daily registration charges, that should be billed to admitted patients automatically without manual entry.</p>
+        <ul>
+          <li><strong>Service Name & Type:</strong> Define the service (e.g., Breakfast, Food).</li>
+          <li><strong>Charge Time:</strong> Set a specific time of delivery (e.g., 08:00 AM). When this exact time is reached, the system automatically posts the <strong>Price per meal</strong> directly into the active Folios of all IPD patients.</li>
+          <li><strong>Automation Toggle:</strong> The "Active" switch dictates whether this recurring charge is automatically applied or paused globally.</li>
+        </ul>
+        
+        <h2>Integrations</h2>
+        <h3>1. SMS Gateway</h3>
+        <p>Configure your Twilio or MSG91 API keys here to enable automated SMS alerts for:</p>
+        <ul>
+          <li>Appointment Confirmations</li>
+          <li>Patient Portal Password Generation</li>
+          <li>Lab Report Ready Alerts</li>
+        </ul>
+
+        <h3>2. Payment Gateways</h3>
+        <p>If you use the Patient Portal for online booking, you must configure your Razorpay or Stripe credentials here to accept online payments securely.</p>
+
+        <h2>Data Backups</h2>
+        <p>ZenoHosp operates securely in the cloud with automated daily backups. However, for internal compliance, Administrators can trigger a manual <strong>Database Export</strong> from this tab to download a secure, encrypted copy of all patient and financial records.</p>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

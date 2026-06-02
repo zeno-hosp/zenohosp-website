@@ -58,3 +58,7 @@
 - Consolidate repeated nav/footer visual rules into shared CSS components.
 - Replace placeholder links (`href="#"`) with real routes or explicit disabled states.
 - Introduce automated checks (HTML validation, Lighthouse CI, basic smoke tests).
+
+
+## Header system — single source of truth
+The master header lives identically on common-site pages and the two-header (platform-strip + module-head) lives on module pages. Any header change must be applied to all pages. Design tokens live only in css/zenohosp-theme.css.

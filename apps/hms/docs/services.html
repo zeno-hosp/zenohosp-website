@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Zeno Hosp Docs</title>
+  <meta name="description" content="Service catalogue management in ZenoHosp HMS.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Services & Charge Sheet</h1>
+        <p>Define the master pricing dictionary for all hospital procedures, consults, and bed rates.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>The Service Catalog</h2>
+        <p>The Services module is the financial backbone of the HMS. If an item is not registered here, the front desk cannot bill a patient for it (with the exception of Pharmacy stock).</p>
+        
+        <h3>Categorizing Services</h3>
+        <p>To keep the billing search clean, services should be grouped into categories:</p>
+        <ul>
+          <li><strong>Consultations:</strong> First Visit, Follow Up, Emergency Consult.</li>
+          <li><strong>Nursing & Treatment:</strong> Dressing, Injection Administration, IV fluid setup, Catheterization.</li>
+          <li><strong>Surgical Procedures:</strong> Major OT fees, Minor OT fees, Anesthesia charges.</li>
+          <li><strong>Ward Bed Rates:</strong> Daily rental rates for General Wards, Private Rooms, and ICU beds.</li>
+        </ul>
+
+        <h2>Managing Price Books</h2>
+        <p>Hospitals rarely have a single flat rate for everyone. The HMS uses <strong>Price Books</strong> to manage complex pricing tiers.</p>
+        
+        <ol>
+          <li><strong>Standard Tariff:</strong> The default price book applied to walk-in patients paying out of pocket.</li>
+          <li><strong>TPA/Insurance Tariffs:</strong> If you have negotiated discounted rates with specific insurance providers (e.g., Star Health, HDFC Ergo), you can create a specific Price Book for them. When a patient with that insurance is billed, the system automatically pulls the discounted rate.</li>
+          <li><strong>Corporate Tariffs:</strong> Similar to TPA, used for B2B company tie-ups.</li>
+        </ol>
+
+        <div style="background-color: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 16px; margin: 24px 0; border-radius: 0 8px 8px 0;">
+          <strong>Tip:</strong> Administrators can use the bulk-import tool (CSV) to update hundreds of service prices at once at the start of a new financial year.
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

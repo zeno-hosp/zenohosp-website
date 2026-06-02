@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctors | Zeno Hosp Docs</title>
+  <meta name="description" content="Managing doctor profiles, schedules, and availability in ZenoHosp HMS.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html" class="active">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Doctors</h1>
+        <p>Manage medical staff profiles, consultation schedules, and EMR preferences.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Roster Management</h2>
+        <p>Setting up accurate working hours ensures that patients can only book appointments when the doctor is actually available.</p>
+        
+        <h3>Configuring Recurring Shifts</h3>
+        <ol>
+          <li>Open the Doctor's profile and go to the <strong>Schedule & Roster</strong> tab.</li>
+          <li>Click <strong>Set Recurring Hours</strong>.</li>
+          <li>Define their availability for each day of the week (e.g., Monday-Wednesday 09:00 to 13:00, Thursday-Friday 14:00 to 18:00).</li>
+          <li>Set the default consultation duration (e.g., 15 minutes or 30 minutes). This divides the total block into bookable slots.</li>
+        </ol>
+
+        <h3>Managing Leaves and Block-Outs</h3>
+        <p>If a doctor goes on vacation, use the <strong>Add Exception</strong> button to block out their calendar for those specific dates. The system will automatically prevent new bookings and alert you to reschedule any existing ones.</p>
+
+        <h2>The Clinical View (EMR Dashboard)</h2>
+        <p>When a doctor logs into the HMS, they do not see the standard administrative dashboard. Instead, they are presented with their specific <strong>Clinical View</strong>.</p>
+        <ul>
+          <li><strong>The Patient Queue:</strong> A live list of patients currently waiting outside their cabin (those marked as "Checked In" by reception).</li>
+          <li><strong>The Encounter Screen:</strong> Upon clicking a patient, the doctor is taken to the Encounter view to record:
+            <ul>
+              <li>Chief Complaints & Symptoms</li>
+              <li>Vital Signs (auto-filled if taken by a nurse previously)</li>
+              <li>Clinical Diagnosis (ICD-10 coded)</li>
+              <li>Prescriptions & Lab Orders</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Consultation Templates</h2>
+        <p>To speed up the documentation process, doctors can create custom templates for common ailments (e.g., "Viral Fever Template").</p>
+        <p>Applying a template will auto-fill standard medications, lab tests, and dietary advice with a single click, which the doctor can then modify as needed for the specific patient.</p>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

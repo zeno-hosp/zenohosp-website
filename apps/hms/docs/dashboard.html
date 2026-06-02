@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Zeno Hosp Docs</title>
+  <meta name="description" content="Understanding the ZenoHosp HMS dashboard and key metrics.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Dashboard</h1>
+        <p>The command center for your hospital operations.</p>
+        
+        <h2>Overview KPIs</h2>
+        <p>At the top of the dashboard, you will find key performance indicators (KPIs) giving you a snapshot of your day:</p>
+        <ul>
+          <li><strong>Total Patients:</strong> Number of patients registered today and month-over-month comparisons.</li>
+          <li><strong>Doctors:</strong> Currently active staff on shift.</li>
+          <li><strong>Revenue Collected:</strong> Real-time tracking of OPD and IPD payments received today, along with outstanding balances.</li>
+          <li><strong>IPD Admissions:</strong> Number of patients currently admitted to wards.</li>
+        </ul>
+
+        <h2>Analytical Charts</h2>
+        <p>The dashboard includes interactive charts to help visualize trends:</p>
+        <ul>
+          <li><strong>Patient Registrations:</strong> A 30-day line chart showing daily new patient sign-ups.</li>
+          <li><strong>Revenue Overview:</strong> A 6-month bar chart comparing paid revenue versus outstanding claims.</li>
+          <li><strong>Appointments:</strong> A donut chart breaking down appointment statuses (Scheduled, Completed, Cancelled).</li>
+        </ul>
+        
+        <p><em>Note: Doctors and Receptionists will see a modified version of this dashboard tailored to their specific roles, hiding financial revenue if they do not have permissions.</em></p>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

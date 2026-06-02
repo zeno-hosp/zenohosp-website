@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing | Zeno Hosp Docs</title>
+  <meta name="description" content="Billing, invoicing, and payment management in ZenoHosp.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html" class="active">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Billing & Invoicing</h1>
+        <p>Manage financial transactions, insurance claims, and taxation for both outpatients and inpatients.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>OPD Billing (Outpatient)</h2>
+        <p>OPD billing covers point-of-sale transactions like consultation fees, immediate diagnostic tests, and pharmacy purchases made without an admission.</p>
+        
+        <h3>Generating an OPD Invoice</h3>
+        <ol>
+          <li>From the Patient Profile or Appointment, click <strong>Create Bill</strong>.</li>
+          <li>Add the required Services (e.g., Initial Consultation).</li>
+          <li>Apply any eligible discounts (requires Admin approval if above standard limits).</li>
+          <li>Select the Payment Mode (Cash, Card, UPI) and process the payment.</li>
+        </ol>
+        <p><strong>Split Payments:</strong> If a patient wants to pay partially in Cash and partially via Credit Card, use the <em>Add Multiple Payment Modes</em> option during checkout.</p>
+
+        <h2>IPD Billing (Inpatient Folio)</h2>
+        <p>Unlike OPD, IPD billing is a running tally (Folio) that accumulates charges over the duration of the patient's stay.</p>
+        <ul>
+          <li><strong>Auto-Posting:</strong> Charges for bed rent are automatically posted to the folio at midnight. Lab tests and pharmacy indents ordered by the nurses are also automatically added to the folio.</li>
+          <li><strong>Advances:</strong> You can request and log Advance Payments throughout the stay to keep the outstanding balance low.</li>
+          <li><strong>Final Settlement:</strong> At discharge, the system calculates (Total Charges - Advances = Balance Due).</li>
+        </ul>
+
+        <h2>Insurance & TPA Workflows</h2>
+        <p>For cashless patients covered by a Third-Party Administrator (TPA) or Health Insurance:</p>
+        <ol>
+          <li>During admission, capture the TPA details and Policy Number.</li>
+          <li>Generate an <strong>Estimated Bill</strong> and submit it to the TPA portal for Pre-Authorization.</li>
+          <li>Log the <em>Approved Amount</em> in the HMS once received from the TPA.</li>
+          <li>At discharge, any amount exceeding the TPA approval must be paid out-of-pocket by the patient (Co-pay).</li>
+        </ol>
+
+        <h2>Tax Configuration (GST)</h2>
+        <p>In India, most healthcare services are exempt from GST, but pharmacy items and certain cosmetic procedures are taxable.</p>
+        <p>The HMS automatically splits the invoice to show taxable vs non-taxable items and calculates CGST/SGST appropriately based on the tax brackets assigned in the <em>Services</em> and <em>Inventory</em> modules.</p>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

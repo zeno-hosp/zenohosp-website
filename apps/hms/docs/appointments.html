@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments | Zeno Hosp Docs</title>
+  <meta name="description" content="Booking, rescheduling, and managing appointments in ZenoHosp HMS.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html" class="active">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Appointments</h1>
+        <p>Schedule, reschedule, and track Outpatient Department (OPD) visits.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Advanced Scheduling</h2>
+        <p>The appointment module handles multiple booking streams effortlessly:</p>
+        
+        <h3>1. Walk-in Bookings</h3>
+        <p>For patients who arrive without prior notice, click <strong>+ Quick Book</strong> on the reception dashboard. It automatically selects the current time slot and moves the patient immediately to the "Checked In" queue.</p>
+        
+        <h3>2. Call-Center / Phone Bookings</h3>
+        <p>For future bookings via phone, use the <strong>Calendar View</strong> to visually identify empty slots across different doctors, ensuring balanced workload distribution.</p>
+
+        <h3>3. Online Bookings</h3>
+        <p>If you have the Patient Portal enabled, patients can book online. These slots will appear in your system automatically, marked with an "Online" tag.</p>
+
+        <h2>Appointment Status & Queue Management</h2>
+        <p>Tracking the status of an appointment helps keep the waiting room organized and informs the doctor of who is outside.</p>
+        <ul>
+          <li><span style="color: #64748b; font-weight: bold;">Scheduled:</span> Future appointment booked. Patient is not yet in the hospital.</li>
+          <li><span style="color: #eab308; font-weight: bold;">Checked In:</span> Patient has arrived and checked in at the front desk. A queue token is generated.</li>
+          <li><span style="color: #3b82f6; font-weight: bold;">In Progress:</span> Patient is currently inside the doctor's cabin.</li>
+          <li><span style="color: #22c55e; font-weight: bold;">Completed:</span> The consultation is finished, and clinical notes have been saved.</li>
+          <li><span style="color: #ef4444; font-weight: bold;">Cancelled/No Show:</span> Patient did not attend or cancelled.</li>
+        </ul>
+
+        <h2>Rescheduling & Cancellations</h2>
+        <p>If a doctor is suddenly unavailable, you can reschedule their entire day:</p>
+        <ol>
+          <li>Go to the Doctor's daily schedule view.</li>
+          <li>Click the <strong>Bulk Reschedule</strong> button.</li>
+          <li>Select the new date/doctor to move the appointments to.</li>
+          <li>The system will automatically send an SMS to all affected patients informing them of the change.</li>
+        </ol>
+
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <dl>
+          <dt style="font-weight: 600; margin-top: 16px;">How to handle double-booked slots?</dt>
+          <dd style="margin-left: 0; margin-top: 8px; color: #475569;">The system prevents double-booking by default. However, Receptionists with override privileges can "force-book" a patient as an <em>Emergency Overbook</em>, which places them at the front of the queue.</dd>
+          
+          <dt style="font-weight: 600; margin-top: 16px;">Can I collect consultation fees during booking?</dt>
+          <dd style="margin-left: 0; margin-top: 8px; color: #475569;">Yes! When clicking "Check In", you will be prompted to generate the OPD bill for the consultation fee immediately before they see the doctor.</dd>
+        </dl>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

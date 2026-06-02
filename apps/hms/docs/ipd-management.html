@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPD Management | Zeno Hosp Docs</title>
+  <meta name="description" content="IPD admission, ward management, and discharge workflows.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html" class="active">IPD Management</a></li>
+          <li><a href="ambulance.html">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>IPD Management</h1>
+        <p>Inpatient Department operations, handling admissions, room allocation, and discharges.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>The Admission Workflow</h2>
+        <p>When an OPD doctor marks a patient for admission in their clinical notes, it creates a pending admission request at the front desk.</p>
+        <ol>
+          <li>Navigate to the <strong>IPD Admissions</strong> queue and select the pending request.</li>
+          <li>Review the doctor's notes (e.g., "Requires immediate ICU admission").</li>
+          <li>Proceed to <strong>Room Allocation</strong> to select an available bed matching the requirement.</li>
+          <li>Print the Admission Consent Form and collect the patient's signature.</li>
+          <li>Collect an Advance Payment (optional, but recommended).</li>
+          <li>Mark the admission as <strong>Active</strong>.</li>
+        </ol>
+
+        <h2>Ward Management & Room Allocation</h2>
+        <p>The system provides a visual grid of the entire hospital floor plan, divided into Wards (General, Private, ICU, NICU).</p>
+        <ul>
+          <li><strong>Color Coding:</strong> Green (Available), Red (Occupied), Yellow (Reserved/Cleaning).</li>
+          <li><strong>Bed Transfers:</strong> To move a patient from ICU to a General Ward as their condition improves, click on their current bed and select "Transfer". The system will log the exact timestamp of the transfer, ensuring the daily bed rental rates are calculated perfectly on the final bill based on hours spent in each room type.</li>
+        </ul>
+
+        <h2>Room Activity Logs</h2>
+        <p>The Room Logs provide a comprehensive, immutable history of all bed allocations and deallocations across the hospital. This acts as an audit trail for IPD movement.</p>
+        <ul>
+          <li><strong>Event Tracking:</strong> Logs every time a patient is <span style="background-color: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600;">Allocated</span> or <span style="background-color: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600;">Deallocated</span> to a room, including the exact admission ID.</li>
+          <li><strong>Patient & Attender Details:</strong> Shows exactly who occupied the room and their registered attender/bystander.</li>
+          <li><strong>Audit Trail:</strong> Captures the precise timestamp of the movement and records the specific staff member (Performed By) who executed the transfer.</li>
+        </ul>
+
+        <h2>The Discharge Process</h2>
+        <p>Discharging a patient requires coordination between the clinical and financial teams.</p>
+        
+        <h3>1. Medical Discharge</h3>
+        <p>The attending doctor writes the final <strong>Discharge Summary</strong> (including surgical notes, condition at discharge, and follow-up medications) and clicks "Initiate Discharge".</p>
+        
+        <h3>2. Financial Clearance</h3>
+        <p>Once medically discharged, the billing department is notified to prepare the final IPD Folio. They compile all room charges, nursing fees, pharmacy indents, and lab tests. Only after the final bill is settled (or TPA approval is received) can the patient physically leave the hospital.</p>
+
+        <div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; margin: 24px 0; border-radius: 0 8px 8px 0;">
+          <strong>Warning:</strong> A patient cannot be marked as "Fully Discharged" until Financial Clearance is granted, ensuring the hospital prevents revenue leakage.
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

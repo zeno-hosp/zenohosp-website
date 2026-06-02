@@ -90,6 +90,7 @@
       "Hospital Inventory Management",
       "Asset Tracking & Maintenance"
     ]
+  }
   </script>
 
   <!-- Fonts - Preload for faster first paint -->
@@ -101,14 +102,13 @@
     rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/zenohosp-theme.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/pages/home.css">
-  <link rel="stylesheet" href="css/pages/marketing-navbar.css">
-
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
+
+
   <nav class="navbar marketing-navbar" id="main-nav">
     <div class="nav-container">
       <a href="index.html" class="logo">
@@ -117,60 +117,120 @@
       </a>
       <ul class="nav-links">
         <li class="has-dropdown">
-          <a href="#solutions" class="dropdown-trigger">Products <svg width="12" height="12" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
+          <a href="#" class="dropdown-trigger">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
             </svg></a>
           <div class="nav-dropdown">
             <div class="dropdown-content">
-              <a href="hms.html" class="dropdown-item">
-                <div class="dropdown-icon hms">🏥</div>
+
+              <a href="apps/hms/index.html" class="dropdown-item">
+                <div class="dropdown-icon hms">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5" />
+                  </svg>
+                </div>
                 <div class="dropdown-info">
-                  <strong>Hospital Management</strong>
-                  <span>Complete patient journey from OPD to IPD</span>
+                  <strong>HMS</strong>
+                  <span>End-to-end hospital management system</span>
                 </div>
               </a>
-              <a href="ot.html" class="dropdown-item">
-                <div class="dropdown-icon ot">⚙️</div>
-                <div class="dropdown-info">
-                  <strong>Operation Theatre</strong>
-                  <span>Smart scheduling & resource tracking</span>
+              <a href="apps/inventory/index.html" class="dropdown-item">
+                <div class="dropdown-icon inv">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7M12 11v10" />
+                  </svg>
                 </div>
-              </a>
-              <a href="pharmacy.html" class="dropdown-item">
-                <div class="dropdown-icon pharma">💊</div>
-                <div class="dropdown-info">
-                  <strong>Pharmacy</strong>
-                  <span>Integrated inventory & billing</span>
-                </div>
-              </a>
-              <a href="inventory.html" class="dropdown-item">
-                <div class="dropdown-icon inv">📦</div>
                 <div class="dropdown-info">
                   <strong>Inventory</strong>
-                  <span>Smart stock tracking & alerts</span>
+                  <span>Track consumables and medical supplies</span>
                 </div>
               </a>
-              <a href="assets.html" class="dropdown-item">
-                <div class="dropdown-icon assets">🛠️</div>
+              <a href="apps/asset/index.html" class="dropdown-item">
+                <div class="dropdown-icon assets">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6" />
+                  </svg>
+                </div>
                 <div class="dropdown-info">
-                  <strong>Asset Management</strong>
-                  <span>Equipment lifecycle & maintenance</span>
+                  <strong>Asset</strong>
+                  <span>Manage and maintain hospital equipment</span>
+                </div>
+              </a>
+              <a href="apps/ot-room/index.html" class="dropdown-item">
+                <div class="dropdown-icon ot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M12 3v18M5 8l7 4 7-4M6 20h12" />
+                  </svg>
+                </div>
+                <div class="dropdown-info">
+                  <strong>OT Room</strong>
+                  <span>Schedule surgeries and manage resources</span>
+                </div>
+              </a>
+              <a href="apps/finance/index.html" class="dropdown-item">
+                <div class="dropdown-icon finance">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M3 17l5-5 4 4 8-8M16 4h5v5" />
+                  </svg>
+                </div>
+                <div class="dropdown-info">
+                  <strong>Finance</strong>
+                  <span>Books built for how hospitals actually earn</span>
+                </div>
+              </a>
+              <a href="apps/pharmacy/index.html" class="dropdown-item">
+                <div class="dropdown-icon pharma">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M12 7v10M7 12h10M5 5h14v14H5z" />
+                  </svg>
+                </div>
+                <div class="dropdown-info">
+                  <strong>Pharmacy</strong>
+                  <span>Dispense meds and manage stock</span>
+                </div>
+              </a>
+              <a href="apps/lab/index.html" class="dropdown-item">
+                <div class="dropdown-icon lab">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10" />
+                  </svg>
+                </div>
+                <div class="dropdown-info">
+                  <strong>Lab</strong>
+                  <span>Diagnostics, ordered to reported</span>
+                </div>
+              </a>
+              <a href="apps/people/index.html" class="dropdown-item">
+                <div class="dropdown-icon people">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6" />
+                  </svg>
+                </div>
+                <div class="dropdown-info">
+                  <strong>People</strong>
+                  <span>Your staff, scheduled and paid</span>
                 </div>
               </a>
             </div>
-            <div class="dropdown-footer">
-              <a href="#solutions" class="view-all-link">View Other Apps →</a>
-            </div>
+            
           </div>
         </li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="Zenohospone.html">Why US</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="solutions/index.html">Solutions</a></li>
+        <li><a href="customers/index.html">Customers</a></li>
+        <li><a href="resources/index.html">Resources</a></li>
+        <li><a href="pricing/index.html">Pricing</a></li>
       </ul>
-
-      <!-- Mobile Menu Toggle -->
+      <div class="nav-actions"><a href="https://hms.zenohosp.com" class="signin">Sign In</a><a href="contact-us/index.html"
+          class="btn btn-primary">Request Demo</a></div>
       <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -179,7 +239,13 @@
     </div>
   </nav>
 
+
+
+
   <!-- Mobile Navigation Menu -->
+
+
+
   <div class="mobile-nav-overlay" id="mobile-overlay"></div>
   <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu">
     <ul>
@@ -191,107 +257,105 @@
           </svg>
         </div>
         <div class="mobile-dropdown" id="solutions-dropdown">
-          <a href="hms.html">Hospital Management</a>
-          <a href="ot.html">Operation Theatre</a>
-          <a href="pharmacy.html">Pharmacy</a>
-          <a href="inventory.html">Inventory</a>
-          <a href="assets.html">Asset Management</a>
+          <a href="apps/hms/index.html">HMS</a>
+          <a href="apps/inventory/index.html">Inventory</a>
+          <a href="apps/asset/index.html">Asset</a>
+          <a href="apps/ot-room/index.html">OT Room</a>
+          <a href="apps/finance/index.html">Finance</a>
+          <a href="apps/pharmacy/index.html">Pharmacy</a>
+          <a href="apps/lab/index.html">Lab</a>
+          <a href="apps/people/index.html">People</a>
         </div>
       </li>
-      <li><a href="about-us.html">About Us</a></li>
-      <li><a href="Zenohospone.html">Why US</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="solutions/index.html">Solutions</a></li>
+      <li><a href="customers/index.html">Customers</a></li>
+      <li><a href="resources/index.html">Resources</a></li>
+      <li><a href="pricing/index.html">Pricing</a></li>
     </ul>
   </div>
-
   <!-- Hero Section -->
-  <section class="home-hero">
-    <div class="container">
-      <div class="hero-grid">
-        <!-- Left Content -->
-        <div class="hero-content">
-          <span class="hero-badge">
-            <span class="badge-dot"></span>
-            New: AI-powered patient insights now available
-          </span>
+  <section class="home-hero zoho-style">
+    <div class="container hero-container">
+      <div class="hero-content centered">
+        <h1>The complete operating system<br><span class="hero-accent">for your hospital.</span></h1>
+        <p class="hero-subtitle centered">A unique and powerful software suite to transform your healthcare operations.
+          Designed for hospitals of all sizes, built by a company that values patient data privacy.</p>
 
-          <h1>The #1 Hospital Management Platform</h1>
-          <p class="hero-subtitle">Streamline your healthcare operations with our all-in-one cloud platform. From
-            patient registration to pharmacy, OT scheduling to asset tracking — everything in one place.</p>
-
-          <div class="hero-ctas">
-            <a href="contact-us.html" class="btn btn-primary btn-lg">Start Free Trial</a>
-            <a href="contact-us.html" class="btn btn-outline btn-lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-              Watch Demo
-            </a>
-          </div>
-
-          <div class="hero-trust">
-            <div class="trust-avatars">
-              <span class="avatar">A</span>
-              <span class="avatar">M</span>
-              <span class="avatar">F</span>
-              <span class="avatar">+</span>
-            </div>
-            <div class="trust-text">
-              <strong>500+ hospitals</strong> already streamlined their operations
-              <div class="trust-rating"><span class="stars">★★★★★</span> <span>4.9/5 rating</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Visual -->
-        <div class="hero-visual">
-          <aside class="hero-apps-panel">
-            <h3>Our Apps</h3>
-
-            <a href="hms.html" class="hero-app-item">
-              <span class="hero-app-icon lime">Z</span>
-              <span class="hero-app-copy">
-                <strong>ZenoHosp HMS</strong>
-                <span>ZenoHosp HMS is #1 tool to manage your Hospital with all the features</span>
-              </span>
-              <span class="hero-app-arrow">›</span>
-            </a>
-
-            <a href="assets.html" class="hero-app-item">
-              <span class="hero-app-icon blue">Z</span>
-              <span class="hero-app-copy">
-                <strong>Asset Management</strong>
-                <span>ZenoHosp HMS is #1 tool to manage your Hospital with all the features</span>
-              </span>
-              <span class="hero-app-arrow">›</span>
-            </a>
-
-            <a href="pharmacy.html" class="hero-app-item">
-              <span class="hero-app-icon purple">Z</span>
-              <span class="hero-app-copy">
-                <strong>Pharmacy Billing</strong>
-                <span>ZenoHosp HMS is #1 tool to manage your Hospital with all the features</span>
-              </span>
-              <span class="hero-app-arrow">›</span>
-            </a>
-
-            <a href="ot.html" class="hero-app-item">
-              <span class="hero-app-icon red">Z</span>
-              <span class="hero-app-copy">
-                <strong>OT Room Management</strong>
-                <span>ZenoHosp HMS is #1 tool to manage your Hospital with all the features</span>
-              </span>
-              <span class="hero-app-arrow">›</span>
-            </a>
-
-            <div class="hero-apps-footer">
-              <a href="#solutions">View Other Apps</a>
-            </div>
-          </aside>
+        <div class="hero-ctas centered">
+          <a href="contact-us/index.html" class="btn btn-primary btn-lg">Request Demo</a>
         </div>
       </div>
-    </div>
+
+      <!-- Zoho-style Apps Grid -->
+      <div class="hero-apps-container">
+        <div class="apps-grid-wrapper">
+          <a href="apps/hms/index.html" class="hero-app-box hms-box">
+            <div class="app-icon hms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2zM9 22V12h6v10" />
+              </svg></div>
+            <span class="app-name">HMS</span>
+            <span class="app-tooltip">Manage 5M+ Patients</span>
+          </a>
+          <a href="apps/inventory/index.html" class="hero-app-box inventory-box">
+            <div class="app-icon inventory-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path
+                  d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16zM3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />
+              </svg></div>
+            <span class="app-name">Inventory</span>
+            <span class="app-tooltip">Automate Stock</span>
+          </a>
+          <a href="apps/asset/index.html" class="hero-app-box asset-box">
+            <div class="app-icon assets-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6" />
+              </svg></div>
+            <span class="app-name">Asset</span>
+            <span class="app-tooltip">Track Equipment</span>
+          </a>
+          <a href="apps/ot-room/index.html" class="hero-app-box ot-box">
+            <div class="app-icon ot-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M12 3v18M5 8l7 4 7-4M6 20h12" />
+              </svg></div>
+            <span class="app-name">OT Room</span>
+            <span class="app-tooltip">Smart Scheduling</span>
+          </a>
+          <a href="apps/finance/index.html" class="hero-app-box finance-box">
+            <div class="app-icon finance-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M3 17l5-5 4 4 8-8M16 4h5v5" />
+              </svg></div>
+            <span class="app-name">Finance</span>
+            <span class="app-tooltip">GST Billing & Tally</span>
+          </a>
+          <a href="apps/pharmacy/index.html" class="hero-app-box pharma-box">
+            <div class="app-icon pharma-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M12 7v10M7 12h10M5 5h14v14H5z" />
+              </svg></div>
+            <span class="app-name">Pharmacy</span>
+            <span class="app-tooltip">Smart Dispensing</span>
+          </a>
+          <a href="apps/lab/index.html" class="hero-app-box lab-box">
+            <div class="app-icon lab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10" />
+              </svg></div>
+            <span class="app-name">Lab</span>
+            <span class="app-tooltip">Automated LIS</span>
+          </a>
+          <a href="apps/people/index.html" class="hero-app-box people-box">
+            <div class="app-icon people-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6" />
+              </svg></div>
+            <span class="app-name">People</span>
+            <span class="app-tooltip">HR & Duty Rosters</span>
+          </a>
+        </div>
+      </div>
   </section>
 
 
@@ -320,31 +384,71 @@
 
   <!-- Trust Logos Section -->
   <section class="home-trust-section">
-    <div class="container">
-      <p class="trust-label">Trusted by leading healthcare institutions across India</p>
-      <div class="trust-logos">
-        <span class="trust-logo">Sri Narayana</span>
-        <span class="trust-logo">Bellroth Hospital</span>
-        <span class="trust-logo">Yoganas Fertility Center</span>
-        <span class="trust-logo">Max Healthcare</span>
-        <span class="trust-logo">Super Healthmed</span>
+    <p class="trust-label">Trusted by leading healthcare institutions across India</p>
+    <div class="trust-marquee-wrapper">
+      <div class="trust-marquee-track">
+        <span class="trust-logo-item">Lakshmi Hospital</span>
+        <span class="trust-logo-item">DSS Multispeciality Hospital</span>
+        <span class="trust-logo-item">One Med Multispeciality Hsopital</span>
+        <span class="trust-logo-item">Kedar ENT Hospital</span>
+        <span class="trust-logo-item">Aishwarya Multispeciality Hospital</span>
+        <span class="trust-logo-item">Yogasana Hospital</span>
+        <span class="trust-logo-item">Dr Arun Ortho Hospital</span>
+        <span class="trust-logo-item">SNS Groups of Hospital - Bengaluru</span>
+        <span class="trust-logo-item">Allam Hosppital - Mysore</span>
+        <span class="trust-logo-item">KRK Multispeciality Hospital - Kochi</span>
+        <!-- duplicate set for seamless loop -->
+        <span class="trust-logo-item">Lakshmi Hospital</span>
+        <span class="trust-logo-item">DSS Multispeciality Hospital</span>
+        <span class="trust-logo-item">One Med Multispeciality Hsopital</span>
+        <span class="trust-logo-item">Kedar ENT Hospital</span>
+        <span class="trust-logo-item">Aishwarya Multispeciality Hospital</span>
+        <span class="trust-logo-item">Yogasana Hospital</span>
+        <span class="trust-logo-item">Dr Arun Ortho Hospital</span>
+        <span class="trust-logo-item">SNS Groups of Hospital - Bengaluru</span>
+        <span class="trust-logo-item">Allam Hosppital - Mysore</span>
+        <span class="trust-logo-item">KRK Multispeciality Hospital - Kochi</span>
       </div>
     </div>
   </section>
-
-  <section class="home-solutions-section reveal" id="solutions">
+  <div class="solutions-scroll-wrapper" id="solutions-wrapper">
+    <section class="home-solutions-section reveal" id="solutions">
     <div class="container">
-      <div class="section-header text-center" style="margin-bottom: 80px;">
+      <div class="section-header text-center zeno-mb-80">
         <span class="solution-tag">Our Solutions</span>
-        <h2 style="font-size: 3rem; font-weight: 700; color: #11110D; margin-bottom: 20px;">The Complete Healthcare
+        <h2 class="zeno-hero-title">The Complete Healthcare
           Stack</h2>
-        <p style="font-size: 1.25rem; color: #6B6B66; max-width: 600px; margin: 0 auto;">Everything you need to run your
+        <p class="zeno-hero-subtitle">Everything you need to run your
           hospital efficiently. One platform, infinite possibilities.</p>
       </div>
 
-      <div class="solutions-bento-grid">
-        <!-- HMS - Featured Card (Large) -->
-        <a href="hms.html" class="solution-card featured">
+      <div class="solutions-bento-grid" id="solutions-track">
+        <!-- Custom Solutions Card (Featured) -->
+        <a href="contact.html" class="solution-card custom featured-custom">
+          <div class="card-content">
+            <div class="featured-header">
+              <div class="card-icon custom-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <div class="header-text">
+                <h3>Custom Healthcare Software</h3>
+                <p>Every hospital is unique. We don't just sell software; we partner with you to build tailored solutions that seamlessly match your exact clinical workflows, operational needs, and legacy systems.</p>
+              </div>
+            </div>
+            <ul class="card-features featured-list">
+              <li>Bespoke Workflow Design & UI Customization</li>
+              <li>Seamless Legacy System Integration (HL7/FHIR)</li>
+              <li>Custom Analytics & Management Dashboards</li>
+              <li>Dedicated Dedicated Development & Support Team</li>
+            </ul>
+            <span class="card-link">Request Customization →</span>
+          </div>
+        </a>
+
+        <!-- HMS Card -->
+        <a href="apps/hms/index.html" class="solution-card">
           <div class="card-glow"></div>
           <div class="card-content">
             <span class="solution-badge">Most Popular</span>
@@ -363,27 +467,10 @@
             </ul>
             <span class="card-link">Explore HMS →</span>
           </div>
-          <div class="card-visual">
-            <div class="visual-mockup hms-mockup">
-              <div class="mockup-bar"></div>
-              <div class="mockup-content">
-                <div class="stat-row">
-                  <div class="mini-stat">
-                    <span class="stat-val">248</span>
-                    <span class="stat-lbl">Patients Today</span>
-                  </div>
-                  <div class="mini-stat">
-                    <span class="stat-val">₹2.4L</span>
-                    <span class="stat-lbl">Revenue</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </a>
 
         <!-- OT Card -->
-        <a href="ot.html" class="solution-card ot">
+        <a href="apps/ot-room/index.html" class="solution-card ot">
           <div class="card-content">
             <div class="card-icon ot-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -394,12 +481,17 @@
             </div>
             <h3>Operation Theatre</h3>
             <p>Smart scheduling, team coordination, and real-time surgery tracking.</p>
+            <ul class="card-features">
+              <li>OT Availability Calendar</li>
+              <li>Surgical Team Roster</li>
+              <li>Pre/Post-Op Checklists</li>
+            </ul>
             <span class="card-link">Learn More →</span>
           </div>
         </a>
 
         <!-- Pharmacy Card -->
-        <a href="pharmacy.html" class="solution-card pharma">
+        <a href="apps/pharmacy/index.html" class="solution-card pharma">
           <div class="card-content">
             <div class="card-icon pharma-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -409,12 +501,17 @@
             </div>
             <h3>Pharmacy & POS</h3>
             <p>Digital dispensing with integrated billing and inventory.</p>
+            <ul class="card-features">
+              <li>Prescription Barcode Scanning</li>
+              <li>Expiry & Near-Expiry Alerts</li>
+              <li>GST Compliant Invoicing</li>
+            </ul>
             <span class="card-link">Learn More →</span>
           </div>
         </a>
 
         <!-- Inventory Card -->
-        <a href="inventory.html" class="solution-card inventory">
+        <a href="apps/inventory/index.html" class="solution-card inventory">
           <div class="card-content">
             <div class="card-icon inv-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -423,12 +520,17 @@
             </div>
             <h3>Inventory Control</h3>
             <p>Smart stock tracking with automated reordering alerts.</p>
+            <ul class="card-features">
+              <li>Multi-Store Management</li>
+              <li>Automated PO Generation</li>
+              <li>Stock Usage Analytics</li>
+            </ul>
             <span class="card-link">Learn More →</span>
           </div>
         </a>
 
         <!-- Assets Card -->
-        <a href="assets.html" class="solution-card assets">
+        <a href="apps/asset/index.html" class="solution-card assets">
           <div class="card-content">
             <div class="card-icon assets-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -438,145 +540,115 @@
             </div>
             <h3>Asset Management</h3>
             <p>Equipment lifecycle, maintenance schedules, and depreciation tracking.</p>
+            <ul class="card-features">
+              <li>Maintenance Scheduling</li>
+              <li>QR Code Asset Tracking</li>
+              <li>Depreciation Reports</li>
+            </ul>
             <span class="card-link">Learn More →</span>
           </div>
         </a>
       </div>
     </div>
   </section>
+</div>
 
   <!-- Features Section -->
   <section class="home-features-section reveal" id="features">
     <div class="container">
-      <div class="section-header text-center">
-        <h2>Powerful Features for Modern Healthcare</h2>
-        <p>Everything you need to run your healthcare facility efficiently, all in one integrated platform.</p>
-      </div>
-      <div class="home-features-grid">
-        <div class="home-feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </div>
-          <h4>Patient Management</h4>
-          <p>Complete patient lifecycle from registration to discharge with digital records.</p>
+      <div class="features-editorial">
+        <div>
+          <p class="features-eyebrow">What's inside</p>
+          <h2>One login.<br>Every department.</h2>
+          <p class="features-sub">From the front desk to the OT, pharmacy, lab, and accounts — ZenoHosp connects all 8
+            modules on a single patient record. Your staff logs in once. Data flows everywhere. Nothing is re-entered.
+          </p>
+          <a href="solutions/index.html" class="features-all-link">Browse all modules →</a>
         </div>
-        <div class="home-feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
+        <div>
+          <div class="features-checklist">
+            <div class="fc-item"><span class="fc-dot"></span>Patient Registration & EMR</div>
+            <div class="fc-item"><span class="fc-dot"></span>OT Scheduling & Team Coordination</div>
+            <div class="fc-item"><span class="fc-dot"></span>Pharmacy Dispensing & GST Billing</div>
+            <div class="fc-item"><span class="fc-dot"></span>Lab Orders & Automated Report Delivery</div>
+            <div class="fc-item"><span class="fc-dot"></span>Finance, TPA & Insurance Claims</div>
+            <div class="fc-item"><span class="fc-dot"></span>Inventory & Reorder Automation</div>
+            <div class="fc-item"><span class="fc-dot"></span>Staff Roster, Attendance & Payroll</div>
+            <div class="fc-item"><span class="fc-dot"></span>Medical Equipment Lifecycle & AMC</div>
           </div>
-          <h4>Smart Scheduling</h4>
-          <p>Intelligent appointment booking with conflict detection and automated reminders.</p>
-        </div>
-        <div class="home-feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-          </div>
-          <h4>Billing & Payments</h4>
-          <p>Automated billing, insurance claims processing, and multiple payment gateway support.</p>
-        </div>
-        <div class="home-feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-              <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-            </svg>
-          </div>
-          <h4>Analytics & Reports</h4>
-          <p>Real-time dashboards and customizable reports for data-driven decisions.</p>
-        </div>
-        <div class="home-feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-          </div>
-          <h4>Data Security</h4>
-          <p>Enterprise-grade encryption and compliance with healthcare data regulations.</p>
-        </div>
-        <div class="home-feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-          </div>
-          <h4>Lab Integration</h4>
-          <p>Seamless integration with laboratory systems for automated result updates.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Integration Section -->
-  <section class="home-integration-section reveal">
+  <!-- Integration Section: Patient Journey Timeline -->
+  <section class="home-integration-section reveal" id="integration-section">
     <div class="container">
-      <div class="integration-header text-center">
-        <span class="section-badge-light">Unified Platform</span>
+      <div class="integration-header text-center zeno-mb-80">
+        <span class="section-badge-light">The Patient Journey</span>
         <h2>All Modules Work Together Seamlessly</h2>
-        <p>One platform. Complete visibility. Zero data silos.</p>
+        <p>A single flow of data from admission to discharge. Watch the journey.</p>
       </div>
 
-      <div class="integration-flow">
-        <div class="integration-flow-row">
-          <div class="flow-module">
-            <div class="flow-icon blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-              </svg>
+      <div class="patient-journey-container">
+        <!-- The glowing track -->
+        <div class="journey-track">
+          <div class="journey-progress" id="journey-progress"></div>
+        </div>
+
+        <div class="journey-steps">
+          <!-- Step 1 -->
+          <div class="journey-step">
+            <div class="step-dot"></div>
+            <div class="step-content">
+              <div class="step-meta">Step 1: Front Desk</div>
+              <h3>Admission & Triage</h3>
+              <p>Patient arrives. Demographics, insurance, and vitals are instantly logged into the HMS module.</p>
+              <div class="step-module">
+                <span class="module-tag hms-tag">HMS Module</span>
+              </div>
             </div>
-            <span class="flow-label">Hospital<br>Management</span>
           </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-module">
-            <div class="flow-icon purple">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path
-                  d="M12 2v4m0 12v4m-7-10H2m20 0h-3M5.64 5.64l2.12 2.12m8.48 8.48l2.12 2.12m0-12.72l-2.12 2.12M7.76 16.24l-2.12 2.12">
-                </path>
-              </svg>
+
+          <!-- Step 2 -->
+          <div class="journey-step">
+            <div class="step-dot"></div>
+            <div class="step-content">
+              <div class="step-meta">Step 2: Consultation</div>
+              <h3>Doctor & Diagnostics</h3>
+              <p>Doctor reviews EMR, prescribes meds, and orders tests. Data routes to Pharmacy and Lab automatically.
+              </p>
+              <div class="step-module">
+                <span class="module-tag lab-tag">Lab (LIS)</span>
+              </div>
             </div>
-            <span class="flow-label">Operation<br>Theatre</span>
           </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-center-hub">
-            <div class="hub-inner">
-              <span class="hub-logo">Z</span>
+
+          <!-- Step 3 -->
+          <div class="journey-step">
+            <div class="step-dot"></div>
+            <div class="step-content">
+              <div class="step-meta">Step 3: Fulfillment</div>
+              <h3>Pharmacy & Inventory</h3>
+              <p>Meds are dispensed, stock is auto-deducted, and low-stock alerts trigger purchase orders.</p>
+              <div class="step-module">
+                <span class="module-tag pharma-tag">Pharmacy</span>
+                <span class="module-tag inv-tag">Inventory</span>
+              </div>
             </div>
-            <span class="hub-label">ZenoHosp</span>
           </div>
-          <div class="flow-arrow">←</div>
-          <div class="flow-module">
-            <div class="flow-icon red">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"></path>
-                <path d="M12 8v8m-4-4h8"></path>
-              </svg>
+
+          <!-- Step 4 -->
+          <div class="journey-step">
+            <div class="step-dot"></div>
+            <div class="step-content">
+              <div class="step-meta">Step 4: Discharge</div>
+              <h3>Unified Billing</h3>
+              <p>A single, consolidated bill is generated covering consultation, lab, and meds. Paid and discharged.</p>
+              <div class="step-module">
+                <span class="module-tag finance-tag">Finance</span>
+              </div>
             </div>
-            <span class="flow-label">Pharmacy<br>Management</span>
-          </div>
-          <div class="flow-arrow">←</div>
-          <div class="flow-module">
-            <div class="flow-icon orange">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-              </svg>
-            </div>
-            <span class="flow-label">Inventory<br>Control</span>
           </div>
         </div>
       </div>
@@ -628,75 +700,503 @@
   <!-- Why Choose Us Section -->
   <section class="home-why-section reveal" id="why-us">
     <div class="container">
-      <div class="section-header text-center">
-        <h2>Why Choose ZenoHosp?</h2>
-        <p>We're committed to transforming healthcare operations with technology that's powerful yet easy to use.</p>
+      <div class="home-why-header text-center">
+        <span class="section-badge-light">Why ZenoHosp</span>
+        <h2>Built for how Indian hospitals actually work.</h2>
+        <p>ABDM, GST, TPA, PF/ESI — not add-ons, built-in. Implemented across 500+ hospitals with our signature on-site
+          support.</p>
       </div>
-      <div class="home-why-grid">
-        <div class="home-why-card">
-          <div class="why-number">01</div>
-          <h4>Easy Implementation</h4>
-          <p>Get up and running in days, not months. Our dedicated team handles migration and training.</p>
+
+      <div class="why-bento-grid">
+        <!-- Big feature card -->
+        <div class="why-bento-card col-span-2 gradient-border">
+          <div class="why-bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <h3>90-day go-live guarantee</h3>
+          <p>Our implementation team goes on-site to handle legacy data migration, setup, and staff training. You don't
+            start from a blank screen. If you're not live in 90 days, we extend your timeline at absolutely zero cost.
+          </p>
         </div>
-        <div class="home-why-card">
-          <div class="why-number">02</div>
-          <h4>24/7 Support</h4>
-          <p>Round-the-clock technical support via phone, email, and chat. We're always here when you need us.</p>
+
+        <!-- Standard card -->
+        <div class="why-bento-card">
+          <div class="why-bento-icon pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Flat pricing model</h3>
+          <p>No per-user fees. Hire 50 more nurses or open a new wing, and you pay the exact same. No budget surprises
+            at renewal.</p>
         </div>
-        <div class="home-why-card">
-          <div class="why-number">03</div>
-          <h4>Cloud-Based</h4>
-          <p>Secure cloud infrastructure with 99.9% uptime. Access your data anytime, anywhere.</p>
+
+        <!-- Standard card -->
+        <div class="why-bento-card">
+          <div class="why-bento-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h3>Data stays in India</h3>
+          <p>Hosted exclusively in premium Mumbai and Chennai data centres. Fully HIPAA-compliant and DPDP Act ready.
+          </p>
         </div>
-        <div class="home-why-card">
-          <div class="why-number">04</div>
-          <h4>Affordable Pricing</h4>
-          <p>Flexible pricing plans designed for hospitals of all sizes. No hidden fees.</p>
-        </div>
-        <div class="home-why-card">
-          <div class="why-number">05</div>
-          <h4>Regular Updates</h4>
-          <p>Continuous improvements and new features based on user feedback and industry changes.</p>
-        </div>
-        <div class="home-why-card">
-          <div class="why-number">06</div>
-          <h4>Customizable</h4>
-          <p>Tailor the platform to your specific workflows with custom modules and integrations.</p>
+
+        <!-- Wide card -->
+        <div class="why-bento-card col-span-2">
+          <div class="why-bento-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="why-bento-flex">
+            <div>
+              <h3>WhatsApp support, not a ticket queue</h3>
+              <p>When there's an issue at the front desk, you don't have time to "log a ticket". You get a dedicated
+                WhatsApp group with real software engineers who respond in under 2 hours.</p>
+            </div>
+            <a href="why-us/index.html" class="why-more-btn">Read the full case &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- ══ ROI CALCULATOR ══════════════════════════════ -->
+  <section class="roi-section" id="roi-calculator">
+    <div class="container">
+      <div class="roi-inner">
+        <!-- Left: Inputs -->
+        <div>
+          <span class="roi-eyebrow">Revenue Recovery Calculator</span>
+          <h2>How much is your hospital losing every month?</h2>
+          <p>Two questions. Your number. Most hospital owners are surprised by the answer.</p>
+
+          <div class="roi-input-group">
+            <label>Daily OPD patients</label>
+            <div class="roi-slider-wrap">
+              <div class="roi-val-display"><span id="roi-opd-display">150</span> patients/day</div>
+              <input type="range" class="roi-range" id="roi-opd" min="20" max="600" value="150" step="10">
+            </div>
+          </div>
+
+          <div class="roi-input-group">
+            <label>Hospital beds (IPD)</label>
+            <div class="roi-slider-wrap">
+              <div class="roi-val-display"><span id="roi-beds-display">50</span> beds</div>
+              <input type="range" class="roi-range" id="roi-beds" min="0" max="500" value="50" step="10">
+            </div>
+          </div>
+
+          <div class="roi-input-group">
+            <label>Accept TPA / cashless insurance?</label>
+            <div class="roi-tpa-btns">
+              <button class="roi-tpa-btn active" data-val="yes">Yes</button>
+              <button class="roi-tpa-btn" data-val="no">No</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Result -->
+        <div class="roi-result-card">
+          <div class="roi-result-label">Estimated monthly revenue leakage</div>
+          <div class="roi-monthly-num"><small>₹</small><span id="roi-monthly">4,68,000</span></div>
+          <div class="roi-annual">₹<span id="roi-annual">56.2</span> lakhs per year</div>
+
+          <div class="roi-divider"></div>
+
+          <div class="roi-recovery-label">ZenoHosp typically recovers <strong style="color:#d1f470">70–85%</strong> of this</div>
+          <div class="roi-bar"><div class="roi-bar-fill" id="roi-bar-fill" style="width:78%"></div></div>
+          <div class="roi-recover-num">₹<span id="roi-recover">3,27,600</span> <small>recovered/month</small></div>
+
+          <a href="contact-us/index.html" class="roi-cta-btn">See how to recover it →</a>
+          <p class="roi-disclaimer">Based on aggregated data from 500+ hospitals using ZenoHosp. Actual recovery varies by hospital type and current billing system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ A DAY IN THE HOSPITAL ══════════════════════ -->
+  <section class="day2-section" id="day-hospital">
+
+    <!-- Header -->
+    <div class="day2-header">
+      <div class="day2-header-text">
+        <span class="day2-eyebrow">ZenoHosp in action</span>
+        <h2>A hospital morning — 8 AM to 6 PM.</h2>
+        <p>10 events. Every module connected. Zero missed charges.</p>
+      </div>
+      <button class="day2-play-btn" id="day2-play">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Play the day
+      </button>
+    </div>
+
+    <!-- Time progress bar -->
+    <div class="day2-timebar-wrap">
+      <div class="day2-timebar-labels">
+        <span>8:00</span><span>10:00</span><span>12:00</span>
+        <span>14:00</span><span>16:00</span><span>18:00</span>
+      </div>
+      <div class="day2-timebar">
+        <div class="day2-timebar-fill" id="day2-progress"></div>
+        <div class="day2-timebar-cursor" id="day2-cursor"></div>
+      </div>
+    </div>
+
+    <!-- Events feed -->
+    <div class="day2-feed" id="day2-feed">
+
+      <div class="day2-event" data-time="08:02" data-pct="2" data-mod="hms">
+        <div class="day2-time">08:02</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <div class="day2-actor">
+              <span class="day2-dept">Front Desk</span>
+            </div>
+            <span class="day2-tag tag-hms">HMS</span>
+          </div>
+          <div class="day2-action">Karthik Subramaniam registered. OPD #2024-0841 generated.</div>
+          <div class="day2-outcome">Insurance: Star Health captured at intake. TPA notified.</div>
+        </div>
+      </div>
+
+      <div class="day2-event" data-time="08:18" data-pct="17" data-mod="pharmacy">
+        <div class="day2-time">08:18</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">Dr. Ramesh · Cardiology</span>
+            <div style="display:flex;gap:6px">
+              <span class="day2-tag tag-hms">HMS EMR</span>
+              <span class="day2-tag tag-pharmacy">Pharmacy</span>
+            </div>
+          </div>
+          <div class="day2-action">Consultation completed. Amoxicillin 500mg × 5 days prescribed.</div>
+          <div class="day2-outcome">Prescription in pharmacy dispensing queue before Karthik leaves the room.</div>
+        </div>
+      </div>
+
+      <div class="day2-event" data-time="08:21" data-pct="20" data-mod="inventory">
+        <div class="day2-time">08:21</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">Pharmacy</span>
+            <div style="display:flex;gap:6px">
+              <span class="day2-tag tag-pharmacy">Pharmacy</span>
+              <span class="day2-tag tag-inventory">Inventory</span>
+            </div>
+          </div>
+          <div class="day2-action">Amoxicillin dispensed. Stock: 284 → 279 units.</div>
+          <div class="day2-outcome">₹420 charge posted to Karthik's bill automatically. No manual entry.</div>
+        </div>
+      </div>
+
+      <div class="day2-event" data-time="08:44" data-pct="38" data-mod="lab">
+        <div class="day2-time">08:44</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">Lab — Phlebotomy</span>
+            <span class="day2-tag tag-lab">Lab</span>
+          </div>
+          <div class="day2-action">CBC ordered. Sample collected. Barcode: #L-8821. STAT priority.</div>
+          <div class="day2-outcome">Sample in analyser queue in 4 seconds. No phone call to lab needed.</div>
+        </div>
+      </div>
+
+      <div class="day2-event" data-time="09:12" data-pct="61" data-mod="lab">
+        <div class="day2-time">09:12</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">Pathologist</span>
+            <div style="display:flex;gap:6px">
+              <span class="day2-tag tag-lab">Lab</span>
+              <span class="day2-tag tag-hms">HMS EMR</span>
+            </div>
+          </div>
+          <div class="day2-action">CBC validated. Results posted to patient record.</div>
+          <div class="day2-outcome">Haemoglobin: 11.2 g/dL flagged low. Dr. Ramesh notified immediately.</div>
+        </div>
+      </div>
+
+      <div class="day2-event" data-time="09:16" data-pct="63" data-mod="hms">
+        <div class="day2-time">09:16</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">Dr. Ramesh</span>
+            <span class="day2-tag tag-referral">Referral</span>
+          </div>
+          <div class="day2-action">Referred Karthik to haematology. Notes and CBC attached.</div>
+          <div class="day2-outcome">Dr. Anitha (haematology) sees referral with full context in 8 seconds.</div>
+        </div>
+      </div>
+
+      <div class="day2-event day2-event-gap" data-time="14:15" data-pct="62" data-mod="people">
+        <div class="day2-time">14:15</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">Admission Desk</span>
+            <div style="display:flex;gap:6px">
+              <span class="day2-tag tag-hms">HMS</span>
+              <span class="day2-tag tag-people">People</span>
+            </div>
+          </div>
+          <div class="day2-action">Priya Nair admitted. Bed 14, Ward B assigned.</div>
+          <div class="day2-outcome">Duty nurse notified. Pre-op investigations auto-ordered for tomorrow's OT slot.</div>
+        </div>
+      </div>
+
+      <div class="day2-event" data-time="15:30" data-pct="75" data-mod="hms">
+        <div class="day2-time">15:30</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">OT Coordinator</span>
+            <span class="day2-tag tag-ot">OT Room</span>
+          </div>
+          <div class="day2-action">Appendectomy scheduled. Dr. Kumar + Anaesthesia + Scrub nurse assigned.</div>
+          <div class="day2-outcome">Surgical team notified via WhatsApp. Pre-op checklist generated automatically.</div>
+        </div>
+      </div>
+
+      <div class="day2-event" data-time="17:42" data-pct="91" data-mod="finance">
+        <div class="day2-time">17:42</div>
+        <div class="day2-card">
+          <div class="day2-card-top">
+            <span class="day2-dept">Billing</span>
+            <span class="day2-tag tag-finance">Finance</span>
+          </div>
+          <div class="day2-action">Karthik discharged. Bill: ₹3,840 — consult + lab + pharmacy.</div>
+          <div class="day2-outcome">GST invoice ready. Star Health: ₹2,900 covered. Patient co-pay: ₹940. Paid via UPI.</div>
+        </div>
+      </div>
+
+      <div class="day2-event day2-event-final" data-time="18:00" data-pct="100" data-mod="analytics">
+        <div class="day2-time">18:00</div>
+        <div class="day2-card day2-card-final">
+          <div class="day2-card-top">
+            <span class="day2-dept">CMO Dashboard</span>
+            <span class="day2-tag tag-analytics">Analytics</span>
+          </div>
+          <div class="day2-action">Today: 248 OPD patients. Revenue: ₹1,84,200. All charges captured.</div>
+          <div class="day2-outcome day2-outcome-final">₹0 manual billing entry &nbsp;·&nbsp; ₹0 missed charges &nbsp;·&nbsp; Month-end closes in 3 days.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Live stats bar -->
+    <div class="day2-stats">
+      <div class="day2-stat">
+        <span class="day2-stat-val" id="day2-patients">0</span>
+        <span class="day2-stat-lbl">Patients today</span>
+      </div>
+      <div class="day2-stat-div"></div>
+      <div class="day2-stat">
+        <span class="day2-stat-val">₹<span id="day2-revenue">0</span></span>
+        <span class="day2-stat-lbl">Revenue captured</span>
+      </div>
+      <div class="day2-stat-div"></div>
+      <div class="day2-stat">
+        <span class="day2-stat-val" style="color:#d1f470">₹0</span>
+        <span class="day2-stat-lbl">Missed charges</span>
+      </div>
+      <div class="day2-stat-div"></div>
+      <div class="day2-stat">
+        <div class="day2-modules-active" id="day2-modules">
+          <span class="day2-mod-dot dot-hms" title="HMS"></span>
+          <span class="day2-mod-dot dot-pharmacy" title="Pharmacy"></span>
+          <span class="day2-mod-dot dot-lab" title="Lab"></span>
+          <span class="day2-mod-dot dot-finance" title="Finance"></span>
+          <span class="day2-mod-dot dot-people" title="People"></span>
+          <span class="day2-mod-dot dot-ot" title="OT Room"></span>
+        </div>
+        <span class="day2-stat-lbl">Modules active</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Privacy & Security Section -->  <!-- Privacy & Security Section -->
+  <section class="home-privacy-section reveal" id="privacy">
+    <div class="container">
+      <div class="privacy-grid">
+        <div class="privacy-content">
+          <span class="section-badge-light">End-to-End Privacy</span>
+          <h2>Your patient data, secured and compliant.</h2>
+          <p>We believe that privacy is a fundamental human right. ZenoHosp is built from the ground up with
+            military-grade encryption and full compliance with local healthcare data regulations.</p>
+          <ul class="privacy-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>HIPAA Compliant & Data Residency in India</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>AES-256 Bit End-to-End Encryption</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Granular Role-Based Access Control (RBAC)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="privacy-visual">
+          <div class="privacy-shield-container">
+            <svg class="privacy-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <div class="shield-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="home-testimonial-section reveal">
+    <div class="container">
+      <div class="home-testimonials-header">
+        <h2>Trusted by 500+ hospitals across India</h2>
+        <p>Decision-makers and clinicians share what changed after switching to ZenoHosp.</p>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="home-testimonials-track marquee-track">
+          <!-- Card 1 -->
+          <div class="home-testimonial-card">
+            <div class="home-tc-stars">★★★★★</div>
+            <blockquote>"Before ZenoHosp, our OPD queues were unmanageable and our pharmacy inventory was always out of sync. After switching, we've completely unified operations across all departments. It's truly the operating system our hospital needed."</blockquote>
+            <div class="home-tc-author">
+              <div class="home-tc-avatar tc-av-1">RS</div>
+              <div>
+                <div class="home-tc-name">Dr. R. Subramaniam</div>
+                <div class="home-tc-role">Medical Director, Lakshmi Hospital</div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="home-testimonial-card">
+            <div class="home-tc-stars">★★★★★</div>
+            <blockquote>"Our billing team used to stay back every month-end to reconcile. With ZenoHosp Finance, the books close themselves. We recovered ₹22 lakhs in the very first month that we didn't even know we were losing."</blockquote>
+            <div class="home-tc-author">
+              <div class="home-tc-avatar tc-av-2">PK</div>
+              <div>
+                <div class="home-tc-name">Priya Krishnamurthy</div>
+                <div class="home-tc-role">CFO, DSS Multispeciality Hospital</div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="home-testimonial-card">
+            <div class="home-tc-stars">★★★★★</div>
+            <blockquote>"As the IT head, security is my first question. ZenoHosp is the only HMS I've seen with end-to-end AES-256 encryption, role-based access down to field level, and a complete audit trail. HIPAA audit was a non-event."</blockquote>
+            <div class="home-tc-author">
+              <div class="home-tc-avatar tc-av-3">VR</div>
+              <div>
+                <div class="home-tc-name">Vijay Ramachandran</div>
+                <div class="home-tc-role">Head of IT, Kedar ENT Hospital</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Duplicated Cards for Seamless Marquee -->
+          <!-- Card 1 -->
+          <div class="home-testimonial-card">
+            <div class="home-tc-stars">★★★★★</div>
+            <blockquote>"Before ZenoHosp, our OPD queues were unmanageable and our pharmacy inventory was always out of sync. After switching, we've completely unified operations across all departments. It's truly the operating system our hospital needed."</blockquote>
+            <div class="home-tc-author">
+              <div class="home-tc-avatar tc-av-1">RS</div>
+              <div>
+                <div class="home-tc-name">Dr. R. Subramaniam</div>
+                <div class="home-tc-role">Medical Director, Lakshmi Hospital</div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="home-testimonial-card">
+            <div class="home-tc-stars">★★★★★</div>
+            <blockquote>"Our billing team used to stay back every month-end to reconcile. With ZenoHosp Finance, the books close themselves. We recovered ₹22 lakhs in the very first month that we didn't even know we were losing."</blockquote>
+            <div class="home-tc-author">
+              <div class="home-tc-avatar tc-av-2">PK</div>
+              <div>
+                <div class="home-tc-name">Priya Krishnamurthy</div>
+                <div class="home-tc-role">CFO, DSS Multispeciality Hospital</div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="home-testimonial-card">
+            <div class="home-tc-stars">★★★★★</div>
+            <blockquote>"As the IT head, security is my first question. ZenoHosp is the only HMS I've seen with end-to-end AES-256 encryption, role-based access down to field level, and a complete audit trail. HIPAA audit was a non-event."</blockquote>
+            <div class="home-tc-author">
+              <div class="home-tc-avatar tc-av-3">VR</div>
+              <div>
+                <div class="home-tc-name">Vijay Ramachandran</div>
+                <div class="home-tc-role">Head of IT, Kedar ENT Hospital</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="customers/index.html" class="testimonials-see-all">See all 500+ success stories →</a>
+      </div>
+    </div>
+  </section>
+
 
   <!-- CTA Section -->
-  <section class="home-cta-section">
+  <section class="home-cta-section reveal">
     <div class="container">
-      <div class="home-cta-content">
-        <h2>Ready to Transform Your Healthcare Operations?</h2>
-        <p>Join 500+ healthcare facilities already using ZenoHosp to deliver better patient care.</p>
-        <div class="home-cta-buttons">
-          <a href="contact-us.html" class="btn btn-primary btn-lg">Start Free Trial</a>
-          <a href="contact-us.html" class="btn btn-outline-dark btn-lg">Talk to Sales</a>
-        </div>
-        <div class="cta-trust">
-          <span>✓ No credit card required</span>
-          <span>✓ 14-day free trial</span>
-          <span>✓ Cancel anytime</span>
+      <div class="cta-glass-card">
+        <div class="cta-glow-bg"></div>
+        <div class="home-cta-content relative z-10">
+          <h2>Ready to transform your hospital?</h2>
+          <p>Join 500+ healthcare facilities across India already using ZenoHosp to streamline operations, stop revenue
+            leakage, and deliver better patient care.</p>
+          <div class="home-cta-buttons">
+            <a href="contact-us/index.html" class="btn btn-primary btn-lg">Book a Demo</a>
+            <a href="contact-us/index.html" class="btn btn-outline-light btn-lg">Talk to Sales</a>
+          </div>
+          <div class="cta-trust-badges">
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> ABDM Ready</span>
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> ISO 27001 Certified</span>
+            <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> HIPAA Compliant</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+      <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
+          <a href="./index.html" class="logo">
             <span class="logo-icon">Z</span>
             <span class="logo-text">Zeno<span class="logo-accent">Hosp</span></span>
           </a>
-          <p>Transforming healthcare operations with intelligent software solutions designed for modern
-            hospitals and clinics.</p>
+          <p>Hospital software built in Chennai, used by 500+ facilities across India.</p>
           <div class="social-links">
             <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -720,44 +1220,253 @@
         <div class="footer-links">
           <h4>Solutions</h4>
           <ul>
-            <li><a href="hms.html">Hospital Management</a></li>
-            <li><a href="ot.html">Operation Theatre</a></li>
-            <li><a href="pharmacy.html">Pharmacy</a></li>
-            <li><a href="inventory.html">Inventory</a></li>
-            <li><a href="assets.html">Asset Management</a></li>
+            <li><a href="./apps/hms/index.html">Hospital Management</a></li>
+            <li><a href="./apps/ot-room/index.html">Operation Theatre</a></li>
+            <li><a href="./apps/pharmacy/index.html">Pharmacy</a></li>
+            <li><a href="./apps/inventory/index.html">Inventory</a></li>
+            <li><a href="./apps/asset/index.html">Asset Management</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="./about-us/index.html">About Us</a></li>
+            <li><a href="./careers/index.html">Careers</a></li>
+            <li><a href="./blog/index.html">Blog</a></li>
+            <li><a href="./contact-us/index.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Support</h4>
           <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Documentation</a></li>
+            <li><a href="./help/index.html">Help Center</a></li>
+            <li><a href="./help/index.html">Documentation</a></li>
             <li><a href="#">API Reference</a></li>
-            <li><a href="#">Status</a></li>
+            <li><a href="./status/index.html">Status</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Zeno Hosp. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookies</a>
+          <a href="./privacy-policy/index.html">Privacy Policy</a>
+          <a href="./terms-of-service/index.html">Terms of Service</a>
+          <a href="./cookie-policy/index.html">Cookies</a>
         </div>
       </div>
     </div>
   </footer>
+
+
+
+
+
+
+
+
+
   <script src="js/app.js" defer></script>
+  <script>
+  // ── ROI CALCULATOR ────────────────────────────────────────────────────────
+  (function() {
+    const opdSlider   = document.getElementById('roi-opd');
+    const bedsSlider  = document.getElementById('roi-beds');
+    const opdDisplay  = document.getElementById('roi-opd-display');
+    const bedsDisplay = document.getElementById('roi-beds-display');
+    const monthlyEl   = document.getElementById('roi-monthly');
+    const annualEl    = document.getElementById('roi-annual');
+    const recoverEl   = document.getElementById('roi-recover');
+    const barFill     = document.getElementById('roi-bar-fill');
+    const tpaBtns     = document.querySelectorAll('.roi-tpa-btn');
+
+    if (!opdSlider) return;
+
+    let tpa = true;
+    let animFrame;
+
+    function animateNum(el, target, prefix) {
+      const start = parseInt(el.textContent.replace(/[^0-9]/g, '')) || 0;
+      const duration = 600;
+      const startTime = performance.now();
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(start + (target - start) * ease);
+        el.textContent = formatNum(current);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    function formatNum(n) {
+      if (n >= 100000) return (n / 100000).toFixed(1).replace(/\.0$/, '') + 'L';
+      return n.toLocaleString('en-IN');
+    }
+
+    function calc() {
+      const opd   = parseInt(opdSlider.value);
+      const beds  = parseInt(bedsSlider.value);
+      // OPD: avg ₹180 uncaptured per patient × 26 working days
+      const opdLeak  = opd * 180 * 26;
+      // IPD: avg ₹720/occupied bed/day × 75% occupancy × 30 days
+      const ipd      = beds > 0 ? Math.round(beds * 0.75 * 720 * 30) : 0;
+      const tpaMul   = tpa ? 1.18 : 1;
+      const monthly  = Math.round((opdLeak + ipd) * tpaMul);
+      const annual   = (monthly * 12 / 100000).toFixed(1);
+      const recover  = Math.round(monthly * 0.78);
+      const pct      = Math.min(Math.round((recover / monthly) * 100), 85);
+
+      animateNum(monthlyEl, monthly, '');
+      animateNum(recoverEl, recover, '');
+      annualEl.textContent = (monthly * 12 / 100000).toFixed(1);
+      if (barFill) { barFill.style.width = pct + '%'; }
+    }
+
+    opdSlider.addEventListener('input', () => {
+      opdDisplay.textContent = opdSlider.value;
+      calc();
+    });
+    bedsSlider.addEventListener('input', () => {
+      bedsDisplay.textContent = bedsSlider.value;
+      calc();
+    });
+    tpaBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tpaBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        tpa = btn.dataset.val === 'yes';
+        calc();
+      });
+    });
+
+    calc(); // initial
+  })();
+
+  // ── DAY IN THE HOSPITAL v2 ───────────────────────────────────────────────
+  (function() {
+    const events      = document.querySelectorAll('.day2-event');
+    const playBtn     = document.getElementById('day2-play');
+    const progress    = document.getElementById('day2-progress');
+    const cursor      = document.getElementById('day2-cursor');
+    const patientsEl  = document.getElementById('day2-patients');
+    const revenueEl   = document.getElementById('day2-revenue');
+    const section     = document.getElementById('day-hospital');
+
+    if (!events.length || !playBtn) return;
+
+    const MOD_DOTS = {
+      hms:       '.dot-hms',
+      pharmacy:  '.dot-pharmacy',
+      lab:       '.dot-lab',
+      finance:   '.dot-finance',
+      people:    '.dot-people',
+      inventory: '.dot-pharmacy',
+      analytics: '.dot-finance',
+      ot:        '.dot-ot',
+      referral:  '.dot-hms',
+    };
+
+    let playing = false;
+    let playTimer = null;
+    // Play delays (ms) — compressed timeline
+    const PLAY_DELAYS = [0, 800, 1400, 2100, 3000, 3600, 5200, 6400, 7800, 9200];
+    const STATS_FINAL = { patients: 248, revenue: 184200 };
+
+    function countUp(el, target, duration) {
+      const start = parseInt(el.textContent.replace(/[^0-9]/g,'')) || 0;
+      const t0 = performance.now();
+      function step(now) {
+        const p = Math.min((now - t0) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(start + (target - start) * ease).toLocaleString('en-IN');
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    function revealEvent(idx) {
+      const ev = events[idx];
+      if (!ev) return;
+      ev.classList.add('visible');
+
+      // Update timebar
+      const pct = parseFloat(ev.dataset.pct || 0);
+      if (progress) { progress.style.width = pct + '%'; }
+      if (cursor)   { cursor.style.left    = pct + '%'; }
+
+      // Light up module dot
+      const mod = ev.dataset.mod;
+      if (mod && MOD_DOTS[mod]) {
+        const dot = document.querySelector(MOD_DOTS[mod]);
+        if (dot) dot.classList.add('lit');
+      }
+
+      // Update stats as events fire
+      if (idx >= 1 && patientsEl) countUp(patientsEl, Math.round(STATS_FINAL.patients * ((idx+1)/events.length)), 400);
+      if (idx >= 6 && revenueEl)  countUp(revenueEl,  Math.round(STATS_FINAL.revenue  * ((idx-4)/events.length)), 500);
+    }
+
+    function playAll() {
+      if (playing) return;
+      playing = true;
+      playBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Playing…';
+      playBtn.classList.add('playing');
+
+      // Reset
+      events.forEach(e => e.classList.remove('visible'));
+      if (progress) progress.style.width = '0%';
+      if (cursor)   cursor.style.left = '0%';
+      document.querySelectorAll('.day2-mod-dot').forEach(d => d.classList.remove('lit'));
+      if (patientsEl) patientsEl.textContent = '0';
+      if (revenueEl)  revenueEl.textContent  = '0';
+
+      events.forEach((_, i) => {
+        playTimer = setTimeout(() => {
+          revealEvent(i);
+          if (i === events.length - 1) {
+            setTimeout(() => {
+              playing = false;
+              playBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Replay';
+              playBtn.classList.remove('playing');
+              countUp(patientsEl, STATS_FINAL.patients, 800);
+              countUp(revenueEl, STATS_FINAL.revenue, 1000);
+            }, 600);
+          }
+        }, PLAY_DELAYS[i]);
+      });
+    }
+
+    playBtn.addEventListener('click', playAll);
+
+    // Auto-reveal on scroll (no play button needed for first visit)
+    const scrollObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const idx = Array.from(events).indexOf(entry.target);
+            setTimeout(() => revealEvent(idx), idx * 100);
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+    );
+    events.forEach(e => scrollObserver.observe(e));
+
+    // Section enter: trigger play once
+    if (section) {
+      const sectionObserver = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          sectionObserver.disconnect();
+        }
+      }, { threshold: 0.1 });
+      sectionObserver.observe(section);
+    }
+  })();
+  </script>
+  <script src="js/patient-journey.js" defer></script>
+  <script src="js/hero-3d.js" defer></script>
+  <script src="js/solutions-scroll.js" defer></script>
 </body>
 
 </html>

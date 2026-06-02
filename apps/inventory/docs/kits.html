@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kits | Zeno Hosp Docs</title>
+  <meta name="description" content="Kit management and bundling in ZenoHosp Inventory.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Inventory Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Inventory</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Products</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="items.html">Items</a></li>
+          <li><a href="item-types.html">Item Types</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="kits.html" class="active">Kits</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Inventory</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="stock-overview.html">Stock Overview</a></li>
+          <li><a href="stock-log.html">Stock Log</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Purchase</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="purchase-orders.html">Purchase Orders</a></li>
+          <li><a href="grn.html">GRN</a></li>
+          <li><a href="po-bills.html">PO Bills</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-bottom: 16px;">
+          <li><a href="stores.html">Stores</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Kits (Bundles)</h1>
+        <p>Bundle multiple items together for streamlined surgical dispensing and billing.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>What is an Inventory Kit?</h2>
+        <p>Often, medical procedures require a standard set of items. Instead of indenting or billing 15 different items individually every time a procedure happens, you can define a "Kit".</p>
+        
+        <h3>Example: C-Section Kit</h3>
+        <p>You can create a Kit that contains:</p>
+        <ul>
+          <li>2 x Surgical Gloves</li>
+          <li>1 x Scalpel</li>
+          <li>5 x Gauze Swabs</li>
+          <li>1 x Antiseptic Solution</li>
+        </ul>
+
+        <h2>Using Kits</h2>
+        <p>When a nurse requests a "C-Section Kit" from the Main Store, the system will automatically deduct all the individual component items from the physical inventory in their respective quantities.</p>
+        <p>Similarly, when added to a patient's bill in the HMS, the patient is charged a single bundled price for the Kit, but the underlying inventory logs remain perfectly accurate.</p>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

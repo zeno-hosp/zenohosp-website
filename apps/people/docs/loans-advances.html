@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advances & Loans | Zeno Hosp Docs</title>
+  <meta name="description" content="Staff loan and advance management in ZenoHosp People.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp People Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to People</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Employees</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Employee Directory</a></li>
+          <li><a href="attendance-leaves.html">Time & Absence</a></li>
+          <li><a href="performance.html">Performance Management</a></li>
+          <li><a href="hr-settings.html">HR & Access Settings</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Payroll</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="payroll-ops.html">Payroll Operations</a></li>
+          <li><a href="salary-config.html">Salary Configuration</a></li>
+          <li><a href="loans-advances.html" class="active">Advances & Loans</a></li>
+          <li><a href="tax-compliance.html">Tax & Compliance</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Advances & Loans</h1>
+        <p>Manage employee financial requests and automate recovery through payroll deductions.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Salary Advances</h2>
+        <p>Employees can request a portion of their upcoming salary early. Once approved by HR and disbursed by Finance, the system automatically flags this amount.</p>
+        <p>During the next "Run Payroll" cycle, the advance amount is automatically deducted in full from their net pay, ensuring the hospital's cash flow is reconciled without manual intervention.</p>
+
+        <h2>Loans & EMI Tracking</h2>
+        <p>For larger financial assistance (e.g., medical emergencies, marriage loans), the hospital can grant an Employee Loan.</p>
+        <ul>
+          <li><strong>EMI Setup:</strong> You define the loan principal and the monthly Equated Monthly Installment (EMI) amount.</li>
+          <li><strong>Automated Recovery:</strong> Every month, the payroll engine deducts the EMI until the principal is fully recovered.</li>
+          <li><strong>Ledger Integration:</strong> These transactions map directly to the Finance module, updating the "Employee Loans Asset" ledger.</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

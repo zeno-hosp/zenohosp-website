@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance | Zeno Hosp Docs</title>
+  <meta name="description" content="Preventive maintenance scheduling in ZenoHosp Asset.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Assets Help Docs
+      </a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Assets</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="asset-inventory.html">Asset Inventory</a></li>
+          <li><a href="room-allocation.html">Room Allocation</a></li>
+          <li><a href="transfer-logs.html">Transfer Logs</a></li>
+          <li><a href="maintenance.html" class="active">Maintenance</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Masters</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="asset-categories.html">Asset Categories</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Maintenance</h1>
+        <p>Ensure maximum uptime for critical medical equipment by tracking repairs and preventative schedules.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Logging a Breakdown</h2>
+        <p>When a piece of equipment fails in a ward, staff can immediately log a maintenance ticket.</p>
+        <ol>
+          <li>Navigate to Maintenance and click <strong>+ Log Issue</strong>.</li>
+          <li>Select the specific <strong>Asset Code</strong>. The system will automatically check if the item is currently covered by a Warranty or AMC.</li>
+          <li>Enter the nature of the breakdown.</li>
+          <li>The asset's status is automatically changed to "Out of Order" across the system, alerting other staff not to rely on it.</li>
+        </ol>
+
+        <h2>Preventative Maintenance</h2>
+        <p>You can schedule recurring check-ups (e.g., quarterly calibration for an X-Ray machine). The system will automatically generate pending maintenance tasks when the date approaches, ensuring compliance with hospital accreditation standards.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

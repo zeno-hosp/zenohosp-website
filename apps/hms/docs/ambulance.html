@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambulance | Zeno Hosp Docs</title>
+  <meta name="description" content="Ambulance request and dispatch management in ZenoHosp HMS.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+
+  <!-- Top Navbar -->
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp HMS Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to HMS</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Getting Started</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roles-access.html">Roles & Access</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Main Menu</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Hospital</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="ipd-management.html">IPD Management</a></li>
+          <li><a href="ambulance.html" class="active">Ambulance</a></li>
+          <li><a href="health-checkups.html">Health Checkups</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="specializations.html">Specializations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hr-staff.html">HR & Staff</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Ambulance Management</h1>
+        <p>Manage fleet vehicles, dispatch bookings, and track emergency transport billing.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Fleet & Bookings</h2>
+        <p>The Ambulance module is divided into two primary sections:</p>
+        <ul>
+          <li><strong>Fleet:</strong> Register your hospital's ambulances, including vehicle numbers, types (Basic vs Advanced Life Support), and assign default drivers.</li>
+          <li><strong>Bookings:</strong> View a live ledger of all dispatched ambulances, their current route status, and billing state.</li>
+        </ul>
+
+        <h2>Creating a New Booking</h2>
+        <p>When an emergency call comes in or a patient needs to be transferred to another facility, click <strong>+ New Booking</strong>. The dispatch form requires:</p>
+        
+        <h3>1. Patient & Schedule</h3>
+        <ul>
+          <li><strong>Patient (Optional):</strong> If the patient is already registered in your HMS, you can search for them here to link the trip to their EMR. For unregistered emergencies, you can leave it blank (Walk-in/Emergency Patient).</li>
+          <li><strong>Date & Time:</strong> Captures the exact dispatch timestamp.</li>
+        </ul>
+
+        <h3>2. Locations</h3>
+        <ul>
+          <li><strong>Pickup Address:</strong> Where the ambulance is departing from (or where it is picking the patient up).</li>
+          <li><strong>Destination Address:</strong> You can check "This hospital" for incoming emergencies, or type a custom address for inter-hospital transfers.</li>
+        </ul>
+
+        <h3>3. Vehicle & Driver Assignment</h3>
+        <p>Select an available vehicle from the dropdown. The system will auto-populate the designated <strong>Driver Name</strong>, <strong>Phone</strong>, and <strong>License Number</strong>, though you can override these if a substitute driver is taking the shift.</p>
+
+        <h3>4. Payment & Billing Integration</h3>
+        <p>The Payment Status dictates how the trip is accounted for financially:</p>
+        <ul>
+          <li><strong>Unpaid / Cash:</strong> The driver collects the fee directly from the patient and deposits it at the front desk later.</li>
+          <li><strong>Billed to IPD:</strong> A very common workflow. If an ambulance brings in an emergency patient who is immediately admitted to the ICU, the ambulance charges are automatically appended to their running IPD Folio. You will see a green "Billed to IPD" badge on the Bookings list to confirm this transfer of charges.</li>
+        </ul>
+
+        <h2>Tracking Status</h2>
+        <p>In the main Bookings view, you can track the lifecycle of a trip:</p>
+        <ol>
+          <li><strong style="color: #3b82f6;">Dispatched:</strong> The vehicle has left the hospital.</li>
+          <li><strong style="color: #22c55e;">Completed:</strong> The trip is finished and the vehicle is available for the next call.</li>
+        </ol>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

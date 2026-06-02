@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Payments | Zeno Hosp Docs</title>
+  <meta name="description" content="Vendor payment processing in ZenoHosp Finance.">
+  <link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="../index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp Finance Help Docs
+      </a>
+      <a href="../../index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Finance</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <ul class="doc-sidebar-nav" style="display: block; margin-top: 16px;">
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Finance</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="bank-accounts.html">Bank Accounts</a></li>
+          <li><a href="hms-billing.html">HMS Billing</a></li>
+          <li><a href="vendor-payments.html" class="active">Vendor Payments</a></li>
+          <li><a href="vendor-ledger.html">Vendor Ledger</a></li>
+          <li><a href="daily-expenses.html">Daily Expenses</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Vendor Payments</h1>
+        <p>Process and track outgoing payments to your inventory suppliers and service contractors.</p>
+        
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>Integration with Inventory</h2>
+        <p>ZenoFinance enforces a strict <strong>3-Way Match</strong> to prevent fraud. A vendor payment can only be processed if:</p>
+        <ol>
+          <li>A valid Purchase Order (PO) was approved in the Inventory module.</li>
+          <li>A Goods Received Note (GRN) confirms the items actually arrived at the warehouse.</li>
+          <li>The Vendor Invoice matches the PO and GRN amounts.</li>
+        </ol>
+
+        <h2>Processing a Payment</h2>
+        <p>Once the Inventory team approves a PO Bill, it appears in the Finance team's <strong>Vendor Payments</strong> queue.</p>
+        <ul>
+          <li>Review the pending bill and select the source Bank Account (e.g., HDFC) from which the funds will be deducted.</li>
+          <li>Record the NEFT/RTGS transaction reference number for auditing purposes.</li>
+          <li>Upon confirming, the funds are deducted from your Dashboard's Total Balance, and the payment is permanently recorded in the Vendor's Ledger.</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
