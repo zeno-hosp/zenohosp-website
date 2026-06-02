@@ -191,9 +191,14 @@
     <div class="hms2-hero-inner container">
 
       <!-- Left: Copy -->
-      <div class="hms2-hero-copy">
+      <div class="hms2-hero-copy hms2-fade-left">
+        <div class="hms2-live-feed">
+          <span class="hms2-live-dot"></span>
+          <span class="hms2-live-label">Live</span>
+          <div class="hms2-live-ticker"><div class="hms2-live-ticker-track" id="liveTicker"><span>Patient registered · Apollo Chennai · just now</span><span>Invoice ₹14,200 generated · City General · 4s ago</span><span>Room 204 allocated · IPD Admissions · 9s ago</span><span>Ambulance dispatched · Emergency → ICU · 14s ago</span><span>Lab report ready · Haematology · 19s ago</span><span>Prescription sent to pharmacy · Ward 3 · 23s ago</span><span>TPA claim filed · Star Health · ₹45,000 · 28s ago</span><span>OPD appointment confirmed · Dr. Ramesh · 33s ago</span></div></div>
+        </div>
         <div class="hms2-eyebrow">Hospital Management System</div>
-        <h1 class="hms2-h1">Your hospital<br>deserves better<br>than spreadsheets.</h1>
+        <h1 class="hms2-h1">Your hospital<br>deserves <span class="hms2-accent">better</span><br>than spreadsheets.</h1>
         <p class="hms2-sub">ZenoHosp HMS connects every department — OPD, IPD, OT, Radiology, Pharmacy, Lab, and Ambulance — in one login. Doctors spend less time on paperwork. Owners stop losing revenue.</p>
         <div class="hms2-hero-proof">
           <div class="hms2-proof-item">
@@ -218,7 +223,7 @@
       </div>
 
       <!-- Right: Actual HMS sidebar visual -->
-      <div class="hms2-hero-visual">
+      <div class="hms2-hero-visual hms2-fade-right" style="transition-delay:.18s">
         <div class="hms2-sidebar-preview">
           <div class="hms2-sb-header">
             <div class="hms2-sb-logo"><span>Z</span> ZenoHosp HMS</div>
@@ -248,45 +253,109 @@
     </div>
   </section>
 
-  <!-- ══ WHAT DOCTORS GET ══════════════════════════════ -->
-  <section class="hms2-for-doctors" id="hms-modules">
+  <!-- ══ WHAT DOCTORS / MANAGEMENT GET ════════════════ -->
+  <section class="hms2-dual-section" id="hms-modules">
     <div class="container">
-      <div class="hms2-split-header">
-        <div>
-          <div class="hms2-section-tag">Built for both sides of the hospital</div>
-          <h2 class="hms2-section-h2">What <span class="hms2-accent">doctors</span> get.<br>What <span class="hms2-accent">management</span> gets.</h2>
-        </div>
-        <p class="hms2-section-sub">ZenoHosp HMS was designed with one rule: if it wastes a doctor's time or lets a rupee slip through, we cut it.</p>
+      <div class="hms2-dual-header hms2-fade-up">
+        <div class="hms2-section-tag">Built for both sides of the hospital</div>
+        <h2 class="hms2-section-h2">What <span class="hms2-accent">doctors</span> get.<br>What <span class="hms2-accent">management</span> gets.</h2>
+        <p class="hms2-section-sub" style="margin:12px auto 0;text-align:center;max-width:46ch">One rule: if it wastes a doctor's time or lets a rupee slip through, we cut it.</p>
       </div>
-      <div class="hms2-two-sides">
-        <div class="hms2-side-card hms2-side-doctor">
-          <div class="hms2-side-label">For Doctors &amp; Clinical Staff</div>
-          <ul class="hms2-side-list">
-            <li><span class="hms2-check">✓</span>Full patient history before the patient walks in</li>
-            <li><span class="hms2-check">✓</span>E-prescriptions routed to pharmacy in 3 seconds</li>
-            <li><span class="hms2-check">✓</span>Lab orders placed from the consultation screen</li>
-            <li><span class="hms2-check">✓</span>Radiology imaging queue — no separate login</li>
-            <li><span class="hms2-check">✓</span>Referrals sent to specialists in 3 clicks</li>
-            <li><span class="hms2-check">✓</span>IPD ward rounds documented on the same record</li>
-            <li><span class="hms2-check">✓</span>Drug allergy alerts before the prescription is saved</li>
-          </ul>
-          <div class="hms2-side-quote">"I see 60 patients a day. ZenoHosp means I spend 2 minutes per patient on paperwork — not 8."</div>
-          <div class="hms2-side-attr">— Dr. Ramesh Kumar, Cardiologist, Chennai</div>
+
+      <div class="hms2-dual-grid">
+
+        <!-- Doctor card -->
+        <div class="hms2-dual-card hms2-dual-doc hms2-fade-left">
+          <div class="hms2-dual-card-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            For Doctors &amp; Clinical Staff
+          </div>
+          <div class="hms2-dual-feats">
+            <div class="hms2-dual-feat">
+              <div class="hms2-dual-fi" style="background:#e8f5e9;color:#2e7d32"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+              <span>Full patient history before the patient walks in</span>
+              <span class="hms2-dual-tag">Instant</span>
+            </div>
+            <div class="hms2-dual-feat">
+              <div class="hms2-dual-fi" style="background:#f3e5f5;color:#6a1b9a"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg></div>
+              <span>E-prescriptions routed to pharmacy in 3 seconds</span>
+              <span class="hms2-dual-tag">3 sec</span>
+            </div>
+            <div class="hms2-dual-feat">
+              <div class="hms2-dual-fi" style="background:#e3f2fd;color:#1565c0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m-7-10H2m20 0h-3"/></svg></div>
+              <span>Lab &amp; radiology orders from consultation screen</span>
+              <span class="hms2-dual-tag">No login-switch</span>
+            </div>
+            <div class="hms2-dual-feat">
+              <div class="hms2-dual-fi" style="background:#fff8e1;color:#f57f17"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+              <span>Referrals sent to specialists in 3 clicks</span>
+              <span class="hms2-dual-tag">3 clicks</span>
+            </div>
+            <div class="hms2-dual-feat">
+              <div class="hms2-dual-fi" style="background:#fce4ec;color:#c62828"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+              <span>Drug allergy alerts before prescription is saved</span>
+              <span class="hms2-dual-tag">Auto-alert</span>
+            </div>
+            <div class="hms2-dual-feat" style="border-bottom:none">
+              <div class="hms2-dual-fi" style="background:#e0f2f1;color:#00695c"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+              <span>IPD ward rounds documented on the same record</span>
+              <span class="hms2-dual-tag">No paper</span>
+            </div>
+          </div>
+          <div class="hms2-dual-quote">
+            "I see 60 patients a day. ZenoHosp means I spend 2 minutes per patient on paperwork — not 8."
+            <div class="hms2-dual-attr">— Dr. Ramesh Kumar, Cardiologist, Chennai</div>
+          </div>
         </div>
-        <div class="hms2-side-card hms2-side-mgmt">
-          <div class="hms2-side-label">For Hospital Owners &amp; Management</div>
-          <ul class="hms2-side-list">
-            <li><span class="hms2-check">✓</span>Every charge auto-captured — OPD, IPD, Ambulance, Radiology</li>
-            <li><span class="hms2-check">✓</span>Live revenue dashboard — not yesterday's numbers</li>
-            <li><span class="hms2-check">✓</span>TPA and insurance claims tracked from pre-auth to settlement</li>
-            <li><span class="hms2-check">✓</span>Bed occupancy, OT utilisation, doctor productivity — live</li>
-            <li><span class="hms2-check">✓</span>Month-end closes in 3 days, not 8</li>
-            <li><span class="hms2-check">✓</span>HR, payroll, and attendance — PF/ESI calculated automatically</li>
-            <li><span class="hms2-check">✓</span>ABDM, GST, and NABH — all compliance built in</li>
-          </ul>
-          <div class="hms2-side-quote">"We recovered ₹22 lakhs in billing charges in the first month — charges we didn't even know were being missed."</div>
-          <div class="hms2-side-attr">— CFO, City General Hospital Network, 450 beds</div>
+
+        <!-- Management card (dark) -->
+        <div class="hms2-dual-card hms2-dual-mgmt hms2-fade-right" style="transition-delay:.15s">
+          <div class="hms2-dual-card-tag" style="color:#d1f470;border-color:rgba(209,244,112,.2)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            For Hospital Owners &amp; Management
+          </div>
+          <div class="hms2-dual-metric">
+            <div class="hms2-dual-metric-num">₹22L</div>
+            <div class="hms2-dual-metric-text">Average revenue recovered in month 1 after go-live</div>
+          </div>
+          <div class="hms2-dual-feats">
+            <div class="hms2-dual-feat hms2-dual-feat-dark">
+              <div class="hms2-dual-fi" style="background:rgba(209,244,112,.1);color:#d1f470"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <span>Every charge auto-captured — OPD, IPD, Ambulance, Radiology</span>
+              <span class="hms2-dual-tag hms2-dual-tag-dark">₹0 missed</span>
+            </div>
+            <div class="hms2-dual-feat hms2-dual-feat-dark">
+              <div class="hms2-dual-fi" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.6)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg></div>
+              <span>Live revenue dashboard — not yesterday's numbers</span>
+              <span class="hms2-dual-tag hms2-dual-tag-dark">Real-time</span>
+            </div>
+            <div class="hms2-dual-feat hms2-dual-feat-dark">
+              <div class="hms2-dual-fi" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.6)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <span>TPA and insurance claims tracked pre-auth to settlement</span>
+              <span class="hms2-dual-tag hms2-dual-tag-dark">18 days</span>
+            </div>
+            <div class="hms2-dual-feat hms2-dual-feat-dark">
+              <div class="hms2-dual-fi" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.6)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+              <span>Bed occupancy, OT utilisation, doctor productivity — live</span>
+              <span class="hms2-dual-tag hms2-dual-tag-dark">Live</span>
+            </div>
+            <div class="hms2-dual-feat hms2-dual-feat-dark">
+              <div class="hms2-dual-fi" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.6)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              <span>Month-end closes in 3 days, not 8</span>
+              <span class="hms2-dual-tag hms2-dual-tag-dark">3 days</span>
+            </div>
+            <div class="hms2-dual-feat hms2-dual-feat-dark" style="border-bottom:none">
+              <div class="hms2-dual-fi" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.6)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+              <span>ABDM, GST, and NABH — all compliance built in</span>
+              <span class="hms2-dual-tag hms2-dual-tag-dark">Compliant</span>
+            </div>
+          </div>
+          <div class="hms2-dual-quote hms2-dual-quote-dark">
+            "We recovered ₹22 lakhs in billing charges in the first month — charges we didn't even know were being missed."
+            <div class="hms2-dual-attr" style="color:rgba(255,255,255,.3)">— CFO, City General Hospital Network, 450 beds</div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -294,13 +363,14 @@
   <!-- ══ ALL MODULES ══════════════════════════════════ -->
   <section class="hms2-modules">
     <div class="container">
-      <div class="hms2-modules-header">
-        <h2 class="hms2-section-h2">Every department connected.<br>One system.</h2>
+      <div class="hms2-modules-header hms2-fade-up">
+        <div class="hms2-section-tag">Complete hospital coverage</div>
+        <h2 class="hms2-section-h2">Every department connected.<br><span class="hms2-accent">One system.</span></h2>
         <p class="hms2-section-sub">From the front desk to the finance office — every module in ZenoHosp HMS shares one patient record.</p>
       </div>
       <div class="hms2-module-grid">
 
-        <div class="hms2-module-card">
+        <div class="hms2-module-card hms2-fade-up hms2-card-stagger" data-num="01">
           <div class="hms2-mod-icon" style="background:#e8f5e9;color:#2e7d32">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
@@ -308,7 +378,7 @@
           <div class="hms2-mod-desc">Register in 2 minutes. ABHA linked. Full history on first visit. Queue managed automatically.</div>
         </div>
 
-        <div class="hms2-module-card">
+        <div class="hms2-module-card hms2-fade-up hms2-card-stagger" data-num="02">
           <div class="hms2-mod-icon" style="background:#e3f2fd;color:#1565c0">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
@@ -316,7 +386,7 @@
           <div class="hms2-mod-desc">Multi-doctor calendars. Walk-in token queues. WhatsApp reminders. 14% fewer no-shows.</div>
         </div>
 
-        <div class="hms2-module-card">
+        <div class="hms2-module-card hms2-fade-up hms2-card-stagger" data-num="03">
           <div class="hms2-mod-icon" style="background:#fce4ec;color:#c62828">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
@@ -324,7 +394,7 @@
           <div class="hms2-mod-desc">Admission, room allocation, room logs, ward rounds, and discharge — zero paperwork.</div>
         </div>
 
-        <div class="hms2-module-card">
+        <div class="hms2-module-card hms2-fade-up hms2-card-stagger" data-num="04">
           <div class="hms2-mod-icon" style="background:#ede9fe;color:#5b21b6">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m-7-10H2m20 0h-3M5.64 5.64l2.12 2.12m8.48 8.48l2.12 2.12m0-12.72l-2.12 2.12M7.76 16.24l-2.12 2.12"/></svg>
           </div>
@@ -332,7 +402,7 @@
           <div class="hms2-mod-desc">Imaging queue managed within HMS. Reports attached to patient record. No separate RIS login.</div>
         </div>
 
-        <div class="hms2-module-card">
+        <div class="hms2-module-card hms2-fade-up hms2-card-stagger" data-num="05">
           <div class="hms2-mod-icon" style="background:#fff8e1;color:#f57f17">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
@@ -340,7 +410,7 @@
           <div class="hms2-mod-desc">Book, dispatch, and track ambulances. Billing for ambulance runs auto-posted to patient account.</div>
         </div>
 
-        <div class="hms2-module-card">
+        <div class="hms2-module-card hms2-fade-up hms2-card-stagger" data-num="06">
           <div class="hms2-mod-icon" style="background:#e0f2f1;color:#00695c">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
@@ -348,7 +418,7 @@
           <div class="hms2-mod-desc">Package-based checkup booking. Results linked to patient record. Corporate health program ready.</div>
         </div>
 
-        <div class="hms2-module-card">
+        <div class="hms2-module-card hms2-fade-up hms2-card-stagger" data-num="07">
           <div class="hms2-mod-icon" style="background:#f3e5f5;color:#6a1b9a">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
@@ -356,59 +426,91 @@
           <div class="hms2-mod-desc">Every charge auto-captured from every department. GST-compliant. TPA split. ₹0 missed charges.</div>
         </div>
 
-        <div class="hms2-module-card">
-          <div class="hms2-mod-icon" style="background:#fce4ec;color:#ad1457">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="hms2-mod-name">HR &amp; Staff</div>
-          <div class="hms2-mod-desc">Doctor profiles, nurse rosters, attendance, and payroll — PF/ESI calculated automatically.</div>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- ══ OPD WORKFLOW ═════════════════════════════════ -->
-  <section class="hms2-workflow">
+  <section class="hms2-workflow hms2-workflow-v2">
     <div class="container">
-      <div class="hms2-wf-header">
+      <div class="hms2-wfv2-header hms2-fade-up">
         <div class="hms2-section-tag">The OPD in real life</div>
-        <h2 class="hms2-section-h2">From token to prescription.<br>Under 8 minutes.</h2>
+        <h2 class="hms2-section-h2">From token to prescription.<br>Under <span class="hms2-accent">8 minutes.</span></h2>
       </div>
-      <div class="hms2-wf-steps">
-        <div class="hms2-wf-step">
-          <div class="hms2-wf-num">01</div>
-          <div class="hms2-wf-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <div class="hms2-wf-title">Patient arrives</div>
-          <div class="hms2-wf-desc">Front desk registers in 2 minutes. ABHA linked. Token issued. Insurance captured. OPD number generated.</div>
-          <div class="hms2-wf-time">2 min</div>
+
+      <div class="hms2-flow-grid">
+
+        <div class="hms2-flow-card hms2-fade-up" style="transition-delay:.05s">
+          <div class="hms2-flow-bnum">01</div>
+          <div class="hms2-flow-icon" style="background:#e8f5e9;color:#2e7d32">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="hms2-flow-meta">
+            <div class="hms2-flow-step">Step 01</div>
+            <div class="hms2-flow-badge" style="background:#e8f5e9;color:#2e7d32;border-color:#c5e8dc">2 min</div>
+          </div>
+          <div class="hms2-flow-title">Patient arrives</div>
+          <div class="hms2-flow-desc">Front desk registers in under 2 minutes. ABHA linked, token issued, insurance captured. OPD number auto-generated.</div>
+          <div class="hms2-flow-tags"><span>ABHA Linked</span><span>Token Issued</span></div>
         </div>
-        <div class="hms2-wf-arrow">→</div>
-        <div class="hms2-wf-step">
-          <div class="hms2-wf-num">02</div>
-          <div class="hms2-wf-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <div class="hms2-wf-title">Doctor consults</div>
-          <div class="hms2-wf-desc">Full patient history visible. Consultation noted. Prescription written. Lab tests ordered — all from one screen.</div>
-          <div class="hms2-wf-time">5 min</div>
+
+        <div class="hms2-flow-connector">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8 H32 M28 3 L38 8 L28 13" stroke="#d1f470" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="hms2-wf-arrow">→</div>
-        <div class="hms2-wf-step">
-          <div class="hms2-wf-num">03</div>
-          <div class="hms2-wf-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg></div>
-          <div class="hms2-wf-title">Pharmacy dispenses</div>
-          <div class="hms2-wf-desc">Prescription arrives in pharmacy in 3 seconds. No paper slip. Meds dispensed. Stock updated. Bill posted.</div>
-          <div class="hms2-wf-time">3 sec</div>
+
+        <div class="hms2-flow-card hms2-fade-up" style="transition-delay:.15s">
+          <div class="hms2-flow-bnum">02</div>
+          <div class="hms2-flow-icon" style="background:#e3f2fd;color:#1565c0">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <div class="hms2-flow-meta">
+            <div class="hms2-flow-step">Step 02</div>
+            <div class="hms2-flow-badge" style="background:#e3f2fd;color:#1565c0;border-color:#bbdefb">5 min</div>
+          </div>
+          <div class="hms2-flow-title">Doctor consults</div>
+          <div class="hms2-flow-desc">Full patient history on screen before they sit down. Consultation noted, e-prescription written, lab orders placed — one screen, zero switching.</div>
+          <div class="hms2-flow-tags"><span>Full History</span><span>E-Prescription</span></div>
         </div>
-        <div class="hms2-wf-arrow">→</div>
-        <div class="hms2-wf-step">
-          <div class="hms2-wf-num">04</div>
-          <div class="hms2-wf-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <div class="hms2-wf-title">Bill is ready</div>
-          <div class="hms2-wf-desc">Consultation + pharmacy + lab — all on one GST-compliant invoice. UPI, card, or cash. Patient leaves satisfied.</div>
-          <div class="hms2-wf-time">1 min</div>
+
+        <div class="hms2-flow-connector">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8 H32 M28 3 L38 8 L28 13" stroke="#d1f470" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
+
+        <div class="hms2-flow-card hms2-fade-up" style="transition-delay:.25s">
+          <div class="hms2-flow-bnum">03</div>
+          <div class="hms2-flow-icon" style="background:#f3e5f5;color:#6a1b9a">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg>
+          </div>
+          <div class="hms2-flow-meta">
+            <div class="hms2-flow-step">Step 03</div>
+            <div class="hms2-flow-badge" style="background:#f3e5f5;color:#6a1b9a;border-color:#e1bee7">3 sec</div>
+          </div>
+          <div class="hms2-flow-title">Pharmacy dispenses</div>
+          <div class="hms2-flow-desc">Prescription reaches pharmacy in 3 seconds. No paper slip, no phone call. Meds dispensed, stock decremented, bill posted — automatically.</div>
+          <div class="hms2-flow-tags"><span>Zero Paper</span><span>Auto Stock</span></div>
+        </div>
+
+        <div class="hms2-flow-connector">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8 H32 M28 3 L38 8 L28 13" stroke="#d1f470" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="hms2-flow-card hms2-fade-up" style="transition-delay:.35s">
+          <div class="hms2-flow-bnum">04</div>
+          <div class="hms2-flow-icon" style="background:#fff8e1;color:#f57f17">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="hms2-flow-meta">
+            <div class="hms2-flow-step">Step 04</div>
+            <div class="hms2-flow-badge" style="background:#fff8e1;color:#f57f17;border-color:#ffe082">1 min</div>
+          </div>
+          <div class="hms2-flow-title">Bill is ready</div>
+          <div class="hms2-flow-desc">Consultation + pharmacy + lab on one GST invoice. UPI, cash, or card. TPA split automatic. WhatsApp receipt sent before the patient reaches the door.</div>
+          <div class="hms2-flow-tags"><span>GST Compliant</span><span>TPA Auto-split</span></div>
+        </div>
+
       </div>
-      <div class="hms2-wf-callout">
+
+      <div class="hms2-wf-callout hms2-fade-up">
         <strong>248 OPD patients</strong> processed on day 1 at City General Hospital after going live with ZenoHosp.
         <span>Zero billing errors. Zero missed charges.</span>
       </div>
@@ -419,7 +521,7 @@
   <section class="hms2-billing-sec">
     <div class="container">
       <div class="hms2-billing-inner">
-        <div class="hms2-billing-copy">
+        <div class="hms2-billing-copy hms2-fade-left">
           <div class="hms2-section-tag" style="color:#d1f470;">Billing that misses nothing</div>
           <h2 style="color:#fff;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;letter-spacing:-.04em;margin-bottom:16px;">OPD. IPD. Ambulance.<br>Every rupee captured.</h2>
           <p style="color:rgba(255,255,255,.6);font-size:1rem;line-height:1.75;margin-bottom:32px;">Most hospitals lose ₹8–22 lakhs a month because charges slip through between departments. In ZenoHosp, every consultation, every IV drip, every radiology scan, and every ambulance run auto-posts to the patient's bill the moment it happens. Nothing waits for someone to type it in.</p>
@@ -439,7 +541,7 @@
           </div>
           <a href="features/billing/index.html" class="hms2-billing-link">See how billing works →</a>
         </div>
-        <div class="hms2-billing-types">
+        <div class="hms2-billing-types hms2-fade-right" style="transition-delay:.2s">
           <div class="hms2-bill-type">
             <div class="hms2-btype-icon">🏥</div>
             <div class="hms2-btype-name">OPD Billing</div>
@@ -468,7 +570,7 @@
   <!-- ══ TESTIMONIAL ══════════════════════════════════ -->
   <section class="hms2-testimonial">
     <div class="container">
-      <div class="hms2-t-inner">
+      <div class="hms2-t-inner hms2-fade-up">
         <div class="hms2-t-quote">"</div>
         <blockquote class="hms2-t-text">Before ZenoHosp, our billing team stayed back every month-end reconciling three systems. OPD billing in one place, pharmacy in another, radiology manually entered. We were losing 15–20 lakhs every month without knowing it. Three months after going live, our billing is clean, our TPA settlements are faster, and my Medical Director finally has a dashboard he trusts.</blockquote>
         <div class="hms2-t-author">
@@ -477,6 +579,7 @@
             <div class="hms2-t-name">Arvind Krishnamurthy</div>
             <div class="hms2-t-role">CEO, 300-bed multi-specialty hospital · Bengaluru</div>
           </div>
+          <div style="margin-left:auto"><span style="color:#d1f470;font-size:.8rem;letter-spacing:.06em">★★★★★</span></div>
         </div>
       </div>
     </div>
@@ -700,6 +803,85 @@
 
 
     <script src="../../js/app.js" defer></script>
+    <script>
+    (function(){
+
+      /* ── 1. SCROLL REVEAL ─────────────────────────────── */
+      var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('hms2-in');io.unobserve(x.target);}});},{threshold:0.12});
+      document.querySelectorAll('.hms2-fade-up,.hms2-fade-left,.hms2-fade-right').forEach(function(el){
+        if(!el.classList.contains('hms2-hero-copy')&&!el.classList.contains('hms2-hero-visual')) io.observe(el);
+      });
+      document.querySelectorAll('.hms2-card-stagger').forEach(function(el,i){el.style.transitionDelay=(i*0.07)+'s';});
+
+      /* ── 2. HERO ENTRANCE ─────────────────────────────── */
+      var hc=document.querySelector('.hms2-hero-copy');
+      var hv=document.querySelector('.hms2-hero-visual');
+      setTimeout(function(){
+        if(hc)hc.classList.add('hms2-in');
+        if(hv)setTimeout(function(){
+          hv.classList.add('hms2-in');
+          setTimeout(function(){
+            if(hv)hv.style.transition='none';
+            if(hc)hc.style.transition='none';
+          },700);
+        },180);
+      },80);
+
+      /* ── 3. MOUSE 3D PARALLAX ON HERO ────────────────── */
+      var hero=document.querySelector('.hms2-hero');
+      var tdx=0,tdy=0,cdx=0,cdy=0,raf=null;
+      function lerp(a,b,t){return a+(b-a)*t;}
+      function tick(){
+        cdx=lerp(cdx,tdx,.07);
+        cdy=lerp(cdy,tdy,.07);
+        if(hv) hv.style.transform='perspective(900px) rotateY('+(cdx*10)+'deg) rotateX('+(-cdy*7)+'deg) translateZ(10px)';
+        if(hc) hc.style.transform='translateX('+(cdx*-14)+'px) translateY('+(cdy*-9)+'px)';
+        if(Math.abs(cdx-tdx)>.0005||Math.abs(cdy-tdy)>.0005) raf=requestAnimationFrame(tick);
+        else raf=null;
+      }
+      if(hero){
+        hero.addEventListener('mousemove',function(e){
+          var r=hero.getBoundingClientRect();
+          tdx=(e.clientX-r.left-r.width/2)/r.width;
+          tdy=(e.clientY-r.top-r.height/2)/r.height;
+          if(!raf) raf=requestAnimationFrame(tick);
+        });
+        hero.addEventListener('mouseleave',function(){tdx=0;tdy=0;if(!raf)raf=requestAnimationFrame(tick);});
+      }
+
+      /* ── 4. LIVE ACTIVITY TICKER ──────────────────────── */
+      var track=document.getElementById('liveTicker');
+      if(track){
+        var spans=track.querySelectorAll('span');
+        var total=spans.length,cur=0;
+        setInterval(function(){
+          cur=(cur+1)%total;
+          track.style.transform='translateY(-'+(cur*16)+'px)';
+        },2800);
+      }
+
+      /* ── 5. FLOW CARDS — hover line animate on scroll-in ─ */
+
+      /* ── 6. SIDEBAR ITEM CYCLING ──────────────────────── */
+      var sb=document.querySelector('.hms2-sidebar-preview');
+      if(sb){
+        var items=sb.querySelectorAll('.hms2-sb-item');
+        var sc=Array.from(items).findIndex(function(el){return el.classList.contains('hms2-sb-active');});
+        if(sc<0)sc=0;
+        setInterval(function(){items[sc].classList.remove('hms2-sb-active');sc=(sc+1)%items.length;items[sc].classList.add('hms2-sb-active');},1800);
+      }
+
+      /* ── 7. BILLING STATS COUNT-UP ────────────────────── */
+      function countUp(el,end,pre,suf,dur){
+        var t0=null;
+        function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=pre+Math.round(e*end).toLocaleString('en-IN')+suf;if(p<1)requestAnimationFrame(step);}
+        requestAnimationFrame(step);
+      }
+      var sio=new IntersectionObserver(function(entries){entries.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,t=el.textContent.trim();el.classList.add('hms2-stat-anim');if(t==='₹0')el.textContent='₹0';if(t==='3 days')countUp(el,3,'',' days',500);if(t==='18 days')countUp(el,18,'',' days',700);sio.unobserve(el);});},{threshold:0.6});
+      document.querySelectorAll('.hms2-bill-num').forEach(function(el){sio.observe(el);});
+
+    })();
+    </script>
 </body>
 
 </html>

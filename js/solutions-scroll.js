@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!wrapper || !section || !track) return;
 
   function setHeight() {
+    // Disable scrolljacking on mobile completely
+    if (window.innerWidth <= 992) {
+      wrapper.style.height = 'auto';
+      track.style.transform = 'none';
+      return;
+    }
+
     // Use clientWidth to ignore scrollbar width, and add 120px buffer for right padding
     const maxTranslate = track.scrollWidth - document.documentElement.clientWidth + 120;
     
@@ -21,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateScroll() {
+    // Abort on mobile to prevent overriding the vertical stack
+    if (window.innerWidth <= 992) return;
+
     const maxTranslate = track.scrollWidth - document.documentElement.clientWidth + 120;
     if (maxTranslate <= 0) {
       track.style.transform = `translateX(0px)`;

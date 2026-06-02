@@ -442,6 +442,51 @@
     update();
   }
 
+  function initBottomMobileNav() {
+    // Ensure we are on mobile/tablet view
+    if (window.innerWidth > 992) return;
+    
+    // Skip on documentation pages
+    if (window.location.pathname.includes('/docs/')) return;
+    
+    // Don't inject multiple times
+    if (document.getElementById('mobile-bottom-bar')) return;
+    
+    const toggle = document.getElementById('mobile-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+
+    // Create the bottom bar
+    const bottomBar = document.createElement('div');
+    bottomBar.className = 'mobile-bottom-bar';
+    bottomBar.id = 'mobile-bottom-bar';
+
+    // Move toggle button into the bottom bar
+    bottomBar.appendChild(toggle);
+
+    // Create and append the Sign In link (Bubble 2)
+    let signinLink = document.querySelector('.nav-actions .signin') || document.querySelector('.ps-right a:not(.btn-primary)');
+    if (signinLink) {
+      const mobileSignIn = document.createElement('a');
+      mobileSignIn.className = 'bottom-bar-signin';
+      mobileSignIn.innerText = 'Sign In';
+      mobileSignIn.href = signinLink.getAttribute('href') || 'javascript:void(0)';
+      bottomBar.appendChild(mobileSignIn);
+    }
+
+    // Create and append the Request Demo CTA (Bubble 3)
+    let ctaLink = document.querySelector('.nav-actions .btn-primary') || document.querySelector('.ps-right .btn-primary');
+    let href = ctaLink ? ctaLink.getAttribute('href') : '/contact-us/index.html';
+    
+    const mobileCta = document.createElement('a');
+    mobileCta.className = 'bottom-bar-cta';
+    mobileCta.innerText = 'Request Demo';
+    mobileCta.href = href;
+    bottomBar.appendChild(mobileCta);
+
+    document.body.appendChild(bottomBar);
+  }
+
   function init() {
     initNavbar();
     initMobileMenu();
@@ -456,6 +501,7 @@
     initCounterAnimation();
     initScrollExpand();
     initJourneyScroll();
+    initBottomMobileNav();
   }
 
   window.ZenoApp = {
