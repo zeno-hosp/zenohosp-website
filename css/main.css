@@ -10140,10 +10140,10 @@ html[data-billing="yearly"] .monthly {
   font-size: 0.82rem;
   font-weight: 600;
 }
-.ps-right a {
+.ps-right a:not(.btn-primary) {
   color: rgba(255, 255, 255, 0.78);
 }
-.ps-right a:hover {
+.ps-right a:not(.btn-primary):hover {
   color: #fff;
 }
 .module-head {
