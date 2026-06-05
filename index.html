@@ -774,6 +774,378 @@
     </div>
   </section>
 
+  <!-- ══ INTERACTIVE ISOMETRIC HOSPITAL SIMULATION ══════════════════════════════════ -->
+  <section id="iso-hospital" class="zeno-mode" style="background:#080806;padding:120px 0;position:relative;overflow:hidden;min-height:900px; font-family: 'Inter', sans-serif;">
+    
+    <style>
+      /* Bespoke Typography & Layout */
+      .iso-header { max-width: 1400px; margin: 0 auto; margin-bottom: 60px; padding: 0 24px; position: relative; z-index: 10; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 40px; }
+      .header-left { max-width: 600px; }
+      .iso-title { color: #c6f135; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; margin-bottom: 16px; font-family: 'Outfit', sans-serif;}
+      .iso-headline { font-size: 56px; font-weight: 300; color: #FFF; letter-spacing: -0.03em; line-height: 1.1; font-family: 'Outfit', sans-serif; margin:0;}
+      .iso-headline span { font-weight: 600; }
+      
+      /* Toggle Switch - Minimalist */
+      .iso-toggle-wrapper { display: flex; align-items: center; gap: 20px; position: relative; z-index: 10; }
+      .iso-toggle-label { color: rgba(255,255,255,0.3); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s; }
+      .iso-switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+      .iso-switch input { opacity: 0; width: 0; height: 0; }
+      .iso-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(239,68,68,0.2); transition: .4s; border-radius: 34px; border: 1px solid rgba(239,68,68,0.5); }
+      .iso-slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background-color: #ef4444; transition: .4s; border-radius: 50%; }
+      input:checked + .iso-slider { background-color: rgba(198, 241, 53, 0.1); border-color: rgba(198, 241, 53, 0.3); }
+      input:checked + .iso-slider:before { transform: translateX(20px); background-color: #c6f135; }
+      
+      .zeno-mode .t-zeno { color: #c6f135; }
+      .legacy-mode .t-leg { color: #ef4444; }
+
+      .iso-layout { display: flex; max-width: 1400px; margin: 0 auto; position: relative; z-index: 5; gap: 60px; padding: 0 24px; align-items: flex-start; }
+      
+      /* Control Panel - Open, Editorial Design */
+      .iso-panel { width: 400px; flex-shrink: 0; display: flex; flex-direction: column; position: relative; z-index: 10; padding-top: 20px; }
+      .panel-desc { color: rgba(255,255,255,0.5); margin-bottom: 40px; font-size: 16px; line-height: 1.6; font-weight: 300; }
+      
+      #panel-main, #panel-hud { transition: opacity 0.3s, transform 0.3s; }
+      
+      /* Scenario List - Bespoke Typography */
+      .scen-btn { display: block; width: 100%; text-align: left; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 24px 0; border-radius: 0; margin: 0; cursor: pointer; transition: all 0.4s ease; position: relative; }
+      .scen-btn::before { content: ''; position: absolute; left: -20px; top: 20px; bottom: 20px; width: 2px; background: transparent; transition: background 0.4s; }
+      .scen-btn:hover { padding-left: 10px; }
+      .scen-btn:hover::before { background: rgba(255,255,255,0.2); left: -10px; }
+      .scen-btn.active { padding-left: 15px; border-bottom-color: rgba(255,255,255,0.1); }
+      .scen-btn.active::before { background: #c6f135; left: 0px; }
+      
+      .scen-btn .btn-title { display: block; font-size: 22px; color: rgba(255,255,255,0.6); font-weight: 300; font-family: 'Outfit', sans-serif; margin-bottom: 8px; transition: color 0.4s;}
+      .scen-btn:hover .btn-title { color: #FFF; }
+      .scen-btn.active .btn-title { color: #c6f135; font-weight: 500; }
+      
+      .scen-btn .btn-sub { display: block; font-size: 11px; color: rgba(255,255,255,0.3); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; transition: color 0.4s;}
+
+      .legacy-mode .scen-btn.active::before { background: #ef4444; }
+      .legacy-mode .scen-btn.active .btn-title { color: #ef4444; }
+
+      /* Process Tracker - Editorial Timeline */
+      .live-log { margin-top: 60px; background: transparent; border: none; padding: 0; box-shadow: none; display: flex; flex-direction: column; }
+      .log-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: rgba(255,255,255,0.3); margin-bottom: 24px; border: none; padding: 0; }
+      
+      .log-content { display: flex; flex-direction: column; gap: 20px; position: relative; padding-left: 20px; }
+      .log-content::before { content: ''; position: absolute; left: 4px; top: 8px; bottom: 8px; width: 1px; background: rgba(255,255,255,0.05); }
+      
+      .log-entry { position: relative; font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300; animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(10px); }
+      .log-entry::before { content: ''; position: absolute; left: -20px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: #c6f135; box-shadow: 0 0 0 4px #080806; z-index: 2; transition: background 0.3s; }
+      
+      .log-entry.active-step { color: #FFF; font-weight: 400; }
+      .log-entry.sys { color: rgba(255,255,255,0.3); }
+      .log-entry.sys::before { background: rgba(255,255,255,0.1); }
+      
+      .log-entry.err { color: rgba(239,68,68,0.9); }
+      .log-entry.err::before { background: #ef4444; }
+      .log-entry.err .err-detail { display: block; font-size: 12px; color: rgba(239,68,68,0.6); margin-top: 4px; }
+      
+      @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+      /* HUD Panel - Minimalist overlay */
+      #panel-hud { position: absolute; inset: 0; background: #080806; border: none; padding: 20px 0; display: none; flex-direction: column; z-index: 20; }
+      .back-btn { background: none; border: none; color: rgba(255,255,255,0.4); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; text-align: left; margin-bottom: 40px; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s; padding: 0;}
+      .back-btn:hover { color: #FFF; }
+      .hud-title { font-size: 32px; font-weight: 300; color: #FFF; margin-bottom: 16px; font-family: 'Outfit', sans-serif;}
+      .hud-desc { font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: 40px; line-height: 1.6; font-weight: 300; }
+      .hud-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+      .hud-features li { padding: 0; color: #FFF; font-size: 15px; font-weight: 300; display: flex; align-items: flex-start; gap: 16px; }
+      .hud-features li svg { width: 18px; height: 18px; stroke: #c6f135; flex-shrink: 0; margin-top: 2px; }
+
+      /* Image Map Wrapper - No borders, pure floating */
+      .iso-map-wrapper { flex-grow: 1; position: relative; border-radius: 0; box-shadow: none; overflow: hidden; background: transparent; border: none; }
+      .base-map-img { width: 100%; height: auto; display: block; transition: filter 0.8s ease; opacity: 0.9; } 
+      .legacy-mode .base-map-img { filter: grayscale(100%) brightness(0.4); opacity: 0.5; }
+
+      /* SVG Overlay Layer */
+      .map-svg-overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; }
+      .route-bg { fill: none; stroke: rgba(198, 241, 53, 0.2); stroke-width: 0.5; stroke-linejoin: round; stroke-linecap: round; }
+      .route-active { fill: none; stroke: #c6f135; stroke-width: 1; stroke-dasharray: 4 4; stroke-linejoin: round; stroke-linecap: round; animation: dashAnim 1s linear infinite reverse; }
+      .legacy-mode .route-active { stroke: #ef4444; stroke-dasharray: 2 6; }
+      
+      @keyframes dashAnim { to { stroke-dashoffset: 8; } }
+
+      /* Interactive Hotspots - Minimal Dots */
+      .hotspots-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+      .hotspot { position: absolute; width: 16px; height: 16px; margin-left: -8px; margin-top: -8px; border-radius: 50%; background: rgba(198, 241, 53, 0.2); pointer-events: auto; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+      .hotspot::after { content: ''; width: 6px; height: 6px; background: #c6f135; border-radius: 50%; transition: all 0.4s; }
+      
+      .hotspot:hover { transform: scale(1.5); background: rgba(198, 241, 53, 0.3); z-index: 10; }
+      .hotspot.active { background: rgba(198, 241, 53, 0.4); transform: scale(2); }
+      
+      .legacy-mode .hotspot { background: rgba(239,68,68,0.2); }
+      .legacy-mode .hotspot::after { background: #ef4444; }
+      .legacy-mode .hotspot.active { background: rgba(239,68,68,0.4); }
+      
+      /* Hotspot Labels - Elegant floating text */
+      .hs-label { position: absolute; top: -24px; left: 50%; transform: translateX(-50%); color: #FFF; font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; opacity: 0; transition: opacity 0.4s, transform 0.4s; pointer-events: none; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+      .hotspot:hover .hs-label, .hotspot.active .hs-label { opacity: 1; transform: translateX(-50%) translateY(-5px); }
+
+      @media(max-width: 1100px) {
+        .iso-header { flex-direction: column; align-items: flex-start; gap: 30px; }
+        .iso-layout { flex-direction: column-reverse; }
+        .iso-panel { width: 100%; }
+        .iso-map-wrapper { width: 100%; }
+      }
+    </style>
+
+    <div class="iso-header">
+      <div class="header-left">
+        <div class="iso-title">Operations Engine</div>
+        <h2 class="iso-headline">The <span>Living</span> Hospital</h2>
+      </div>
+      
+      <div class="iso-toggle-wrapper">
+        <div class="iso-toggle-label t-leg">Legacy IT</div>
+        <label class="iso-switch">
+          <input type="checkbox" id="glitch-toggle" checked onchange="toggleGlitchMode(this)">
+          <span class="iso-slider"></span>
+        </label>
+        <div class="iso-toggle-label t-zeno active">ZenoHosp</div>
+      </div>
+    </div>
+
+    <div class="iso-layout">
+      
+      <!-- Control Panel -->
+      <div class="iso-panel">
+        <div id="panel-main">
+          <div class="panel-desc">Observe real-time data flows across physical departments. Select a sequence to initiate tracking.</div>
+          <div class="scenario-list">
+            <button class="scen-btn" id="btn-opd" onclick="runScenario('opd')">
+              <span class="btn-title">Walk-in Patient</span>
+              <span class="btn-sub">Reception &rarr; Radiology &rarr; Lab &rarr; Pharm &rarr; Bill</span>
+            </button>
+            <button class="scen-btn" id="btn-emergency" onclick="runScenario('emergency')">
+              <span class="btn-title">Emergency Trauma</span>
+              <span class="btn-sub">Ambulance &rarr; OT Room &rarr; Blood Bank &rarr; Bill</span>
+            </button>
+            <button class="scen-btn" id="btn-lab_flow" onclick="runScenario('lab_flow')">
+              <span class="btn-title">Diagnostics Flow</span>
+              <span class="btn-sub">Reception &rarr; Lab &rarr; Inventory &rarr; Bill</span>
+            </button>
+          </div>
+
+          <div class="live-log">
+            <div class="log-title">Live Telemetry</div>
+            <div class="log-content" id="live-log-box">
+              <div class="log-entry sys">Awaiting sequence...</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-hud">
+          <button class="back-btn" onclick="closeHud()">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Return
+          </button>
+          <h3 class="hud-title" id="hud-title">Department</h3>
+          <div class="hud-desc" id="hud-desc">Description.</div>
+          <ul class="hud-features" id="hud-features"></ul>
+        </div>
+      </div>
+
+      <!-- Image Map Wrapper -->
+      <div class="iso-map-wrapper">
+        <img src="images/isometric-zenohosp.png" alt="Hospital 3D Map" class="base-map-img" />
+        
+        <!-- SVG Overlay for Paths -->
+        <svg class="map-svg-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <path id="active-route-line" class="route-active" d="" />
+          <g id="active-packet" style="display:none;">
+            <circle cx="0" cy="0" r="1.5" fill="#c6f135" filter="url(#glow)"/>
+          </g>
+        </svg>
+
+        <!-- Interactive Hotspots -->
+        <div class="hotspots-layer">
+          <div class="hotspot" id="hs-ambulance" style="left:12%; top:52%;" onclick="openHud('ambulance')"><div class="hs-label">Ambulance</div></div>
+          <div class="hotspot" id="hs-pharm" style="left:25%; top:18%;" onclick="openHud('pharm')"><div class="hs-label">Pharmacy</div></div>
+          <div class="hotspot" id="hs-admin" style="left:40%; top:38%;" onclick="openHud('admin')"><div class="hs-label">Reception</div></div>
+          <div class="hotspot" id="hs-lab" style="left:45%; top:18%;" onclick="openHud('lab')"><div class="hs-label">Lab</div></div>
+          <div class="hotspot" id="hs-radio" style="left:64%; top:20%;" onclick="openHud('radio')"><div class="hs-label">Radiology</div></div>
+          <div class="hotspot" id="hs-ot" style="left:60%; top:44%;" onclick="openHud('ot')"><div class="hs-label">OT Room</div></div>
+          <div class="hotspot" id="hs-invent" style="left:85%; top:22%;" onclick="openHud('invent')"><div class="hs-label">Inventory</div></div>
+          <div class="hotspot" id="hs-blood" style="left:86%; top:44%;" onclick="openHud('blood')"><div class="hs-label">Blood Bank</div></div>
+          <div class="hotspot" id="hs-bill" style="left:80%; top:66%;" onclick="openHud('bill')"><div class="hs-label">Billings</div></div>
+        </div>
+      </div>
+
+    </div>
+    
+    <script>
+      let isZenoMode = true;
+
+      function toggleGlitchMode(cb) {
+        isZenoMode = cb.checked;
+        const section = document.getElementById('iso-hospital');
+        const logBox = document.getElementById('live-log-box');
+        if(!isZenoMode) {
+          section.classList.remove('zeno-mode');
+          section.classList.add('legacy-mode');
+          logBox.innerHTML = `<div class="log-entry err">Legacy systems online.<span class="err-detail">Data fragmentation detected.</span></div>`;
+        } else {
+          section.classList.remove('legacy-mode');
+          section.classList.add('zeno-mode');
+          logBox.innerHTML = `<div class="log-entry sys" style="color:#c6f135;">System Restored. Sync active.</div>`;
+        }
+      }
+
+      // HUD Logic
+      const nodeData = {
+        admin: { title: "Reception", desc: "The intelligent entry point. Ensure zero-wait registration and flawless initial data capture.", feats: ["Insurance Verification", "Queue Management", "Digital Consent Forms"] },
+        pharm: { title: "Pharmacy", desc: "A smart dispensary that never runs out of stock and never lets drugs expire.", feats: ["Auto-PO for low stock", "Expiry Date Alerts", "Substitute Finder"] },
+        lab: { title: "Laboratory", desc: "Fully integrated diagnostics. Test results flow straight to the doctor's screen and the billing engine.", feats: ["Direct machine interfacing", "Auto-post charges", "Critical Alert SMS"] },
+        radio: { title: "Radiology", desc: "Seamless imaging integration. PACS links directly to patient EMRs instantly.", feats: ["PACS Integration", "Instant Report Delivery", "Auto-billing"] },
+        ot: { title: "OT Room", desc: "Manage surgical suites with precision, from scheduling to post-op recovery.", feats: ["OT Scheduling", "Anaesthesia Notes", "Surgeon Payout Tracking"] },
+        invent: { title: "Inventory", desc: "Centralized stores management with total visibility across all hospital departments.", feats: ["Multi-store tracking", "Vendor Management", "Consumption Analytics"] },
+        blood: { title: "Blood Bank", desc: "Critical blood unit tracking from donation to transfusion.", feats: ["Barcode Tracking", "Temperature Logs", "Cross-match workflows"] },
+        bill: { title: "Billings", desc: "The heart of ZenoHosp. Captures every single charge automatically to ensure absolutely zero revenue leakage.", feats: ["Auto-capture from all depts", "Split billing (Cash/TPA)", "Discount Approvals Flow"] },
+        ambulance: { title: "Ambulance", desc: "Emergency response dispatch with live ETA tracking.", feats: ["GPS Tracking", "ER Pre-alerts", "Vitals telemetry"] }
+      };
+
+      function openHud(nodeId) {
+        if(isRunning) return; 
+        const data = nodeData[nodeId];
+        if(!data) return;
+        
+        document.getElementById('hud-title').innerText = data.title;
+        document.getElementById('hud-desc').innerText = data.desc;
+        const ul = document.getElementById('hud-features');
+        ul.innerHTML = '';
+        data.feats.forEach(f => { 
+          ul.innerHTML += `<li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ${f}</li>`; 
+        });
+
+        document.getElementById('panel-main').style.display = 'none';
+        document.getElementById('panel-hud').style.display = 'flex';
+        
+        document.querySelectorAll('.hotspot').forEach(n => n.classList.remove('active'));
+        document.getElementById('hs-'+nodeId).classList.add('active');
+      }
+
+      function closeHud() {
+        document.getElementById('panel-main').style.display = 'block';
+        document.getElementById('panel-hud').style.display = 'none';
+        document.querySelectorAll('.hotspot').forEach(n => n.classList.remove('active'));
+      }
+
+      const c = {
+        ambulance: {x: 12, y: 52}, pharm: {x: 25, y: 18}, admin: {x: 40, y: 38},
+        lab: {x: 45, y: 18}, radio: {x: 64, y: 20}, ot: {x: 60, y: 44},
+        invent: {x: 85, y: 22}, blood: {x: 86, y: 44}, bill: {x: 80, y: 66}
+      };
+
+      function getArc(p1, p2) {
+        const cx = (p1.x + p2.x) / 2 + (p2.y - p1.y) * 0.1; 
+        const cy = Math.min(p1.y, p2.y) - 15;
+        return `M${p1.x},${p1.y} Q${cx},${cy} ${p2.x},${p2.y}`;
+      }
+
+      const scenarios = {
+        opd: [
+          { node: 'admin', log: 'Walk-in patient registered. Profile created.', err: 'Registration queue delayed.' }, { path: getArc(c.admin, c.radio), time: 1000 },
+          { node: 'radio', log: 'X-Ray captured. Images pushed to EMR instantly.', err: 'PACS disconnected. Manual upload required.' }, { path: getArc(c.radio, c.lab), time: 800 },
+          { node: 'lab', log: 'Blood sample collected. Results synced.', err: 'Lab barcode misprinted.' }, { path: getArc(c.lab, c.pharm), time: 1000 },
+          { node: 'pharm', log: 'Medication dispensed. Inventory auto-updated.', err: 'Prescription illegible. Dispense failed.' }, { path: getArc(c.pharm, c.bill), time: 1500 },
+          { node: 'bill', log: 'Consolidated bill generated with zero leakage.', err: 'Lab & Radio charges missed. Revenue leakage.' }
+        ],
+        emergency: [
+          { node: 'ambulance', log: 'Emergency pickup. ER alerted via telemetry.', err: 'Ambulance GPS offline.' }, { path: getArc(c.ambulance, c.ot), time: 1200 },
+          { node: 'ot', log: 'Emergency Surgery commenced. Vitals stable.', err: 'OT schedule conflict. Patient waiting.' }, { path: getArc(c.ot, c.blood), time: 1000 },
+          { node: 'blood', log: '2 units of O- blood cross-matched and delivered.', err: 'Blood stock mismatch.' }, { path: getArc(c.blood, c.bill), time: 1000 },
+          { node: 'bill', log: 'Emergency response charges compiled.', err: 'Blood unit charges not captured.' }
+        ],
+        lab_flow: [
+          { node: 'admin', log: 'Patient registered for master health checkup.', err: 'File missing.' }, { path: getArc(c.admin, c.lab), time: 800 },
+          { node: 'lab', log: 'Samples processed via automated LIS.', err: 'Analyzer integration failure.' }, { path: getArc(c.lab, c.invent), time: 1000 },
+          { node: 'invent', log: 'Reagents auto-deducted from inventory.', err: 'Stock ledger not updated.' }, { path: getArc(c.invent, c.bill), time: 1200 },
+          { node: 'bill', log: 'Package billing closed.', err: 'Package exclusions not tracked.' }
+        ]
+      };
+
+      let isRunning = false;
+      async function runScenario(type) {
+        if (isRunning) return;
+        closeHud();
+        isRunning = true;
+        
+        document.querySelectorAll('.scen-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-'+type).classList.add('active');
+        document.querySelectorAll('.hotspot').forEach(n => { n.classList.remove('active'); });
+        
+        const logBox = document.getElementById('live-log-box');
+        logBox.innerHTML = '';
+        
+        const packetLayer = document.getElementById('active-packet');
+        const routeLine = document.getElementById('active-route-line');
+        const packetCircle = packetLayer.querySelector('circle');
+        
+        const steps = scenarios[type];
+        for (let step of steps) {
+          if (step.node) {
+            packetLayer.style.display = 'none';
+            routeLine.setAttribute('d', '');
+            
+            const nodeEl = document.getElementById('hs-' + step.node);
+            
+            // Glitch Mode Failure
+            if(!isZenoMode && Math.random() > 0.4 && steps.indexOf(step) > 0) {
+              logBox.innerHTML += `<div class="log-entry err active-step">Error at ${step.node.toUpperCase()}<span class="err-detail">${step.err}</span></div>`;
+              logBox.innerHTML += `<div class="log-entry err sys" style="margin-top:10px;">Process aborted.</div>`;
+              break; 
+            }
+
+            // Normal Success
+            if (nodeEl) nodeEl.classList.add('active');
+            logBox.innerHTML += `<div class="log-entry active-step">${step.log}</div>`;
+            
+            await new Promise(r => setTimeout(r, 1200)); 
+            if (nodeEl) nodeEl.classList.remove('active');
+            
+            // Dim previous logs
+            const allLogs = logBox.querySelectorAll('.log-entry');
+            if (allLogs.length > 0) allLogs[allLogs.length-1].classList.remove('active-step');
+          }
+          else if (step.path) {
+            routeLine.setAttribute('d', step.path);
+            packetLayer.style.display = 'block';
+            
+            packetCircle.setAttribute('fill', isZenoMode ? '#c6f135' : '#ef4444');
+            
+            const anim = document.createElementNS("http://www.w3.org/2000/svg", 'animateMotion');
+            anim.setAttribute('dur', `${step.time}ms`);
+            anim.setAttribute('fill', 'freeze');
+            const mpath = document.createElementNS("http://www.w3.org/2000/svg", 'mpath');
+            mpath.setAttribute('href', '#active-route-line');
+            anim.appendChild(mpath);
+            
+            packetLayer.innerHTML = '';
+            packetLayer.appendChild(packetCircle);
+            packetLayer.appendChild(anim);
+            
+            anim.beginElement();
+            await new Promise(r => setTimeout(r, step.time));
+          }
+        }
+        
+        if(isZenoMode) {
+          logBox.innerHTML += `<div class="log-entry sys" style="color:#c6f135;">Sequence Complete.</div>`;
+        }
+        
+        packetLayer.style.display = 'none';
+        routeLine.setAttribute('d', '');
+        isRunning = false;
+      }
+    </script>
+  </section>
 
   <!-- ══ ROI CALCULATOR ══════════════════════════════ -->
   <section class="roi-section" id="roi-calculator">

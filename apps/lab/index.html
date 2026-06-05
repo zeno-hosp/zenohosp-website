@@ -84,6 +84,176 @@
 
     <!-- Styles -->
       <link rel="stylesheet" href="/css/main.css">
+      <style>
+/* Ultra-Premium Glass App UI */
+.lab-app-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  border-radius: 24px;
+  background: rgba(20, 20, 18, 0.6);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* Subtle Top Bar */
+.lab-app-topbar {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.mac-dots {
+  display: flex;
+  gap: 6px;
+}
+.mac-dots span {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+.mac-dots span:nth-child(1) { background: #ff5f56; }
+.mac-dots span:nth-child(2) { background: #ffbd2e; }
+.mac-dots span:nth-child(3) { background: #27c93f; }
+
+.lab-app-tabs {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  border-radius: 12px;
+  margin-left: auto;
+}
+.lab-app-tab {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lab-app-tab.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.lab-app-body {
+  padding: 24px;
+}
+
+/* Stat Cards */
+.lab-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.lab-stat-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 16px;
+  overflow: hidden;
+}
+.lab-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 2px;
+}
+.lab-stat-card.c-lime::before { background: var(--zd-lime); box-shadow: 0 0 10px var(--zd-lime); }
+.lab-stat-card.c-blue::before { background: #38bdf8; box-shadow: 0 0 10px #38bdf8; }
+.lab-stat-card.c-purple::before { background: #a78bfa; box-shadow: 0 0 10px #a78bfa; }
+
+.lab-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.lab-stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* List Items */
+.lab-list-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.lab-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+.lab-list-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateX(4px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.lab-avatar {
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 800;
+}
+.lab-item-info { flex: 1; }
+.lab-item-name {
+  font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 2px;
+}
+.lab-item-test {
+  font-size: 0.75rem; color: rgba(255,255,255,0.4);
+}
+.lab-item-status {
+  text-align: right;
+}
+.lab-status-badge {
+  display: inline-flex;
+  align-items: center; gap: 6px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+/* Floating Elements (Decorative) */
+.float-element {
+  position: absolute;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  padding: 12px 16px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  z-index: 10;
+  animation: float-slow 6s ease-in-out infinite;
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+</style>
 </head>
 <body>
 
@@ -171,59 +341,101 @@
         <p style="font-size:1.1rem;color:#555;margin-bottom:2rem;max-width:500px;">Test orders land from the EMR, samples are tracked by barcode, results are validated, and reports reach the patient — without a single paper slip.</p>
         <a href="/contact-us/index.html" class="btn btn-primary btn-lg">Request Demo</a>
       </div>
-      <div class="hms-hero-image reveal zeno-delay-200">
-        <div class="software-preview zeno-float">
-          <div class="preview-header">
-            <div class="preview-logo">
-              <span class="logo-icon-sm">Z</span>
-              <span>ZenoHosp Lab</span>
+      <div class="hms-hero-image reveal zeno-delay-200" style="position: relative; perspective: 1200px;">
+        
+        <!-- Decorative Glow -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120%; height: 120%; background: radial-gradient(circle, rgba(209,244,112,0.15) 0%, transparent 60%); pointer-events: none;"></div>
+
+        <!-- Floating Card 1 -->
+        <div class="float-element" style="top: -20px; right: -30px; animation-delay: 0s;">
+          <div style="width: 32px; height: 32px; border-radius: 10px; background: rgba(209,244,112,0.2); display: flex; align-items: center; justify-content: center; color: #d1f470;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <div>
+            <div style="font-size: 0.7rem; color: rgba(255,255,255,0.5); font-weight: 600;">Auto-Validated</div>
+            <div style="font-size: 0.85rem; color: #fff; font-weight: 700;">SMP-0835</div>
+          </div>
+        </div>
+
+        <!-- Floating Card 2 -->
+        <div class="float-element" style="bottom: 40px; left: -40px; animation-delay: -3s;">
+          <div style="width: 32px; height: 32px; border-radius: 10px; background: rgba(56,189,248,0.2); display: flex; align-items: center; justify-content: center; color: #38bdf8;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <div style="font-size: 0.7rem; color: rgba(255,255,255,0.5); font-weight: 600;">TAT Alert</div>
+            <div style="font-size: 0.85rem; color: #fff; font-weight: 700;">14m Remaining</div>
+          </div>
+        </div>
+
+        <div class="lab-app-showcase zeno-float" style="transform: rotateY(-8deg) rotateX(4deg); transform-style: preserve-3d;">
+          
+          <div class="lab-app-topbar">
+            <div class="mac-dots"><span></span><span></span><span></span></div>
+            <div style="margin-left: 20px; font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 8px;">
+              <span class="logo-icon-sm" style="width: 20px; height: 20px; background: var(--zd-lime); color: #111; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; border-radius: 4px;">Z</span>
+              Lab Workspace
             </div>
-            <div class="preview-tabs">
-              <span class="tab active">Worklist</span>
-              <span class="tab">Samples</span>
-              <span class="tab">Results</span>
-              <span class="tab">Reports</span>
+            <div class="lab-app-tabs">
+              <div class="lab-app-tab active">Queue</div>
+              <div class="lab-app-tab">Results</div>
             </div>
           </div>
-          <div class="preview-body" style="padding:14px;display:flex;flex-direction:column;gap:10px;">
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-              <div style="background:#f0faf6;border-radius:8px;padding:10px;text-align:center;">
-                <div style="font-size:1.3rem;font-weight:700;color:#2D8A6E;">42</div>
-                <div style="font-size:.68rem;color:#666;">Pending</div>
+
+          <div class="lab-app-body">
+            <div class="lab-stats-grid">
+              <div class="lab-stat-card c-lime">
+                <div class="lab-stat-value">42</div>
+                <div class="lab-stat-label">Pending</div>
               </div>
-              <div style="background:#fef9f0;border-radius:8px;padding:10px;text-align:center;">
-                <div style="font-size:1.3rem;font-weight:700;color:#d97706;">18</div>
-                <div style="font-size:.68rem;color:#666;">In Process</div>
+              <div class="lab-stat-card c-blue">
+                <div class="lab-stat-value">18</div>
+                <div class="lab-stat-label">Processing</div>
               </div>
-              <div style="background:#f0f4ff;border-radius:8px;padding:10px;text-align:center;">
-                <div style="font-size:1.3rem;font-weight:700;color:#4f46e5;">97</div>
-                <div style="font-size:.68rem;color:#666;">Reported Today</div>
+              <div class="lab-stat-card c-purple">
+                <div class="lab-stat-value">97</div>
+                <div class="lab-stat-label">Reported</div>
               </div>
             </div>
-            <div style="background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;">
-              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:7px 10px;background:#f9fafb;font-size:.68rem;font-weight:600;color:#888;">
-                <span>ID</span><span>Patient / Test</span><span>Status</span><span>TAT</span>
+
+            <div class="lab-list-header">
+              <span>Priority Queue</span>
+              <span style="color: var(--zd-lime); cursor: pointer;">View All →</span>
+            </div>
+
+            <div class="lab-list">
+              <!-- Item 1 -->
+              <div class="lab-list-item">
+                <div class="lab-avatar" style="background: linear-gradient(135deg, #f59e0b, #ea580c); color: #fff;">KR</div>
+                <div class="lab-item-info">
+                  <div class="lab-item-name">Karthik Raj</div>
+                  <div class="lab-item-test">CBC + LFT · <span style="color: rgba(255,255,255,0.6);">SMP-0841</span></div>
+                </div>
+                <div class="lab-item-status">
+                  <div class="lab-status-badge" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); color: #fcd34d;">
+                    <div class="badge-dot" style="background: #fcd34d;"></div> Collecting
+                  </div>
+                  <div style="font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 4px; font-weight: 600;">2h elapsed</div>
+                </div>
               </div>
-              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:8px 10px;font-size:.72rem;border-top:1px solid #f3f4f6;align-items:center;">
-                <span style="color:#888;">SMP-0841</span>
-                <div><div style="font-weight:600;color:#333;">Karthik Raj</div><div style="color:#888;font-size:.68rem;">CBC + LFT</div></div>
-                <span style="background:#fef3c7;color:#92400e;padding:2px 7px;border-radius:20px;font-size:.65rem;white-space:nowrap;">Collecting</span>
-                <span style="color:#555;">2h</span>
-              </div>
-              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:8px 10px;font-size:.72rem;border-top:1px solid #f3f4f6;align-items:center;">
-                <span style="color:#888;">SMP-0839</span>
-                <div><div style="font-weight:600;color:#333;">Meena Suresh</div><div style="color:#888;font-size:.68rem;">HbA1c</div></div>
-                <span style="background:#dbeafe;color:#1e40af;padding:2px 7px;border-radius:20px;font-size:.65rem;white-space:nowrap;">Processing</span>
-                <span style="color:#555;">4h</span>
-              </div>
-              <div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;padding:8px 10px;font-size:.72rem;border-top:1px solid #f3f4f6;align-items:center;">
-                <span style="color:#888;">SMP-0835</span>
-                <div><div style="font-weight:600;color:#333;">Arun Pillai</div><div style="color:#888;font-size:.68rem;">Lipid Profile</div></div>
-                <span style="background:#d1fae5;color:#065f46;padding:2px 7px;border-radius:20px;font-size:.65rem;white-space:nowrap;">Reported</span>
-                <span style="color:#2D8A6E;font-weight:600;">3h 12m</span>
+
+              <!-- Item 2 -->
+              <div class="lab-list-item">
+                <div class="lab-avatar" style="background: linear-gradient(135deg, #38bdf8, #0284c7); color: #fff;">MS</div>
+                <div class="lab-item-info">
+                  <div class="lab-item-name">Meena Suresh</div>
+                  <div class="lab-item-test">HbA1c · <span style="color: rgba(255,255,255,0.6);">SMP-0839</span></div>
+                </div>
+                <div class="lab-item-status">
+                  <div class="lab-status-badge" style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); color: #7dd3fc;">
+                    <div class="badge-dot" style="background: #7dd3fc;"></div> Processing
+                  </div>
+                  <div style="font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 4px; font-weight: 600;">4h elapsed</div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
