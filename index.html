@@ -1030,11 +1030,6 @@
         border-radius: 20px;
       }
 
-      .legacy-mode .base-map-img {
-        filter: grayscale(100%) brightness(0.9);
-        opacity: 0.6;
-      }
-
       /* SVG Overlay Layer */
       .map-svg-overlay {
         position: absolute;
@@ -1210,62 +1205,9 @@
     </div>
 
     <div class="iso-layout">
-
-      <!-- Control Panel -->
-      <div class="iso-panel">
-        <div id="panel-main">
-          <div class="panel-desc">Observe real-time data flows across physical departments. Select a sequence to
-            initiate tracking.</div>
-          <div class="scenario-list">
-            <button class="scen-btn" id="btn-opd" onclick="runScenario('opd')">
-              <span class="btn-title">Walk-in Patient</span>
-
-            </button>
-            <button class="scen-btn" id="btn-emergency" onclick="runScenario('emergency')">
-              <span class="btn-title">Emergency Trauma</span>
-
-            </button>
-            <button class="scen-btn" id="btn-lab_flow" onclick="runScenario('lab_flow')">
-              <span class="btn-title">Diagnostics Flow</span>
-
-            </button>
-            <button class="scen-btn" id="btn-surgery" onclick="runScenario('surgery')">
-              <span class="btn-title">Inpatient Surgery</span>
-
-            </button>
-            <button class="scen-btn" id="btn-pharm_refill" onclick="runScenario('pharm_refill')">
-              <span class="btn-title">Pharmacy Refill</span>
-
-            </button>
-            <button class="scen-btn" id="btn-blood_transfusion" onclick="runScenario('blood_transfusion')">
-              <span class="btn-title">Blood Transfusion Flow</span>
-
-            </button>
-          </div>
-        </div>
-
-        </div>
-
       <!-- Image Map Wrapper -->
       <div class="iso-map-wrapper">
-        <img src="images/iso-hospital.png" alt="Hospital 3D Map" class="base-map-img" />
-
-        <!-- SVG Overlay for Paths -->
-        <svg class="map-svg-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <defs>
-            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="0.5" result="coloredBlur" />
-              <feMerge>
-                <feMergeNode in="coloredBlur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          <path id="active-route-line" class="route-active" d="" />
-          <g id="active-packet" style="display:none;">
-            <circle cx="0" cy="0" r="1.5" fill="#84cc16" filter="url(#glow)" />
-          </g>
-        </svg>
+        <img id="base-map-img" src="images/iso-hospital-on.jpg" alt="Hospital 3D Map" class="base-map-img" />
 
         <!-- Interactive Hotspots -->
         <div class="hotspots-layer">
@@ -1330,175 +1272,16 @@
       function toggleGlitchMode(cb) {
         isZenoMode = cb.checked;
         const section = document.getElementById('iso-hospital');
+        const img = document.getElementById('base-map-img');
         if (!isZenoMode) {
           section.classList.remove('zeno-mode');
           section.classList.add('legacy-mode');
+          if (img) img.src = "images/iso-hospital-off.jpg";
         } else {
           section.classList.remove('legacy-mode');
           section.classList.add('zeno-mode');
+          if (img) img.src = "images/iso-hospital-on.jpg";
         }
-      }
-
-      // HUD Logic
-      const nodeData = {
-        accounts: { title: "Accounts Room", desc: "Real-time revenue intelligence and financial reconciliation.", feats: ["Automated Ledger", "TPA Claim Tracking", "Vendor Payments"] },
-        admin: { title: "Reception", desc: "The intelligent entry point. Ensure zero-wait registration and flawless initial data capture.", feats: ["Insurance Verification", "Queue Management", "Digital Consent Forms"] },
-        doctor: { title: "Doctor Consultation", desc: "Comprehensive EMR access for the physician to review history, order tests, and e-prescribe.", feats: ["Single-screen EMR", "Voice Dictation", "1-Click Orders"] },
-        emergency: { title: "Emergency Ward", desc: "Fast-paced triage and trauma care management.", feats: ["Triage Scoring", "Crash Cart Inventory", "Fast-track Billing"] },
-        pharm: { title: "Pharmacy", desc: "A smart dispensary that never runs out of stock and never lets drugs expire.", feats: ["Auto-PO for low stock", "Expiry Date Alerts", "Substitute Finder"] },
-        lab: { title: "Laboratory", desc: "Fully integrated diagnostics. Test results flow straight to the doctor's screen and the billing engine.", feats: ["Direct machine interfacing", "Auto-post charges", "Critical Alert SMS"] },
-        radio: { title: "Radiology", desc: "Seamless imaging integration. PACS links directly to patient EMRs instantly.", feats: ["PACS Integration", "Instant Report Delivery", "Auto-billing"] },
-        ot: { title: "Operation Theatre", desc: "Manage surgical suites with precision, from scheduling to post-op recovery.", feats: ["OT Scheduling", "Anaesthesia Notes", "Surgeon Payout Tracking"] },
-        icu: { title: "ICU / Critical Care", desc: "Continuous monitoring integration and critical care pathways.", feats: ["Vitals Telemetry", "Nursing Flowsheets", "Ventilator Integration"] },
-        ipd: { title: "IPD Ward", desc: "Seamless inpatient management from admission to discharge.", feats: ["Bed Management", "Medication Administration Record", "Discharge Summary Auto-gen"] },
-        private: { title: "Private Rooms", desc: "Premium patient experience and care coordination.", feats: ["Dietary Integration", "Patient Portal", "Concierge Services"] },
-        invent: { title: "Inventory Room", desc: "Centralized stores management with total visibility across all hospital departments.", feats: ["Multi-store tracking", "Vendor Management", "Consumption Analytics"] },
-        blood: { title: "Blood Bank", desc: "Critical blood unit tracking from donation to transfusion.", feats: ["Barcode Tracking", "Temperature Logs", "Cross-match workflows"] },
-        bill: { title: "Billing", desc: "The heart of ZenoHosp. Captures every single charge automatically to ensure absolutely zero revenue leakage.", feats: ["Auto-capture from all depts", "Split billing (Cash/TPA)", "Discount Approvals Flow"] },
-        ambulance: { title: "Ambulance Bay", desc: "Emergency response dispatch with live ETA tracking.", feats: ["GPS Tracking", "ER Pre-alerts", "Vitals telemetry"] }
-      };
-
-      function openHud(nodeId) {
-        if (isRunning) return;
-        const data = nodeData[nodeId];
-        if (!data) return;
-
-        document.getElementById('hud-title').innerText = data.title;
-        document.getElementById('hud-desc').innerText = data.desc;
-        const ul = document.getElementById('hud-features');
-        ul.innerHTML = '';
-        data.feats.forEach(f => {
-          ul.innerHTML += `<li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ${f}</li>`;
-        });
-
-        document.getElementById('panel-main').style.display = 'none';
-        document.getElementById('panel-hud').style.display = 'flex';
-
-        document.querySelectorAll('.hotspot').forEach(n => n.classList.remove('active'));
-        document.getElementById('hs-' + nodeId).classList.add('active');
-      }
-
-      function closeHud() {
-        document.getElementById('panel-main').style.display = 'block';
-        document.getElementById('panel-hud').style.display = 'none';
-        document.querySelectorAll('.hotspot').forEach(n => n.classList.remove('active'));
-      }
-
-      const c = {
-        lab: { x: 20, y: 15 }, ot: { x: 45, y: 15 }, radio: { x: 65, y: 15 }, private: { x: 85, y: 15 },
-        doctor: { x: 20, y: 35 }, admin: { x: 45, y: 40 }, icu: { x: 65, y: 45 }, ipd: { x: 85, y: 45 },
-        emergency: { x: 12, y: 55 }, ambulance: { x: 10, y: 75 }, pharm: { x: 40, y: 75 }, bill: { x: 60, y: 75 }, blood: { x: 75, y: 75 }, invent: { x: 90, y: 75 }
-      };
-
-      function getArc(p1, p2) {
-        const cx = (p1.x + p2.x) / 2 + (p2.y - p1.y) * 0.1;
-        const cy = Math.min(p1.y, p2.y) - 15;
-        return `M${p1.x},${p1.y} Q${cx},${cy} ${p2.x},${p2.y}`;
-      }
-
-      const scenarios = {
-        opd: [
-          { node: 'admin' }, { path: getArc(c.admin, c.doctor), time: 1000 },
-          { node: 'doctor' }, { path: getArc(c.doctor, c.lab), time: 800 },
-          { node: 'lab' }, { path: getArc(c.lab, c.pharm), time: 1000 },
-          { node: 'pharm' }, { path: getArc(c.pharm, c.bill), time: 1200 },
-          { node: 'bill' }
-        ],
-        emergency: [
-          { node: 'ambulance' }, { path: getArc(c.ambulance, c.emergency), time: 800 },
-          { node: 'emergency' }, { path: getArc(c.emergency, c.ot), time: 1000 },
-          { node: 'ot' }, { path: getArc(c.ot, c.icu), time: 1000 },
-          { node: 'icu' }, { path: getArc(c.icu, c.ipd), time: 1000 },
-          { node: 'ipd' }
-        ],
-        lab_flow: [
-          { node: 'admin' }, { path: getArc(c.admin, c.lab), time: 800 },
-          { node: 'lab' }, { path: getArc(c.lab, c.radio), time: 1000 },
-          { node: 'radio' }, { path: getArc(c.radio, c.doctor), time: 1200 },
-          { node: 'doctor' }, { path: getArc(c.doctor, c.bill), time: 1200 },
-          { node: 'bill' }
-        ],
-        surgery: [
-          { node: 'admin' }, { path: getArc(c.admin, c.private), time: 1000 },
-          { node: 'private' }, { path: getArc(c.private, c.ot), time: 1000 },
-          { node: 'ot' }, { path: getArc(c.ot, c.icu), time: 1000 },
-          { node: 'icu' }, { path: getArc(c.icu, c.private), time: 1000 },
-          { node: 'private' }
-        ],
-        pharm_refill: [
-          { node: 'admin' }, { path: getArc(c.admin, c.doctor), time: 1000 },
-          { node: 'doctor' }, { path: getArc(c.doctor, c.pharm), time: 1000 },
-          { node: 'pharm' }, { path: getArc(c.pharm, c.bill), time: 1000 },
-          { node: 'bill' }
-        ],
-        blood_transfusion: [
-          { node: 'emergency' }, { path: getArc(c.emergency, c.blood), time: 1200 },
-          { node: 'blood' }, { path: getArc(c.blood, c.icu), time: 1000 },
-          { node: 'icu' }, { path: getArc(c.icu, c.bill), time: 1000 },
-          { node: 'bill' }
-        ]
-      };
-
-      let isRunning = false;
-      async function runScenario(type) {
-        if (isRunning) return;
-        closeHud();
-        isRunning = true;
-
-        document.querySelectorAll('.scen-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById('btn-' + type).classList.add('active');
-        document.querySelectorAll('.hotspot').forEach(n => { n.classList.remove('active'); });
-
-        const packetLayer = document.getElementById('active-packet');
-        const routeLine = document.getElementById('active-route-line');
-        const packetCircle = packetLayer.querySelector('circle');
-
-        const steps = scenarios[type];
-        for (let step of steps) {
-          if (step.node) {
-            packetLayer.style.display = 'none';
-            routeLine.setAttribute('d', '');
-
-            const nodeEl = document.getElementById('hs-' + step.node);
-
-            // Glitch Mode Failure
-            if (!isZenoMode && Math.random() > 0.4 && steps.indexOf(step) > 0) {
-              if (nodeEl) nodeEl.classList.add('active');
-              await new Promise(r => setTimeout(r, 600));
-              if (nodeEl) nodeEl.classList.remove('active');
-              break;
-            }
-
-            // Normal Success
-            if (nodeEl) nodeEl.classList.add('active');
-            await new Promise(r => setTimeout(r, 1200));
-            if (nodeEl) nodeEl.classList.remove('active');
-          }
-          else if (step.path) {
-            routeLine.setAttribute('d', step.path);
-            packetLayer.style.display = 'block';
-
-            packetCircle.setAttribute('fill', isZenoMode ? '#84cc16' : '#ef4444');
-
-            const anim = document.createElementNS("http://www.w3.org/2000/svg", 'animateMotion');
-            anim.setAttribute('dur', `${step.time}ms`);
-            anim.setAttribute('fill', 'freeze');
-            const mpath = document.createElementNS("http://www.w3.org/2000/svg", 'mpath');
-            mpath.setAttribute('href', '#active-route-line');
-            anim.appendChild(mpath);
-
-            packetLayer.innerHTML = '';
-            packetLayer.appendChild(packetCircle);
-            packetLayer.appendChild(anim);
-
-            anim.beginElement();
-            await new Promise(r => setTimeout(r, step.time));
-          }
-        }
-
-        packetLayer.style.display = 'none';
-        routeLine.setAttribute('d', '');
-        isRunning = false;
       }
     </script>
   </section>
