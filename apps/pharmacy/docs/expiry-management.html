@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-27WDP0T7BZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Manage Near-Expiry Stock in Pharmacy | ZenoHosp Docs</title>
+  <meta name="description" content="Learn how to configure FEFO rules and manage near-expiry medicine stock in ZenoHosp Pharmacy.">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+      .doc-hero { padding: 80px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--color-border); }
+      .doc-content { max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 18px; padding: 0 20px; }
+      .doc-content h2 { margin-top: 40px; margin-bottom: 20px; }
+      .doc-step { background: var(--bg-tertiary); padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--color-pharma); }
+  </style>
+</head>
+<body>
+  <nav class="navbar"><div class="nav-container"><a href="/help/index.html" class="logo"><span class="logo-text">ZenoHosp Help</span></a></div></nav>
+
+  <section class="doc-hero">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h1>How to Manage Near-Expiry Stock</h1>
+      <p style="color: var(--color-muted);">Module: Pharmacy • Level: Pharmacist</p>
+    </div>
+  </section>
+
+  <section class="doc-content">
+    <p>ZenoHosp enforces a strict FEFO (First Expiry, First Out) methodology to minimize pharmaceutical wastage. Here is how to configure alerts to prevent stock from expiring on your shelves.</p>
+    
+    <h2>Setting the Expiry Alert Threshold</h2>
+    <div class="doc-step">
+      <strong>Step 1:</strong> Go to <code>Pharmacy > Configuration > Inventory Rules</code>.
+    </div>
+    <div class="doc-step">
+      <strong>Step 2:</strong> Find the setting for <strong>"Global Near-Expiry Threshold (Days)"</strong>. The default is 90 days. You can adjust this to 60 or 120 days depending on your vendor return policies.
+    </div>
+    <div class="doc-step">
+      <strong>Step 3:</strong> Save the configuration. The system will now flag any batch dropping below this threshold.
+    </div>
+
+    <h2>Generating the Return to Vendor (RTV) Report</h2>
+    <p>At the end of every month, your Chief Pharmacist should run the RTV report to claim refunds from distributors before the drugs actually expire.</p>
+    <ul>
+      <li>Navigate to <code>Pharmacy > Reports > Expiry Reports</code>.</li>
+      <li>Select the "Near Expiry (Next 90 Days)" filter.</li>
+      <li>Click "Export to Excel" or "Generate RTV PO" to instantly create return challans for your vendors.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

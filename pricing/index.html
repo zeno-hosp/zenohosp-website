@@ -12,8 +12,8 @@
   </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transparent pricing for ZenoHosp hospital management software. Individual modules from ₹5,000/month or ZenoHosp One bundles from ₹22,000/month. GST extra. Free demo.">
-    <meta name="keywords" content="hospital management software pricing India, HMS software price India, hospital software cost, ZenoHosp pricing, HMS subscription India, healthcare software plans">
+    <meta name="description" content="Affordable and transparent pricing for the best hospital management software. Calculate your ZenoHosp HMS cost based on hospital bed capacity.">
+    <meta name="keywords" content="Hospital Management Software Pricing, HMS Cost in India, ZenoHosp Pricing, EMR Software Cost, Clinic Software Price">
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="canonical" href="https://zenohosp.com/pricing/">
@@ -30,7 +30,7 @@
     <meta property="twitter:description" content="Simple, transparent pricing for hospitals of every size. Individual modules or full-suite bundles. No per-user fees. Free demo included.">
     <meta property="twitter:image" content="https://zenohosp.com/images/hero-doctors.png">
 
-    <title>Hospital Software Pricing India — Plans from ₹5,000/month | ZenoHosp</title>
+    <title>Hospital Management Software Pricing | ZenoHosp Cost</title>
 
     <script type="application/ld+json">
     {
@@ -40,17 +40,10 @@
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "ZenoHosp One Core",
-          "price": "22000",
+          "name": "ZenoHosp Essential Pack",
+          "price": "9000",
           "priceCurrency": "INR",
-          "description": "Includes HMS, 1 OT Room, and Inventory (monthly billing)."
-        },
-        {
-          "@type": "Offer",
-          "name": "ZenoHosp One Full",
-          "price": "27000",
-          "priceCurrency": "INR",
-          "description": "Includes HMS, 1 OT Room, Inventory, and Asset Management (monthly billing)."
+          "description": "Includes HMS, Inventory, Asset, Finance, and People (monthly billing)."
         }
       ]
     }
@@ -65,6 +58,30 @@
 
       <link rel="stylesheet" href="/css/main.css">
   <meta name="theme-color" content="#111827">
+
+    <!-- FAQ Schema for Pricing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How much does Hospital Management Software cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The cost of Hospital Management Software depends on the bed capacity and modules needed. ZenoHosp offers transparent, tiered pricing starting for 35-bed hospitals, ensuring you only pay for what you use."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are there hidden fees in ZenoHosp HMS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, ZenoHosp believes in 100% transparent pricing. Our subscription plans include standard support, updates, and maintenance with no hidden costs."
+        }
+      }]
+    }
+    </script>
+
 </head>
 
 <body>
@@ -209,7 +226,7 @@
 <section class="pricing-hero reveal">
         <div class="container">
             <span class="hero-pill">Simple pricing for hospitals and clinics</span>
-            <h1>Choose individual modules or the complete ZenoHosp One bundle</h1>
+            <h1>Choose individual modules or the complete ZenoHosp Essential Pack</h1>
             <p>All prices are in INR per month, per hospital location. GST extra as applicable.</p>
             <div class="billing-toggle" role="group" aria-label="Billing period">
                 <button type="button" class="billing-btn active" data-billing="monthly">Monthly</button>
@@ -218,149 +235,262 @@
         </div>
     </section>
 
-    <section class="bundle-section reveal" id="bundle-plans">
+    <style>
+    .pricing-horizontal-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: stretch;
+    }
+    
+    @media (max-width: 992px) {
+        .pricing-horizontal-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .calculator-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background: var(--zd-white, #ffffff);
+        border-radius: var(--zd-radius-xl, 24px);
+        padding: 32px;
+        border: 1px solid rgba(0,0,0,0.05);
+        box-shadow: var(--zd-shadow-md, 0 4px 16px rgba(0,0,0,0.08));
+        height: 100%;
+    }
+    .calculator-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-grow: 1;
+    }
+    .calc-item {
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: var(--zd-radius-md, 12px);
+        background: var(--zd-cream, #f5f5f2);
+        cursor: pointer;
+        transition: all 0.2s;
+        user-select: none;
+    }
+    .calc-item.base-pack {
+        border-color: var(--color-primary, #d1f470);
+        background: rgba(209, 244, 112, 0.15);
+        cursor: default;
+    }
+    .calc-item:hover:not(.base-pack) {
+        background: var(--zd-white, #ffffff);
+        border-color: rgba(0,0,0,0.2);
+        box-shadow: var(--zd-shadow-sm, 0 2px 4px rgba(0,0,0,0.05));
+    }
+    .calc-item input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-right: 16px;
+        cursor: pointer;
+        accent-color: var(--color-dark, #11110d);
+    }
+    .calc-item-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .calc-item-info strong {
+        font-size: 1.05rem;
+        color: var(--zd-text-dark, #11110d);
+        margin-bottom: 4px;
+    }
+    .calc-item-info span {
+        font-size: 0.85rem;
+        color: var(--zd-text-muted, #6b6b66);
+    }
+    .calc-item-price {
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: var(--zd-text-dark, #11110d);
+        text-align: right;
+    }
+    .calc-item-price .yearly-price {
+        display: none;
+    }
+    [data-billing="yearly"] .calc-item-price .monthly-price { display: none; }
+    [data-billing="yearly"] .calc-item-price .yearly-price { display: inline; }
+
+    .calculator-summary {
+        background: var(--zd-obsidian, #11110d);
+        border-radius: var(--zd-radius-lg, 16px);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        box-shadow: var(--zd-shadow-lg, 0 8px 32px rgba(0,0,0,0.12));
+        margin-bottom: 24px;
+    }
+    .calculator-summary h3 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: rgba(255,255,255,0.7);
+        font-weight: 500;
+    }
+    .total-price-display {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .total-price-display .amount {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.02em;
+    }
+    .total-price-display .period {
+        color: rgba(255,255,255,0.5);
+        font-size: 1.1rem;
+    }
+    .calculator-summary .billing-note {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.4);
+        margin-bottom: 30px;
+    }
+    </style>
+
+    <section class="pricing-main reveal" id="pricing-layout" style="padding-bottom: 80px;">
         <div class="container">
-            <div class="section-head">
-                <h2>ZenoHosp One Bundles</h2>
-                <p>Built for faster rollout with integrated workflows.</p>
-            </div>
-
-            <div class="bundle-grid">
-                <article class="bundle-card">
-                    <div class="card-top">
-                        <h3>ZenoHosp One Core</h3>
-                        <p>HMS + 1 OT Room + Inventory</p>
+            <div class="pricing-horizontal-layout">
+                
+                <!-- Left Column: Bundles -->
+                <div class="bundle-column">
+                    <div class="section-head" style="text-align: left; margin-bottom: 32px;">
+                        <h2 style="font-size: 2rem; margin-bottom: 8px;">ZenoHosp One Bundles</h2>
+                        <p style="margin: 0; font-size: 1.1rem; color: var(--zd-text-muted);">Built for faster rollout with integrated workflows.</p>
                     </div>
-                    <div class="price-wrap">
-                        <p class="price monthly">₹22,000<span>/month</span></p>
-                        <p class="price yearly">₹20,000<span>/month</span></p>
-                        <p class="billing-caption monthly">Billed monthly</p>
-                        <p class="billing-caption yearly">Billed annually (₹2,40,000/year)</p>
+
+                    <div class="bundle-grid" style="grid-template-columns: 1fr; margin-top: 0; height: calc(100% - 90px);">
+                        <article class="bundle-card featured" style="height: 100%; display: flex; flex-direction: column;">
+                            <div class="popular-tag">Best Value</div>
+                            <div class="card-top">
+                                <h3>ZenoHosp Essential Pack</h3>
+                                <p>HMS + Inventory + Asset + Finance + People</p>
+                            </div>
+                            <div class="price-wrap">
+                                <p class="price monthly">Starts at ₹9,000<span>/month</span></p>
+                                <p class="price yearly">Starts at ₹8,000<span>/month</span></p>
+                                <p class="billing-caption monthly">Billed monthly (+ GST)</p>
+                                <p class="billing-caption yearly">Billed annually (₹96,000/year + GST)</p>
+                                <p class="billing-caption" style="margin-top: 8px; color: var(--zd-text-dark); font-weight: 500; display: inline-flex; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Pricing scales with bed capacity</p>
+                            </div>
+                            <ul class="card-list" style="margin-bottom: 32px;">
+                                <li>HMS with comprehensive patient workflows</li>
+                                <li>Inventory and Procurement management</li>
+                                <li>Asset lifecycle tracking</li>
+                                <li>Finance and Billing</li>
+                                <li>People and HR Management</li>
+                                <li><strong style="color:var(--primary-color)">Need more?</strong> Add other apps like Lab, Pharmacy, and OT Room as add-ons anytime.</li>
+                            </ul>
+                            <a href="/contact-us/index.html" class="btn btn-primary" style="margin-top: auto; width: 100%; text-align: center;">Start with Essential Pack</a>
+                        </article>
                     </div>
-                    <ul class="card-list">
-                        <li>HMS with up to 20,000 patient records</li>
-                        <li>1 OT room scheduling and tracking</li>
-                        <li>Inventory with low-stock alerts and procurement</li>
-                        <li>Implementation support</li>
-                    </ul>
-                    <a href="/contact-us/index.html" class="btn btn-outline">Request Demo</a>
-                </article>
+                </div>
 
-                <article class="bundle-card featured">
-                    <div class="popular-tag">Most Complete</div>
-                    <div class="card-top">
-                        <h3>ZenoHosp One Full</h3>
-                        <p>Core + Asset Management</p>
+                <!-- Right Column: Custom Pack -->
+                <div class="calculator-column">
+                    <div class="section-head" style="text-align: left; margin-bottom: 32px;">
+                        <h2 style="font-size: 2rem; margin-bottom: 8px;">Build Your Custom Pack</h2>
+                        <p style="margin: 0; font-size: 1.1rem; color: var(--zd-text-muted);">Select the add-ons you need and instantly see your price.</p>
                     </div>
-                    <div class="price-wrap">
-                        <p class="price monthly">₹27,000<span>/month</span></p>
-                        <p class="price yearly">₹24,000<span>/month</span></p>
-                        <p class="billing-caption monthly">Billed monthly</p>
-                        <p class="billing-caption yearly">Billed annually (₹2,88,000/year)</p>
+                    
+                    <div class="calculator-container" style="height: calc(100% - 90px);">
+                        <div class="calculator-summary">
+                            <h3>Your Total Price</h3>
+                            <div class="total-price-display">
+                                <span id="calc-total" class="amount">₹9,000</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <p class="billing-note" id="calc-billing-note">Billed monthly (+ GST)</p>
+                            <a href="/contact-us/index.html" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1.05rem;">Get Started</a>
+                        </div>
+
+                        <div class="calculator-options">
+                            <div class="calc-item base-pack" style="flex-direction: column; align-items: stretch; gap: 16px;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
+                                    <div class="calc-item-info">
+                                        <strong>Essential Pack (Base)</strong>
+                                        <span>HMS, Inventory, Asset, Finance, People</span>
+                                    </div>
+                                    <div class="calc-item-price" id="base-pack-price">
+                                        <span class="monthly-price" id="base-monthly-display">₹9,000 /mo</span>
+                                        <span class="yearly-price" id="base-yearly-display">₹8,000 /mo</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <label for="bed-count" style="font-size: 0.85rem; font-weight: 700; color: var(--zd-text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Hospital Capacity</label>
+                                    <select id="bed-count" style="padding: 12px 14px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: inherit; font-size: 0.95rem; background: #fff; cursor: pointer; outline: none; transition: border-color 0.2s;">
+                                        <option value="tier1" data-monthly="9000" data-yearly="8000">35 - 80 beds</option>
+                                        <option value="tier2" data-monthly="15000" data-yearly="13500">81 - 150 beds</option>
+                                        <option value="tier3" data-monthly="25000" data-yearly="22500">151 - 250 beds</option>
+                                        <option value="tier4" data-monthly="40000" data-yearly="36000">251+ beds</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <label class="calc-item add-on">
+                                <input type="checkbox" class="addon-checkbox" data-monthly="1000" data-yearly="900">
+                                <div class="calc-item-info">
+                                    <strong>OT Room</strong>
+                                    <span>Surgical scheduling and live dashboards</span>
+                                </div>
+                                <div class="calc-item-price">
+                                    <span class="monthly-price">+₹1,000 /mo</span>
+                                    <span class="yearly-price">+₹900 /mo</span>
+                                </div>
+                            </label>
+                            
+                            <label class="calc-item add-on">
+                                <input type="checkbox" class="addon-checkbox" data-monthly="2000" data-yearly="1800">
+                                <div class="calc-item-info">
+                                    <strong>Pharmacy</strong>
+                                    <span>Dispensing and stock management</span>
+                                </div>
+                                <div class="calc-item-price">
+                                    <span class="monthly-price">+₹2,000 /mo</span>
+                                    <span class="yearly-price">+₹1,800 /mo</span>
+                                </div>
+                            </label>
+                            
+                            <label class="calc-item add-on">
+                                <input type="checkbox" class="addon-checkbox" data-monthly="2500" data-yearly="2250">
+                                <div class="calc-item-info">
+                                    <strong>Lab</strong>
+                                    <span>Diagnostics and reporting</span>
+                                </div>
+                                <div class="calc-item-price">
+                                    <span class="monthly-price">+₹2,500 /mo</span>
+                                    <span class="yearly-price">+₹2,250 /mo</span>
+                                </div>
+                            </label>
+
+                            <label class="calc-item add-on">
+                                <input type="checkbox" class="addon-checkbox zema-checkbox" data-monthly="0" data-yearly="0">
+                                <div class="calc-item-info">
+                                    <strong>Zema AI</strong>
+                                    <span>Automated reporting & data monitoring</span>
+                                </div>
+                                <div class="calc-item-price" style="color: var(--primary-color);">
+                                    Free for 3 months
+                                </div>
+                            </label>
+                        </div>
                     </div>
-                    <ul class="card-list">
-                        <li>Everything in Core bundle</li>
-                        <li>Asset lifecycle and maintenance tracking</li>
-                        <li>Equipment uptime and AMC reminders</li>
-                        <li>Priority onboarding support</li>
-                    </ul>
-                    <a href="/contact-us/index.html" class="btn btn-primary">Talk to Sales</a>
-                </article>
+                </div>
+
             </div>
-        </div>
-    </section>
-
-    <section class="module-section reveal" id="module-pricing">
-        <div class="container">
-            <div class="section-head">
-                <h2>Individual Module Pricing</h2>
-                <p>Start with one module and expand anytime.</p>
-            </div>
-
-            <div class="module-grid">
-                <article class="module-card">
-                    <h3>HMS</h3>
-                    <p class="module-price monthly">₹8,000<span>/month</span></p>
-                    <p class="module-price yearly">₹7,600<span>/month</span></p>
-                    <p class="module-note">Includes up to 20,000 patient records</p>
-                    <ul>
-                        <li>Patient onboarding and OPD/IPD workflows</li>
-                        <li>Appointment and doctor schedule management</li>
-                        <li>Billing with GST compliance</li>
-                    </ul>
-                </article>
-
-                <article class="module-card">
-                    <h3>OT Room</h3>
-                    <p class="module-price monthly">₹6,000<span>/month</span></p>
-                    <p class="module-price yearly">₹5,700<span>/month</span></p>
-                    <p class="module-note">Price per OT room</p>
-                    <ul>
-                        <li>Surgical scheduling and conflict checks</li>
-                        <li>Team assignment and coordination</li>
-                        <li>Live OT room status dashboard</li>
-                    </ul>
-                </article>
-
-                <article class="module-card">
-                    <h3>Inventory</h3>
-                    <p class="module-price monthly">₹8,000<span>/month</span></p>
-                    <p class="module-price yearly">₹7,600<span>/month</span></p>
-                    <ul>
-                        <li>Live stock monitoring across departments</li>
-                        <li>Purchase workflow and vendor comparison</li>
-                        <li>Barcode and RFID-ready tracking</li>
-                    </ul>
-                </article>
-
-                <article class="module-card">
-                    <h3>Asset Management</h3>
-                    <p class="module-price monthly">₹5,000<span>/month</span></p>
-                    <p class="module-price yearly">₹4,750<span>/month</span></p>
-                    <ul>
-                        <li>Asset registry and lifecycle tracking</li>
-                        <li>Preventive and corrective maintenance</li>
-                        <li>Service logs and compliance records</li>
-                    </ul>
-                </article>
-            </div>
-
-            <p class="pricing-footnote">Need Pharmacy module pricing? We can share a custom quote based on billing
-                volume and setup.</p>
-        </div>
-    </section>
-
-    <section class="comparison-section reveal">
-        <div class="container">
-            <h2>Quick Comparison</h2>
-            <div class="comparison-table-wrap">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Plan</th>
-                            <th>Modules</th>
-                            <th class="monthly">Monthly</th>
-                            <th class="yearly">Effective Monthly (Annual Billing)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Core Bundle</td>
-                            <td>HMS + OT Room + Inventory</td>
-                            <td class="monthly">₹22,000 + GST</td>
-                            <td class="yearly">₹20,000 + GST</td>
-                        </tr>
-                        <tr>
-                            <td>Full Bundle</td>
-                            <td>Core + Asset Management</td>
-                            <td class="monthly">₹27,000 + GST</td>
-                            <td class="yearly">₹24,000 + GST</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="pricing-footnote">All amounts are per location. Multi-location and enterprise rollout pricing is
-                available on request.</p>
         </div>
     </section>
 
@@ -545,8 +675,63 @@
                     root.setAttribute('data-billing', billing);
                     buttons.forEach((item) => item.classList.remove('active'));
                     button.classList.add('active');
+                    
+                    if (typeof calculateTotal === 'function') {
+                        calculateTotal();
+                    }
                 });
             });
+
+            const addonCheckboxes = document.querySelectorAll('.addon-checkbox');
+            const totalDisplay = document.getElementById('calc-total');
+            const billingNote = document.getElementById('calc-billing-note');
+            const bedCountSelect = document.getElementById('bed-count');
+            const baseMonthlyDisplay = document.getElementById('base-monthly-display');
+            const baseYearlyDisplay = document.getElementById('base-yearly-display');
+
+            function calculateTotal() {
+                const billing = root.getAttribute('data-billing');
+                
+                // Get base price from selected bed count
+                let basePrice = 9000;
+                if (bedCountSelect) {
+                    const selectedOption = bedCountSelect.options[bedCountSelect.selectedIndex];
+                    basePrice = parseInt(selectedOption.getAttribute(`data-${billing}`));
+                    
+                    // Update base pack individual display
+                    const mPrice = parseInt(selectedOption.getAttribute('data-monthly'));
+                    const yPrice = parseInt(selectedOption.getAttribute('data-yearly'));
+                    if(baseMonthlyDisplay) baseMonthlyDisplay.textContent = '₹' + mPrice.toLocaleString('en-IN') + ' /mo';
+                    if(baseYearlyDisplay) baseYearlyDisplay.textContent = '₹' + yPrice.toLocaleString('en-IN') + ' /mo';
+                } else {
+                    basePrice = billing === 'yearly' ? 8000 : 9000;
+                }
+
+                let total = basePrice;
+                
+                addonCheckboxes.forEach(cb => {
+                    if(cb.checked) {
+                        total += parseInt(cb.getAttribute(`data-${billing}`) || 0);
+                    }
+                });
+
+                totalDisplay.textContent = '₹' + total.toLocaleString('en-IN');
+                
+                if (billing === 'yearly') {
+                    billingNote.textContent = `Billed annually (₹${(total * 12).toLocaleString('en-IN')}/year + GST)`;
+                } else {
+                    billingNote.textContent = 'Billed monthly (+ GST)';
+                }
+            }
+
+            addonCheckboxes.forEach(cb => {
+                cb.addEventListener('change', calculateTotal);
+            });
+            if (bedCountSelect) {
+                bedCountSelect.addEventListener('change', calculateTotal);
+            }
+            
+            calculateTotal();
         })();
     </script>
 </body>

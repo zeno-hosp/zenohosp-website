@@ -11,9 +11,9 @@
   </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratory Information System (LIS) & Lab Software | ZenoHosp</title>
-    <meta name="description" content="Manage test orders, sample tracking, analyser integration, and pathology reporting with ZenoHosp Laboratory Information System (LIS) and diagnostic software.">
-    <meta name="keywords" content="Laboratory Information System (LIS), Lab Software, Pathology Reporting Software, Diagnostic Centre Software, LIMS, Analyser Integration">
+    <title>Best Laboratory Information System (LIS) Software | ZenoHosp</title>
+    <meta name="description" content="Automate your pathology lab with ZenoHosp LIS. Connect analyzers, track samples, and deliver fast, accurate test reports with our integrated laboratory software.">
+    <meta name="keywords" content="Laboratory Information System, Best LIS Software, Pathology Lab Software, Diagnostic Lab Management System, ZenoHosp Lab Module">
 
     <!-- Geo-targeting for India -->
     <meta name="geo.region" content="IN" />
@@ -68,6 +68,7 @@
         "Sample Tracking & Barcode Generation",
         "Result Entry & Validation",
         "Equipment Integration",
+        "Equipment Calibration Logging & Next-Due Alarms",
         "Automated Report Delivery",
         "Digital Signatures for Pathologists"
       ]
@@ -669,6 +670,74 @@
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Sample rejection analysis by reason</li>
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Monthly MIS reports exportable to Excel</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 6: Equipment Calibration & Alarm Management -->
+  <section class="hms-feature feature-alt-right reveal">
+    <div class="container">
+      <div class="feature-content">
+        <h2>Equipment calibration & next-due alarms</h2>
+        <p>Log every calibration run against each analyser and instrument in your lab. Set the next-due date and ZenoHosp automatically fires an alert before the deadline — keeping you NABL-ready without a manual tracker in sight.</p>
+        <ul class="feature-list">
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> One-click calibration log against each instrument</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Configurable next-calibration alarm per equipment</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Full audit trail with technician, date, and result</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Overdue alerts escalate to lab supervisor automatically</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="analytics-preview">
+          <div class="analytics-header">
+            <span>🔧 Calibration Tracker</span>
+            <span class="period">16 Jun 2026</span>
+          </div>
+          <!-- Overdue alarm banner -->
+          <div style="display:flex;align-items:center;gap:8px;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:8px 10px;margin-bottom:8px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span style="font-size:.7rem;font-weight:700;color:#dc2626;">OVERDUE — Mindray BS-240 calibration was due 14 Jun</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <!-- Header row -->
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;font-size:.65rem;font-weight:600;color:#888;padding:0 4px;">
+              <span>Equipment</span><span>Last Done</span><span>Next Due</span><span>Status</span>
+            </div>
+            <!-- Row 1 - Calibrated -->
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;padding:8px 10px;background:#f9fafb;border-radius:8px;font-size:.74rem;">
+              <div><div style="font-weight:600;color:#333;">Sysmex XN-450</div><div style="font-size:.65rem;color:#888;">Haematology</div></div>
+              <span style="color:#555;">10 Jun</span>
+              <span style="color:#555;">10 Jul</span>
+              <span style="background:#d1fae5;color:#065f46;padding:2px 7px;border-radius:20px;font-size:.65rem;font-weight:600;">OK</span>
+            </div>
+            <!-- Row 2 - Due Soon -->
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;padding:8px 10px;background:#fffbeb;border-radius:8px;border-left:3px solid #f59e0b;font-size:.74rem;">
+              <div><div style="font-weight:600;color:#333;">Roche Cobas c311</div><div style="font-size:.65rem;color:#888;">Biochemistry</div></div>
+              <span style="color:#555;">01 Jun</span>
+              <span style="color:#d97706;font-weight:700;">18 Jun</span>
+              <span style="background:#fef3c7;color:#92400e;padding:2px 7px;border-radius:20px;font-size:.65rem;font-weight:600;">DUE SOON</span>
+            </div>
+            <!-- Row 3 - Overdue -->
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;padding:8px 10px;background:#fef2f2;border-radius:8px;border-left:3px solid #dc2626;font-size:.74rem;">
+              <div><div style="font-weight:600;color:#333;">Mindray BS-240</div><div style="font-size:.65rem;color:#888;">Chemistry</div></div>
+              <span style="color:#555;">14 May</span>
+              <span style="color:#dc2626;font-weight:700;">14 Jun</span>
+              <span style="background:#fee2e2;color:#991b1b;padding:2px 7px;border-radius:20px;font-size:.65rem;font-weight:600;">OVERDUE</span>
+            </div>
+            <!-- Row 4 - Calibrated -->
+            <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;padding:8px 10px;background:#f9fafb;border-radius:8px;font-size:.74rem;">
+              <div><div style="font-weight:600;color:#333;">BioMérieux Vitek 2</div><div style="font-size:.65rem;color:#888;">Microbiology</div></div>
+              <span style="color:#555;">05 Jun</span>
+              <span style="color:#555;">05 Aug</span>
+              <span style="background:#d1fae5;color:#065f46;padding:2px 7px;border-radius:20px;font-size:.65rem;font-weight:600;">OK</span>
+            </div>
+          </div>
+          <!-- Log action bar -->
+          <div style="display:flex;gap:8px;margin-top:12px;border-top:1px solid #eee;padding-top:10px;">
+            <button style="flex:1;background:#2D8A6E;color:#fff;border:none;border-radius:6px;padding:7px;font-size:.74rem;font-weight:600;">+ Log Calibration</button>
+            <button style="flex:1;background:#f3f4f6;color:#333;border:none;border-radius:6px;padding:7px;font-size:.74rem;">Set Alarm</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>

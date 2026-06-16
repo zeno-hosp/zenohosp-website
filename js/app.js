@@ -487,6 +487,32 @@
     document.body.appendChild(bottomBar);
   }
 
+  function initAnalyticsTracking() {
+    // Track clicks on 'Request Demo' buttons
+    document.querySelectorAll('a[href*="/contact-us"]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'request_demo_click', {
+            'event_category': 'engagement',
+            'event_label': window.location.pathname
+          });
+        }
+      });
+    });
+
+    // Track clicks on Pricing links
+    document.querySelectorAll('a[href*="/pricing"]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'pricing_view_click', {
+            'event_category': 'engagement',
+            'event_label': window.location.pathname
+          });
+        }
+      });
+    });
+  }
+
   function init() {
     initNavbar();
     initMobileMenu();
@@ -502,6 +528,7 @@
     initScrollExpand();
     initJourneyScroll();
     initBottomMobileNav();
+    initAnalyticsTracking();
   }
 
   window.ZenoApp = {
