@@ -487,6 +487,25 @@
     document.body.appendChild(bottomBar);
   }
 
+  function initDemoModal() {
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (!link) return;
+      
+      const href = link.getAttribute('href') || '';
+      const text = (link.textContent || '').trim().toLowerCase();
+      
+      // If the link points to contact us and has the word "demo"
+      if (href.includes('contact-us') && text.includes('demo')) {
+        const modal = document.querySelector('demo-modal');
+        if (modal && typeof modal.open === 'function') {
+          e.preventDefault();
+          modal.open();
+        }
+      }
+    });
+  }
+
   function initAnalyticsTracking() {
     // Track clicks on 'Request Demo' buttons
     document.querySelectorAll('a[href*="/contact-us"]').forEach((btn) => {
@@ -528,6 +547,7 @@
     initScrollExpand();
     initJourneyScroll();
     initBottomMobileNav();
+    initDemoModal();
     initAnalyticsTracking();
   }
 

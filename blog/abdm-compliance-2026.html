@@ -91,6 +91,17 @@
       .blog-cta p {
           color: #9ca3af;
       }
+    
+      .blog-article-hero-img {
+          max-width: 800px;
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          object-fit: cover;
+          border-radius: 16px;
+          margin: 40px auto 0 auto;
+          display: block;
+      }
     </style>
 </head>
 <body>
@@ -116,6 +127,10 @@
         <div class="blog-article-meta">
           <span>Compliance</span> • <span>Apr 2026</span> • <span>6 min read</span>
         </div>
+      </div>
+    
+      <div class="container">
+        <img src="/images/blog-cover-2.jpg" class="blog-article-hero-img" alt="Blog Cover Image">
       </div>
     </section>
 
@@ -162,5 +177,8 @@
   <!-- Footer (Simplified) -->
   <zeno-footer></zeno-footer>
 <script src="/js/components/footer.js"></script>
+
+    <demo-modal></demo-modal>
+    <script src="/js/components/demo-modal.js"></script>
 </body>
 </html>
