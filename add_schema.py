@@ -31,7 +31,7 @@ hms_schema = """
       "@type": "SoftwareApplication",
       "name": "ZenoHosp Hospital Management Software",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web, Cloud",
+      "operatingSystem": "Web-based, Cloud, On-Premise",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
