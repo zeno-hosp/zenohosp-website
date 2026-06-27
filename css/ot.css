@@ -1,39 +1,67 @@
+/* ══════════════════════════════════════════════
+   OT Room – Complete Styles
+   ══════════════════════════════════════════════ */
 
-
+/* ── Hero ── */
 .ot-hero {
-  min-height: 80vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
-  background: var(--bg-hero-gradient);
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 40%, #e0f2fe 100%);
   padding: 140px 0 80px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.ot-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(59,130,246,0.06) 0, transparent 50%),
+    radial-gradient(circle at 75% 70%, rgba(124,58,237,0.04) 0, transparent 50%);
+  pointer-events: none;
+}
+
+.ot-hero .container { position: relative; z-index: 1; }
 
 .ot-hero-video-badge {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   padding: 8px 20px 8px 8px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-md);
+  background: rgba(255,255,255,0.9);
+  border-radius: 100px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   margin-bottom: 32px;
+  backdrop-filter: blur(8px);
 }
 
 .ot-hero-video-badge span {
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--zd-text-dark, #11110d);
 }
 
 .ot-hero-title {
   font-size: 3.5rem;
-  line-height: 1.15;
+  line-height: 1.12;
   margin-bottom: 24px;
+  color: var(--zd-text-dark, #11110d);
+  font-weight: 800;
+}
+
+/* OT gradient text – teal→blue→purple for maximum readability on light bg */
+.ot-hero .gradient-text {
+  background: linear-gradient(135deg, #0d9488 0%, #2563eb 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .ot-hero-subtitle {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
+  font-size: 1.2rem;
+  color: var(--zd-text-body, #4a4a45);
   max-width: 700px;
   margin: 0 auto 40px;
   line-height: 1.7;
@@ -46,19 +74,43 @@
   flex-wrap: wrap;
 }
 
+/* ── Trust Logos ── */
 .ot-trust-logos {
   margin-top: 60px;
   padding-top: 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0,0,0,0.06);
 }
 
+.ot-trust-logos .trust-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--zd-text-muted, #6b6b66);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.ot-trust-logos .trust-logo {
+  color: var(--zd-text-body, #4a4a45);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+
+.ot-trust-logos .trust-logo:hover {
+  opacity: 1;
+}
+
+/* ── Feature Sections ── */
 .ot-feature-section {
   padding: 100px 0;
-  background: var(--bg-white);
+  background: var(--zd-white, #ffffff);
 }
 
 .ot-feature-section.ot-feature-alt {
-  background: var(--bg-light);
+  background: var(--zd-cream, #f5f5f2);
 }
 
 .ot-feature-grid {
@@ -72,7 +124,7 @@
   direction: rtl;
 }
 
-.ot-feature-grid.reverse>* {
+.ot-feature-grid.reverse > * {
   direction: ltr;
 }
 
@@ -80,11 +132,13 @@
   font-size: 2.25rem;
   margin-bottom: 20px;
   line-height: 1.25;
+  color: var(--zd-text-dark, #11110d);
+  font-weight: 800;
 }
 
 .ot-feature-desc {
   font-size: 1.0625rem;
-  color: var(--text-secondary);
+  color: var(--zd-text-body, #4a4a45);
   line-height: 1.7;
   margin-bottom: 24px;
 }
@@ -95,38 +149,211 @@
   text-align: center;
 }
 
+/* ── Explore Links (fix lime→teal) ── */
 .ot-feature-links {
   display: flex;
   gap: 24px;
   margin-bottom: 32px;
 }
 
+.ot-feature-section .explore-link {
+  color: #0d9488;
+  border-color: #0d9488;
+}
+
+.ot-feature-section .explore-link:hover {
+  background: #0d9488;
+  color: #fff;
+}
+
+/* ── Checklist (fix lime checks) ── */
 .ot-feature-checklist {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px 24px;
 }
 
+.ot-feature-section .checklist-item {
+  color: var(--zd-text-dark, #11110d);
+}
+
+.ot-feature-section .check-icon {
+  color: #0d9488;
+}
+
+/* ── OT Schedule Mockup ── */
 .ot-scheduling-mockup {
   background: #fff;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
+  border-radius: var(--zd-radius-xl, 24px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.ot-scheduling-mockup .mockup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: #fafafa;
+}
+
+.ot-scheduling-mockup .mockup-title {
+  font-weight: 600;
+  color: var(--zd-text-dark, #11110d);
+}
+
+.ot-scheduling-mockup .mockup-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.ot-scheduling-mockup .tab {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--zd-text-muted, #6b6b66);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ot-scheduling-mockup .tab.active {
+  background: var(--zd-lime, #d1f470);
+  color: var(--zd-obsidian, #11110d);
+  font-weight: 600;
 }
 
 .ot-timeline {
   padding: 20px;
 }
 
+.time-slot {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.time-slot:last-child { border-bottom: none; }
+
+.time-slot .time {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--zd-text-muted, #6b6b66);
+  min-width: 50px;
+  padding-top: 4px;
+}
+
+.surgery-card {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  border-left: 4px solid transparent;
+}
+
+.surgery-card.surgery-high {
+  background: rgba(239,68,68,0.06);
+  border-left-color: #ef4444;
+}
+
+.surgery-card.surgery-medium {
+  background: rgba(245,158,11,0.06);
+  border-left-color: #f59e0b;
+}
+
+.surgery-card.surgery-low {
+  background: rgba(16,185,129,0.06);
+  border-left-color: #10b981;
+}
+
+.surgery-type {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--zd-text-dark, #11110d);
+  margin-bottom: 6px;
+}
+
+.surgery-details {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.surgery-details .duration,
+.surgery-details .room {
+  font-size: 0.8125rem;
+  color: var(--zd-text-muted, #6b6b66);
+}
+
+.surgeon-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.surgeon-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d9488 0%, #2563eb 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.surgeon-info span {
+  font-size: 0.8125rem;
+  color: var(--zd-text-body, #4a4a45);
+}
+
+.schedule-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  background: #fafafa;
+}
+
+.surgeries-count {
+  font-size: 0.8125rem;
+  color: var(--zd-text-muted, #6b6b66);
+  font-weight: 500;
+}
+
+.add-surgery-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background: var(--zd-lime, #d1f470);
+  color: var(--zd-obsidian, #11110d);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-surgery-btn:hover {
+  background: var(--zd-lime-hover, #c5e864);
+}
+
+/* ── Dark Section ── */
 .ot-dark-section {
-  background: linear-gradient(135deg, #1e293b 0, #0f172a 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   padding: 100px 0;
   color: #fff;
 }
 
+/* ── Dashboard Section ── */
 .ot-dashboard-section {
-  background: var(--bg-section);
+  background: var(--zd-cream, #f5f5f2);
+  padding: 100px 0;
 }
 
 .centered-header .ot-feature-title {
@@ -135,12 +362,13 @@
 
 .ot-dashboard-mockup {
   background: #fff;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
+  border-radius: var(--zd-radius-xl, 24px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(0,0,0,0.06);
 }
 
+/* ── OT Rooms Grid ── */
 .ot-rooms-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -150,29 +378,35 @@
 
 .ot-room-card {
   padding: 20px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border-radius: var(--zd-radius-lg, 16px);
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ot-room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
 
 .ot-room-card.active-surgery {
-  background: linear-gradient(135deg,
-      rgba(59, 130, 246, 0.05) 0,
-      rgba(139, 92, 246, 0.05) 100%);
-  border-color: rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, rgba(59,130,246,0.05) 0%, rgba(139,92,246,0.05) 100%);
+  border-color: rgba(59,130,246,0.25);
 }
 
 .ot-room-card.available {
-  background: rgba(16, 185, 129, 0.05);
-  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16,185,129,0.05);
+  border-color: rgba(16,185,129,0.25);
 }
 
 .ot-room-card.cleaning {
-  background: rgba(245, 158, 11, 0.05);
-  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245,158,11,0.05);
+  border-color: rgba(245,158,11,0.25);
 }
 
+/* ── Analytics Section ── */
 .ot-analytics-section {
-  background: linear-gradient(135deg, #1e293b 0, #0f172a 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   padding: 100px 0;
 }
 
@@ -183,9 +417,30 @@
   align-items: center;
 }
 
+/* ── Integrations ── */
 .ot-integrations {
-  background: var(--bg-white);
+  background: var(--zd-white, #ffffff);
 }
+
+/* ── Hero App Box ── */
+.hero-app-box.ot-box:hover {
+  box-shadow: 0 12px 30px rgba(198,40,40,0.15);
+  border-color: rgba(198,40,40,0.3);
+}
+
+.app-icon.ot-icon {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.ot-icon {
+  background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%);
+  color: #0c4a6e;
+}
+
+/* ══════════════════════════════════════════════
+   Responsive
+   ══════════════════════════════════════════════ */
 
 @media (max-width: 992px) {
   .ot-hero-title {
@@ -196,6 +451,7 @@
   .ot-feature-grid.reverse {
     grid-template-columns: 1fr;
     direction: ltr;
+    gap: 48px;
   }
 
   .ot-feature-checklist {
@@ -259,19 +515,4 @@
     flex-direction: column;
     align-items: stretch;
   }
-}
-
-.hero-app-box.ot-box:hover {
-  box-shadow: 0 12px 30px rgba(198, 40, 40, 0.15);
-  border-color: rgba(198, 40, 40, 0.3);
-}
-
-.app-icon.ot-icon {
-  background: #ffebee;
-  color: #c62828;
-}
-
-.ot-icon {
-  background: linear-gradient(135deg, #7dd3fc 0, #38bdf8 100%);
-  color: #0c4a6e;
 }

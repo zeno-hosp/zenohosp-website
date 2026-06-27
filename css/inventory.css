@@ -1,4 +1,23 @@
 
+/* ── Inventory: Fix lime text on light backgrounds ── */
+/* --color-primary (#d1f470) is invisible on white/cream. Override with teal for text. */
+
+.inv-hero .announcement-link,
+.inv-hero .announcement-link:hover {
+  color: #0d9488;
+}
+
+.inv-hero .gradient-text-inv {
+  background: linear-gradient(135deg, #0d9488 0%, #0284c7 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.feature-badge {
+  color: #0d9488;
+  background: rgba(13, 148, 136, 0.12);
+}
 
 .inv-hero {
   min-height: 100vh;
@@ -270,6 +289,63 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+}
+
+.advanced-feature {
+  background: var(--zd-cream, #f5f5f2);
+  border-radius: var(--zd-radius-lg, 16px);
+  padding: 32px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.advanced-feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.advanced-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--zd-lime, #d1f470);
+  border-radius: var(--zd-radius-md, 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--zd-obsidian, #11110d);
+  box-shadow: 0 4px 12px rgba(209, 244, 112, 0.3);
+}
+
+.advanced-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+}
+
+.advanced-feature h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: var(--zd-text-dark, #11110d);
+  font-weight: 700;
+}
+
+.advanced-feature p {
+  color: var(--zd-text-body, #4a4a45);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .inv-advanced-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .inv-advanced-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .inv-cta-section {
