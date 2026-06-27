@@ -130,28 +130,56 @@ body.lab-app {
 .emr-visual {
   max-width: 100%;
   overflow-x: auto;
-  padding: 20px 0;
+  padding: 40px 20px;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -webkit-overflow-scrolling: touch;
 }
+.emr-visual::-webkit-scrollbar {
+  display: none;
+}
+.emr-visual {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .emr-flowchart {
   flex-wrap: nowrap;
-  min-width: 900px;
+  min-width: max-content;
+  padding: 0 20px;
+  justify-content: flex-start;
 }
 .emr-node {
   background: #fff;
   border: 1px solid rgba(0,0,0,0.05);
+  min-width: 160px;
+  flex: 0 0 auto;
+  padding: 24px 16px;
+  text-align: center;
 }
 .emr-node span {
   color: var(--lab-text) !important;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 .emr-node.center-node {
   background: var(--lab-lime) !important;
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(209, 244, 112, 0.4);
+  border: none;
 }
 .emr-node.center-node span {
   color: var(--lab-text) !important;
-  font-weight: 700;
+  font-weight: 800;
 }
 .emr-connector {
   background: linear-gradient(90deg, #e5e7eb, var(--lab-lime), #e5e7eb) !important;
+  flex: 0 0 60px;
+  height: 3px;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .emr-node { min-width: 140px; }
+  .emr-connector { flex: 0 0 30px; }
 }
 /* Ultra-Premium Glass App UI */
 .lab-app-showcase {
