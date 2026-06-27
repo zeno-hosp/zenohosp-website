@@ -68,6 +68,45 @@ body.finance-app {
   background: var(--finance-bg-alt);
 }
 
+.finance-feature .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.finance-feature-centered {
+  padding: 100px 0;
+  background: var(--finance-bg-alt);
+}
+
+.finance-feature-centered .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.finance-feature.feature-alt-left .container {
+  direction: rtl;
+}
+
+.finance-feature.feature-alt-left .container > * {
+  direction: ltr;
+}
+
+@media (max-width: 992px) {
+  .finance-feature .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .finance-feature.feature-alt-left .container {
+    direction: ltr;
+  }
+}
+
 .finance-feature h2 {
   color: var(--finance-text-main);
   font-size: clamp(1.6rem, 2.8vw, 2.2rem);
