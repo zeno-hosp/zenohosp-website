@@ -18,9 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/finance.css">
   <meta name="theme-color" content="#111827">
 </head>
-<body>
+<body class="finance-app">
                 <div class="platform-strip">
     <div class="nav-container">
       <a href="/index.html" class="ps-brand"><img src="/images/zenohosp-w.svg" alt="ZenoHosp Logo" style="height: 20px; width: auto; vertical-align: middle;" /></a>
@@ -52,8 +53,8 @@
           <a href="javascript:void(0)" class="dropdown-trigger">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
           <div class="nav-feat-dropdown"><a href="/apps/finance/features/billing-invoicing/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="feat-dd-info"><strong>Billing &amp; Invoicing</strong><span>GST-compliant bills auto-generated from clinical modules</span></div></a><a href="/apps/finance/features/tpa-claims/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feat-dd-info"><strong>TPA &amp; Claims</strong><span>Insurance claims from submission to settlement</span></div></a><a href="/apps/finance/features/revenue-analytics/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div class="feat-dd-info"><strong>Revenue Analytics</strong><span>Department-wise P&L, doctor revenue, collection reports</span></div></a><a href="/apps/finance/features/gst-compliance/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="feat-dd-info"><strong>GST Compliance</strong><span>Correct GST rates, GSTR reports, audit-ready</span></div></a><a href="/apps/finance/features/doctor-incentives/index.html" class="feat-dd-item"><div class="feat-dd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="feat-dd-info"><strong>Doctor Incentives</strong><span>Auto-calculated monthly payouts from actual revenue data</span></div></a></div>
         </li>
-        <li><a href="/apps/finance/resources/index.html">Solutions</a></li>
-        <li><a href="/apps/finance/resources/index.html" style="color:#2D8A6E;font-weight:700;">Resources</a></li>
+        <li><a href="/apps/finance/solutions/index.html">Solutions</a></li>
+        <li><a href="/apps/finance/resources/index.html" style="color:var(--finance-accent);font-weight:700;">Resources</a></li>
         <li><a href="/apps/finance/docs/index.html">Docs</a></li>
         <li><a href="/apps/finance/pricing/index.html">Pricing</a></li>
       </ul>
@@ -72,28 +73,75 @@
       <li><a href="/apps/finance/pricing/index.html">Pricing</a></li>
     </ul>
   </div>
-  <section class="hms-feat-page-hero">
+  <section class="finance-feat-page-hero">
     <div class="container">
       <div class="crumb">ZenoHosp Finance / Resources</div>
-      <h1>Everything you need to deploy ZenoHosp Finance.</h1>
-      <p>Implementation guides, FAQs, technical requirements, and related resources for ZenoHosp Finance.</p>
+      <h1>Finance & Accounting Resources</h1>
+      <p>Implementation guides, financial templates, case studies, and technical resources to help you master healthcare revenue cycle management.</p>
     </div>
   </section>
-    <section class="feat-page-section">
-    <div class="container" style="max-width:760px;">
-      <h2 style="font-size:clamp(1.5rem,2vw,1.9rem);font-weight:800;letter-spacing:-.03em;color:#11110d;margin-bottom:32px;">Common questions about Finance</h2>
-      <div class="feat-faq-list">
-        <div class="feat-faq-item"><h4>How long does Finance implementation take?</h4><p>ZenoHosp Finance is typically deployed as part of the overall ZenoHosp go-live - within the 90-day guaranteed timeline. For standalone Finance deployments, most hospitals are live within 30 days.</p></div>
-        <div class="feat-faq-item"><h4>Does Finance integrate with HMS and other modules?</h4><p>Yes. All ZenoHosp modules share a single patient database. Finance reads from and writes to the same record - no separate integrations required.</p></div>
-        <div class="feat-faq-item"><h4>Is training included?</h4><p>Yes. Our implementation team trains all relevant staff roles on Finance as part of go-live. Role-specific training ensures each team member learns only what applies to their workflow.</p></div>
+
+  <section class="finance-page-section">
+    <div class="container">
+      <h2 style="font-size:clamp(1.8rem,3vw,2.2rem);font-weight:800;color:var(--finance-text-main);text-align:center;">Downloadable Templates</h2>
+      <p style="text-align:center;color:var(--finance-text-muted);max-width:600px;margin:0 auto;">Ready-to-use Excel and PDF templates to standardize your hospital's financial reporting and day-to-day operations.</p>
+      
+      <div class="finance-grid">
+        <div class="finance-card">
+          <div class="finance-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Daily Cash Register Template</h3>
+          <p>A standardized template for front-desk cashiers to reconcile OPD and IPD collections at shift-end.</p>
+          <a href="#" style="display:inline-block;margin-top:16px;color:var(--finance-accent);font-weight:600;">Download Excel &rarr;</a>
+        </div>
+        
+        <div class="finance-card">
+          <div class="finance-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+          </div>
+          <h3>Doctor Payout Calculator</h3>
+          <p>Calculate complex revenue-sharing models for visiting consultants and full-time doctors.</p>
+          <a href="#" style="display:inline-block;margin-top:16px;color:var(--finance-accent);font-weight:600;">Download Excel &rarr;</a>
+        </div>
+        
+        <div class="finance-card">
+          <div class="finance-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3>Hospital P&L Dashboard</h3>
+          <p>A master sheet to plug in your monthly departmental revenues and expenses to gauge true profitability.</p>
+          <a href="#" style="display:inline-block;margin-top:16px;color:var(--finance-accent);font-weight:600;">Download Template &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
-  <section class="feat-page-cta">
+
+  <section class="finance-page-section alt">
+    <div class="container" style="max-width:800px;">
+      <h2 style="font-size:clamp(1.5rem,2vw,1.9rem);font-weight:800;color:var(--finance-text-main);margin-bottom:32px;">Implementation Guides & FAQs</h2>
+      <div class="feat-faq-list">
+        <div class="feat-faq-item">
+          <h4>How long does Finance implementation take?</h4>
+          <p>ZenoHosp Finance is typically deployed as part of the overall ZenoHosp go-live - within the 90-day guaranteed timeline. For standalone Finance deployments, most hospitals are live within 30 days.</p>
+        </div>
+        <div class="feat-faq-item">
+          <h4>Does Finance integrate with TPA portals?</h4>
+          <p>Yes. You can generate claim XMLs and track the status of submissions directly from the Finance module. Remittances are automatically reconciled against patient accounts.</p>
+        </div>
+        <div class="feat-faq-item">
+          <h4>How do we migrate historical accounting data?</h4>
+          <p>Our implementation team provides a standard CSV template for Opening Balances, Vendor Ledgers, and outstanding patient dues. This is imported on Go-Live day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="finance-page-section" style="text-align:center;">
     <div class="container">
-      <h2>See Finance in action.</h2>
-      <p>45-minute demo tailored to your hospital type and workflows.</p>
-      <a href="/contact-us/index.html" class="btn btn-primary">Request Demo</a>
+      <h2 style="font-size:2.5rem;font-weight:800;color:var(--finance-text-main);margin-bottom:16px;">Stop revenue leakage today.</h2>
+      <p style="color:var(--finance-text-muted);font-size:1.1rem;margin-bottom:32px;">Get a personalized walk-through of ZenoHosp Finance for your facility.</p>
+      <a href="/contact-us/index.html" class="btn btn-finance">Book a Free Demo</a>
     </div>
   </section>
       <!-- Footer -->

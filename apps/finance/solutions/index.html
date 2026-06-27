@@ -18,9 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/finance.css">
   <meta name="theme-color" content="#111827">
 </head>
-<body>
+<body class="finance-app">
                 <div class="platform-strip">
     <div class="nav-container">
       <a href="/index.html" class="ps-brand"><img src="/images/zenohosp-w.svg" alt="ZenoHosp Logo" style="height: 20px; width: auto; vertical-align: middle;" /></a>
@@ -72,29 +73,67 @@
       <li><a href="/apps/finance/pricing/index.html">Pricing</a></li>
     </ul>
   </div>
-  <section class="hms-feat-page-hero">
+  <section class="finance-feat-page-hero">
     <div class="container">
       <div class="crumb">ZenoHosp Finance / Solutions</div>
       <h1>Finance solutions for every hospital type.</h1>
       <p>How ZenoHosp Finance works for multi-specialty hospitals, clinics, and hospital chains - with the exact workflows relevant to each facility type.</p>
     </div>
   </section>
-    <section class="feat-page-section">
+
+  <section class="finance-page-section">
     <div class="container">
-      <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:-.03em;color:#11110d;margin-bottom:16px;">Who uses ZenoHosp Finance?</h2>
-      <p style="color:#666;font-size:.97rem;max-width:600px;margin-bottom:40px;">ZenoHosp Finance is deployed across multi-specialty hospitals, clinics, diagnostic centres, and pharmacy chains across South India.</p>
-      <div class="feat-caps" style="max-width:760px;">
-        <div class="feat-cap"><div class="feat-cap-dot"></div><div><strong>Multi-Specialty Hospitals</strong><span>Full Finance capability with integration to HMS, Finance, and all other ZenoHosp modules.</span></div></div>
-        <div class="feat-cap"><div class="feat-cap-dot"></div><div><strong>Clinics &amp; Polyclinics</strong><span>Lightweight Finance configuration for high-volume outpatient workflows.</span></div></div>
-        <div class="feat-cap"><div class="feat-cap-dot"></div><div><strong>Hospital Chains</strong><span>Centralised Finance management across multiple branches with consolidated reporting.</span></div></div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.2rem);font-weight:800;color:var(--finance-text-main);text-align:center;margin-bottom:16px;">Tailored for your scale</h2>
+      <p style="text-align:center;color:var(--finance-text-muted);max-width:600px;margin:0 auto;">From single-doctor clinics to 500-bed multi-specialty chains, our finance module adapts to your specific operational needs.</p>
+      
+      <div class="finance-grid" style="margin-top:48px;">
+        <div class="finance-card">
+          <div class="finance-card-icon" style="background:#fef08a;color:#854d0e;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Multi-Specialty Hospitals</h3>
+          <p>Full-scale capability with deep integration into IPD workflows. Manage complex TPA claims, room-wise billing, consultant share calculations, and vendor ledgers seamlessly.</p>
+          <ul style="margin-top:16px;color:var(--finance-text-muted);padding-left:20px;">
+            <li style="margin-bottom:8px;">IPD Advance tracking</li>
+            <li style="margin-bottom:8px;">Auto-calculated doctor cuts</li>
+            <li>TPA & Corporate credit tracking</li>
+          </ul>
+        </div>
+        
+        <div class="finance-card">
+          <div class="finance-card-icon" style="background:#fef08a;color:#854d0e;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Clinics & Polyclinics</h3>
+          <p>A lightweight, POS-style configuration for high-volume outpatient workflows. Fast billing, instant digital receipts, and end-of-day cash reconciliation.</p>
+          <ul style="margin-top:16px;color:var(--finance-text-muted);padding-left:20px;">
+            <li style="margin-bottom:8px;">1-click OPD billing</li>
+            <li style="margin-bottom:8px;">WhatsApp receipt integration</li>
+            <li>Daily cash register summaries</li>
+          </ul>
+        </div>
+        
+        <div class="finance-card">
+          <div class="finance-card-icon" style="background:#fef08a;color:#854d0e;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Hospital Chains</h3>
+          <p>Centralized financial control across multiple geographical branches. Consolidated P&L reporting, unified vendor management, and inter-branch transfers.</p>
+          <ul style="margin-top:16px;color:var(--finance-text-muted);padding-left:20px;">
+            <li style="margin-bottom:8px;">Branch-wise P&L statements</li>
+            <li style="margin-bottom:8px;">Centralized purchasing & payments</li>
+            <li>Role-based multi-branch access</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
-  <section class="feat-page-cta">
+
+  <section class="finance-page-section" style="text-align:center;background:var(--finance-bg-alt);">
     <div class="container">
-      <h2>See Finance in action.</h2>
-      <p>45-minute demo tailored to your hospital type and workflows.</p>
-      <a href="/contact-us/index.html" class="btn btn-primary">Request Demo</a>
+      <h2 style="font-size:2.5rem;font-weight:800;color:var(--finance-text-main);margin-bottom:16px;">See how it fits your hospital.</h2>
+      <p style="color:var(--finance-text-muted);font-size:1.1rem;margin-bottom:32px;">45-minute demo tailored to your exact workflows and scale.</p>
+      <a href="/contact-us/index.html" class="btn btn-finance">Request Demo</a>
     </div>
   </section>
       <!-- Footer -->

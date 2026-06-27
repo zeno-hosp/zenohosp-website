@@ -84,180 +84,11 @@
         rel="stylesheet">
 
     <!-- Styles -->
-      <link rel="stylesheet" href="/css/main.css">
-      <style>
-/* Ultra-Premium Glass App UI */
-.lab-app-showcase {
-  position: relative;
-  width: 100%;
-  max-width: 580px;
-  border-radius: 24px;
-  background: rgba(20, 20, 18, 0.6);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-/* Subtle Top Bar */
-.lab-app-topbar {
-  display: flex;
-  align-items: center;
-  padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.02);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.mac-dots {
-  display: flex;
-  gap: 6px;
-}
-.mac-dots span {
-  width: 10px; height: 10px; border-radius: 50%;
-}
-.mac-dots span:nth-child(1) { background: #ff5f56; }
-.mac-dots span:nth-child(2) { background: #ffbd2e; }
-.mac-dots span:nth-child(3) { background: #27c93f; }
-
-.lab-app-tabs {
-  display: flex;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 4px;
-  border-radius: 12px;
-  margin-left: auto;
-}
-.lab-app-tab {
-  padding: 6px 16px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.lab-app-tab.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.lab-app-body {
-  padding: 24px;
-}
-
-/* Stat Cards */
-.lab-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.lab-stat-card {
-  position: relative;
-  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  padding: 16px;
-  overflow: hidden;
-}
-.lab-stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 2px;
-}
-.lab-stat-card.c-lime::before { background: var(--zd-lime); box-shadow: 0 0 10px var(--zd-lime); }
-.lab-stat-card.c-blue::before { background: #38bdf8; box-shadow: 0 0 10px #38bdf8; }
-.lab-stat-card.c-purple::before { background: #a78bfa; box-shadow: 0 0 10px #a78bfa; }
-
-.lab-stat-value {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1;
-  margin-bottom: 6px;
-  letter-spacing: -0.02em;
-}
-.lab-stat-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* List Items */
-.lab-list-header {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-}
-.lab-list-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 16px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  transition: all 0.3s ease;
-}
-.lab-list-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-  transform: translateX(4px);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-.lab-avatar {
-  width: 40px; height: 40px;
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.85rem; font-weight: 800;
-}
-.lab-item-info { flex: 1; }
-.lab-item-name {
-  font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 2px;
-}
-.lab-item-test {
-  font-size: 0.75rem; color: rgba(255,255,255,0.4);
-}
-.lab-item-status {
-  text-align: right;
-}
-.lab-status-badge {
-  display: inline-flex;
-  align-items: center; gap: 6px;
-  padding: 4px 10px;
-  border-radius: 100px;
-  font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
-}
-.badge-dot { width: 6px; height: 6px; border-radius: 50%; }
-
-/* Floating Elements (Decorative) */
-.float-element {
-  position: absolute;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.05);
-  padding: 12px 16px;
-  display: flex; align-items: center; gap: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  z-index: 10;
-  animation: float-slow 6s ease-in-out infinite;
-}
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-</style>
-  <meta name="theme-color" content="#111827">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/lab.css">
+    <meta name="theme-color" content="#111827">
 </head>
-<body>
+<body class="lab-app">
 
                               <div class="platform-strip">
     <div class="nav-container">
@@ -335,14 +166,14 @@
     </ul>
   </div>
 <!-- Hero -->
-  <section class="hms-hero reveal">
+  <section class="lab-hero reveal">
     <div class="container">
-      <div class="hms-hero-content">
+      <div class="lab-hero-content">
         <h1>Diagnostics, ordered to reported</h1>
         <p style="font-size:1.1rem;color:#555;margin-bottom:2rem;max-width:500px;">Test orders land from the EMR, samples are tracked by barcode, results are validated, and reports reach the patient - without a single paper slip.</p>
         <a href="/contact-us/index.html" class="btn btn-primary btn-lg">Request Demo</a>
       </div>
-      <div class="hms-hero-image reveal zeno-delay-200" style="position: relative; perspective: 1200px;">
+      <div class="lab-hero-image reveal zeno-delay-200" style="position: relative; perspective: 1200px;">
         
         <!-- Decorative Glow -->
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120%; height: 120%; background: radial-gradient(circle, rgba(209,244,112,0.15) 0%, transparent 60%); pointer-events: none;"></div>
@@ -443,7 +274,7 @@
   </section>
 
   <!-- Feature 1: Test Orders & Sample Tracking -->
-  <section class="hms-feature feature-alt-right reveal" id="features">
+  <section class="lab-feature feature-alt-right reveal" id="features">
     <div class="container">
       <div class="feature-content">
         <h2>Test orders & sample tracking</h2>
@@ -489,7 +320,7 @@
   </section>
 
   <!-- Feature 2: Result Entry & Validation -->
-  <section class="hms-feature feature-alt-left reveal">
+  <section class="lab-feature feature-alt-left reveal">
     <div class="container">
       <div class="feature-visual">
         <div class="analytics-preview">
@@ -534,7 +365,7 @@
   </section>
 
   <!-- Feature 3: Automated Report Delivery (centered) -->
-  <section class="hms-feature-centered reveal" id="solutions">
+  <section class="lab-feature-centered reveal" id="solutions">
     <div class="container">
       <div class="centered-content">
         <h2>Reports delivered the moment they're signed</h2>
@@ -572,7 +403,7 @@
   </section>
 
   <!-- Feature 4: Equipment Integration -->
-  <section class="hms-feature feature-alt-right reveal">
+  <section class="lab-feature feature-alt-right reveal">
     <div class="container">
       <div class="feature-content">
         <h2>Analyser & equipment integration</h2>
@@ -618,7 +449,7 @@
   </section>
 
   <!-- Feature 5: TAT & Lab Analytics -->
-  <section class="hms-feature feature-alt-left reveal">
+  <section class="lab-feature feature-alt-left reveal">
     <div class="container">
       <div class="feature-visual">
         <div class="analytics-preview">
@@ -674,7 +505,7 @@
   </section>
 
   <!-- Feature 6: Equipment Calibration & Alarm Management -->
-  <section class="hms-feature feature-alt-right reveal">
+  <section class="lab-feature feature-alt-right reveal">
     <div class="container">
       <div class="feature-content">
         <h2>Equipment calibration & next-due alarms</h2>
