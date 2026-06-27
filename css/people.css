@@ -1,0 +1,80 @@
+
+
+.hero-app-box.people-box:hover {
+  box-shadow: 0 12px 30px rgba(173, 20, 87, 0.15);
+  border-color: rgba(173, 20, 87, 0.3);
+}
+
+.app-icon.people-icon {
+  background: #fce4ec;
+  color: #ad1457;
+}
+
+.people-hero {
+  min-height: 100vh;
+  padding: 140px 0 60px;
+  background: linear-gradient(180deg, #f5f3ff 0, #ede9fe 50%, #f0fdf4 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.people-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(91, 33, 182, 0.05) 0, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(13, 148, 136, 0.05) 0, transparent 50%);
+  pointer-events: none;
+}
+
+.people-hero .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.people-hero-title {
+  font-size: 3.75rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.people-hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.people-hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.people-hero-image {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+@media (max-width: 900px) {
+  .people-hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .people-hero-title {
+    font-size: 2.2rem;
+  }
+  .people-hero {
+    padding: 120px 0 40px;
+  }
+}

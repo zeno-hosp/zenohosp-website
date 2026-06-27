@@ -1,0 +1,150 @@
+/* css/finance.css - Dedicated bright yellow theme for the Finance module */
+
+:root {
+  --finance-bg-light: #FEFCE8; /* Very soft pastel yellow */
+  --finance-bg-alt: #FEF9C3; /* Slightly deeper pastel yellow for contrast */
+  --finance-hero-bg: #FACC15; /* Vibrant, premium yellow */
+  --finance-text-main: #11110d;
+  --finance-text-muted: #555550;
+  --finance-accent: #A16207; /* Dark golden brown for text accents */
+  --finance-icon-bg: #FEF08A;
+  --finance-icon-stroke: #CA8A04;
+}
+
+/* Base Overrides */
+body.finance-app {
+  background-color: var(--finance-bg-light);
+  color: var(--finance-text-main);
+}
+
+/* Hero Section */
+.finance-hero {
+  padding: 140px 0 80px;
+  background: var(--finance-hero-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.finance-hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--finance-text-main);
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.finance-hero-sub {
+  font-size: 1.1rem;
+  color: #444440;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-finance {
+  background: var(--finance-text-main) !important;
+  color: #fff !important;
+  border-color: var(--finance-text-main) !important;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 14px 32px;
+  transition: all 0.3s ease;
+}
+.btn-finance:hover {
+  background: #333 !important;
+  border-color: #333 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Feature Sections */
+.finance-feature {
+  padding: 100px 0;
+  background: var(--finance-bg-light);
+}
+.finance-feature.alt {
+  background: var(--finance-bg-alt);
+}
+
+.finance-feature h2 {
+  color: var(--finance-text-main);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.finance-feature p {
+  color: var(--finance-text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+/* Feature List Overrides */
+.finance-app .feature-list svg circle {
+  fill: var(--finance-icon-bg) !important;
+}
+.finance-app .feature-list svg path {
+  stroke: var(--finance-icon-stroke) !important;
+}
+.finance-app .feature-list li {
+  color: var(--finance-text-main);
+  font-weight: 500;
+}
+
+/* Navigation overrides for Yellow Theme */
+.finance-app .navbar {
+  background: rgba(254, 252, 232, 0.95) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.finance-app .navbar .nav-links a, .finance-app .dropdown-label {
+  color: var(--finance-text-muted) !important;
+}
+.finance-app .navbar .nav-links a:hover {
+  color: var(--finance-accent) !important;
+}
+.finance-app .logo-icon {
+  background-color: var(--finance-hero-bg) !important;
+  color: #111 !important;
+}
+.finance-app .mlogo {
+  color: #111 !important;
+}
+
+.finance-app .mobile-menu-toggle .bar {
+  background-color: #111 !important;
+}
+
+.finance-app .nav-feat-dropdown {
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+.finance-app .feat-dd-info strong {
+  color: var(--finance-text-main) !important;
+}
+.finance-app .feat-dd-info span {
+  color: var(--finance-text-muted) !important;
+}
+.finance-app .feat-dd-icon {
+  background: var(--finance-bg-light) !important;
+}
+.finance-app .feat-dd-icon svg {
+  stroke: var(--finance-accent) !important;
+}
+
+/* Mockup Colors Overrides inside Hero */
+.finance-preview-logo {
+  color: var(--finance-accent) !important;
+}
+.finance-preview-icon {
+  background: var(--finance-hero-bg) !important;
+  color: #111 !important;
+}
+.finance-preview-tab.active {
+  color: var(--finance-accent) !important;
+}

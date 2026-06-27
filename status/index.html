@@ -146,6 +146,22 @@
         <h2 style="font-size: 1.5rem; margin-bottom: 24px;">Past Incidents</h2>
         
         <div class="incident-card" style="border-color: #f59e0b;">
+          <div class="incident-date">June 20, 2026</div>
+          <div class="incident-title">Delayed SMS/WhatsApp Notifications</div>
+          <div class="incident-desc">
+            <strong>Resolved:</strong> Our third-party SMS provider experienced an upstream routing issue causing a delay of up to 15 minutes for appointment reminders. Service was fully restored.
+          </div>
+        </div>
+
+        <div class="incident-card" style="border-color: #ef4444;">
+          <div class="incident-date">May 05, 2026</div>
+          <div class="incident-title">ABDM Sync Timeout</div>
+          <div class="incident-desc">
+            <strong>Resolved:</strong> The NDHM gateway was temporarily unreachable, causing timeouts when generating ABHA IDs. We implemented a queue mechanism to automatically retry failed syncs once the gateway came back online.
+          </div>
+        </div>
+
+        <div class="incident-card" style="border-color: #f59e0b;">
           <div class="incident-date">April 14, 2026</div>
           <div class="incident-title">Elevated Latency in Pharmacy POS</div>
           <div class="incident-desc">

@@ -397,50 +397,6 @@
     update();
   }
 
-  function initJourneyScroll() {
-    const container = document.querySelector('.patient-journey-container');
-    const progressBar = document.getElementById('journey-progress');
-    const steps = document.querySelectorAll('.journey-step');
-    
-    if (!container || !progressBar || !steps.length) return;
-
-    let ticking = false;
-
-    const update = () => {
-      const rect = container.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Start progress when container is near middle of screen
-      const startTrigger = windowHeight * 0.7;
-      
-      let progressRaw = (startTrigger - rect.top) / rect.height;
-      let progress = Math.max(0, Math.min(1, progressRaw));
-      
-      progressBar.style.height = `${progress * 100}%`;
-      
-      steps.forEach((step, index) => {
-        // Threshold based on even spacing
-        const threshold = index / (steps.length > 1 ? steps.length - 1 : 1);
-        if (progress >= threshold - 0.1) {
-          step.classList.add('active');
-        } else {
-          step.classList.remove('active');
-        }
-      });
-      
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        window.requestAnimationFrame(update);
-      }
-    };
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    update();
-  }
 
   function initBottomMobileNav() {
     // Ensure we are on mobile/tablet view
@@ -545,7 +501,6 @@
     initPlatformStrip();
     initCounterAnimation();
     initScrollExpand();
-    initJourneyScroll();
     initBottomMobileNav();
     initDemoModal();
     initAnalyticsTracking();

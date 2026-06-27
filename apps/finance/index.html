@@ -85,8 +85,9 @@
     <!-- Styles -->
       <link rel="stylesheet" href="/css/main.css">
   <meta name="theme-color" content="#111827">
+  <link rel="stylesheet" href="/css/finance.css">
 </head>
-<body>
+<body class="finance-app">
 
                               <div class="platform-strip">
     <div class="nav-container">
@@ -117,7 +118,7 @@
 
   <header class="module-head" id="main-nav">
     <div class="nav-container">
-      <a href="/apps/finance/index.html" class="mlogo"> <span class="mod">Finance</span>
+      <a href="/apps/finance/index.html" class="mlogo"> <span class="mod" style="color: #d1f470;">Finance</span>
       </a>
             <ul class="nav-links">
         <li class="has-dropdown">
@@ -126,8 +127,8 @@
         </li>
         <li><a href="/apps/finance/solutions/index.html">Solutions</a></li>
         <li><a href="/apps/finance/resources/index.html">Resources</a></li>
+        <li><a href="/apps/finance/docs/index.html">Docs</a></li>
         <li><a href="/apps/finance/pricing/index.html">Pricing</a></li>
-        <li><a href="/apps/finance/docs/index.html">Knowledge Base</a></li>
       </ul>
       <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
         <span class="bar"></span>
@@ -164,22 +165,22 @@
     </ul>
   </div>
 <!-- Hero -->
-  <section class="hms-hero reveal">
+  <section class="finance-hero reveal">
     <div class="container">
-      <div class="hms-hero-content">
-        <h1>Books built for how hospitals actually earn</h1>
-        <p style="font-size:1.1rem;color:#555;margin-bottom:2rem;max-width:500px;">Ledgers, GST, payer settlements and department-wise P&amp;L - all the financial plumbing your hospital needs, pre-wired.</p>
-        <a href="/contact-us/index.html" class="btn btn-primary btn-lg">Request Demo</a>
+      <div class="finance-hero-content">
+        <h1>Zero revenue leakage. Total financial control.</h1>
+        <p class="finance-hero-sub">Built for hospital founders who demand accuracy. Connect every department directly to your ledger and ensure not a single penny is missed across OPD, IPD, Pharmacy, and Lab.</p>
+        <a href="/contact-us/index.html" class="btn btn-finance btn-lg">Request Demo</a>
       </div>
       <div class="hms-hero-image reveal zeno-delay-200">
         <div class="software-preview zeno-float">
           <div class="preview-header">
-            <div class="preview-logo">
-              <span class="logo-icon-sm">Z</span>
+            <div class="preview-logo finance-preview-logo">
+              <span class="logo-icon-sm finance-preview-icon">Z</span>
               <span>ZenoHosp Finance</span>
             </div>
             <div class="preview-tabs">
-              <span class="tab active">Dashboard</span>
+              <span class="tab active finance-preview-tab">Dashboard</span>
               <span class="tab">Billing</span>
               <span class="tab">Claims</span>
               <span class="tab">P&amp;L</span>
@@ -229,16 +230,16 @@
   </section>
 
   <!-- Feature 1: Billing & Invoicing -->
-  <section class="hms-feature feature-alt-right reveal" id="features">
+  <section class="hms-feature finance-feature feature-alt-right reveal" id="features">
     <div class="container">
       <div class="feature-content">
-        <h2>Comprehensive billing & invoicing</h2>
-        <p>Automate your entire revenue cycle. Generate itemized bills for IPD and OPD, track payments, and manage outstanding balances effortlessly across all departments.</p>
+        <h2>Zero-leakage automated billing</h2>
+        <p>Capture every charge instantly. When a procedure is performed or medicine dispensed, it is automatically billed. Eliminate missing charges, forgotten consumables, and manual data entry errors.</p>
         <ul class="feature-list">
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Automated charge capture from all departments</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 100% automated charge capture from all departments</li>
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> GST-compliant invoicing out of the box</li>
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Multi-mode payments - UPI, Cash, Card, NEFT</li>
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Split billing across patients or payers</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Real-time outstanding balance tracking</li>
         </ul>
       </div>
       <div class="feature-visual">
@@ -279,7 +280,7 @@
   </section>
 
   <!-- Feature 2: TPA & Insurance Claims -->
-  <section class="hms-feature feature-alt-left reveal">
+  <section class="hms-feature finance-feature alt feature-alt-left reveal">
     <div class="container">
       <div class="feature-visual">
         <div class="analytics-preview">
@@ -331,24 +332,24 @@
         </div>
       </div>
       <div class="feature-content">
-        <h2>Insurance claims & TPA management</h2>
-        <p>Simplify cashless treatments end-to-end. Manage pre-authorizations, compile claim documents automatically, and track every claim's status - from submission to settlement.</p>
+        <h2>Predictable TPA & Claim Settlements</h2>
+        <p>Track every insurance claim from submission to settlement. Get real-time visibility into pending claims, identify causes for rejections early, and accelerate your hospital's cash flow.</p>
         <ul class="feature-list">
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Pre-authorization request management</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> End-to-end claim tracking dashboard</li>
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Auto-compilation of claim documents</li>
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Real-time claim status across all TPAs</li>
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> TPA settlement reconciliation</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Real-time status across all major TPAs</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Automated settlement reconciliation</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- Feature 3: Revenue Analytics & P&L (centered) -->
-  <section class="hms-feature-centered reveal" id="solutions">
+  <section class="hms-feature-centered finance-feature reveal" id="solutions">
     <div class="container">
       <div class="centered-content">
-        <h2>Department-wise revenue analytics & P&L</h2>
-        <p>Know exactly where your hospital earns and where it spends. Real-time P&L breakdowns by department, doctor, and payer - so management decisions are driven by data, not intuition.</p>
+        <h2>Real-time P&L for Founders</h2>
+        <p>Stop waiting for month-end reports. See your hospital's financial health in real time. Track revenue by department, doctor, and procedure to understand exactly where your profits are coming from.</p>
       </div>
       <div class="emr-visual">
         <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;max-width:700px;margin:0 auto;">
@@ -395,16 +396,16 @@
   </section>
 
   <!-- Feature 4: GST & Compliance -->
-  <section class="hms-feature feature-alt-right reveal">
+  <section class="hms-feature finance-feature alt feature-alt-right reveal">
     <div class="container">
       <div class="feature-content">
-        <h2>GST compliance & ledger management</h2>
-        <p>Stay audit-ready at all times. ZenoHosp Finance handles GST categorisation, generates GSTR-ready reports, and maintains a full double-entry ledger - so your accountant has everything in one place.</p>
+        <h2>Audit-ready accounting & GST</h2>
+        <p>Automate your compliance completely. ZenoHosp maintains a strict double-entry ledger and generates GSTR-ready reports automatically, ensuring you are always audit-ready with zero accounting headaches.</p>
         <ul class="feature-list">
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Automatic GST calculation & GSTR filing reports</li>
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Double-entry ledger with chart of accounts</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Automated double-entry ledger</li>
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Bank reconciliation & deposit tracking</li>
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Audit trail for every financial transaction</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Secure audit trail for every transaction</li>
         </ul>
       </div>
       <div class="feature-visual">
@@ -439,7 +440,7 @@
   </section>
 
   <!-- Feature 5: Doctor Incentives -->
-  <section class="hms-feature feature-alt-left reveal">
+  <section class="hms-feature finance-feature feature-alt-left reveal">
     <div class="container">
       <div class="feature-visual">
         <div class="analytics-preview">
@@ -471,12 +472,12 @@
         </div>
       </div>
       <div class="feature-content">
-        <h2>Doctor incentives & payout management</h2>
-        <p>Calculate and track doctor revenue shares automatically. Define incentive structures per speciality, generate payout summaries each month, and eliminate the manual reconciliation nightmare.</p>
+        <h2>Automated Doctor Payouts</h2>
+        <p>Eliminate disputes and manual calculations. Define custom incentive structures per doctor and automatically generate accurate, transparent payout statements based on real-time revenue.</p>
         <ul class="feature-list">
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Configurable incentive % per doctor & speciality</li>
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Auto-calculated monthly payout statements</li>
-          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Revenue attribution by procedure & consultation</li>
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Revenue attribution by exact procedure & consultation</li>
           <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#E8F5F2"/><path d="M6 10L9 13L14 7" stroke="#2D8A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Export to PDF for doctor sign-off</li>
         </ul>
       </div>
@@ -484,67 +485,67 @@
   </section>
 
   <!-- ══ WORKS WITH ════════════════════════════════════════════ -->
-  <section style="background:#f5f5f2;padding:64px 0;border-top:1px solid rgba(17,17,13,.07);">
+  <section style="background:var(--finance-bg-light);padding:64px 0;border-top:1px solid rgba(0,0,0,.05);">
     <div class="container">
       <div style="margin-bottom:28px;">
-        <p style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b6b66;margin:0 0 8px;">Also in ZenoHosp</p>
-        <h2 style="font-size:1.4rem;font-weight:800;color:#11110d;letter-spacing:-.02em;margin:0;">Finance doesn't enter data. It receives it - from here.</h2>
+        <p style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--finance-text-muted);margin:0 0 8px;">Also in ZenoHosp</p>
+        <h2 style="font-size:1.4rem;font-weight:800;color:var(--finance-text-main);letter-spacing:-.02em;margin:0;">Finance doesn't enter data. It receives it - from here.</h2>
       </div>
-      <div style="border:1px solid rgba(17,17,13,.1);border-radius:16px;overflow:hidden;background:#fff;">
+      <div style="border:1px solid rgba(0,0,0,.08);border-radius:16px;overflow:hidden;background:#fff;">
 
-        <div style="display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-bottom:1px solid rgba(17,17,13,.06);">
-          <div style="width:40px;height:40px;border-radius:10px;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <div style="display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-bottom:1px solid rgba(0,0,0,.06);">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--finance-icon-bg);color:var(--finance-accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg>
           </div>
           <div style="flex:1;">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
-              <span style="font-size:.9rem;font-weight:700;color:#11110d;">HMS</span>
-              <span style="font-size:.7rem;color:#6b6b66;border:1px solid rgba(17,17,13,.1);border-radius:100px;padding:2px 8px;">OPD · IPD · Procedures</span>
+              <span style="font-size:.9rem;font-weight:700;color:var(--finance-text-main);">HMS</span>
+              <span style="font-size:.7rem;color:var(--finance-text-muted);border:1px solid rgba(0,0,0,.1);border-radius:100px;padding:2px 8px;">OPD · IPD · Procedures</span>
             </div>
-            <p style="font-size:.875rem;color:#4a4a45;line-height:1.65;margin:0 0 10px;">Every OPD consultation, IPD room charge, surgical fee, and emergency admission captured in HMS posts to Finance in real time. Your revenue figures are always current, not reconciled at month-end.</p>
-            <a href="/apps/hms/index.html" style="font-size:.8rem;font-weight:600;color:#11110d;text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See HMS <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <p style="font-size:.875rem;color:var(--finance-text-muted);line-height:1.65;margin:0 0 10px;">Every OPD consultation, IPD room charge, surgical fee, and emergency admission captured in HMS posts to Finance in real time. Your revenue figures are always current, not reconciled at month-end.</p>
+            <a href="/apps/hms/index.html" style="font-size:.8rem;font-weight:600;color:var(--finance-text-main);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See HMS <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
           </div>
         </div>
 
-        <div style="display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-bottom:1px solid rgba(17,17,13,.06);">
-          <div style="width:40px;height:40px;border-radius:10px;background:#f3e5f5;color:#6a1b9a;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <div style="display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-bottom:1px solid rgba(0,0,0,.06);">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--finance-icon-bg);color:var(--finance-accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg>
           </div>
           <div style="flex:1;">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
-              <span style="font-size:.9rem;font-weight:700;color:#11110d;">Pharmacy</span>
-              <span style="font-size:.7rem;color:#6b6b66;border:1px solid rgba(17,17,13,.1);border-radius:100px;padding:2px 8px;">Drug Sales</span>
+              <span style="font-size:.9rem;font-weight:700;color:var(--finance-text-main);">Pharmacy</span>
+              <span style="font-size:.7rem;color:var(--finance-text-muted);border:1px solid rgba(0,0,0,.1);border-radius:100px;padding:2px 8px;">Drug Sales</span>
             </div>
-            <p style="font-size:.875rem;color:#4a4a45;line-height:1.65;margin:0 0 10px;">Each dispensing transaction in Pharmacy is posted to Finance's daily revenue ledger automatically. No separate pharmacy reconciliation. What was dispensed is what gets billed.</p>
-            <a href="/apps/pharmacy/index.html" style="font-size:.8rem;font-weight:600;color:#11110d;text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See Pharmacy <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <p style="font-size:.875rem;color:var(--finance-text-muted);line-height:1.65;margin:0 0 10px;">Each dispensing transaction in Pharmacy is posted to Finance's daily revenue ledger automatically. No separate pharmacy reconciliation. What was dispensed is what gets billed.</p>
+            <a href="/apps/pharmacy/index.html" style="font-size:.8rem;font-weight:600;color:var(--finance-text-main);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See Pharmacy <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
           </div>
         </div>
 
-        <div style="display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-bottom:1px solid rgba(17,17,13,.06);">
-          <div style="width:40px;height:40px;border-radius:10px;background:#ede9fe;color:#5b21b6;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <div style="display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-bottom:1px solid rgba(0,0,0,.06);">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--finance-icon-bg);color:var(--finance-accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10"/></svg>
           </div>
           <div style="flex:1;">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
-              <span style="font-size:.9rem;font-weight:700;color:#11110d;">Lab</span>
-              <span style="font-size:.7rem;color:#6b6b66;border:1px solid rgba(17,17,13,.1);border-radius:100px;padding:2px 8px;">Diagnostic Revenue</span>
+              <span style="font-size:.9rem;font-weight:700;color:var(--finance-text-main);">Lab</span>
+              <span style="font-size:.7rem;color:var(--finance-text-muted);border:1px solid rgba(0,0,0,.1);border-radius:100px;padding:2px 8px;">Diagnostic Revenue</span>
             </div>
-            <p style="font-size:.875rem;color:#4a4a45;line-height:1.65;margin:0 0 10px;">When a lab report is verified and released, the test charges hit Finance automatically - before the patient even collects the report. No waiting on the pathologist to close a billing register.</p>
-            <a href="/apps/lab/index.html" style="font-size:.8rem;font-weight:600;color:#11110d;text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See Lab <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <p style="font-size:.875rem;color:var(--finance-text-muted);line-height:1.65;margin:0 0 10px;">When a lab report is verified and released, the test charges hit Finance automatically - before the patient even collects the report. No waiting on the pathologist to close a billing register.</p>
+            <a href="/apps/lab/index.html" style="font-size:.8rem;font-weight:600;color:var(--finance-text-main);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See Lab <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
           </div>
         </div>
 
         <div style="display:flex;align-items:flex-start;gap:20px;padding:24px 28px;">
-          <div style="width:40px;height:40px;border-radius:10px;background:#fff8e1;color:#f57f17;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--finance-icon-bg);color:var(--finance-accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
           </div>
           <div style="flex:1;">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
-              <span style="font-size:.9rem;font-weight:700;color:#11110d;">Inventory</span>
-              <span style="font-size:.7rem;color:#6b6b66;border:1px solid rgba(17,17,13,.1);border-radius:100px;padding:2px 8px;">Procurement & Costs</span>
+              <span style="font-size:.9rem;font-weight:700;color:var(--finance-text-main);">Inventory</span>
+              <span style="font-size:.7rem;color:var(--finance-text-muted);border:1px solid rgba(0,0,0,.1);border-radius:100px;padding:2px 8px;">Procurement & Costs</span>
             </div>
-            <p style="font-size:.875rem;color:#4a4a45;line-height:1.65;margin:0 0 10px;">Purchase orders raised and GRNs approved in Inventory create accounts payable entries in Finance automatically. Procurement and payables are one connected workflow, not two separate processes.</p>
-            <a href="/apps/inventory/index.html" style="font-size:.8rem;font-weight:600;color:#11110d;text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See Inventory <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <p style="font-size:.875rem;color:var(--finance-text-muted);line-height:1.65;margin:0 0 10px;">Purchase orders raised and GRNs approved in Inventory create accounts payable entries in Finance automatically. Procurement and payables are one connected workflow, not two separate processes.</p>
+            <a href="/apps/inventory/index.html" style="font-size:.8rem;font-weight:600;color:var(--finance-text-main);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">See Inventory <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
           </div>
         </div>
 

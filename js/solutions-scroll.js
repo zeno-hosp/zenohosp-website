@@ -56,9 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
     track.style.transform = `translateX(-${translateX}px)`;
   }
 
-  // Use requestAnimationFrame for smooth scrolling if preferred, but passive scroll listener is usually fine
+  // Use requestAnimationFrame for smooth scrolling
+  let ticking = false;
   window.addEventListener('resize', setHeight);
-  window.addEventListener('scroll', updateScroll, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
   
   // Initial setup after fonts/images load
   window.addEventListener('load', setHeight);

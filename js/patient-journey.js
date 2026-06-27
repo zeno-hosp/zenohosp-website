@@ -26,20 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
   steps.forEach(step => observer.observe(step));
 
   // Animate the central green glowing line based on scroll depth inside the container
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const rect = container.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    
-    // Calculate how far the container has been scrolled through
-    const startOffset = windowHeight * 0.7; // Start drawing line when container is 70% in view
-    let scrolled = startOffset - rect.top;
-    let totalScrollable = rect.height;
-    
-    let percentage = (scrolled / totalScrollable) * 100;
-    
-    // Clamp between 0 and 100
-    percentage = Math.max(0, Math.min(100, percentage));
-    
-    progressLine.style.height = `${percentage}%`;
-  });
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const rect = container.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate how far the container has been scrolled through
+        const startOffset = windowHeight * 0.7; // Start drawing line when container is 70% in view
+        let scrolled = startOffset - rect.top;
+        let totalScrollable = rect.height;
+        
+        let percentage = (scrolled / totalScrollable) * 100;
+        
+        // Clamp between 0 and 100
+        percentage = Math.max(0, Math.min(100, percentage));
+        
+        progressLine.style.height = `${percentage}%`;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 });
