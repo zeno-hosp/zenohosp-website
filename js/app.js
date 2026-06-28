@@ -488,6 +488,79 @@
     });
   }
 
+  function initIdlePopup() {
+    var IDLE_MS = 60000;
+    var timer = null;
+    var shown = false;
+    var dismissed = sessionStorage.getItem('zeno_idle_dismissed');
+
+    if (dismissed) return;
+
+    var overlay = document.createElement('div');
+    overlay.className = 'idle-popup-overlay';
+    overlay.innerHTML =
+      '<div class="idle-popup">' +
+        '<button class="idle-popup-close" aria-label="Close">&times;</button>' +
+        '<div class="idle-popup-badge">Limited Offer</div>' +
+        '<h3>Start with <span class="idle-popup-highlight">₹0 payment</span></h3>' +
+        '<p>Pay as per bed count and patient flow after each month. No upfront costs, no lock-in.</p>' +
+        '<a href="/contact-us/index.html" class="idle-popup-cta">Book a Free Demo</a>' +
+        '<span class="idle-popup-note">75+ hospitals already onboarded</span>' +
+      '</div>';
+
+    var style = document.createElement('style');
+    style.textContent =
+      '.idle-popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}' +
+      '.idle-popup-overlay.active{opacity:1;visibility:visible}' +
+      '.idle-popup{background:#fff;border-radius:20px;padding:40px 36px;max-width:420px;width:90%;text-align:center;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.2);transform:translateY(20px) scale(.96);transition:transform .35s cubic-bezier(.4,0,.2,1)}' +
+      '.idle-popup-overlay.active .idle-popup{transform:translateY(0) scale(1)}' +
+      '.idle-popup-close{position:absolute;top:14px;right:14px;background:none;border:none;font-size:1.5rem;color:#999;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}' +
+      '.idle-popup-close:hover{background:#f5f5f2;color:#11110d}' +
+      '.idle-popup-badge{display:inline-block;padding:5px 14px;background:rgba(13,148,136,.1);border:1px solid rgba(13,148,136,.25);border-radius:100px;font-size:.75rem;font-weight:700;color:#0d9488;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}' +
+      '.idle-popup h3{font-size:1.75rem;font-weight:800;color:#11110d;margin:0 0 12px;line-height:1.25}' +
+      '.idle-popup-highlight{color:#0d9488}' +
+      '.idle-popup p{font-size:1rem;color:#4a4a45;line-height:1.65;margin:0 0 24px}' +
+      '.idle-popup-cta{display:inline-block;padding:14px 32px;background:#11110d;color:#fff;font-size:.9375rem;font-weight:700;border-radius:100px;text-decoration:none;transition:background .2s,transform .15s}' +
+      '.idle-popup-cta:hover{background:#0d9488;transform:translateY(-2px)}' +
+      '.idle-popup-note{display:block;margin-top:14px;font-size:.8rem;color:#6b6b66}';
+    document.head.appendChild(style);
+    document.body.appendChild(overlay);
+
+    var closeBtn = overlay.querySelector('.idle-popup-close');
+
+    function show() {
+      if (shown || sessionStorage.getItem('zeno_idle_dismissed')) return;
+      shown = true;
+      overlay.classList.add('active');
+    }
+
+    function dismiss() {
+      overlay.classList.remove('active');
+      sessionStorage.setItem('zeno_idle_dismissed', '1');
+      clearTimeout(timer);
+    }
+
+    function resetTimer() {
+      clearTimeout(timer);
+      if (!shown) timer = setTimeout(show, IDLE_MS);
+    }
+
+    closeBtn.addEventListener('click', dismiss);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) dismiss();
+    });
+
+    ['mousemove', 'keydown', 'scroll', 'touchstart', 'click'].forEach(function (evt) {
+      document.addEventListener(evt, resetTimer, { passive: true });
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible') show();
+    });
+
+    resetTimer();
+  }
+
   function init() {
     initNavbar();
     initMobileMenu();
@@ -504,6 +577,7 @@
     initBottomMobileNav();
     initDemoModal();
     initAnalyticsTracking();
+    initIdlePopup();
   }
 
   window.ZenoApp = {
