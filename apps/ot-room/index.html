@@ -926,47 +926,86 @@
     <!-- Integration & Compliance -->
     <section class="ot-feature-section ot-integrations" id="integrations">
         <div class="container">
-            <div class="centered-header">
-                <h2 class="ot-feature-title">Seamless integration with hospital systems</h2>
-                <p class="ot-feature-desc centered">
-                    Zeno OT integrates with your existing HMS, EMR, billing, and inventory systems
-                    for a unified surgical management experience.
-                </p>
-            </div>
-
-            <div class="integration-flow">
-                <div class="integration-node">
-                    <div class="node-icon hms">HMS</div>
-                    <span>Patient Data</span>
+            <div class="ot-integ-grid">
+                <div class="ot-integ-text">
+                    <h2 class="ot-feature-title">Seamless integration with hospital systems</h2>
+                    <p class="ot-feature-desc">
+                        A surgery touches patient records, inventory, billing, and staff scheduling. Zeno OT connects to all of them — no data re-entry, no switching between apps.
+                    </p>
+                    <div class="ot-integ-items">
+                        <div class="ot-integ-item">
+                            <div class="ot-integ-icon hms">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            </div>
+                            <div>
+                                <strong>HMS & EMR</strong>
+                                <span>Patient history, diagnosis, and consent pulled automatically into the OT record.</span>
+                            </div>
+                        </div>
+                        <div class="ot-integ-item">
+                            <div class="ot-integ-icon inv">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
+                            </div>
+                            <div>
+                                <strong>Inventory</strong>
+                                <span>Consumables used in surgery auto-decremented from stock. No manual entry.</span>
+                            </div>
+                        </div>
+                        <div class="ot-integ-item">
+                            <div class="ot-integ-icon billing">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div>
+                                <strong>Billing</strong>
+                                <span>OT charges, surgeon fees, and consumables auto-posted to the patient's bill.</span>
+                            </div>
+                        </div>
+                        <div class="ot-integ-item">
+                            <div class="ot-integ-icon people">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <div>
+                                <strong>Staff Scheduling</strong>
+                                <span>Surgeon and anaesthetist availability synced with OT calendar.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flow-arrow">→</div>
-                <div class="integration-node center-node">
-                    <div class="node-icon ot">OT</div>
-                    <span>Zeno OT</span>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="integration-node">
-                    <div class="node-icon billing">₹</div>
-                    <span>Billing</span>
-                </div>
-            </div>
-
-            <div class="compliance-badges">
-                <div class="compliance-badge">
-                    <span class="badge-icon">🏥</span>
-                    <span class="badge-text">NABH Compliant</span>
-                </div>
-                <div class="compliance-badge">
-                    <span class="badge-icon">🔒</span>
-                    <span class="badge-text">HIPAA Ready</span>
-                </div>
-                <div class="compliance-badge">
-                    <span class="badge-icon">📋</span>
-                    <span class="badge-text">JCI Standards</span>
-                </div>
-                <div class="compliance-badge">
-                    <span class="badge-icon">🛡️</span>
-                    <span class="badge-text">ISO 27001</span>
+                <div class="ot-integ-visual">
+                    <div class="ot-integ-flow-card">
+                        <div class="ot-flow-node">
+                            <div class="node-icon hms">HMS</div>
+                            <span>Patient Data</span>
+                        </div>
+                        <div class="ot-flow-line"></div>
+                        <div class="ot-flow-node">
+                            <div class="node-icon ot" style="width:80px;height:80px;font-size:1.25rem;">OT</div>
+                            <span style="font-weight:700;color:#0d9488;">Zeno OT</span>
+                        </div>
+                        <div class="ot-flow-line"></div>
+                        <div class="ot-flow-node">
+                            <div class="node-icon billing">₹</div>
+                            <span>Billing</span>
+                        </div>
+                    </div>
+                    <div class="ot-compliance-row">
+                        <div class="ot-compliance-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                            NABH
+                        </div>
+                        <div class="ot-compliance-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                            HIPAA
+                        </div>
+                        <div class="ot-compliance-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            JCI
+                        </div>
+                        <div class="ot-compliance-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            ISO 27001
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
