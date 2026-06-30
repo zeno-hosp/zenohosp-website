@@ -46,12 +46,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/resources/ebook-revenue-leakage/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/solutions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/solutions/abdm-compliance/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/solutions/stop-revenue-leakage/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/status/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/blog/inventory-money-missing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/blog/hospital-inventory-management-2026.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -66,7 +91,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/blog/stop-revenue-leakage-ipd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/blog/fragmented-hospital-software-costs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/blog/how-to-choose-best-hospital-software-india.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/blog/patient-wait-times-discharge.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -101,12 +141,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/blog/cloud-vs-legacy-hms.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/blog/revenue-left-on-table.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/careers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://zenohosp.com/partners/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/compare/zenohosp-vs-nuvertos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/compare/zenohosp-vs-adrine/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/india/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -201,6 +266,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/apps/pharmacy/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/apps/asset/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -274,6 +344,11 @@
     <loc>https://zenohosp.com/apps/asset/docs/vendors.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/apps/asset/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zenohosp.com/apps/hms/</loc>
@@ -391,6 +466,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/apps/hms/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/apps/lab/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -432,6 +512,11 @@
   </url>
   <url>
     <loc>https://zenohosp.com/apps/lab/docs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/apps/lab/pricing/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -536,6 +621,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/apps/inventory/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/apps/people/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -616,6 +706,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/apps/people/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/apps/finance/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -686,6 +781,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/apps/finance/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/apps/ot-room/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -746,6 +846,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zenohosp.com/apps/ot-room/pricing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://zenohosp.com/pricing/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -759,25 +864,5 @@
     <loc>https://zenohosp.com/help/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://zenohosp.com/compare/zenohosp-vs-adrine/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zenohosp.com/compare/zenohosp-vs-nuvertos/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zenohosp.com/solutions/abdm-compliance/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://zenohosp.com/resources/ebook-revenue-leakage/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
