@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-27WDP0T7BZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZenoHosp for hospital founders and owners — stop revenue leakage, know your numbers in real time, close books in 3 days. Built for Indian healthcare business realities.">
+  <meta name="keywords" content="hospital management software for founders India, HMS for hospital owners, hospital revenue leakage, NABH compliance software, hospital ROI software India">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="canonical" href="https://zenohosp.com/for-founders/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zenohosp.com/for-founders/">
+  <meta property="og:title" content="ZenoHosp for Hospital Founders — Know your numbers. Stop the leaks.">
+  <meta property="og:description" content="The average Indian hospital leaks 8–15% of revenue to missed charges, delayed claims, and manual reconciliation. ZenoHosp closes the gaps automatically.">
+  <meta property="og:site_name" content="Zenohosp">
+  <title>ZenoHosp for Hospital Founders — Know your numbers. Stop the leaks.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <meta name="theme-color" content="#111827">
+  <style>
+    .fo-hero {
+      background: #0a0a08;
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .fo-hero-glow {
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(13,148,136,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .fo-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .fo-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0d9488;
+      margin-bottom: 20px;
+    }
+    .fo-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .fo-hero h1 em {
+      font-style: normal;
+      color: #0d9488;
+    }
+    .fo-hero-sub {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+    .fo-hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .fo-hero-stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 36px;
+    }
+    .fo-hero-stat-num {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #0d9488;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .fo-hero-stat-label {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .fo-hero-stat-detail {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.6;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Numbers section */
+    .fo-numbers {
+      background: #f8f8f6;
+      padding: 100px 0;
+    }
+    .fo-numbers-header {
+      max-width: 680px;
+      margin-bottom: 56px;
+    }
+    .fo-numbers-header h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: #11110d;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .fo-numbers-header p {
+      font-size: 1.0625rem;
+      color: #4a4a45;
+      line-height: 1.7;
+    }
+    .fo-leak-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .fo-leak-item {
+      display: grid;
+      grid-template-columns: 200px 1fr auto;
+      gap: 24px;
+      padding: 28px 0;
+      border-top: 1px solid rgba(0,0,0,0.07);
+      align-items: center;
+    }
+    .fo-leak-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.07); }
+    .fo-leak-source {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #11110d;
+    }
+    .fo-leak-desc {
+      font-size: 0.9375rem;
+      color: #4a4a45;
+      line-height: 1.55;
+    }
+    .fo-leak-fix {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #0d9488;
+      background: rgba(13,148,136,0.08);
+      padding: 6px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    /* Control */
+    .fo-control {
+      padding: 100px 0;
+      background: #fff;
+    }
+    .fo-control-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .fo-control-header h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: #11110d;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .fo-control-header p {
+      font-size: 1.0625rem;
+      color: #4a4a45;
+      line-height: 1.7;
+    }
+    .fo-control-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .fo-control-card {
+      background: #f8f8f6;
+      border-radius: 16px;
+      padding: 32px 28px;
+    }
+    .fo-control-card.highlight {
+      background: #11110d;
+    }
+    .fo-control-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(13,148,136,0.1);
+      color: #0d9488;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .fo-control-card.highlight .fo-control-icon {
+      background: rgba(255,255,255,0.08);
+    }
+    .fo-control-card h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #11110d;
+      margin-bottom: 10px;
+    }
+    .fo-control-card.highlight h3 { color: #fff; }
+    .fo-control-card p {
+      font-size: 0.9375rem;
+      color: #4a4a45;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .fo-control-card.highlight p { color: rgba(255,255,255,0.45); }
+
+    /* Pricing section */
+    .fo-pricing {
+      background: #f8f8f6;
+      padding: 100px 0;
+    }
+    .fo-pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .fo-pricing h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: #11110d;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .fo-pricing > div > p {
+      font-size: 1.0625rem;
+      color: #4a4a45;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .fo-pricing-points {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .fo-pricing-point {
+      display: flex;
+      gap: 12px;
+      align-items: start;
+    }
+    .fo-pricing-point-dot {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      background: #0d9488;
+      margin-top: 2px;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .fo-pricing-point span {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #11110d;
+      line-height: 1.5;
+    }
+    .fo-pricing-compare {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .fo-compare-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .fo-compare-row:last-child { border-bottom: none; }
+    .fo-compare-cell {
+      padding: 16px 20px;
+      font-size: 0.875rem;
+      color: #4a4a45;
+      border-right: 1px solid rgba(0,0,0,0.06);
+    }
+    .fo-compare-cell:last-child { border-right: none; }
+    .fo-compare-cell.header {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b6b66;
+      background: #f8f8f6;
+    }
+    .fo-compare-cell.zeno {
+      background: rgba(13,148,136,0.04);
+      color: #11110d;
+      font-weight: 600;
+    }
+    .fo-compare-cell.zeno-header {
+      background: rgba(13,148,136,0.08);
+      font-weight: 700;
+      color: #0d9488;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Quote */
+    .fo-quote {
+      padding: 80px 0;
+      background: #fff;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .fo-quote-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .fo-quote-text {
+      font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      color: #11110d;
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .fo-quote-attr { font-size: 0.9375rem; color: #6b6b66; }
+    .fo-quote-attr strong { color: #11110d; font-weight: 700; }
+
+    /* CTA */
+    .fo-cta {
+      background: #0d9488;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .fo-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .fo-cta p {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .fo-cta-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 992px) {
+      .fo-hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .fo-control-grid { grid-template-columns: 1fr; }
+      .fo-pricing-grid { grid-template-columns: 1fr; }
+      .fo-leak-item { grid-template-columns: 1fr; gap: 8px; }
+    }
+    @media (max-width: 768px) {
+      .fo-hero { padding: 100px 0 56px; }
+      .fo-hero-inner { padding: 0 20px; }
+      .fo-numbers, .fo-control, .fo-pricing { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar marketing-navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="/index.html" class="logo">
+        <img src="/images/zenohosp-b.svg" alt="ZenoHosp Logo" style="height: 32px; width: auto; display: block;" />
+      </a>
+      <ul class="nav-links">
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-trigger">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <div class="dropdown-content">
+              <a href="/apps/hms/index.html" class="dropdown-item">
+                <div class="dropdown-icon hms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg></div>
+                <div class="dropdown-info"><strong>HMS</strong><span>End-to-end hospital management system</span></div>
+              </a>
+              <a href="/apps/finance/index.html" class="dropdown-item">
+                <div class="dropdown-icon finance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg></div>
+                <div class="dropdown-info"><strong>Finance</strong><span>Books built for how hospitals actually earn</span></div>
+              </a>
+              <a href="/apps/pharmacy/index.html" class="dropdown-item">
+                <div class="dropdown-icon pharma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg></div>
+                <div class="dropdown-info"><strong>Pharmacy</strong><span>Dispense meds and manage stock</span></div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/solutions/index.html">Solutions</a></li>
+        <li><a href="/customers/index.html">Customers</a></li>
+        <li><a href="/pricing/index.html">Pricing</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://hms.zenohosp.com" class="signin">Sign In</a>
+        <a href="/contact-us/index.html" class="btn btn-primary">Request Demo</a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu">
+    <ul>
+      <li><a href="/apps/hms/index.html">HMS</a></li>
+      <li><a href="/solutions/index.html">Solutions</a></li>
+      <li><a href="/customers/index.html">Customers</a></li>
+      <li><a href="/pricing/index.html">Pricing</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="fo-hero">
+    <div class="fo-hero-glow"></div>
+    <div class="fo-hero-inner">
+      <div>
+        <div class="fo-eyebrow">For Hospital Founders & Owners</div>
+        <h1>Know your numbers.<br><em>Stop the leaks.</em></h1>
+        <p class="fo-hero-sub">The average Indian hospital leaks 8–15% of revenue to missed charges, delayed TPA claims, and manual reconciliation errors. ZenoHosp captures every rupee automatically — and shows you the ones you were missing.</p>
+        <div class="fo-hero-ctas">
+          <a href="/contact-us/index.html" class="btn btn-primary btn-lg">Book a Demo</a>
+          <a href="/customers/index.html" class="btn btn-lg" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.8);border:1.5px solid rgba(255,255,255,0.15);">See case studies</a>
+        </div>
+      </div>
+      <div>
+        <div class="fo-hero-stat-card">
+          <div class="fo-hero-stat-num">₹22L</div>
+          <div class="fo-hero-stat-label">Average revenue recovered in month 1 after go-live</div>
+          <div class="fo-hero-stat-detail">This isn't new revenue. It's revenue your hospital already earned — from consumables used in procedures, pharmacy charges on discharge, OT time, and radiology surcharges — that was never billed because it fell through the gaps between disconnected systems.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE THE MONEY LEAKS -->
+  <section class="fo-numbers">
+    <div class="container">
+      <div class="fo-numbers-header">
+        <h2>Where your revenue is leaking right now</h2>
+        <p>These aren't edge cases. They happen in every Indian hospital that runs disconnected systems. If your billing team reconciles manually at month-end, you're finding these problems weeks after they happened — when it's too late to recover them.</p>
+      </div>
+      <div class="fo-leak-list">
+        <div class="fo-leak-item">
+          <div class="fo-leak-source">Unbilled consumables</div>
+          <div class="fo-leak-desc">Gloves, sutures, syringes, and procedure consumables used in the OT or ward — recorded in the inventory system but never linked to a patient bill.</div>
+          <div class="fo-leak-fix">Auto-captured</div>
+        </div>
+        <div class="fo-leak-item">
+          <div class="fo-leak-source">Pharmacy discharge gaps</div>
+          <div class="fo-leak-desc">Medicines dispensed to inpatients on their final day that don't make it onto the discharge bill because billing and pharmacy run separate systems.</div>
+          <div class="fo-leak-fix">Auto-captured</div>
+        </div>
+        <div class="fo-leak-item">
+          <div class="fo-leak-source">TPA claim rejections</div>
+          <div class="fo-leak-desc">Claims rejected for missing documents, incorrect codes, or late submission — with no system tracking which are pending, which were rejected, and which are recoverable.</div>
+          <div class="fo-leak-fix">Tracked end-to-end</div>
+        </div>
+        <div class="fo-leak-item">
+          <div class="fo-leak-source">OT time not billed</div>
+          <div class="fo-leak-desc">Surgeries that ran over time — or required unplanned additional procedures — with no mechanism to capture the additional charges at the point of care.</div>
+          <div class="fo-leak-fix">Auto-captured</div>
+        </div>
+        <div class="fo-leak-item">
+          <div class="fo-leak-source">Manual reconciliation errors</div>
+          <div class="fo-leak-desc">Month-end reconciliation done by hand across 3–5 systems produces discrepancies. By the time you find the error, the month is closed and the patient has left.</div>
+          <div class="fo-leak-fix">Automated</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="fo-control">
+    <div class="container">
+      <div class="fo-control-header">
+        <h2>What hospital founders actually need from their software</h2>
+        <p>Not another dashboard that requires a data analyst to interpret. Real-time visibility into the numbers that matter — so you make decisions on today's data, not last month's report.</p>
+      </div>
+      <div class="fo-control-grid">
+        <div class="fo-control-card">
+          <div class="fo-control-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg>
+          </div>
+          <h3>Today's revenue — live</h3>
+          <p>Not yesterday's export. Not a report you generate at 6 PM. What your hospital billed today, broken down by OPD, IPD, pharmacy, lab, and OT — updating every minute.</p>
+        </div>
+        <div class="fo-control-card highlight">
+          <div class="fo-control-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Every charge captured automatically</h3>
+          <p>Every billable event — from a blood test to an OT consumable to a radiology surcharge — posts to the patient's account the moment it's recorded. Nothing manual. Nothing missed.</p>
+        </div>
+        <div class="fo-control-card">
+          <div class="fo-control-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Month-end close in 3 days</h3>
+          <p>No 10-day reconciliation marathons. Every department's charges are already in one system. Review, approve, and close — in 3 days instead of 8.</p>
+        </div>
+        <div class="fo-control-card">
+          <div class="fo-control-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>TPA claims tracked pre-auth to settlement</h3>
+          <p>See every pending claim across all TPAs — Star Health, Medi Assist, ICICI Lombard, CGHS, and government schemes. Know which are at risk before the settlement date.</p>
+        </div>
+        <div class="fo-control-card">
+          <div class="fo-control-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Doctor-wise revenue & productivity</h3>
+          <p>Which doctors are generating what revenue. Average revenue per consultation. Procedure volume. Patient retention. All the numbers you need for incentive calculations and staffing decisions.</p>
+        </div>
+        <div class="fo-control-card">
+          <div class="fo-control-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>NABH & compliance ready</h3>
+          <p>Audit trails, clinical indicators, and quality metrics structured for NABH accreditation. When auditors request documentation, you export it — you don't compile it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="fo-pricing">
+    <div class="container">
+      <div class="fo-pricing-grid">
+        <div>
+          <h2>Flat pricing. No per-user fees. No surprise renewals.</h2>
+          <p>Most HMS vendors charge per seat, per module, and per year — with mandatory AMCs that creep up at renewal. ZenoHosp has one price. You know it upfront. Hire 50 more staff, open a new wing — your HMS cost doesn't change.</p>
+          <div class="fo-pricing-points">
+            <div class="fo-pricing-point">
+              <div class="fo-pricing-point-dot"></div>
+              <span>One annual licence fee — unlimited users, all modules</span>
+            </div>
+            <div class="fo-pricing-point">
+              <div class="fo-pricing-point-dot"></div>
+              <span>No per-seat charges as your team grows</span>
+            </div>
+            <div class="fo-pricing-point">
+              <div class="fo-pricing-point-dot"></div>
+              <span>No module upgrade fees — you get everything</span>
+            </div>
+            <div class="fo-pricing-point">
+              <div class="fo-pricing-point-dot"></div>
+              <span>Implementation included — our team, on-site, for 90 days</span>
+            </div>
+            <div class="fo-pricing-point">
+              <div class="fo-pricing-point-dot"></div>
+              <span>Data migration from your existing system — fully handled</span>
+            </div>
+          </div>
+          <div style="margin-top:32px;">
+            <a href="/pricing/index.html" style="font-size:0.9375rem;font-weight:600;color:#0d9488;text-decoration:none;border-bottom:1px solid rgba(13,148,136,0.3);padding-bottom:2px;">See pricing details →</a>
+          </div>
+        </div>
+        <div class="fo-pricing-compare">
+          <div class="fo-compare-row">
+            <div class="fo-compare-cell header">What you pay for</div>
+            <div class="fo-compare-cell zeno-header">ZenoHosp</div>
+            <div class="fo-compare-cell header">Typical HMS</div>
+          </div>
+          <div class="fo-compare-row">
+            <div class="fo-compare-cell">Users</div>
+            <div class="fo-compare-cell zeno">Unlimited</div>
+            <div class="fo-compare-cell">Per seat/month</div>
+          </div>
+          <div class="fo-compare-row">
+            <div class="fo-compare-cell">Modules</div>
+            <div class="fo-compare-cell zeno">All included</div>
+            <div class="fo-compare-cell">Each module extra</div>
+          </div>
+          <div class="fo-compare-row">
+            <div class="fo-compare-cell">Implementation</div>
+            <div class="fo-compare-cell zeno">Included, on-site</div>
+            <div class="fo-compare-cell">₹5–20L extra</div>
+          </div>
+          <div class="fo-compare-row">
+            <div class="fo-compare-cell">Training</div>
+            <div class="fo-compare-cell zeno">Included</div>
+            <div class="fo-compare-cell">Charged separately</div>
+          </div>
+          <div class="fo-compare-row">
+            <div class="fo-compare-cell">AMC</div>
+            <div class="fo-compare-cell zeno">No surprise renewals</div>
+            <div class="fo-compare-cell">Annual + inflation</div>
+          </div>
+          <div class="fo-compare-row">
+            <div class="fo-compare-cell">Data migration</div>
+            <div class="fo-compare-cell zeno">Handled by us</div>
+            <div class="fo-compare-cell">Your problem</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="fo-quote">
+    <div class="container">
+      <div class="fo-quote-inner">
+        <div class="fo-quote-text">"We recovered ₹22 lakhs in billing charges in the first month — charges we didn't even know we were losing. And month-end close went from 10 days to 3."</div>
+        <div class="fo-quote-attr"><strong>Priya Krishnamurthy</strong>, CFO, DSS Multispeciality Hospital</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="fo-cta">
+    <div class="container">
+      <h2>See what you're missing.<br>Before next month-end.</h2>
+      <p>We'll show you exactly where your hospital's revenue gaps are — using a live demo configured for your size and specialty. No commitment. No slides.</p>
+      <div class="fo-cta-btns">
+        <a href="/contact-us/index.html" class="btn btn-lg" style="background:#fff;color:#0d9488;font-weight:700;border:none;">Book a Demo</a>
+        <a href="/pricing/index.html" class="btn btn-lg" style="background:rgba(255,255,255,0.12);color:#fff;border:1.5px solid rgba(255,255,255,0.25);">See pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <zeno-footer></zeno-footer>
+  <script src="/js/components/footer.js"></script>
+  <demo-modal></demo-modal>
+  <script src="/js/components/demo-modal.js"></script>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

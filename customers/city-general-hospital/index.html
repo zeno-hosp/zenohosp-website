@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-27WDP0T7BZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A 450-bed hospital network in India reduced OPD scheduling delays from 90 minutes to 15 and recovered missed revenue with ZenoHosp HMS.">
+  <meta name="keywords" content="City General Hospital, ZenoHosp, Hospital Management System, HMS, OPD, Revenue Recovery, Case Study">
+
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="canonical" href="https://zenohosp.com/customers/city-general-hospital/">
+
+  <title>How City General Hospital Cut OPD Time from 90 Minutes to 15 | ZenoHosp</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <style>
+    /* ── Hero ── */
+    .cs-hero {
+      background: #0a0a08;
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cs-hero-glow {
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(13, 148, 136, 0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cs-hospital-name {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0d9488;
+      margin-bottom: 8px;
+    }
+    .cs-hospital-meta {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .cs-hero-stat {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 100px;
+      padding: 8px 20px;
+      margin-bottom: 32px;
+      letter-spacing: 0.02em;
+    }
+    .cs-hero h1 {
+      font-size: clamp(1.75rem, 3.8vw, 3.25rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      max-width: 820px;
+      margin: 0 auto 28px;
+    }
+    .cs-hero-byline {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.45);
+      font-style: italic;
+    }
+
+    /* ── Sections ── */
+    .cs-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .cs-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #374151;
+      margin-bottom: 20px;
+    }
+    .cs-section p:last-child {
+      margin-bottom: 0;
+    }
+    .cs-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #11110d;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    /* ── Label ── */
+    .cs-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #0d9488;
+      margin-bottom: 12px;
+    }
+
+    /* ── Divider ── */
+    .cs-divider {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 0;
+    }
+
+    /* ── Results Grid ── */
+    .cs-results-section {
+      background: #11110d;
+      padding: 80px 0;
+    }
+    .cs-results-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cs-results-heading {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .cs-results-heading .cs-label {
+      display: block;
+    }
+    .cs-results-heading h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .cs-results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .cs-stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 36px 28px;
+      text-align: center;
+    }
+    .cs-stat-card .stat-number {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: #d1f470;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .cs-stat-card .stat-label {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+    }
+
+    /* ── Quote ── */
+    .cs-quote-section {
+      background: #f8f8f6;
+      padding: 80px 24px;
+    }
+    .cs-quote {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cs-quote blockquote {
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      font-style: italic;
+      font-weight: 500;
+      color: #11110d;
+      line-height: 1.6;
+      margin: 0 0 28px;
+      position: relative;
+    }
+    .cs-quote blockquote::before {
+      content: '\201C';
+      font-size: 5rem;
+      color: #0d9488;
+      line-height: 0;
+      position: absolute;
+      top: 28px;
+      left: -20px;
+      font-style: normal;
+      font-weight: 800;
+      opacity: 0.25;
+    }
+    .cs-quote cite {
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 600;
+      color: #6b7280;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── CTA ── */
+    .cs-cta {
+      background: #d1f470;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .cs-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #11110d;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .cs-cta p {
+      font-size: 1.1rem;
+      color: rgba(17,17,13,0.65);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .cs-cta .btn-dark {
+      display: inline-block;
+      background: #11110d;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: opacity 0.2s;
+    }
+    .cs-cta .btn-dark:hover {
+      opacity: 0.85;
+    }
+
+    /* ── Solution pills ── */
+    .cs-module-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .cs-module-pill {
+      background: #f0fdf9;
+      border: 1px solid #99f6e4;
+      color: #0d9488;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+    }
+
+    /* ── Highlight callout ── */
+    .cs-callout {
+      background: #f0fdf9;
+      border-left: 4px solid #0d9488;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-size: 1rem;
+      color: #0f766e;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .cs-results-grid {
+        grid-template-columns: 1fr;
+      }
+      .cs-hero h1 {
+        font-size: 1.75rem;
+      }
+      .cs-quote blockquote::before {
+        display: none;
+      }
+    }
+  </style>
+
+  <meta property="og:site_name" content="ZenoHosp">
+  <meta property="og:title" content="How City General Hospital Cut OPD Time from 90 Minutes to 15 | ZenoHosp">
+  <meta property="og:description" content="A 450-bed hospital network in India reduced OPD scheduling delays from 90 minutes to 15 and recovered missed revenue with ZenoHosp HMS.">
+  <meta property="og:type" content="article">
+
+  <!-- Brand Identity & Schema Markup -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ZenoHosp",
+  "alternateName": [
+    "ZenoHosp",
+    "Zenohosp",
+    "Zeno Hosp",
+    "ZenoHosp HMS",
+    "zenohosp.com"
+  ],
+  "url": "https://zenohosp.com",
+  "logo": "https://zenohosp.com/images/zenohosp-b.svg",
+  "description": "ZenoHosp is a technology corporation and software developer of cloud-based Hospital Management Software (HMS), EMR, clinic POS, and electronic health record systems. ZenoHosp is a software enterprise and is not a drug, medication, or pharmaceutical product.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-8056159395",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/zenohosp",
+    "https://www.instagram.com/zenohosp/",
+    "https://x.com/zenohosp"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ZenoHosp Hospital Management Software",
+  "description": "ZenoHosp is the leading Hospital Management Software (HMS) suite in India, unifying EMR, OPD, IPD, OT scheduling, pharmacy, and laboratory workflows on a single cloud platform.",
+  "applicationCategory": "HealthcareBusinessApplication",
+  "operatingSystem": "Web-based, Cloud, On-Premise",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Free demo available for hospitals in India"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZenoHosp",
+    "url": "https://zenohosp.com"
+  },
+  "featureList": [
+    "Hospital Management System",
+    "Patient Registration & EMR",
+    "Operation Theatre Scheduling",
+    "Pharmacy Billing & Inventory",
+    "Hospital Inventory Management",
+    "Asset Tracking & Maintenance"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How City General Hospital Cut OPD Time from 90 Minutes to 15",
+  "description": "A 450-bed hospital network in India reduced OPD scheduling delays from 90 minutes to 15 and recovered missed revenue with ZenoHosp HMS.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZenoHosp",
+    "url": "https://zenohosp.com",
+    "logo": "https://zenohosp.com/images/zenohosp-b.svg"
+  },
+  "url": "https://zenohosp.com/customers/city-general-hospital/"
+}
+</script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar marketing-navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="/index.html" class="logo">
+        <img src="/images/zenohosp-b.svg" alt="ZenoHosp Logo" style="height: 32px; width: auto; display: block;" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/solutions/index.html">Solutions</a></li>
+        <li><a href="/pricing/index.html">Pricing</a></li>
+        <li><a href="/contact-us/index.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://hms.zenohosp.com" class="signin">Sign In</a>
+        <a href="/contact-us/index.html" class="btn btn-primary">Request Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="cs-hero-glow"></div>
+    <div class="container">
+      <span class="cs-hospital-name">City General Hospital Network</span>
+      <span class="cs-hospital-meta">450-bed multi-specialty network</span>
+      <div class="cs-hero-stat">OPD on schedule. Revenue recovered. Day 1.</div>
+      <h1>"Our OPD was 90 minutes behind schedule every day. Now we run within 15 minutes of plan."</h1>
+      <p class="cs-hero-byline">CFO, City General Hospital Network, 450 beds</p>
+    </div>
+  </section>
+
+  <!-- Challenge -->
+  <section style="background: #fff;">
+    <div class="cs-section">
+      <span class="cs-label">The Challenge</span>
+      <h2>Chronic delays. Invisible revenue leaks.</h2>
+      <p>City General Hospital Network runs across multiple locations with 450 beds. Before ZenoHosp, the OPD was chronically behind — 60 to 90 minutes of delay by mid-morning, every single day. Walk-in patients overwhelmed the pre-booked schedule. Doctors had no visibility into the queue.</p>
+      <p>Appointments were managed on paper and in disconnected spreadsheets. No-shows went untracked. Slots went wasted.</p>
+      <p>On the finance side, the CFO knew revenue was leaking but couldn't prove it until month-end — by which point it was too late to recover.</p>
+    </div>
+  </section>
+
+  <hr class="cs-divider">
+
+  <!-- Solution -->
+  <section style="background: #fff;">
+    <div class="cs-section">
+      <span class="cs-label">The Solution</span>
+      <h2>One queue. Every doctor. Every location.</h2>
+      <p>ZenoHosp's queue management merged walk-in tokens with pre-booked appointments into a single view visible to every doctor — across all locations simultaneously. No more phone calls to reception asking who was next.</p>
+      <div class="cs-callout">WhatsApp reminders went out automatically 24 hours and 2 hours before every appointment — reducing no-shows by 14% in the first month.</div>
+      <p>The finance module captured every charge at the point of care, automatically — consumables, procedure surcharges, and radiology charges included. Nothing fell through the cracks.</p>
+      <div class="cs-module-list">
+        <span class="cs-module-pill">HMS — OPD + IPD</span>
+        <span class="cs-module-pill">Finance</span>
+        <span class="cs-module-pill">Pharmacy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Grid -->
+  <section class="cs-results-section">
+    <div class="cs-results-inner">
+      <div class="cs-results-heading">
+        <span class="cs-label">Results</span>
+        <h2>Month one. Measurable. Verified.</h2>
+      </div>
+      <div class="cs-results-grid">
+        <div class="cs-stat-card">
+          <div class="stat-number">90 min<br>→ 15 min</div>
+          <div class="stat-label">OPD delay reduced within 2 weeks of go-live</div>
+        </div>
+        <div class="cs-stat-card">
+          <div class="stat-number">₹22L</div>
+          <div class="stat-label">Revenue recovered in month 1 from previously untracked charges</div>
+        </div>
+        <div class="cs-stat-card">
+          <div class="stat-number">14%</div>
+          <div class="stat-label">Fewer no-shows after WhatsApp appointment reminders</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Narrative -->
+  <section style="background: #fff;">
+    <div class="cs-section">
+      <span class="cs-label">What Changed</span>
+      <h2>Same team. Same volume. Different system.</h2>
+      <p>Within two weeks of go-live, the OPD was running within 15 minutes of the scheduled plan. The change wasn't in staffing — the same front desk team handled the same patient volume. The difference was that walk-in queues and appointments were visible in a single system, and doctors knew exactly who was next without a phone call to reception.</p>
+      <p>The finance team's month-1 review identified ₹22 lakhs in revenue from charges that had never been billed before — consumables, procedure surcharges, and radiology charges that had been falling through the cracks between disconnected systems.</p>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="cs-quote-section">
+    <div class="cs-quote">
+      <blockquote>
+        We recovered ₹22 lakhs in billing charges in the first month — charges we didn't even know we were missing. And our OPD hasn't been more than 15 minutes behind since week two.
+      </blockquote>
+      <cite>CFO, City General Hospital Network, 450 beds</cite>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cs-cta">
+    <h2>Stop leaving revenue on the table.</h2>
+    <p>See how ZenoHosp unifies your OPD, finance, and pharmacy in a single demo.</p>
+    <a href="/contact-us/index.html" class="btn-dark">Request a Demo</a>
+  </section>
+
+  <!-- Footer -->
+  <zeno-footer></zeno-footer>
+
+  <script src="/js/components/footer.js"></script>
+
+  <demo-modal></demo-modal>
+  <script src="/js/components/demo-modal.js"></script>
+</body>
+</html>

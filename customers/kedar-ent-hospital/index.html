@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-27WDP0T7BZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kedar ENT Hospital's Head of IT shares how ZenoHosp's AES-256 encryption, role-based access, and audit trail made their HIPAA audit a non-event.">
+  <meta name="keywords" content="ZenoHosp, Hospital Management System, HMS, HIPAA audit, AES-256 encryption, role-based access, case study">
+
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="canonical" href="https://zenohosp.com/customers/kedar-ent-hospital/">
+
+  <title>How Kedar ENT Hospital Passed HIPAA Audit Without a Single Data Finding | ZenoHosp</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <style>
+    /* ── Hero ── */
+    .cs-hero {
+      background: #0a0a08;
+      padding: 120px 0 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cs-hero-glow {
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(209, 244, 112, 0.07) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .cs-hospital-name {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(209, 244, 112, 0.75);
+      margin-bottom: 20px;
+    }
+    .cs-hero-stat {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      color: #d1f470;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 28px;
+    }
+    .cs-hero h1 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 720px;
+      margin: 0 auto 32px;
+      line-height: 1.45;
+      font-style: italic;
+    }
+    .cs-hero-byline {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 0.04em;
+    }
+    .cs-hero-byline strong {
+      color: rgba(255, 255, 255, 0.65);
+      font-weight: 600;
+    }
+
+    /* ── Section base ── */
+    .cs-section {
+      padding: 88px 0;
+      background: #fff;
+    }
+    .cs-section-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .cs-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #16a34a;
+      margin-bottom: 14px;
+    }
+    .cs-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: #0a0a08;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 28px;
+    }
+    .cs-section p {
+      font-size: 1.1rem;
+      color: #374151;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .cs-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Solution module tags ── */
+    .cs-modules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .cs-module-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #15803d;
+    }
+
+    /* ── Security feature pills ── */
+    .cs-security-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+    .cs-security-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      background: #0a0a08;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #d1f470;
+    }
+    .cs-security-pill::before {
+      content: "&#10003;";
+      font-size: 0.75rem;
+    }
+
+    /* ── Results ── */
+    .cs-results {
+      background: #0a0a08;
+      padding: 88px 0;
+    }
+    .cs-results-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .cs-results-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .cs-results-header .cs-label {
+      color: rgba(209, 244, 112, 0.7);
+    }
+    .cs-results-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+    }
+    .cs-results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .cs-stat-card {
+      background: #161614;
+      border: 1px solid #2a2a26;
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .cs-stat-card .stat-value {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: #d1f470;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .cs-stat-card .stat-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.4;
+    }
+    .cs-results-narrative {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .cs-results-narrative p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .cs-results-narrative p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Quote ── */
+    .cs-quote-section {
+      background: #f9fafb;
+      padding: 88px 0;
+    }
+    .cs-quote {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cs-quote blockquote {
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-style: italic;
+      font-weight: 500;
+      color: #111827;
+      line-height: 1.65;
+      margin: 0 0 32px;
+      position: relative;
+      padding: 0 16px;
+    }
+    .cs-quote blockquote::before {
+      content: "\201C";
+      font-size: 5rem;
+      color: #d1f470;
+      line-height: 0;
+      position: absolute;
+      top: 32px;
+      left: -8px;
+      font-style: normal;
+    }
+    .cs-quote-attr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .cs-quote-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111827;
+    }
+    .cs-quote-title {
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+
+    /* ── CTA banner ── */
+    .cs-cta {
+      background: #d1f470;
+      padding: 88px 0;
+      text-align: center;
+    }
+    .cs-cta h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: #0a0a08;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .cs-cta p {
+      font-size: 1.05rem;
+      color: rgba(10, 10, 8, 0.65);
+      margin-bottom: 40px;
+    }
+    .cs-cta-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cs-cta-btns .btn-dark {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #0a0a08;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .cs-cta-btns .btn-dark:hover { opacity: 0.85; }
+    .cs-cta-btns .btn-ghost {
+      display: inline-block;
+      padding: 14px 28px;
+      background: transparent;
+      color: #0a0a08;
+      border: 2px solid rgba(10, 10, 8, 0.3);
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .cs-cta-btns .btn-ghost:hover { border-color: #0a0a08; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .cs-hero { padding: 100px 0 72px; }
+      .cs-results-grid { grid-template-columns: 1fr; gap: 16px; }
+      .cs-quote blockquote { padding: 0; }
+      .cs-quote blockquote::before { display: none; }
+    }
+  </style>
+
+  <meta property="og:site_name" content="ZenoHosp">
+  <meta property="og:title" content="How Kedar ENT Hospital Passed HIPAA Audit Without a Single Data Finding | ZenoHosp">
+  <meta property="og:description" content="Kedar ENT Hospital's Head of IT shares how ZenoHosp's AES-256 encryption, role-based access, and audit trail made their HIPAA audit a non-event.">
+  <meta property="og:type" content="article">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ZenoHosp",
+  "alternateName": ["ZenoHosp", "Zenohosp", "Zeno Hosp", "ZenoHosp HMS", "zenohosp.com"],
+  "url": "https://zenohosp.com",
+  "logo": "https://zenohosp.com/images/zenohosp-b.svg",
+  "description": "ZenoHosp is a technology corporation and software developer of cloud-based Hospital Management Software (HMS), EMR, clinic POS, and electronic health record systems.",
+  "areaServed": { "@type": "Country", "name": "India" },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-8056159395",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": ["English", "Hindi", "Tamil"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/zenohosp",
+    "https://www.instagram.com/zenohosp/",
+    "https://x.com/zenohosp"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Kedar ENT Hospital Passed HIPAA Audit Without a Single Data Finding",
+  "description": "Kedar ENT Hospital's Head of IT shares how ZenoHosp's AES-256 encryption, role-based access, and audit trail made their HIPAA audit a non-event.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZenoHosp",
+    "url": "https://zenohosp.com",
+    "logo": "https://zenohosp.com/images/zenohosp-b.svg"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Kedar ENT Hospital"
+  },
+  "url": "https://zenohosp.com/customers/kedar-ent-hospital/"
+}
+</script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar marketing-navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="/index.html" class="logo">
+        <img src="/images/zenohosp-b.svg" alt="ZenoHosp Logo" style="height: 32px; width: auto; display: block;" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/solutions/index.html">Solutions</a></li>
+        <li><a href="/pricing/index.html">Pricing</a></li>
+        <li><a href="/contact-us/index.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://hms.zenohosp.com" class="signin">Sign In</a>
+        <a href="/contact-us/index.html" class="btn btn-primary">Request Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="cs-hero-glow"></div>
+    <div class="container">
+      <span class="cs-hospital-name">Kedar ENT Hospital &mdash; Multi-specialty hospital</span>
+      <div class="cs-hero-stat">HIPAA audit passed. Zero data findings.</div>
+      <h1>"HIPAA audit was a non-event. For the first time in 6 years."</h1>
+      <p class="cs-hero-byline"><strong>Vijay Ramachandran</strong>, Head of IT, Kedar ENT Hospital</p>
+    </div>
+  </section>
+
+  <!-- The Challenge -->
+  <section class="cs-section">
+    <div class="container">
+      <div class="cs-section-inner">
+        <span class="cs-label">The Challenge</span>
+        <h2>Weeks of preparation for an audit that should have been routine</h2>
+        <p>Every year before ZenoHosp, Kedar ENT's HIPAA audit was a scramble. Patient records existed across multiple systems with inconsistent access controls. Audit logs were fragmented &mdash; some in the EMR, some in the billing system, some in paper registers. The IT team would spend weeks before the audit manually compiling access logs and chasing department heads for documentation. The hospital passed, but only after significant pre-audit effort.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution -->
+  <section class="cs-section" style="background: #f9fafb;">
+    <div class="container">
+      <div class="cs-section-inner">
+        <span class="cs-label">The Solution</span>
+        <h2>Security that is always audit-ready by default</h2>
+        <div class="cs-modules">
+          <span class="cs-module-tag">HMS &mdash; Full Suite</span>
+          <span class="cs-module-tag">Lab</span>
+          <span class="cs-module-tag">Pharmacy</span>
+          <span class="cs-module-tag">Finance</span>
+        </div>
+        <p>ZenoHosp implements AES-256 encryption at rest, TLS 1.3 in transit, and field-level encryption for Aadhaar numbers, diagnoses, and prescriptions. Role-based access is configured down to individual fields &mdash; billing staff can't see diagnoses, nurses can't see financial data. Every access is logged with IP address, device, user ID, and timestamp.</p>
+        <p>The audit trail is always current &mdash; no pre-audit preparation required. What used to take weeks of manual assembly is now a single export from the ZenoHosp compliance dashboard.</p>
+        <div class="cs-security-pills">
+          <span class="cs-security-pill">AES-256 encryption at rest</span>
+          <span class="cs-security-pill">TLS 1.3 in transit</span>
+          <span class="cs-security-pill">Field-level encryption</span>
+          <span class="cs-security-pill">Role-based access (RBAC)</span>
+          <span class="cs-security-pill">Complete audit trail</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Results -->
+  <section class="cs-results">
+    <div class="container">
+      <div class="cs-results-inner">
+        <div class="cs-results-header">
+          <span class="cs-label">The Results</span>
+          <h2>An audit that took 4 minutes to prepare for</h2>
+        </div>
+        <div class="cs-results-grid">
+          <div class="cs-stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Data-related findings in HIPAA audit</div>
+          </div>
+          <div class="cs-stat-card">
+            <div class="stat-value">AES-256</div>
+            <div class="stat-label">Encryption at rest, field-level for sensitive data</div>
+          </div>
+          <div class="cs-stat-card">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Audit trail coverage across all modules</div>
+          </div>
+        </div>
+        <div class="cs-results-narrative">
+          <p>The audit team requested 90 days of access logs. The IT team exported them in 4 minutes. Role-based access reports showed exactly who could see what, with timestamps of every access event. The auditors had no data-related findings &mdash; for the first time in the hospital's history.</p>
+          <p>ZenoHosp's RBAC is granular enough that a pharmacist can dispense a prescription without seeing the diagnosis that prompted it. A billing clerk can generate an invoice without reading the patient's clinical notes. This level of separation &mdash; which previously required expensive custom development &mdash; is default configuration in ZenoHosp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="cs-quote-section">
+    <div class="container">
+      <div class="cs-quote">
+        <blockquote>
+          As the IT head, security is my first question. ZenoHosp is the only HMS I've seen with end-to-end AES-256 encryption, role-based access down to field level, and a complete audit trail. HIPAA audit was a non-event.
+        </blockquote>
+        <div class="cs-quote-attr">
+          <span class="cs-quote-name">Vijay Ramachandran</span>
+          <span class="cs-quote-title">Head of IT, Kedar ENT Hospital</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cs-cta">
+    <div class="container">
+      <h2>Make your next audit a non-event too</h2>
+      <p>See ZenoHosp's security architecture and compliance tools in a live demo.</p>
+      <div class="cs-cta-btns">
+        <a href="/customers/index.html" class="btn-ghost">Read more stories</a>
+        <a href="/contact-us/index.html" class="btn-dark">Book a demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <zeno-footer></zeno-footer>
+
+  <script src="/js/components/footer.js"></script>
+
+  <demo-modal></demo-modal>
+  <script src="/js/components/demo-modal.js"></script>
+</body>
+</html>

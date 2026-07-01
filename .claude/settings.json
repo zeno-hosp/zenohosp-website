@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /Users/iniyananbu/Documents/ZenoHosp Website/customers/ 2>/dev/null || echo \"directory does not exist\")",
+      "Read(//Users/iniyananbu/Documents/ZenoHosp/**)"
+    ]
+  }
+}
