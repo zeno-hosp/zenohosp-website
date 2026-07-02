@@ -285,37 +285,105 @@
   <section class="process-section">
     <div class="container">
       <div style="text-align: center; margin-bottom: 48px;">
-        <h2 style="font-size: 2.25rem; font-weight: 800; color: #111;">How Zip Discharge Works</h2>
-        <p style="color: #4b5563; margin-top: 8px;">A single, coordinated flow of data from clinical decision to patient exit.</p>
+        <h2 style="font-size: 2.25rem; font-weight: 800; color: #111;">From Discharge Initiated to Bye Bye</h2>
+        <p style="color: #4b5563; margin-top: 8px;">The detailed operational sequence that gets a patient home in under 15 minutes.</p>
       </div>
       <div class="process-flow">
         <div class="process-step">
           <div class="step-number">1</div>
           <div class="step-text">
-            <h3>Medical Discharge Initiated</h3>
-            <p>The attending physician completes the digital patient chart in the EMR and enters the discharge orders. The doctor generates and signs the digital discharge summary directly on screen.</p>
+            <h3>Clinical Clearance &amp; Summary (Attending Physician)</h3>
+            <p>During morning rounds, the doctor reviews the patient’s progress, completes the final clinical SOAP notes, compiles the discharge summary (follow-up guidelines, vitals, and home medications), and hits "Initiate Medical Discharge" in the EMR.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-number">2</div>
           <div class="step-text">
-            <h3>Consolidated Ledger Compilation</h3>
-            <p>ZenoHosp's ledger aggregates every running charge—including IPD room tariffs, diagnostics lab results, and nursing procedures. If connected to a pharmacy POS via active API contracts, pharmacy items are pulled in simultaneously.</p>
+            <h3>Nursing Verification &amp; Ward Clearance (Ward Nurse)</h3>
+            <p>The nursing station receives the digital discharge trigger. The nurse records the final patient vitals, verifies that all consumables used in the ward have been logged, confirms the return of any unused ward medication, and completes the ward clearance checklist.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-number">3</div>
           <div class="step-text">
-            <h3>TPA Splitting &amp; Adjustments</h3>
-            <p>For cashless patients, the finance engine splits TPA approvals and co-pay parameters dynamically. Cashier applies initial advance deposits and finalizes the balance invoice within seconds.</p>
+            <h3>Real-Time Ledger Consolidation (ZenoHosp Ledger)</h3>
+            <p>The finance module automatically consolidates the final invoice. It aggregates all charges dynamically: room rent (calculated by hour/day), nursing care charges, OT procedures, laboratory investigations, and pharmacy items.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-number">4</div>
           <div class="step-text">
-            <h3>Digital Clearance &amp; Receipt</h3>
-            <p>The system sends the final itemized bill to the family's WhatsApp number. Once paid via UPI or card, financial clearance is updated, printing the gate pass and completing the patient exit loop.</p>
+            <h3>TPA Split &amp; Financial Clearance (Billing Desk)</h3>
+            <p>The billing cashier pulls up the consolidated patient folio. ZenoHosp references the pre-authorization limits approved during admission and splits the bill into the TPA coverage portion and patient co-pay. The cashier applies any advance deposits collected at intake.</p>
           </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-text">
+            <h3>WhatsApp Invoice Delivery &amp; Settle (Cash Counter)</h3>
+            <p>The finalized consolidated invoice is pushed to the family via WhatsApp. They pay the balance amount via UPI or card directly at the counter or online. Once paid, the cashier clicks "Grant Financial Clearance" in ZenoHosp.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">6</div>
+          <div class="step-text">
+            <h3>Gate-Pass &amp; Safe Exit (Security/Ward Exit)</h3>
+            <p>The system automatically prints the gate pass and issues a digital exit authorization. The nurse prints the physical discharge summary, explains the follow-up medication, hands it to the patient, and wishes them well as they leave.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How the Apps Coordinate to Feed Finance -->
+  <section class="section-padding bg-cream" style="border-top: 1px solid var(--zd-cream-dark);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Behind the Scenes: How the Apps Coordinate</h2>
+        <p>Six ZenoHosp modules working in background synchronization to feed the central billing engine.</p>
+      </div>
+      <div class="zip-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          </div>
+          <h3>EMR App &rarr; Finance</h3>
+          <p>Consultation fees, ward visits, and clinical procedure codes logged by doctors are automatically converted to billing line items based on pre-configured hospital price sheets.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16.2 7.8l-2 2c-.3-.3-.7-.3-1 0s-.3.7 0 1l2-2c-.3-.3-.3-.7 0-1s.7-.3 1 0z"></path></svg>
+          </div>
+          <h3>OT Room App &rarr; Finance</h3>
+          <p>Upon surgery completion, the OT log automatically captures surgeon fees, assistant doctor shares, anesthesiology levels, and consumables used, instantly posting these to the patient's running invoice.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+          </div>
+          <h3>Lab App &rarr; Finance</h3>
+          <p>When a doctor orders a test in the EMR, it routes to the lab queue. The finance module records the charge when ordered, and updates the status to "completed" once the lab validates results, ensuring zero unbilled investigations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg>
+          </div>
+          <h3>Pharmacy App &rarr; Finance</h3>
+          <p>When medication is dispensed, the pharmacy POS interface logs the items directly onto the patient's inpatient bill, tracking batch numbers, HSN codes, and correct GST rates.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          </div>
+          <h3>Inventory App &rarr; Finance</h3>
+          <p>Tracks ward stock usage and equipment utilization (like ventilator hours), ensuring high-value assets are billed accurately per patient day.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Asset App &rarr; Finance</h3>
+          <p>Coordinates with the finance ledger to calculate equipment depreciation, AMC costs, and vendor maintenance billing lines automatically.</p>
         </div>
       </div>
     </div>
