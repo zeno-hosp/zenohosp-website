@@ -77,8 +77,8 @@
       .episode-card { flex-direction: column; gap: 16px; }
     }
     .episode-media {
-      width: 80px;
-      height: 80px;
+      width: 160px;
+      aspect-ratio: 16 / 9;
       background: #0a0a08;
       border-radius: 12px;
       display: flex;
@@ -86,6 +86,18 @@
       justify-content: center;
       color: #d1f470;
       flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .episode-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
     }
     .episode-meta {
       font-size: 0.85rem;
@@ -274,6 +286,7 @@
           <div class="episodes-list">
             <div class="episode-card">
               <div class="episode-media">
+                <img src="/images/podcast/episode-01.jpg" alt="Episode 1 Cover" onerror="this.style.display='none'">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v11a4 4 0 0 0-4 4v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-3a4 4 0 0 0-4-4z"/><circle cx="12" cy="5" r="4"/></svg>
               </div>
               <div class="episode-text">
@@ -284,6 +297,7 @@
             </div>
             <div class="episode-card">
               <div class="episode-media">
+                <img src="/images/podcast/episode-02.jpg" alt="Episode 2 Cover" onerror="this.style.display='none'">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </div>
               <div class="episode-text">
@@ -294,6 +308,7 @@
             </div>
             <div class="episode-card">
               <div class="episode-media">
+                <img src="/images/podcast/episode-03.jpg" alt="Episode 3 Cover" onerror="this.style.display='none'">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               </div>
               <div class="episode-text">
