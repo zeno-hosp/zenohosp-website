@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-27WDP0T7BZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to listen to the ZenoHosp Healthcare IT Podcast. Strategic discussions, migrations, and playbooks from hospital CTOs and clinical directors.">
+  <meta name="keywords" content="healthcare podcast, hospital IT podcast, HMS migration podcast, ZenoHosp podcast">
+
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="canonical" href="https://zenohosp.com/resources/podcast/">
+
+  <title>ZenoHosp Podcast: Healthcare Leaders &amp; IT Insights | ZenoHosp Resources</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <style>
+    .podcast-hero {
+      background: #0a0a08;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .podcast-hero h1 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.03em;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .podcast-hero p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.6);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .podcast-main {
+      padding: 80px 0;
+      background: #fafafa;
+    }
+    .podcast-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+    }
+    @media (max-width: 992px) {
+      .podcast-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .episodes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .episode-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      display: flex;
+      gap: 24px;
+    }
+    @media (max-width: 576px) {
+      .episode-card { flex-direction: column; gap: 16px; }
+    }
+    .episode-media {
+      width: 80px;
+      height: 80px;
+      background: #0a0a08;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d1f470;
+      flex-shrink: 0;
+    }
+    .episode-meta {
+      font-size: 0.85rem;
+      color: #84cc16;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .episode-text h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .episode-text p {
+      color: #4b5563;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+    .form-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    .form-card h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 12px;
+    }
+    .form-card p {
+      color: #4b5563;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #374151;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #1f2937;
+      background-color: #fff;
+      transition: border-color 0.15s ease;
+    }
+    .form-group input:focus, .form-group select:focus {
+      outline: none;
+      border-color: #11110d;
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: #11110d;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.15s ease;
+    }
+    .btn-submit:hover {
+      background: #272722;
+    }
+    .success-box {
+      display: none;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+    }
+    .success-box h3 {
+      color: #15803d;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .success-box p {
+      color: #166534;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  </style>
+
+  <meta property="og:site_name" content="Zenohosp">
+  <meta property="og:title" content="ZenoHosp Podcast: Healthcare Leaders &amp; IT Insights">
+  <meta property="og:description" content="Apply for access to ZenoHosp's private podcast series for hospital CTOs and leaders.">
+  <meta property="og:type" content="website">
+
+  <!-- Brand Identity & Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ZenoHosp",
+    "alternateName": [
+      "ZenoHosp",
+      "Zenohosp",
+      "Zeno Hosp",
+      "ZenoHosp HMS",
+      "zenohosp.com"
+    ],
+    "url": "https://zenohosp.com",
+    "logo": "https://zenohosp.com/images/zenohosp-b.svg",
+    "description": "ZenoHosp is a technology corporation and software developer of cloud-based Hospital Management Software (HMS), EMR, clinic POS, and electronic health record systems.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://zenohosp.com/resources/podcast/",
+    "url": "https://zenohosp.com/resources/podcast/",
+    "name": "ZenoHosp Healthcare IT Podcast Registration",
+    "description": "Apply for listen access to ZenoHosp's private podcast series featuring hospital leadership insights.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ZenoHosp"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar marketing-navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="/index.html" class="logo">
+        <img src="/images/zenohosp-b.svg" alt="ZenoHosp Logo" style="height: 32px; width: auto; display: block;" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/solutions/index.html">Solutions</a></li>
+        <li><a href="/pricing/index.html">Pricing</a></li>
+        <li><a href="/contact-us/index.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://hms.zenohosp.com" class="signin">Sign In</a>
+        <a href="/contact-us/index.html" class="btn btn-primary">Request Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="podcast-hero">
+    <div class="container">
+      <div style="display:inline-block; padding: 6px 16px; background: rgba(209, 244, 112, 0.1); border: 1px solid rgba(209, 244, 112, 0.3); border-radius: 100px; color: #d1f470; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px;">Audio Resource Center</div>
+      <h1>ZenoHosp Podcast:<br>Healthcare Leaders &amp; IT Insights</h1>
+      <p>A private audio series featuring hospital executives, clinical directors, and technology officers sharing real operational playbooks for modern hospital networks.</p>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <section class="podcast-main">
+    <div class="container">
+      <div class="podcast-layout">
+        
+        <!-- Left: Episode List -->
+        <div>
+          <h2 style="font-size: 1.75rem; font-weight: 800; color: #111; margin-bottom: 32px;">Featured Episodes</h2>
+          <div class="episodes-list">
+            <div class="episode-card">
+              <div class="episode-media">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v11a4 4 0 0 0-4 4v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-3a4 4 0 0 0-4-4z"/><circle cx="12" cy="5" r="4"/></svg>
+              </div>
+              <div class="episode-text">
+                <div class="episode-meta">Episode 01 &bull; 45 mins</div>
+                <h3>The Cloud HMS Migration Playbook</h3>
+                <p>Guest: Dr. Aravind Swaminathan, CIO of Swaminathan Hospitals. Learn how a 3-campus network migrated 75+ ward terminals to a cloud system with zero operational downtime.</p>
+              </div>
+            </div>
+            <div class="episode-card">
+              <div class="episode-media">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="episode-text">
+                <div class="episode-meta">Episode 02 &bull; 38 mins</div>
+                <h3>Plugging the 15% Revenue Leakage Loophole</h3>
+                <p>Guest: Meera Nair, CFO of MetroCare Network. A deep-dive discussion on how automated clinical charges, inventory tracking, and TPA split logs recovered lakhs in unbilled consumables.</p>
+              </div>
+            </div>
+            <div class="episode-card">
+              <div class="episode-media">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div class="episode-text">
+                <div class="episode-meta">Episode 03 &bull; 50 mins</div>
+                <h3>ABDM Compliance: Hurdles &amp; Triumphs</h3>
+                <p>Guest: Rajesh Varma, IT Director of Varma Medical Center. A practical look at Ayushman Bharat Digital Mission readiness, building trust with patients, and onboarding doctors onto digital EMRs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Form -->
+        <div>
+          <div class="form-card" id="form-container">
+            <h3>Request Access</h3>
+            <p>Access is restricted to healthcare executives and hospital administrators. Enter your details to request an invite link.</p>
+            
+            <form id="podcast-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" required placeholder="Rajesh Kumar">
+              </div>
+              <div class="form-group">
+                <label for="workEmail">Work Email *</label>
+                <input type="email" id="workEmail" required placeholder="rajesh@hospital.com">
+              </div>
+              <div class="form-group">
+                <label for="hospitalName">Hospital / Clinic Name *</label>
+                <input type="text" id="hospitalName" required placeholder="Lakshmi Hospital">
+              </div>
+              <div class="form-group">
+                <label for="bedCount">Facility Size *</label>
+                <select id="bedCount" required>
+                  <option value="">Select bed count</option>
+                  <option value="clinic">Clinic / No beds</option>
+                  <option value="25-50">25–50 beds</option>
+                  <option value="50-100">50–100 beds</option>
+                  <option value="100-250">100–250 beds</option>
+                  <option value="250-500">250–500 beds</option>
+                  <option value="500+">500+ beds</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="jobTitle">Role / Job Title *</label>
+                <input type="text" id="jobTitle" required placeholder="Chief Technology Officer">
+              </div>
+              <button type="submit" class="btn-submit">Request Listen Access</button>
+            </form>
+          </div>
+          
+          <div class="success-box" id="success-box">
+            <h3>Request Submitted</h3>
+            <p>Thank you for your interest. We will verify your details and send your access credentials and private RSS link within 24 hours.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <zeno-footer></zeno-footer>
+  <script src="/js/components/footer.js"></script>
+
+  <demo-modal></demo-modal>
+  <script src="/js/components/demo-modal.js"></script>
+
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      document.getElementById('form-container').style.display = 'none';
+      document.getElementById('success-box').style.display = 'block';
+    }
+  </script>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
