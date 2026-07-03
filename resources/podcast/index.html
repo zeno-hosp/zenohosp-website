@@ -76,6 +76,20 @@
     @media (max-width: 576px) {
       .episode-card { flex-direction: column; gap: 16px; }
     }
+    .podcast-host-card {
+      margin-top: 48px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 576px) {
+      .podcast-host-card { flex-direction: column; text-align: center; gap: 16px; }
+    }
     .episode-media {
       width: 160px;
       aspect-ratio: 16 / 9;
@@ -400,6 +414,16 @@
                 <h3>ABDM Compliance: Hurdles &amp; Triumphs</h3>
                 <p>Guest: Rajesh Varma, IT Director of Varma Medical Center. A practical look at Ayushman Bharat Digital Mission readiness, building trust with patients, and onboarding doctors onto digital EMRs.</p>
               </div>
+            </div>
+          </div>
+          
+          <!-- Host Section -->
+          <div class="podcast-host-card">
+            <img src="/images/podcast/Iniyan.jpg" alt="Iniyan Anbu" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #84cc16; flex-shrink: 0;">
+            <div>
+              <div style="font-size: 0.8rem; color: #84cc16; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Hosted By</div>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: #111; margin-bottom: 4px;">Iniyan Anbu</h3>
+              <p style="color: #4b5563; line-height: 1.5; font-size: 0.92rem; margin: 0;">Founder of ZenoHosp. Hosting discussions with CIOs, CFOs, and hospital operational leaders sharing practical playbooks.</p>
             </div>
           </div>
         </div>
