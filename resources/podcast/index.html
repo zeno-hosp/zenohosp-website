@@ -47,6 +47,30 @@
       max-width: 600px;
       line-height: 1.6;
     }
+    .podcast-hero-split {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .podcast-cover-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .podcast-cover-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .podcast-hero-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
     .podcast-main {
       padding: 80px 0;
       background: #fafafa;
@@ -367,9 +391,16 @@
   <!-- Hero Section -->
   <section class="podcast-hero">
     <div class="container">
-      <div style="display:inline-block; padding: 6px 16px; background: rgba(209, 244, 112, 0.1); border: 1px solid rgba(209, 244, 112, 0.3); border-radius: 100px; color: #d1f470; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px;">Audio Resource Center</div>
-      <h1>ZenoHosp Podcast:<br>Healthcare Leaders &amp; IT Insights</h1>
-      <p>A private audio series featuring hospital executives, clinical directors, and technology officers sharing real operational playbooks for modern hospital networks.</p>
+      <div class="podcast-hero-split">
+        <div>
+          <div style="display:inline-block; padding: 6px 16px; background: rgba(209, 244, 112, 0.1); border: 1px solid rgba(209, 244, 112, 0.3); border-radius: 100px; color: #d1f470; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px;">Audio Resource Center</div>
+          <h1>ZenoHosp Podcast:<br>Healthcare Leaders &amp; IT Insights</h1>
+          <p>A private audio series featuring hospital executives, clinical directors, and technology officers sharing real operational playbooks for modern hospital networks.</p>
+        </div>
+        <div class="podcast-cover-container">
+          <img src="/images/podcast/Iniyan.jpg" alt="Inside ZenoHosp Podcast Cover">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -384,7 +415,7 @@
           <div class="episodes-list">
             <div class="episode-card">
               <div class="episode-media">
-                <img src="/images/podcast/episode-01.jpg" alt="Episode 1 Cover" onerror="this.style.display='none'">
+                <img src="/images/podcast/Iniyan.jpg" alt="Episode 1 Cover">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v11a4 4 0 0 0-4 4v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-3a4 4 0 0 0-4-4z"/><circle cx="12" cy="5" r="4"/></svg>
               </div>
               <div class="episode-text">
@@ -395,7 +426,7 @@
             </div>
             <div class="episode-card">
               <div class="episode-media">
-                <img src="/images/podcast/episode-02.jpg" alt="Episode 2 Cover" onerror="this.style.display='none'">
+                <img src="/images/podcast/Iniyan.jpg" alt="Episode 2 Cover">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </div>
               <div class="episode-text">
@@ -406,7 +437,7 @@
             </div>
             <div class="episode-card">
               <div class="episode-media">
-                <img src="/images/podcast/episode-03.jpg" alt="Episode 3 Cover" onerror="this.style.display='none'">
+                <img src="/images/podcast/Iniyan.jpg" alt="Episode 3 Cover">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               </div>
               <div class="episode-text">
@@ -419,7 +450,7 @@
           
           <!-- Host Section -->
           <div class="podcast-host-card">
-            <img src="/images/podcast/Iniyan.jpg" alt="Iniyan Anbu" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #84cc16; flex-shrink: 0;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #475569; font-size: 1.5rem; flex-shrink: 0; border: 2px solid #84cc16;">IA</div>
             <div>
               <div style="font-size: 0.8rem; color: #84cc16; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Hosted By</div>
               <h3 style="font-size: 1.15rem; font-weight: 800; color: #111; margin-bottom: 4px;">Iniyan Anbu</h3>
