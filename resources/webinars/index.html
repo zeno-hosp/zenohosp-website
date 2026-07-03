@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-27WDP0T7BZ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join ZenoHosp webinars and masterclasses. Learn how to optimize hospital operations, ensure ABDM compliance, and reduce revenue leakage with modern technology.">
-    <meta name="keywords" content="Hospital Webinars, Healthcare IT Webinars, HMS Masterclass, ABDM Compliance Guide, Hospital Operations Software, ZenoHosp">
+    <meta name="description"
+        content="Join ZenoHosp webinars and masterclasses. Learn how to optimize hospital operations, ensure ABDM compliance, and reduce revenue leakage with modern technology.">
+    <meta name="keywords"
+        content="Hospital Webinars, Healthcare IT Webinars, HMS Masterclass, ABDM Compliance Guide, Hospital Operations Software, ZenoHosp">
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="canonical" href="https://zenohosp.com/resources/webinars/">
@@ -20,26 +23,29 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zenohosp.com/resources/webinars/">
     <meta property="og:title" content="Webinars & Masterclasses | ZenoHosp">
-    <meta property="og:description" content="Watch on-demand healthcare IT webinars and register for upcoming live sessions.">
+    <meta property="og:description"
+        content="Watch on-demand healthcare IT webinars and register for upcoming live sessions.">
     <meta property="og:image" content="https://zenohosp.com/images/hero-doctors.png">
 
     <title>Webinars & Masterclasses | ZenoHosp</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/pages/resources.css">
-    
+
     <style>
         .webinar-hero {
             padding: 120px 0 60px;
-            background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
+            background: #000;
             text-align: center;
             color: white;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
+
         .webinar-hero h1 {
             font-size: 3rem;
             font-weight: 800;
@@ -47,16 +53,19 @@
             letter-spacing: -0.02em;
             margin-bottom: 20px;
         }
+
         .webinar-hero p {
             font-size: 1.2rem;
             color: #94a3b8;
             max-width: 600px;
             margin: 0 auto;
         }
+
         .upcoming-section {
             padding: 80px 0;
             background: #ffffff;
         }
+
         .section-title {
             font-size: 2rem;
             font-weight: 800;
@@ -64,16 +73,19 @@
             margin-bottom: 10px;
             letter-spacing: -0.02em;
         }
+
         .section-subtitle {
             font-size: 1.05rem;
             color: #64748b;
             margin-bottom: 40px;
         }
+
         .upcoming-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
+
         .upcoming-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -84,11 +96,13 @@
             justify-content: space-between;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .upcoming-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
             border-color: #cbd5e1;
         }
+
         .upcoming-tag {
             display: inline-block;
             align-self: flex-start;
@@ -103,6 +117,7 @@
             letter-spacing: 0.05em;
             margin-bottom: 24px;
         }
+
         .upcoming-card h3 {
             font-size: 1.5rem;
             font-weight: 800;
@@ -110,6 +125,7 @@
             margin-bottom: 12px;
             line-height: 1.3;
         }
+
         .upcoming-card p {
             font-size: 0.95rem;
             color: #475569;
@@ -117,6 +133,7 @@
             margin-bottom: 30px;
             flex: 1;
         }
+
         .upcoming-meta {
             display: flex;
             flex-direction: column;
@@ -125,6 +142,7 @@
             padding-top: 24px;
             margin-bottom: 30px;
         }
+
         .meta-row {
             display: flex;
             align-items: center;
@@ -133,15 +151,18 @@
             color: #334155;
             font-weight: 500;
         }
+
         .meta-row svg {
             color: #64748b;
             flex-shrink: 0;
         }
+
         .speaker-profile {
             display: flex;
             align-items: center;
             gap: 12px;
         }
+
         .speaker-avatar {
             width: 44px;
             height: 44px;
@@ -154,25 +175,30 @@
             color: #475569;
             font-size: 0.9rem;
         }
+
         .speaker-name {
             font-size: 0.9rem;
             font-weight: 700;
             color: #0f172a;
         }
+
         .speaker-role {
             font-size: 0.8rem;
             color: #64748b;
         }
+
         .past-section {
             padding: 80px 0;
             background: #f8fafc;
             border-top: 1px solid #e2e8f0;
         }
+
         .past-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
+
         .past-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -182,10 +208,12 @@
             flex-direction: column;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .past-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
         }
+
         .past-thumb {
             height: 180px;
             background: #0f172a;
@@ -197,6 +225,7 @@
             font-size: 0.9rem;
             font-weight: 600;
         }
+
         .past-play-btn {
             width: 50px;
             height: 50px;
@@ -209,10 +238,12 @@
             color: white;
             transition: transform 0.3s, background 0.3s;
         }
+
         .past-card:hover .past-play-btn {
             transform: scale(1.1);
             background: #0d9488;
         }
+
         .past-content {
             padding: 24px;
             flex: 1;
@@ -220,6 +251,7 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
         .past-meta {
             font-size: 0.8rem;
             color: #64748b;
@@ -231,6 +263,7 @@
             align-items: center;
             gap: 12px;
         }
+
         .past-card h4 {
             font-size: 1.15rem;
             font-weight: 700;
@@ -238,11 +271,13 @@
             line-height: 1.4;
             margin-bottom: 12px;
         }
+
         .past-speaker {
             font-size: 0.85rem;
             color: #475569;
             margin-bottom: 20px;
         }
+
         .past-link {
             font-size: 0.85rem;
             font-weight: 700;
@@ -252,32 +287,38 @@
             align-items: center;
             gap: 6px;
         }
+
         .past-link:hover {
             text-decoration: underline;
         }
+
         @media(max-width: 992px) {
             .upcoming-grid {
                 grid-template-columns: 1fr;
             }
+
             .past-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
         @media(max-width: 768px) {
             .webinar-hero h1 {
                 font-size: 2.25rem;
             }
+
             .past-grid {
                 grid-template-columns: 1fr;
             }
+
             .upcoming-card {
                 padding: 24px;
             }
         }
     </style>
 
-  <!-- Brand Identity & Schema Markup -->
-  <script type="application/ld+json">
+    <!-- Brand Identity & Schema Markup -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -314,7 +355,7 @@
   ]
 }
 </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -344,23 +385,50 @@
 }
 </script>
 </head>
+
 <body>
     <div class="platform-strip">
         <div class="nav-container">
-            <a href="/index.html" class="ps-brand"><img src="/images/zenohosp-w.svg" alt="ZenoHosp Logo" style="height: 20px; width: auto; vertical-align: middle;" /></a>
+            <a href="/index.html" class="ps-brand"><img src="/images/zenohosp-w.svg" alt="ZenoHosp Logo"
+                    style="height: 20px; width: auto; vertical-align: middle;" /></a>
             <nav class="module-switcher">
-                <a href="/apps/hms/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg> HMS</a>
-                <a href="/apps/inventory/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7M12 11v10"/></svg> Inventory</a>
-                <a href="/apps/asset/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6"/></svg> Asset</a>
-                <a href="/apps/ot-room/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7 4 7-4M6 20h12"/></svg> OT Room</a>
-                <a href="/apps/finance/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg> Finance</a>
-                <a href="/apps/pharmacy/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg> Pharmacy</a>
-                <a href="/apps/lab/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10"/></svg> Lab</a>
-                <a href="/apps/people/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6"/></svg> People</a>
+                <a href="/apps/hms/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5" />
+                    </svg> HMS</a>
+                <a href="/apps/inventory/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7M12 11v10" />
+                    </svg> Inventory</a>
+                <a href="/apps/asset/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6" />
+                    </svg> Asset</a>
+                <a href="/apps/ot-room/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v18M5 8l7 4 7-4M6 20h12" />
+                    </svg> OT Room</a>
+                <a href="/apps/finance/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 17l5-5 4 4 8-8M16 4h5v5" />
+                    </svg> Finance</a>
+                <a href="/apps/pharmacy/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 7v10M7 12h10M5 5h14v14H5z" />
+                    </svg> Pharmacy</a>
+                <a href="/apps/lab/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10" />
+                    </svg> Lab</a>
+                <a href="/apps/people/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6" />
+                    </svg> People</a>
             </nav>
             <div class="ps-right">
                 <a href="https://hms.zenohosp.com" class="signin">Sign In</a>
-                <a href="/contact-us/index.html" class="btn btn-primary ps-cta" style="padding:7px 16px;font-size:.82rem">Request Demo</a>
+                <a href="/contact-us/index.html" class="btn btn-primary ps-cta"
+                    style="padding:7px 16px;font-size:.82rem">Request Demo</a>
             </div>
         </div>
     </div>
@@ -371,6 +439,85 @@
                 <img src="/images/zenohosp-b.svg" alt="ZenoHosp Logo" style="height: 32px; width: auto; display: block;" />
             </a>
             <ul class="nav-links">
+                <li class="has-dropdown">
+                    <a href="#" class="dropdown-trigger">Products <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                    <div class="nav-dropdown">
+                        <div class="dropdown-content">
+                            <a href="/apps/hms/index.html" class="dropdown-item">
+                                <div class="dropdown-icon hms">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>HMS</strong>
+                                    <span>End-to-end hospital management system</span>
+                                </div>
+                            </a>
+                            <a href="/apps/inventory/index.html" class="dropdown-item">
+                                <div class="dropdown-icon inv">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7M12 11v10"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Inventory</strong>
+                                    <span>Track consumables and medical supplies</span>
+                                </div>
+                            </a>
+                            <a href="/apps/asset/index.html" class="dropdown-item">
+                                <div class="dropdown-icon assets">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M4 7h16v12H4zM4 7l3-4h10l3 4M9 12h6"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Asset</strong>
+                                    <span>Manage and maintain hospital equipment</span>
+                                </div>
+                            </a>
+                            <a href="/apps/ot-room/index.html" class="dropdown-item">
+                                <div class="dropdown-icon ot">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 3v18M5 8l7 4 7-4M6 20h12"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>OT Room</strong>
+                                    <span>Schedule surgeries and manage resources</span>
+                                </div>
+                            </a>
+                            <a href="/apps/finance/index.html" class="dropdown-item">
+                                <div class="dropdown-icon finance">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M3 17l5-5 4 4 8-8M16 4h5v5"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Finance</strong>
+                                    <span>Books built for how hospitals actually earn</span>
+                                </div>
+                            </a>
+                            <a href="/apps/pharmacy/index.html" class="dropdown-item">
+                                <div class="dropdown-icon pharma">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 7v10M7 12h10M5 5h14v14H5z"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Pharmacy</strong>
+                                    <span>Dispense meds and manage stock</span>
+                                </div>
+                            </a>
+                            <a href="/apps/lab/index.html" class="dropdown-item">
+                                <div class="dropdown-icon lab">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7 15h10"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Lab</strong>
+                                    <span>Diagnostics, ordered to reported</span>
+                                </div>
+                            </a>
+                            <a href="/apps/people/index.html" class="dropdown-item">
+                                <div class="dropdown-icon people">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M16 18a4 4 0 00-8 0M12 11a3 3 0 100-6 3 3 0 000 6"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>People</strong>
+                                    <span>Your staff, scheduled and paid</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="/solutions/index.html">Solutions</a></li>
                 <li><a href="/customers/index.html">Customers</a></li>
                 <li><a href="/resources/index.html">Resources</a></li>
@@ -380,12 +527,35 @@
                 <a href="https://hms.zenohosp.com" class="signin">Sign In</a>
                 <a href="/contact-us/index.html" class="btn btn-primary">Request Demo</a>
             </div>
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
 
     <div class="mobile-nav-overlay" id="mobile-overlay"></div>
     <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu">
         <ul>
+            <li>
+                <div class="dropdown-label" id="solutions-toggle">
+                    Products
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="mobile-dropdown" id="solutions-dropdown">
+                    <a href="/apps/hms/index.html">HMS</a>
+                    <a href="/apps/inventory/index.html">Inventory</a>
+                    <a href="/apps/asset/index.html">Asset</a>
+                    <a href="/apps/ot-room/index.html">OT Room</a>
+                    <a href="/apps/finance/index.html">Finance</a>
+                    <a href="/apps/pharmacy/index.html">Pharmacy</a>
+                    <a href="/apps/lab/index.html">Lab</a>
+                    <a href="/apps/people/index.html">People</a>
+                </div>
+            </li>
             <li><a href="/solutions/index.html">Solutions</a></li>
             <li><a href="/customers/index.html">Customers</a></li>
             <li><a href="/resources/index.html">Resources</a></li>
@@ -396,7 +566,8 @@
     <section class="webinar-hero">
         <div class="container">
             <h1>Webinars & Masterclasses</h1>
-            <p>Join live panel discussions and watch on-demand masterclasses about hospital IT strategy, ABDM compliance, and leakage control workflows.</p>
+            <p>Join live panel discussions and watch on-demand masterclasses about hospital IT strategy, ABDM
+                compliance, and leakage control workflows.</p>
         </div>
     </section>
 
@@ -404,28 +575,47 @@
         <div class="container">
             <h2 class="section-title">Upcoming Live Sessions</h2>
             <p class="section-subtitle">Reserve your spot in our next interactive roundtable discussion.</p>
-            
+
             <div class="upcoming-grid">
                 <div class="upcoming-card" style="padding: 0; overflow: hidden;">
-                    <a href="/resources/webinars/navigating-dpdp-act-abdm-compliance-2026.html"><img src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;" alt="DPDP Act Compliance Guide"></a>
-                    <div style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+                    <a href="/resources/webinars/navigating-dpdp-act-abdm-compliance-2026.html"><img
+                            src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;"
+                            alt="DPDP Act Compliance Guide"></a>
+                    <div
+                        style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
                         <div>
                             <span class="upcoming-tag" style="margin-bottom: 16px;">Live Discussion</span>
-                            <h3><a href="/resources/webinars/navigating-dpdp-act-abdm-compliance-2026.html" style="text-decoration: none; color: inherit;">Navigating the DPDP Act & ABDM Compliance in 2026</a></h3>
-                            <p>A step-by-step roadmap for hospital administrators to implement ABHA-linked EMR, secure user consent under the Digital Personal Data Protection Act, and pass national audits with zero paperwork delays.</p>
+                            <h3><a href="/resources/webinars/navigating-dpdp-act-abdm-compliance-2026.html"
+                                    style="text-decoration: none; color: inherit;">Navigating the DPDP Act & ABDM
+                                    Compliance in 2026</a></h3>
+                            <p>A step-by-step roadmap for hospital administrators to implement ABHA-linked EMR, secure
+                                user consent under the Digital Personal Data Protection Act, and pass national audits
+                                with zero paperwork delays.</p>
                         </div>
                         <div>
-                            <div class="upcoming-meta" style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 20px; margin-bottom: 24px;">
+                            <div class="upcoming-meta"
+                                style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 20px; margin-bottom: 24px;">
                                 <div class="meta-row">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                        <line x1="16" y1="2" x2="16" y2="6" />
+                                        <line x1="8" y1="2" x2="8" y2="6" />
+                                        <line x1="3" y1="10" x2="21" y2="10" />
+                                    </svg>
                                     <span>Thursday, July 16, 2026 &middot; 4:00 PM IST</span>
                                 </div>
                                 <div class="meta-row">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
                                     <span>Duration: 60 mins</span>
                                 </div>
                             </div>
-                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
                                 <div class="speaker-profile">
                                     <div class="speaker-avatar">IA</div>
                                     <div>
@@ -433,32 +623,52 @@
                                         <div class="speaker-role">Founder, ZenoHosp</div>
                                     </div>
                                 </div>
-                                <a href="/contact-us/index.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">Register Now</a>
+                                <a href="/contact-us/index.html" class="btn btn-primary"
+                                    style="padding: 10px 22px; font-size: 0.9rem;">Register Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="upcoming-card" style="padding: 0; overflow: hidden;">
-                    <a href="/resources/webinars/stopping-pharmacy-pilferage-revenue-leakage.html"><img src="/images/blog-cover-1.jpg" style="width: 100%; height: auto; display: block;" alt="Stopping Pharmacy Pilferage & Revenue Leakage"></a>
-                    <div style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+                    <a href="/resources/webinars/stopping-pharmacy-pilferage-revenue-leakage.html"><img
+                            src="/images/blog-cover-1.jpg" style="width: 100%; height: auto; display: block;"
+                            alt="Stopping Pharmacy Pilferage & Revenue Leakage"></a>
+                    <div
+                        style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
                         <div>
                             <span class="upcoming-tag" style="margin-bottom: 16px;">Product Masterclass</span>
-                            <h3><a href="/resources/webinars/stopping-pharmacy-pilferage-revenue-leakage.html" style="text-decoration: none; color: inherit;">Stopping Pharmacy Pilferage & Revenue Leakage</a></h3>
-                            <p>Learn how top hospital chains use FEFO stock tracking, automated alerts, and bidirectional billing sync to prevent stockouts and stop 15% average leakage at the pharmacy counter.</p>
+                            <h3><a href="/resources/webinars/stopping-pharmacy-pilferage-revenue-leakage.html"
+                                    style="text-decoration: none; color: inherit;">Stopping Pharmacy Pilferage & Revenue
+                                    Leakage</a></h3>
+                            <p>Learn how top hospital chains use FEFO stock tracking, automated alerts, and
+                                bidirectional billing sync to prevent stockouts and stop 15% average leakage at the
+                                pharmacy counter.</p>
                         </div>
                         <div>
-                            <div class="upcoming-meta" style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 20px; margin-bottom: 24px;">
+                            <div class="upcoming-meta"
+                                style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 20px; margin-bottom: 24px;">
                                 <div class="meta-row">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                        <line x1="16" y1="2" x2="16" y2="6" />
+                                        <line x1="8" y1="2" x2="8" y2="6" />
+                                        <line x1="3" y1="10" x2="21" y2="10" />
+                                    </svg>
                                     <span>Tuesday, August 4, 2026 &middot; 3:00 PM IST</span>
                                 </div>
                                 <div class="meta-row">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
                                     <span>Duration: 45 mins</span>
                                 </div>
                             </div>
-                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
                                 <div class="speaker-profile">
                                     <div class="speaker-avatar">PN</div>
                                     <div>
@@ -466,7 +676,8 @@
                                         <div class="speaker-role">Hospital Operations Consultant</div>
                                     </div>
                                 </div>
-                                <a href="/contact-us/index.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">Register Now</a>
+                                <a href="/contact-us/index.html" class="btn btn-primary"
+                                    style="padding: 10px 22px; font-size: 0.9rem;">Register Now</a>
                             </div>
                         </div>
                     </div>
@@ -479,18 +690,28 @@
         <div class="container">
             <h2 class="section-title">Webinar Summaries & Key Takeaways</h2>
             <p class="section-subtitle">Read briefs and high-level summaries of our past strategic sessions.</p>
-            
+
             <div class="past-grid">
                 <div class="past-card" style="padding: 0; overflow: hidden;">
-                    <a href="/resources/webinars/unified-billing-multi-campus-sync.html"><img src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;" alt="Unified Billing & Multi-Campus Synchronization"></a>
+                    <a href="/resources/webinars/unified-billing-multi-campus-sync.html"><img
+                            src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;"
+                            alt="Unified Billing & Multi-Campus Synchronization"></a>
                     <div class="past-content">
                         <div>
                             <div class="past-meta">
-                                <span class="upcoming-tag" style="background: rgba(15, 23, 42, 0.05); color: #334155; border-color: rgba(15, 23, 42, 0.1); margin-bottom: 0;">Masterclass</span>
+                                <span class="upcoming-tag"
+                                    style="background: rgba(15, 23, 42, 0.05); color: #334155; border-color: rgba(15, 23, 42, 0.1); margin-bottom: 0;">Masterclass</span>
                                 <span style="font-weight: 500; font-size: 0.85rem;">Duration: 45 mins</span>
                             </div>
-                            <h4 style="font-size: 1.3rem; margin-top: 15px; margin-bottom: 10px;"><a href="/resources/webinars/unified-billing-multi-campus-sync.html" style="text-decoration: none; color: inherit;">Unified Billing & Multi-Campus Synchronization</a></h4>
-                            <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0 0 20px 0;">This masterclass discusses IT strategies for multi-campus hospital chains to achieve real-time financial consolidation. It details centralized accounting schemas, patient demographic synchronization across remote database instances, and secure multi-branch data replication techniques with zero transaction loss.</p>
+                            <h4 style="font-size: 1.3rem; margin-top: 15px; margin-bottom: 10px;"><a
+                                    href="/resources/webinars/unified-billing-multi-campus-sync.html"
+                                    style="text-decoration: none; color: inherit;">Unified Billing & Multi-Campus
+                                    Synchronization</a></h4>
+                            <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0 0 20px 0;">This
+                                masterclass discusses IT strategies for multi-campus hospital chains to achieve
+                                real-time financial consolidation. It details centralized accounting schemas, patient
+                                demographic synchronization across remote database instances, and secure multi-branch
+                                data replication techniques with zero transaction loss.</p>
                         </div>
                         <div style="border-top: 1px solid #e2e8f0; padding-top: 16px;">
                             <div class="speaker-profile">
@@ -505,15 +726,26 @@
                 </div>
 
                 <div class="past-card" style="padding: 0; overflow: hidden;">
-                    <a href="/resources/webinars/modern-ot-scheduling-tackling-cancellations.html"><img src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;" alt="Modern OT Scheduling: Tackling Cancellations"></a>
+                    <a href="/resources/webinars/modern-ot-scheduling-tackling-cancellations.html"><img
+                            src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;"
+                            alt="Modern OT Scheduling: Tackling Cancellations"></a>
                     <div class="past-content">
                         <div>
                             <div class="past-meta">
-                                <span class="upcoming-tag" style="background: rgba(15, 23, 42, 0.05); color: #334155; border-color: rgba(15, 23, 42, 0.1); margin-bottom: 0;">Product Tour</span>
+                                <span class="upcoming-tag"
+                                    style="background: rgba(15, 23, 42, 0.05); color: #334155; border-color: rgba(15, 23, 42, 0.1); margin-bottom: 0;">Product
+                                    Tour</span>
                                 <span style="font-weight: 500; font-size: 0.85rem;">Duration: 35 mins</span>
                             </div>
-                            <h4 style="font-size: 1.3rem; margin-top: 15px; margin-bottom: 10px;"><a href="/resources/webinars/modern-ot-scheduling-tackling-cancellations.html" style="text-decoration: none; color: inherit;">Modern OT Scheduling: Tackling Cancellations</a></h4>
-                            <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0 0 20px 0;">A clinical operations roundtable addressing the top causes of scheduled surgery dropouts in Indian hospitals. Highlights include electronic booking checks for anesthesiology clearance, automated OT stock alerts, and patient communication templates to reduce last-minute cancellations by up to 30%.</p>
+                            <h4 style="font-size: 1.3rem; margin-top: 15px; margin-bottom: 10px;"><a
+                                    href="/resources/webinars/modern-ot-scheduling-tackling-cancellations.html"
+                                    style="text-decoration: none; color: inherit;">Modern OT Scheduling: Tackling
+                                    Cancellations</a></h4>
+                            <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0 0 20px 0;">A
+                                clinical operations roundtable addressing the top causes of scheduled surgery dropouts
+                                in Indian hospitals. Highlights include electronic booking checks for anesthesiology
+                                clearance, automated OT stock alerts, and patient communication templates to reduce
+                                last-minute cancellations by up to 30%.</p>
                         </div>
                         <div style="border-top: 1px solid #e2e8f0; padding-top: 16px;">
                             <div class="speaker-profile">
@@ -528,15 +760,26 @@
                 </div>
 
                 <div class="past-card" style="padding: 0; overflow: hidden;">
-                    <a href="/resources/webinars/abdm-milestone-3-integration-guide.html"><img src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;" alt="ABDM Milestone 3 (M3) Integration Guide"></a>
+                    <a href="/resources/webinars/abdm-milestone-3-integration-guide.html"><img
+                            src="/images/podcast/Iniyan.jpg" style="width: 100%; height: auto; display: block;"
+                            alt="ABDM Milestone 3 (M3) Integration Guide"></a>
                     <div class="past-content">
                         <div>
                             <div class="past-meta">
-                                <span class="upcoming-tag" style="background: rgba(15, 23, 42, 0.05); color: #334155; border-color: rgba(15, 23, 42, 0.1); margin-bottom: 0;">Panel Discussion</span>
+                                <span class="upcoming-tag"
+                                    style="background: rgba(15, 23, 42, 0.05); color: #334155; border-color: rgba(15, 23, 42, 0.1); margin-bottom: 0;">Panel
+                                    Discussion</span>
                                 <span style="font-weight: 500; font-size: 0.85rem;">Duration: 50 mins</span>
                             </div>
-                            <h4 style="font-size: 1.3rem; margin-top: 15px; margin-bottom: 10px;"><a href="/resources/webinars/abdm-milestone-3-integration-guide.html" style="text-decoration: none; color: inherit;">ABDM Milestone 3 (M3) Integration Guide</a></h4>
-                            <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0 0 20px 0;">An executive guide outlining standard specifications for Ayushman Bharat Digital Mission (ABDM) Milestone 3 compliance. Includes details on linking patient clinical histories, EMR uploads, consent management modules, and security compliance for health records under the DPDP Act.</p>
+                            <h4 style="font-size: 1.3rem; margin-top: 15px; margin-bottom: 10px;"><a
+                                    href="/resources/webinars/abdm-milestone-3-integration-guide.html"
+                                    style="text-decoration: none; color: inherit;">ABDM Milestone 3 (M3) Integration
+                                    Guide</a></h4>
+                            <p style="font-size: 0.92rem; color: #475569; line-height: 1.65; margin: 0 0 20px 0;">An
+                                executive guide outlining standard specifications for Ayushman Bharat Digital Mission
+                                (ABDM) Milestone 3 compliance. Includes details on linking patient clinical histories,
+                                EMR uploads, consent management modules, and security compliance for health records
+                                under the DPDP Act.</p>
                         </div>
                         <div style="border-top: 1px solid #e2e8f0; padding-top: 16px;">
                             <div class="speaker-profile">
@@ -561,4 +804,5 @@
     <script src="/js/components/demo-modal.js"></script>
     <script src="/js/app.js" defer></script>
 </body>
+
 </html>
