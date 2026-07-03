@@ -8473,6 +8473,13 @@ p {
   margin: 0 auto 16px;
   border: 2px solid #ffffff;
   box-shadow: var(--zd-shadow-sm, 0 2px 4px rgba(0, 0, 0, 0.05));
+  overflow: hidden;
+}
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .ta-blue {
