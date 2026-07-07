@@ -37,32 +37,41 @@
     const idToggle = document.getElementById('mobile-toggle');
     const idMenu = document.getElementById('mobile-menu');
     const idOverlay = document.getElementById('mobile-overlay');
-    const solutionsToggle = document.getElementById('solutions-toggle');
-    const solutionsDropdown = document.getElementById('solutions-dropdown');
+      const solutionsToggle = document.getElementById('solutions-toggle');
+      const solutionsDropdown = document.getElementById('solutions-dropdown');
+      const servicesToggle = document.getElementById('services-toggle');
+      const servicesDropdown = document.getElementById('services-dropdown');
 
-    if (idToggle && idMenu) {
-      const setMenuOpen = (isOpen) => {
-        idToggle.classList.toggle('active', isOpen);
-        idMenu.classList.toggle('active', isOpen);
-        if (idOverlay) idOverlay.classList.toggle('active', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-        idToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      };
+      if (idToggle && idMenu) {
+        const setMenuOpen = (isOpen) => {
+          idToggle.classList.toggle('active', isOpen);
+          idMenu.classList.toggle('active', isOpen);
+          if (idOverlay) idOverlay.classList.toggle('active', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+          idToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        };
 
-      idToggle.addEventListener('click', () => {
-        setMenuOpen(!idMenu.classList.contains('active'));
-      });
-
-      if (idOverlay) {
-        idOverlay.addEventListener('click', () => setMenuOpen(false));
-      }
-
-      if (solutionsToggle && solutionsDropdown) {
-        solutionsToggle.addEventListener('click', () => {
-          solutionsToggle.classList.toggle('active');
-          solutionsDropdown.classList.toggle('active');
+        idToggle.addEventListener('click', () => {
+          setMenuOpen(!idMenu.classList.contains('active'));
         });
-      }
+
+        if (idOverlay) {
+          idOverlay.addEventListener('click', () => setMenuOpen(false));
+        }
+
+        if (solutionsToggle && solutionsDropdown) {
+          solutionsToggle.addEventListener('click', () => {
+            solutionsToggle.classList.toggle('active');
+            solutionsDropdown.classList.toggle('active');
+          });
+        }
+        
+        if (servicesToggle && servicesDropdown) {
+          servicesToggle.addEventListener('click', () => {
+            servicesToggle.classList.toggle('active');
+            servicesDropdown.classList.toggle('active');
+          });
+        }
 
       idMenu.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => setMenuOpen(false));

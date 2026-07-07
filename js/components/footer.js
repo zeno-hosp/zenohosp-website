@@ -33,6 +33,7 @@ class ZenoFooter extends HTMLElement {
           <h4>Company</h4>
           <ul>
             <li><a href="/about-us/index.html">About Us</a></li>
+            <li><a href="/services/index.html">Services</a></li>
             <li><a href="/careers/index.html">Careers</a></li>
             <li><a href="/blog/index.html">Blog</a></li>
             <li><a href="/contact-us/index.html">Contact Us</a></li>

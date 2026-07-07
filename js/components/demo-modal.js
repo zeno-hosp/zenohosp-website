@@ -16,6 +16,7 @@ class DemoModal extends HTMLElement {
             <p>Tell us about your hospital and we'll personalise the demo for you.</p>
 
             <form action="https://formspree.io/f/xwvjzvnd" method="POST" style="margin-top: 24px;">
+              <input type="hidden" name="page_path" id="modal-page-path" value="">
               <div class="form-grid">
                 <div class="form-group">
                   <label for="modal-firstName">First Name *</label>
@@ -61,6 +62,13 @@ class DemoModal extends HTMLElement {
                     <option value="lab">Lab — LIS & analyser integration</option>
                     <option value="people">People — HR, roster & payroll</option>
                     <option value="asset">Asset — Equipment lifecycle</option>
+                    <optgroup label="Services">
+                      <option value="website">Hospital Websites</option>
+                      <option value="custom-software">Hospital Custom Software</option>
+                      <option value="social-media">Social Media Management</option>
+                      <option value="advertising">Advertising</option>
+                      <option value="voimai">Voim.ai Voice Agent</option>
+                    </optgroup>
                   </select>
                 </div>
               </div>
@@ -72,6 +80,7 @@ class DemoModal extends HTMLElement {
                 <span>No commitment required</span>
                 <span>No spam, ever</span>
               </div>
+              <div class="form-error-message" style="color:#dc2626; font-size:0.9rem; margin-top:12px; display:none;"></div>
             </form>
           </div>
         </div>
@@ -82,6 +91,35 @@ class DemoModal extends HTMLElement {
     const overlay = this.querySelector('.demo-modal-overlay');
     const closeBtn = this.querySelector('.demo-modal-close');
     const modalContent = this.querySelector('.demo-modal-content');
+    const form = this.querySelector('form');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const errorEl = form.querySelector('.form-error-message');
+    const originalBtnText = submitBtn.textContent;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      errorEl.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then((response) => {
+        if (response.ok) {
+          sessionStorage.setItem('zeno_lead_submitted', '1');
+          window.location.href = '/thank-you/index.html?source=demo_modal';
+        } else {
+          throw new Error('Submission failed');
+        }
+      }).catch(() => {
+        errorEl.textContent = 'Something went wrong sending your request. Please try again, or reach us directly at hi@zenohosp.com / +91-8056159395.';
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      });
+    });
 
     closeBtn.addEventListener('click', () => this.close());
     
@@ -106,6 +144,31 @@ class DemoModal extends HTMLElement {
       overlay.style.display = 'flex';
       // Prevent body scrolling
       document.body.style.overflow = 'hidden';
+      
+      // Record which page the demo request originated from
+      const pagePathField = this.querySelector('#modal-page-path');
+      if (pagePathField) {
+        pagePathField.value = window.location.pathname;
+      }
+
+      // Auto-select based on URL
+      const interestSelect = this.querySelector('#modal-interest');
+      if (interestSelect) {
+        const path = window.location.pathname;
+        if (path.includes('/apps/hms')) interestSelect.value = 'hms';
+        else if (path.includes('/apps/ot-room')) interestSelect.value = 'ot';
+        else if (path.includes('/apps/pharmacy')) interestSelect.value = 'pharmacy';
+        else if (path.includes('/apps/inventory')) interestSelect.value = 'inventory';
+        else if (path.includes('/apps/finance')) interestSelect.value = 'finance';
+        else if (path.includes('/apps/lab')) interestSelect.value = 'lab';
+        else if (path.includes('/apps/people')) interestSelect.value = 'people';
+        else if (path.includes('/apps/asset')) interestSelect.value = 'asset';
+        else if (path.includes('/services/digital-presence') || path.includes('/services/websites')) interestSelect.value = 'website';
+        else if (path.includes('/services/custom-software')) interestSelect.value = 'custom-software';
+        else if (path.includes('/services/social-media')) interestSelect.value = 'social-media';
+        else if (path.includes('/services/advertising')) interestSelect.value = 'advertising';
+        else if (path.includes('/services/voimai')) interestSelect.value = 'voimai';
+      }
     }
   }
 
