@@ -3,12 +3,17 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ"></script>
-  <script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-27WDP0T7BZ');
+    if (/(^|\.)zenohosp\.com$/.test(location.hostname)) {
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ';
+      document.head.appendChild(gtagScript);
+      gtag('js', new Date());
+      gtag('config', 'G-27WDP0T7BZ');
+    }
   </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -516,7 +521,7 @@
             </div>
             <div class="res-grid-3">
                 <div class="webinar-card">
-                    <div class="webinar-thumb" style="background: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600&q=80') center/cover;">
+                    <div class="webinar-thumb" style="background: url('/images/webinar-billing.png') center/cover;">
                         <div class="play-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg></div>
                     </div>
                     <div class="webinar-content">
@@ -528,7 +533,7 @@
                     </div>
                 </div>
                 <div class="webinar-card">
-                    <div class="webinar-thumb" style="background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80') center/cover;">
+                    <div class="webinar-thumb" style="background: url('/images/webinar-pharmacy.png') center/cover;">
                         <div class="play-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg></div>
                     </div>
                     <div class="webinar-content">
@@ -540,7 +545,7 @@
                     </div>
                 </div>
                 <div class="webinar-card">
-                    <div class="webinar-thumb" style="background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80') center/cover;">
+                    <div class="webinar-thumb" style="background: url('/images/webinar-infrastructure.png') center/cover;">
                         <div class="play-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg></div>
                     </div>
                     <div class="webinar-content">
