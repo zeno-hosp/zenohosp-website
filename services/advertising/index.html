@@ -149,6 +149,27 @@
       "@type": "Answer",
       "text": "While we cannot legally guarantee specific medical outcomes, our performance marketing strategies guarantee highly targeted impressions and clicks from patients actively searching for your specific treatments in your precise locality. We measure success by actual appointments booked."
     }
+  }, {
+    "@type": "Question",
+    "name": "How much should we budget for hospital advertising?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most single-specialty clinics see meaningful results starting at ₹30,000-50,000/month in ad spend. Multi-specialty hospitals covering several service lines typically need ₹75,000+ to get enough data to optimize properly. We recommend a specific number after a free audit, based on local competition and target procedures."
+    }
+  }, {
+    "@type": "Question",
+    "name": "How long until we see results?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Google Search and Local Service Ads can start driving calls within the first week of launch. Meta and YouTube campaigns typically need 3-4 weeks of data before they can be optimized meaningfully. We report progress weekly for the first month."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Do you also create the ad creative and videos?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, through our Social Media Management service, delivered with our partner Zesignworks, we can shoot and edit the photo and video creative your campaigns need."
+    }
   }]
 }
 </script>
@@ -170,7 +191,6 @@
       --ad-card: #0a0f25;
       --ad-blue: #3b82f6;
       --ad-purple: #8b5cf6;
-      --ad-pink: #ec4899;
       --glass-bg: rgba(10, 15, 37, 0.6);
       --glass-border: rgba(255, 255, 255, 0.05);
     }
@@ -232,8 +252,9 @@
       line-height: 1.1;
     }
     .text-gradient {
-      background: linear-gradient(135deg, var(--ad-blue), var(--ad-purple), var(--ad-pink));
+      background: linear-gradient(135deg, var(--ad-blue), var(--ad-purple));
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .ad-hero p {
@@ -244,33 +265,17 @@
       max-width: 500px;
     }
 
-    /* Glass Mockup */
+    /* Hero panel */
     .glass-dashboard {
       background: var(--glass-bg);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--glass-border);
       border-radius: 24px;
-      padding: 32px;
+      padding: 36px;
       box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
       position: relative;
-      transform: perspective(1000px) rotateY(-5deg);
-      transition: transform 0.5s ease;
     }
-    .glass-dashboard:hover {
-      transform: perspective(1000px) rotateY(0deg);
-    }
-    .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
-    .dash-title { font-weight: 700; font-size: 1.2rem; }
-    .dash-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
-    .metric-card { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
-    .metric-val { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
-    .metric-val.green { color: #10b981; }
-    .metric-label { font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
-    
-    .chart-bar { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); margin-bottom: 12px; overflow: hidden; }
-    .chart-fill { height: 100%; background: linear-gradient(90deg, var(--ad-blue), var(--ad-purple)); width: 75%; border-radius: 4px; }
-    .chart-fill.secondary { background: linear-gradient(90deg, var(--ad-pink), var(--ad-purple)); width: 45%; }
 
     /* Ads Grid Section */
     .ads-section {
@@ -335,6 +340,50 @@
     .ad-card h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; position: relative; }
     .ad-card p { color: #94a3b8; line-height: 1.6; position: relative; }
 
+    /* Process Section */
+    .process-flow { max-width: 780px; margin: 0 auto; }
+    .process-step { display: flex; gap: 28px; margin-bottom: 40px; position: relative; }
+    .process-step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 44px;
+      bottom: -16px;
+      width: 2px;
+      background: var(--glass-border);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ad-blue), var(--ad-purple));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .step-text h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: #fff; }
+    .step-text p { color: #94a3b8; line-height: 1.6; }
+
+    /* Why ZenoHosp Grid */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .why-card { background: var(--ad-card); border: 1px solid var(--glass-border); border-radius: 20px; padding: 36px; }
+    .why-card .why-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.1); color: var(--ad-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .why-card h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .why-card p { color: #94a3b8; line-height: 1.6; }
+
+    /* Hero panel (replaces fabricated live dashboard mockup) */
+    .hero-panel-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; }
+    .hero-panel-list { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 14px; }
+    .hero-panel-list li { display: flex; align-items: flex-start; gap: 10px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.4; }
+    .hero-panel-list li svg { flex-shrink: 0; margin-top: 2px; color: #10b981; }
+    .hero-panel-footer { border-top: 1px solid var(--glass-border); padding-top: 20px; }
+    .hero-panel-stat strong { display: block; font-size: 2rem; font-weight: 800; background: linear-gradient(90deg, var(--ad-blue), var(--ad-purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-panel-stat span { font-size: 0.85rem; color: #64748b; }
+
     /* Pain Points */
     .pain-point-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
     .pain-card { 
@@ -385,7 +434,7 @@
     }
 
     .cta-banner {
-      background: linear-gradient(135deg, var(--ad-blue), var(--ad-purple), var(--ad-pink));
+      background: linear-gradient(135deg, var(--ad-blue), var(--ad-purple));
       padding: 100px 0;
       text-align: center;
       color: #fff;
@@ -400,11 +449,13 @@
     @media (max-width: 1024px) {
       .ad-hero-grid { grid-template-columns: 1fr; text-align: center; }
       .ad-hero p { margin: 0 auto 40px; }
-      .ads-grid, .pain-point-grid { grid-template-columns: repeat(2, 1fr); }
+      .ads-grid, .pain-point-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 640px) {
-      .ads-grid, .pain-point-grid { grid-template-columns: 1fr; }
+      .ads-grid, .pain-point-grid, .why-grid { grid-template-columns: 1fr; }
       .ad-hero h1 { font-size: 3rem; }
+      .process-step { flex-direction: column; gap: 16px; }
+      .process-step:not(:last-child)::before { display: none; }
     }
   </style>
 
@@ -610,6 +661,7 @@
 
 
   <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
   <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu">
     <ul>
       <li>
@@ -619,6 +671,70 @@
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </div>
+        <div class="mobile-dropdown" id="solutions-dropdown">
+          <a href="/apps/hms/index.html">HMS</a>
+          <a href="/apps/inventory/index.html">Inventory</a>
+          <a href="/apps/asset/index.html">Asset</a>
+          <a href="/apps/ot-room/index.html">OT Room</a>
+          <a href="/apps/finance/index.html">Finance</a>
+          <a href="/apps/pharmacy/index.html">Pharmacy</a>
+          <a href="/apps/lab/index.html">Lab</a>
+          <a href="/apps/people/index.html">People</a>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown-label" id="services-toggle">
+          Services
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="mobile-dropdown" id="services-dropdown">
+          <a href="/services/digital-presence/index.html">Hospital Websites</a>
+          <a href="/services/custom-software/index.html">Hospital Custom Software</a>
+          <a href="/services/social-media/index.html">Social Media Management</a>
+          <a href="/services/advertising/index.html">Advertising</a>
+          <a href="/services/voimai/index.html">Voim.ai</a>
+        </div>
+      </li>
+      <li><a href="/solutions/index.html">Solutions</a></li>
+      <li><a href="/customers/index.html">Customers</a></li>
+      <li><a href="/resources/index.html">Resources</a></li>
+      <li><a href="/pricing/index.html">Pricing</a></li>
+    </ul>
+  </div>
+        <div class="mobile-dropdown" id="solutions-dropdown">
+          <a href="/apps/hms/index.html">HMS</a>
+          <a href="/apps/inventory/index.html">Inventory</a>
+          <a href="/apps/asset/index.html">Asset</a>
+          <a href="/apps/ot-room/index.html">OT Room</a>
+          <a href="/apps/finance/index.html">Finance</a>
+          <a href="/apps/pharmacy/index.html">Pharmacy</a>
+          <a href="/apps/lab/index.html">Lab</a>
+          <a href="/apps/people/index.html">People</a>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown-label" id="services-toggle">
+          Services
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="mobile-dropdown" id="services-dropdown">
+          <a href="/services/digital-presence/index.html">Hospital Websites</a>
+          <a href="/services/custom-software/index.html">Hospital Custom Software</a>
+          <a href="/services/social-media/index.html">Social Media Management</a>
+          <a href="/services/advertising/index.html">Advertising</a>
+          <a href="/services/voimai/index.html">Voim.ai</a>
+        </div>
+      </li>
+      <li><a href="/solutions/index.html">Solutions</a></li>
+      <li><a href="/customers/index.html">Customers</a></li>
+      <li><a href="/resources/index.html">Resources</a></li>
+      <li><a href="/pricing/index.html">Pricing</a></li>
+    </ul>
+  </div>
         <div class="mobile-dropdown" id="solutions-dropdown">
           <a href="/apps/hms/index.html">HMS</a>
           <a href="/apps/inventory/index.html">Inventory</a>
@@ -664,25 +780,18 @@
         </div>
         
         <div class="glass-dashboard">
-          <div class="dash-header">
-            <div class="dash-title">Campaign Performance</div>
-            <div style="background: rgba(16,185,129,0.1); color: #10b981; padding: 4px 12px; border-radius: 100px; font-size: 0.8rem; font-weight: 700;">LIVE</div>
-          </div>
-          <div class="dash-metrics">
-            <div class="metric-card">
-              <div class="metric-val">+342</div>
-              <div class="metric-label">OPD Walk-ins</div>
+          <div class="hero-panel-title">Every campaign includes</div>
+          <ul class="hero-panel-list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Certified healthcare ad account setup</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> DPDP-safe landing pages with call tracking</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Weekly spend review, monthly plain-English report</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> No lock-in contracts — cancel with 30 days' notice</li>
+          </ul>
+          <div class="hero-panel-footer">
+            <div class="hero-panel-stat">
+              <strong>30–50%</strong>
+              <span>Typical reduction in patient acquisition cost once campaigns are optimized</span>
             </div>
-            <div class="metric-card">
-              <div class="metric-val green">-45%</div>
-              <div class="metric-label">Patient CAC</div>
-            </div>
-          </div>
-          <div>
-            <div class="metric-label" style="margin-bottom: 12px;">Search Ads Traffic</div>
-            <div class="chart-bar"><div class="chart-fill"></div></div>
-            <div class="metric-label" style="margin-bottom: 12px; margin-top: 24px;">Meta Ads Retargeting</div>
-            <div class="chart-bar"><div class="chart-fill secondary"></div></div>
           </div>
         </div>
       </div>
@@ -732,6 +841,73 @@
           <div class="ad-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
           <h3>A/B Testing & Optimization</h3>
           <p>Continuous ad creative testing, bidding strategy optimization, and audience refinement to maximize every rupee spent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="ads-section" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-title">
+        <h2>How We Get You From Zero to Booked</h2>
+        <p>A structured, compliance-first process built for healthcare advertising — not a generic marketing playbook copied from another industry.</p>
+      </div>
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-text">
+            <h3>Free Audit & Compliance Check</h3>
+            <p>We review your current ad accounts (or lack of one), specialty mix, and service-line margins to find where ad spend will actually move the needle — and flag anything that risks a Google or Meta suspension before it becomes a problem.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-text">
+            <h3>Strategy, Landing Pages & Tracking</h3>
+            <p>We build or fix landing pages per specialty, wire up call and form tracking on every number, and map a channel mix — Search, Meta, YouTube, Local Service Ads — matched to your actual budget.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-text">
+            <h3>Launch Under a Healthcare-Safe Structure</h3>
+            <p>Campaigns go live using account structures built to survive Google and Meta's medical advertiser policies, so you don't wake up to a suspended ad account mid-month.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-text">
+            <h3>Weekly Optimization, Monthly Reporting</h3>
+            <p>We review cost-per-booking weekly, cut underperforming ads fast, and send a plain-English report every month tied to actual OPD walk-ins — not just clicks and impressions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why ZenoHosp Section -->
+  <section class="ads-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why a Hospital Software Company Runs Better Ads</h2>
+        <p>We're not a general marketing agency that added "healthcare" as a vertical. Hospital operations is the only thing we do.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg></div>
+          <h3>We already speak hospital ops</h3>
+          <p>We build the HMS running OPD queues, billing, and EMR for 75+ hospitals across India — so we know which service lines are actually worth advertising, not just which get the cheapest clicks.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>One team, not five vendors</h3>
+          <p>Your ads, landing pages, and lead data can plug directly into the same ZenoHosp stack we already run for you — no handoff gaps between marketing and your front desk.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Compliance built in, not bolted on</h3>
+          <p>Every landing page and ad account is structured around DPDP Act requirements and Google/Meta's healthcare advertiser policies from day one — the same compliance bar we hold our own HMS to.</p>
         </div>
       </div>
     </div>
@@ -787,6 +963,24 @@
             While we cannot legally guarantee specific medical outcomes, our performance marketing strategies guarantee highly targeted impressions and clicks from patients actively searching for your specific treatments in your precise locality. We measure success by actual appointments booked.
           </div>
         </details>
+        <details>
+          <summary>How much should we budget for hospital advertising?</summary>
+          <div class="faq-content">
+            Most single-specialty clinics see meaningful results starting at ₹30,000–50,000/month in ad spend. Multi-specialty hospitals covering several service lines typically need ₹75,000+ to get enough data to optimize properly. We'll recommend a specific number after the free audit, based on your local competition and target procedures — not a one-size-fits-all package.
+          </div>
+        </details>
+        <details>
+          <summary>How long until we see results?</summary>
+          <div class="faq-content">
+            Google Search and Local Service Ads can start driving calls within the first week of launch, since they capture patients already searching for care. Meta and YouTube campaigns are more about building awareness and typically need 3–4 weeks of data before we can optimize them meaningfully. We report progress weekly for the first month so you're never wondering what's happening with your spend.
+          </div>
+        </details>
+        <details>
+          <summary>Do you also create the ad creative and videos?</summary>
+          <div class="faq-content">
+            Yes. Through our <a href="/services/social-media/index.html" style="color: #93c5fd;">Social Media Management</a> service, delivered with our partner Zesignworks, we can shoot and edit the photo and video creative your campaigns need — so you're not scrambling to find content between ad launches.
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -794,9 +988,9 @@
   <!-- CTA Banner -->
   <section class="cta-section cta-banner">
     <div class="container">
-      <h2>Ready to Dominate Local Searches?</h2>
-      <p>Partner with the only digital agency built exclusively for Indian hospitals.</p>
-      <a href="/contact-us/index.html" class="btn">Get a Free Marketing Audit</a>
+      <h2>Ready to Fill Your OPD Calendar?</h2>
+      <p>Get a free campaign audit from a team that already understands hospital operations, not just ad platforms.</p>
+      <a href="/contact-us/index.html" class="btn">Get My Free Ad Audit</a>
     </div>
   </section>
 

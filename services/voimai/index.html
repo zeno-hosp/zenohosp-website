@@ -583,6 +583,214 @@
 
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  /* Flowchart & Multilingual Styles */
+  .flowchart-section {
+    padding: 100px 0;
+    background: #0f172a;
+    color: #fff;
+    overflow: hidden;
+  }
+  .flowchart-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .flowchart-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  .flowchart-header p {
+    color: #94a3b8;
+    font-size: 1.15rem;
+  }
+  
+  .flow-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .flow-node {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    width: 320px;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  
+  .flow-node.primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+  }
+  
+  .flow-node.urgent {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    border: none;
+  }
+  
+  .flow-node.standard {
+    background: linear-gradient(135deg, #10b981, #047857);
+    border: none;
+  }
+  
+  .flow-node h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .flow-node p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  
+  .flow-split {
+    display: flex;
+    gap: 80px;
+    margin-top: 60px;
+    position: relative;
+  }
+  
+  /* Connecting lines */
+  .flow-container::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    width: 2px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+  }
+  
+  .flow-split::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 320px);
+    height: 2px;
+    background: rgba(255,255,255,0.2);
+  }
+  
+  .flow-split::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 160px;
+    width: 2px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+  }
+  
+  .flow-split-right-line {
+    position: absolute;
+    top: -60px;
+    right: 160px;
+    width: 2px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+  }
+  
+  /* Languages Marquee */
+  .languages-section {
+    padding: 100px 0;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  
+  .lang-grid {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: langScroll 30s linear infinite;
+    margin-top: 48px;
+  }
+  
+  @keyframes langScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50% - 8px)); }
+  }
+  
+  .lang-badge {
+    padding: 24px 40px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .lang-badge span {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+  
+  /* Outbound Calling */
+  .outbound-section {
+    padding: 100px 0;
+    background: #f8fafc;
+  }
+  
+  .outbound-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+  
+  .outbound-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  }
+  
+  .outbound-card h3 {
+    font-size: 1.25rem;
+    margin: 16px 0 8px;
+    color: #0f172a;
+  }
+  
+  .outbound-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .flow-split {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .flow-split::before, .flow-split::after, .flow-split-right-line {
+      display: none;
+    }
+    .outbound-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
 </head>
 
 <body>
@@ -785,6 +993,7 @@
 
 
   <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
   <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu">
     <ul>
       <li>
@@ -794,6 +1003,70 @@
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </div>
+        <div class="mobile-dropdown" id="solutions-dropdown">
+          <a href="/apps/hms/index.html">HMS</a>
+          <a href="/apps/inventory/index.html">Inventory</a>
+          <a href="/apps/asset/index.html">Asset</a>
+          <a href="/apps/ot-room/index.html">OT Room</a>
+          <a href="/apps/finance/index.html">Finance</a>
+          <a href="/apps/pharmacy/index.html">Pharmacy</a>
+          <a href="/apps/lab/index.html">Lab</a>
+          <a href="/apps/people/index.html">People</a>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown-label" id="services-toggle">
+          Services
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="mobile-dropdown" id="services-dropdown">
+          <a href="/services/digital-presence/index.html">Hospital Websites</a>
+          <a href="/services/custom-software/index.html">Hospital Custom Software</a>
+          <a href="/services/social-media/index.html">Social Media Management</a>
+          <a href="/services/advertising/index.html">Advertising</a>
+          <a href="/services/voimai/index.html">Voim.ai</a>
+        </div>
+      </li>
+      <li><a href="/solutions/index.html">Solutions</a></li>
+      <li><a href="/customers/index.html">Customers</a></li>
+      <li><a href="/resources/index.html">Resources</a></li>
+      <li><a href="/pricing/index.html">Pricing</a></li>
+    </ul>
+  </div>
+        <div class="mobile-dropdown" id="solutions-dropdown">
+          <a href="/apps/hms/index.html">HMS</a>
+          <a href="/apps/inventory/index.html">Inventory</a>
+          <a href="/apps/asset/index.html">Asset</a>
+          <a href="/apps/ot-room/index.html">OT Room</a>
+          <a href="/apps/finance/index.html">Finance</a>
+          <a href="/apps/pharmacy/index.html">Pharmacy</a>
+          <a href="/apps/lab/index.html">Lab</a>
+          <a href="/apps/people/index.html">People</a>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown-label" id="services-toggle">
+          Services
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="mobile-dropdown" id="services-dropdown">
+          <a href="/services/digital-presence/index.html">Hospital Websites</a>
+          <a href="/services/custom-software/index.html">Hospital Custom Software</a>
+          <a href="/services/social-media/index.html">Social Media Management</a>
+          <a href="/services/advertising/index.html">Advertising</a>
+          <a href="/services/voimai/index.html">Voim.ai</a>
+        </div>
+      </li>
+      <li><a href="/solutions/index.html">Solutions</a></li>
+      <li><a href="/customers/index.html">Customers</a></li>
+      <li><a href="/resources/index.html">Resources</a></li>
+      <li><a href="/pricing/index.html">Pricing</a></li>
+    </ul>
+  </div>
         <div class="mobile-dropdown" id="solutions-dropdown">
           <a href="/apps/hms/index.html">HMS</a>
           <a href="/apps/inventory/index.html">Inventory</a>
@@ -1134,6 +1407,116 @@
       </div>
     </div>
   </section>
+
+  
+  <!-- Flowchart Section -->
+  <section class="flowchart-section">
+    <div class="container">
+      <div class="flowchart-header">
+        <div style="display:inline-block; padding: 6px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; color: #fff; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 16px;">Intelligent Routing</div>
+        <h2>24/7 Smart Emergency Handling</h2>
+        <p>Voim.ai doesn't just book appointments. It understands medical urgency and routes calls to human doctors when seconds matter.</p>
+      </div>
+      
+      <div class="flow-container">
+        <div class="flow-node primary">
+          <h3>Patient Calls at 2:00 AM</h3>
+          <p>"Hello, Voim.ai speaking. How can I help you?"</p>
+        </div>
+        
+        <div class="flow-split">
+          <div class="flow-split-right-line"></div>
+          
+          <!-- Standard -->
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 100px; font-size: 0.85rem; margin-bottom: 24px;">"I want to book a routine checkup"</div>
+            <div class="flow-node standard">
+              <h3>Books Appointment</h3>
+              <p>AI checks doctor availability, books the slot, and syncs directly into HMS.</p>
+            </div>
+          </div>
+          
+          <!-- Urgent -->
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="background: rgba(239,68,68,0.2); padding: 8px 16px; border-radius: 100px; font-size: 0.85rem; margin-bottom: 24px; color: #fca5a5;">"I am having severe chest pain"</div>
+            <div class="flow-node urgent">
+              <h3>Emergency Routing</h3>
+              <p>AI detects critical intent and immediately bridges the call to the on-call cardiologist's mobile.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Marquee Section -->
+  <section class="languages-section">
+    <div class="container" style="text-align: center;">
+      <h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; margin-bottom: 16px;">Speaks 400+ Languages Natively</h2>
+      <p style="color: #64748b; font-size: 1.15rem;">No more translation barriers. Voim.ai automatically detects the caller's language and replies with native fluency and empathy.</p>
+    </div>
+    
+    <div style="position: relative; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+      <div class="lang-grid">
+        <div class="lang-badge">नमस्ते <span>Hindi</span></div>
+        <div class="lang-badge">வணக்கம் <span>Tamil</span></div>
+        <div class="lang-badge">నమస్కారం <span>Telugu</span></div>
+        <div class="lang-badge">Hello <span>English</span></div>
+        <div class="lang-badge">ನಮಸ್ಕಾರ <span>Kannada</span></div>
+        <div class="lang-badge">നമസ്കാരം <span>Malayalam</span></div>
+        <div class="lang-badge">مرحباً <span>Arabic</span></div>
+        <div class="lang-badge">Hola <span>Spanish</span></div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="lang-badge">नमस्ते <span>Hindi</span></div>
+        <div class="lang-badge">வணக்கம் <span>Tamil</span></div>
+        <div class="lang-badge">నమస్కారం <span>Telugu</span></div>
+        <div class="lang-badge">Hello <span>English</span></div>
+        <div class="lang-badge">ನಮಸ್ಕಾರ <span>Kannada</span></div>
+        <div class="lang-badge">നമസ്കാരം <span>Malayalam</span></div>
+        <div class="lang-badge">مرحباً <span>Arabic</span></div>
+        <div class="lang-badge">Hola <span>Spanish</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outbound Calling Section -->
+  <section class="outbound-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div style="display:inline-block; padding: 6px 16px; background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 100px; color: #2563eb; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 16px;">Proactive Outreach</div>
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; margin-bottom: 16px;">Automated Outbound Calling</h2>
+        <p style="color: #64748b; font-size: 1.15rem;">Stop paying staff to manually call hundreds of patients. Voim.ai can run massive outbound campaigns in minutes.</p>
+      </div>
+      
+      <div class="outbound-grid">
+        <div class="outbound-card">
+          <div class="outbound-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3>Appointment Reminders</h3>
+          <p style="color: #64748b;">Automatically calls patients 24 hours before their visit to confirm, reschedule, or cancel, drastically reducing no-shows.</p>
+        </div>
+        
+        <div class="outbound-card">
+          <div class="outbound-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <h3>Post-Discharge Follow-up</h3>
+          <p style="color: #64748b;">Calls patients 3 days after discharge to check on their recovery, pain levels, and whether they need to speak with a nurse.</p>
+        </div>
+        
+        <div class="outbound-card">
+          <div class="outbound-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3>Medicine Refill Alerts</h3>
+          <p style="color: #64748b;">Proactively contacts chronic care patients when it's time to refill their prescriptions or schedule their next checkup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- FAQ Section -->
   <section class="seo-section alt-bg">
