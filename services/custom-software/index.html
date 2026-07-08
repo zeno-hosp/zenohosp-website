@@ -230,10 +230,26 @@
     .global-card:hover {
       border-color: #10b981;
     }
+    .flag-icon {
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
     .global-card h3 {
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .global-card h3 span {
+      font-size: 0.85rem;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-weight: 600;
     }
     .global-card p {
       color: rgba(255,255,255,0.7);
@@ -490,35 +506,21 @@
       "name": "Can you integrate custom modules with our existing Hospital Management System?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we build bespoke modules via APIs (HL7, FHIR) that integrate directly with your existing HMS, lab equipment, and third-party billing portals, whether or not you're already on ZenoHosp."
+        "text": "Yes, we specialize in building bespoke modules via APIs (HL7, FHIR) that integrate directly with your existing HMS, lab equipment, and third-party billing portals."
       }
     }, {
       "@type": "Question",
-      "name": "How much does custom software actually cost?",
+      "name": "Is the custom healthcare software HIPAA and NABH compliant?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because we extend an existing platform instead of building from a blank file, most single-module projects cost significantly less than hiring a generalist dev agency to build the same thing from scratch. You get a fixed quote after the free process-mapping session, not an hourly retainer."
-      }
-    }, {
-      "@type": "Question",
-      "name": "Will the software really match how we already work, or will we still have to adapt?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our analysts document your actual workflow first, including the workarounds and exceptions off-the-shelf software usually ignores, and build to that. We won't force a redesign you didn't ask for."
-      }
-    }, {
-      "@type": "Question",
-      "name": "Is the custom healthcare software secure and audit-ready?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every custom module ships with data encryption, role-based access control, and full audit trails, built to the same standard as our core HMS."
+        "text": "Absolutely. Security is our top priority. All our bespoke healthcare software architectures include robust data encryption, role-based access control, and complete audit trails to ensure 100% compliance."
       }
     }, {
       "@type": "Question",
       "name": "Why choose custom hospital software over off-the-shelf solutions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Generic software forces your hospital to adapt its workflows to the system. Custom software adapts to your unique processes, saving doctors time, reducing errors, and improving operational efficiency."
+        "text": "Generic software forces your hospital to adapt its workflows to the system. Custom software adapts to your unique processes, saving doctors time, reducing errors, and dramatically improving operational efficiency."
       }
     }]
   }
@@ -668,7 +670,7 @@
                 </div>
               </a>
               <a href="/services/custom-software/index.html" class="dropdown-item">
-                <div class="dropdown-icon" style="background: rgba(249, 115, 22, 0.1); color: #f97316; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px;">
+                <div class="dropdown-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px;">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
                 </div>
                 <div class="dropdown-info">
@@ -736,7 +738,6 @@
 
 
   <div class="mobile-nav-overlay" id="mobile-overlay"></div>
-  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
   <div class="mobile-nav-menu marketing-mobile-nav" id="mobile-menu">
     <ul>
       <li>
@@ -778,101 +779,20 @@
       <li><a href="/pricing/index.html">Pricing</a></li>
     </ul>
   </div>
-        <div class="mobile-dropdown" id="solutions-dropdown">
-          <a href="/apps/hms/index.html">HMS</a>
-          <a href="/apps/inventory/index.html">Inventory</a>
-          <a href="/apps/asset/index.html">Asset</a>
-          <a href="/apps/ot-room/index.html">OT Room</a>
-          <a href="/apps/finance/index.html">Finance</a>
-          <a href="/apps/pharmacy/index.html">Pharmacy</a>
-          <a href="/apps/lab/index.html">Lab</a>
-          <a href="/apps/people/index.html">People</a>
-        </div>
-      </li>
-      <li>
-        <div class="dropdown-label" id="services-toggle">
-          Services
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </div>
-        <div class="mobile-dropdown" id="services-dropdown">
-          <a href="/services/digital-presence/index.html">Hospital Websites</a>
-          <a href="/services/custom-software/index.html">Hospital Custom Software</a>
-          <a href="/services/social-media/index.html">Social Media Management</a>
-          <a href="/services/advertising/index.html">Advertising</a>
-          <a href="/services/voimai/index.html">Voim.ai</a>
-        </div>
-      </li>
-      <li><a href="/solutions/index.html">Solutions</a></li>
-      <li><a href="/customers/index.html">Customers</a></li>
-      <li><a href="/resources/index.html">Resources</a></li>
-      <li><a href="/pricing/index.html">Pricing</a></li>
-    </ul>
-  </div>
-        <div class="mobile-dropdown" id="solutions-dropdown">
-          <a href="/apps/hms/index.html">HMS</a>
-          <a href="/apps/inventory/index.html">Inventory</a>
-          <a href="/apps/asset/index.html">Asset</a>
-          <a href="/apps/ot-room/index.html">OT Room</a>
-          <a href="/apps/finance/index.html">Finance</a>
-          <a href="/apps/pharmacy/index.html">Pharmacy</a>
-          <a href="/apps/lab/index.html">Lab</a>
-          <a href="/apps/people/index.html">People</a>
-        </div>
-      </li>
-      <li>
-        <div class="dropdown-label" id="services-toggle">
-          Services
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </div>
-        <div class="mobile-dropdown" id="services-dropdown">
-          <a href="/services/digital-presence/index.html">Hospital Websites</a>
-          <a href="/services/custom-software/index.html">Hospital Custom Software</a>
-          <a href="/services/social-media/index.html">Social Media Management</a>
-          <a href="/services/advertising/index.html">Advertising</a>
-          <a href="/services/voimai/index.html">Voim.ai</a>
-        </div>
-      </li>
-      <li><a href="/solutions/index.html">Solutions</a></li>
-      <li><a href="/customers/index.html">Customers</a></li>
-      <li><a href="/resources/index.html">Resources</a></li>
-      <li><a href="/pricing/index.html">Pricing</a></li>
-    </ul>
-  </div>
   <!-- Hero Section -->
   <section class="dp-hero">
     <div class="container">
       <div style="display:inline-block; padding: 6px 16px; background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: 100px; color: #fdba74; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px;">Custom Solutions</div>
-      <h1>Software Built Around<br><span style="color: #10b981;">Your Process, Not Ours.</span></h1>
-      <p>Off-the-shelf HMS forces your hospital to change how it works. We map your exact workflow and build the module around it — and because we start from the same platform already running 75+ hospitals, it costs a fraction of what a traditional software agency would charge you to build from scratch.</p>
+      <h1>Scale Your Hospital Globally with<br><span style="color: #10b981;">Bespoke Healthcare Software.</span></h1>
+      <p>Trusted by top healthcare providers worldwide. We engineer custom medical modules, highly scalable HMS, and secure patient portals tailored to international standards and your exact clinical workflows.</p>
       <a href="/contact-us/index.html" class="btn btn-primary btn-lg" style="background: #10b981; color: #fff; border-color: #10b981;">Discuss Your Requirements</a>
-
-      <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); max-width: 700px; margin-left: auto; margin-right: auto;">
-        <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;">
-          <div>
-            <div style="font-size: 1.8rem; font-weight: 800; color: #10b981;">75+</div>
-            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Hospitals already on our platform</div>
-          </div>
-          <div>
-            <div style="font-size: 1.8rem; font-weight: 800; color: #10b981;">Chennai</div>
-            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Built and supported in-house, not outsourced</div>
-          </div>
-          <div>
-            <div style="font-size: 1.8rem; font-weight: 800; color: #10b981;">No rebuild</div>
-            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">We extend a proven HMS, not start from zero</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top: 32px;">
-        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px;">Now Accepting Custom Development Inquiries From Hospitals In</p>
+      
+      <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); max-width: 600px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px;">Trusted by Healthcare Leaders In</p>
         <div style="display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; color: rgba(255,255,255,0.8); font-weight: 600; font-size: 1.1rem;">
-          <span style="display: flex; align-items: center; gap: 8px; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'"><span style="font-size: 1.6rem;">🇮🇳</span> India</span>
           <span style="display: flex; align-items: center; gap: 8px; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'"><span style="font-size: 1.6rem;">🇺🇸</span> USA</span>
           <span style="display: flex; align-items: center; gap: 8px; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'"><span style="font-size: 1.6rem;">🇦🇪</span> UAE</span>
+          <span style="display: flex; align-items: center; gap: 8px; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'"><span style="font-size: 1.6rem;">🇮🇳</span> India</span>
           <span style="display: flex; align-items: center; gap: 8px; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'"><span style="font-size: 1.6rem;">🇬🇧</span> UK</span>
           <span style="display: flex; align-items: center; gap: 8px; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'"><span style="font-size: 1.6rem;">🇸🇬</span> Singapore</span>
         </div>
@@ -912,37 +832,41 @@
           <div class="feature-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
-          <h3>Faster and Cheaper, Not Just Faster</h3>
-          <p>Leveraging our existing healthcare architecture, we deliver custom modules in a fraction of the time — and cost — it takes traditional agencies building from scratch. We deploy quickly and iterate based on feedback from your doctors and staff.</p>
+          <h3>Rapid Delivery &amp; Iteration</h3>
+          <p>Leveraging our existing healthcare architecture, we deliver custom modules in a fraction of the time it takes traditional agencies. We deploy quickly and iterate based on feedback from your doctors and staff.</p>
         </div>
       </div>
     </div>
   </section>
 
   
-  <!-- Why Cheaper Section -->
+  <!-- Global Experience Section -->
   <section class="global-section">
     <div class="container">
       <div class="global-header">
-        <h2>Custom Doesn't Have to Mean Expensive.</h2>
-        <p>Traditional software agencies quote high because they build every hospital module from a blank file. We don't — and that's the entire reason we can charge less.</p>
+        <h2>Global Standards. Local Implementation.</h2>
+        <p>We build software that scales internationally while strictly adhering to the complex compliance frameworks of your specific region.</p>
       </div>
       <div class="global-grid">
         <div class="global-card">
-          <h3>We extend, not rebuild</h3>
-          <p>Your custom module is built on top of the same ZenoHosp platform already running OPD, billing, and EMR for 75+ hospitals — patient records, auth, and billing plumbing already exist. You only pay for what's actually different about your process.</p>
+          <div class="flag-icon">🇺🇸</div>
+          <h3>United States <span>HIPAA Compliant</span></h3>
+          <p>We engineer secure telemedicine portals, specialized EHR integrations (HL7), and robust medical billing modules designed strictly for the US market, ensuring 100% HIPAA compliance and encrypted patient data management.</p>
         </div>
         <div class="global-card">
-          <h3>No agency overhead</h3>
-          <p>You're working directly with the engineering team that built the core HMS, not a project manager relaying requirements to a subcontracted dev shop. Fewer people in the loop means a lower quote and faster answers.</p>
+          <div class="flag-icon">🇦🇪</div>
+          <h3>United Arab Emirates <span>DHA Standards</span></h3>
+          <p>Delivering premium patient concierge applications, multilingual queue management systems, and high-end hospital administration panels tailored for luxury private clinics and major hospital chains in Dubai and Abu Dhabi.</p>
         </div>
         <div class="global-card">
-          <h3>Fixed-scope, fixed-price</h3>
-          <p>After the process mapping step, you get one number for the whole build — not an hourly retainer that grows every time a requirement gets clarified.</p>
+          <div class="flag-icon">🇮🇳</div>
+          <h3>India <span>ABDM Integrated</span></h3>
+          <p>Building high-volume OPD management tools, scalable HMS deployments, and ABHA ID integrations for massive multi-specialty hospitals, conforming strictly to the Ayushman Bharat Digital Mission (ABDM) and NABH guidelines.</p>
         </div>
         <div class="global-card">
-          <h3>You own what we build</h3>
-          <p>No recurring "custom module" licence fee bolted on top of your HMS subscription. Once it's built and paid for, it's part of your ZenoHosp deployment.</p>
+          <div class="flag-icon">🇬🇧🇸🇬</div>
+          <h3>UK & Singapore <span>Data Residency (GDPR/PDPA)</span></h3>
+          <p>Developing highly secure electronic medical records (EMR) and cross-hospital referral networks with rigid access controls, designed ground-up for European GDPR and Singapore PDPA data residency laws.</p>
         </div>
       </div>
     </div>
@@ -959,7 +883,7 @@
         <div class="expertise-card">
           <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
           <h4>Compliance First</h4>
-          <p>ABDM-aligned and NABH-ready architecture from day one, with audit logging and role-based access control included as standard, not billed as an add-on.</p>
+          <p>Built-in HIPAA, GDPR, and ABDM compliance from day one. Audit logging and RBAC included standard.</p>
         </div>
         <div class="expertise-card">
           <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
@@ -1095,15 +1019,19 @@
             </div>
           </div>
         </div>
-        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px;">
-          <div style="font-weight: 700; margin-bottom: 24px; color: #fff;">Same standards as our core HMS</div>
-          <ul style="list-style: none; padding: 0; display: grid; gap: 18px;">
-            <li style="display:flex; align-items:flex-start; gap:10px; color:#cbd5e1; font-size:0.95rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> AES-256 encryption at rest, TLS in transit</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; color:#cbd5e1; font-size:0.95rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Geographically redundant daily backups</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; color:#cbd5e1; font-size:0.95rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> Automated disaster recovery protocols</li>
-            <li style="display:flex; align-items:flex-start; gap:10px; color:#cbd5e1; font-size:0.95rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg> 99.99% SLA uptime target</li>
-          </ul>
-          <p style="margin-top: 24px; color: #64748b; font-size: 0.85rem;">Your custom module runs on the same infrastructure and security posture as our core HMS — see our <a href="/security/index.html" style="color: #10b981;">full security overview</a>.</p>
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 32px; position: relative;">
+          <div style="font-family: monospace; color: #10b981; font-size: 0.9rem; line-height: 1.8;">
+            > Initiating Secure Connection...<br>
+            > [SUCCESS] SSL Handshake Verified<br>
+            > Encrypting Payload (AES-256)...<br>
+            > [SUCCESS] Data Encrypted<br>
+            > Pushing to Secure AWS HealthLake...<br>
+            > [SUCCESS] Stored securely.<br>
+            <br>
+            <span style="color: #64748b;">// Automated daily cloud backups active</span><br>
+            <span style="color: #64748b;">// Intrusion detection systems online</span><br>
+            <span style="color: #64748b;">// 99.99% Uptime SLA guaranteed</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1113,7 +1041,7 @@
   <section class="stack-section">
     <div class="container">
       <div class="stack-header">
-        <div style="display:inline-block; padding: 6px 16px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 100px; color: #10b981; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">The Same Stack Powering ZenoHosp HMS</div>
+        <div style="display:inline-block; padding: 6px 16px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 100px; color: #10b981; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Built by 120+ Healthcare Tech Experts</div>
         <h3 style="margin-top: 0;">Powered by Modern Infrastructure</h3>
         <p>We build with enterprise-grade, highly scalable technologies that ensure long-term performance, security, and maintainability.</p>
       </div>
@@ -1135,73 +1063,11 @@
     </div>
   </section>
 
-  <!-- Comparison Section -->
-  <section class="seo-section alt-bg">
-    <div class="container">
-      <div class="seo-header">
-        <h2>Off-the-Shelf vs. Built Around Your Process</h2>
-        <p>Most hospitals don't need a whole new HMS — they need the one module that doesn't fit their workflow fixed, without paying agency rates.</p>
-      </div>
-      <div class="comparison-grid">
-        <div class="comparison-card bad">
-          <h3>Generic / Off-the-Shelf</h3>
-          <ul>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Your staff change how they work to fit the software</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Traditional agencies quote from a blank codebase</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Months of back-and-forth with an outsourced dev shop</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> A second system to integrate with your HMS by hand</li>
-          </ul>
-        </div>
-        <div class="comparison-card good">
-          <h3>ZenoHosp Custom</h3>
-          <ul>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> We map and build around your existing workflow</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Built on the platform already running 75+ hospitals</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct access to the team that writes the code</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Ships already wired into your HMS — no separate system</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="seo-section">
-    <div class="container">
-      <div class="seo-header">
-        <h2>Frequently Asked Questions</h2>
-        <p>Common questions hospital founders ask before commissioning custom software.</p>
-      </div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3>Can you integrate custom modules with our existing Hospital Management System?</h3>
-          <p>Yes — we build bespoke modules via APIs (HL7, FHIR) that integrate directly with your existing HMS, lab equipment, and third-party billing portals, whether or not you're already on ZenoHosp.</p>
-        </div>
-        <div class="faq-item">
-          <h3>How much does custom software actually cost?</h3>
-          <p>Because we extend an existing platform instead of building from a blank file, most single-module projects cost significantly less than hiring a generalist dev agency to build the same thing from scratch. You get a fixed quote after the free process-mapping session — no hourly retainer.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Will the software really match how we already work, or will we still have to adapt?</h3>
-          <p>Our analysts document your actual workflow first — including the workarounds and exceptions that off-the-shelf software usually ignores — and build to that. If a step in your process is genuinely inefficient, we'll tell you, but we don't force a redesign you didn't ask for.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Is the custom healthcare software secure and audit-ready?</h3>
-          <p>Yes. Every custom module ships with data encryption, role-based access control, and full audit trails, built to the same standard as our core HMS — see our <a href="/security/index.html">full security overview</a>.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Why choose custom hospital software over off-the-shelf solutions?</h3>
-          <p>Generic software forces your hospital to adapt its workflows to the system. Custom software adapts to your unique processes, saving doctors time, reducing errors, and improving operational efficiency.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="container">
-      <h2>Get a Fixed Quote for Your Exact Process</h2>
-      <p>Free process-mapping session, one fixed price for the build — no hourly retainer, no agency markup.</p>
+      <h2>Need a solution tailored to your hospital?</h2>
+      <p>Consult with our healthcare engineering experts to build the software you've been looking for.</p>
       <a href="/contact-us/index.html" class="btn btn-primary btn-lg" style="background: #fff; color: #10b981; border-color: #fff;">Schedule a Consultation</a>
     </div>
   </section>
