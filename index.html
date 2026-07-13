@@ -1244,14 +1244,19 @@
         isZenoMode = cb.checked;
         const section = document.getElementById('iso-hospital');
         const img = document.getElementById('base-map-img');
+        const source = img && img.closest('picture')
+          ? img.closest('picture').querySelector('source[type="image/webp"]')
+          : null;
         if (!isZenoMode) {
           section.classList.remove('zeno-mode');
           section.classList.add('legacy-mode');
           if (img) img.src = "images/iso-hospital-off.jpg";
+          if (source) source.srcset = "images/iso-hospital-off.webp";
         } else {
           section.classList.remove('legacy-mode');
           section.classList.add('zeno-mode');
           if (img) img.src = "images/iso-hospital-on.jpg";
+          if (source) source.srcset = "images/iso-hospital-on.webp";
         }
       }
     </script>
