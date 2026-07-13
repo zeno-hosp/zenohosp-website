@@ -49,6 +49,7 @@ class ZenoFooter extends HTMLElement {
         <div class="footer-links">
           <h4>Compare</h4>
           <ul>
+            <li><a href="/resources/best-hospital-management-software-india-2026.html">Best HMS in India 2026</a></li>
             <li><a href="/compare/zenohosp-vs-adrine/index.html">vs Adrine</a></li>
             <li><a href="/compare/zenohosp-vs-nuvertos/index.html">vs NuvertOS</a></li>
             <li><a href="/compare/zenohosp-vs-ehospital/index.html">vs eHospital</a></li>
@@ -69,8 +70,15 @@ class ZenoFooter extends HTMLElement {
           <ul>
             <li><a href="/help/index.html">Help Center</a></li>
             <li><a href="/help/index.html">Documentation</a></li>
-            <li><a href="#">API Reference</a></li>
             <li><a href="/status/index.html">Status</a></li>
+          </ul>
+          <h4 style="margin-top: 24px;">HMS by City</h4>
+          <ul>
+            <li><a href="/hms-software/mumbai/index.html">Mumbai</a></li>
+            <li><a href="/hms-software/bengaluru/index.html">Bengaluru</a></li>
+            <li><a href="/hms-software/hyderabad/index.html">Hyderabad</a></li>
+            <li><a href="/hms-software/chennai/index.html">Chennai</a></li>
+            <li><a href="/hms-software/coimbatore/index.html">Coimbatore</a></li>
           </ul>
         </div>
       </div>

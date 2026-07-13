@@ -161,11 +161,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://zenohosp.com/blog/post-template.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://zenohosp.com/blog/abdm-compliance-2026.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1012,5 +1007,10 @@
     <loc>https://zenohosp.com/services/voimai/insurance-verification/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zenohosp.com/resources/best-hospital-management-software-india-2026.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

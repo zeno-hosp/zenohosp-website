@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Python (codegen scripts in scripts/)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Vercel
+.vercel
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+
+# Environment
+.env
+.env.local
+.env.*.local
