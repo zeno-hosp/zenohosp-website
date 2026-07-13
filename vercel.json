@@ -4,138 +4,43 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/hms.html",
+      "source": "/hms/",
       "destination": "/apps/hms/",
       "permanent": true
     },
     {
-      "source": "/inventory.html",
+      "source": "/inventory/",
       "destination": "/apps/inventory/",
       "permanent": true
     },
     {
-      "source": "/asset.html",
+      "source": "/asset/",
       "destination": "/apps/asset/",
       "permanent": true
     },
     {
-      "source": "/ot-room.html",
+      "source": "/ot-room/",
       "destination": "/apps/ot-room/",
       "permanent": true
     },
     {
-      "source": "/finance.html",
+      "source": "/finance/",
       "destination": "/apps/finance/",
       "permanent": true
     },
     {
-      "source": "/pharmacy.html",
+      "source": "/pharmacy/",
       "destination": "/apps/pharmacy/",
       "permanent": true
     },
     {
-      "source": "/lab.html",
+      "source": "/lab/",
       "destination": "/apps/lab/",
       "permanent": true
     },
     {
-      "source": "/people.html",
+      "source": "/people/",
       "destination": "/apps/people/",
-      "permanent": true
-    },
-    {
-      "source": "/hms",
-      "destination": "/apps/hms/",
-      "permanent": true
-    },
-    {
-      "source": "/inventory",
-      "destination": "/apps/inventory/",
-      "permanent": true
-    },
-    {
-      "source": "/asset",
-      "destination": "/apps/asset/",
-      "permanent": true
-    },
-    {
-      "source": "/ot-room",
-      "destination": "/apps/ot-room/",
-      "permanent": true
-    },
-    {
-      "source": "/finance",
-      "destination": "/apps/finance/",
-      "permanent": true
-    },
-    {
-      "source": "/pharmacy",
-      "destination": "/apps/pharmacy/",
-      "permanent": true
-    },
-    {
-      "source": "/lab",
-      "destination": "/apps/lab/",
-      "permanent": true
-    },
-    {
-      "source": "/people",
-      "destination": "/apps/people/",
-      "permanent": true
-    },
-    {
-      "source": "/solutions.html",
-      "destination": "/solutions/",
-      "permanent": true
-    },
-    {
-      "source": "/customers.html",
-      "destination": "/customers/",
-      "permanent": true
-    },
-    {
-      "source": "/resources.html",
-      "destination": "/resources/",
-      "permanent": true
-    },
-    {
-      "source": "/about-us.html",
-      "destination": "/about-us/",
-      "permanent": true
-    },
-    {
-      "source": "/contact-us.html",
-      "destination": "/contact-us/",
-      "permanent": true
-    },
-    {
-      "source": "/blog.html",
-      "destination": "/blog/",
-      "permanent": true
-    },
-    {
-      "source": "/partners.html",
-      "destination": "/partners/",
-      "permanent": true
-    },
-    {
-      "source": "/security.html",
-      "destination": "/security/",
-      "permanent": true
-    },
-    {
-      "source": "/services.html",
-      "destination": "/services/",
-      "permanent": true
-    },
-    {
-      "source": "/why-us.html",
-      "destination": "/why-us/",
-      "permanent": true
-    },
-    {
-      "source": "/pricing.html",
-      "destination": "/pricing/",
       "permanent": true
     }
   ],
@@ -143,33 +48,54 @@
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
       ]
     },
     {
       "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
       ]
     },
     {
       "source": "/images/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
       ]
     },
     {
       "source": "/(.*)\\.html",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]
