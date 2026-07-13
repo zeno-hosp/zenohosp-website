@@ -23,7 +23,7 @@ Usage:
 import glob, re, os, sys, html
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
-SITE = "https://zenohosp.com"
+SITE = "https://www.zenohosp.com"
 GENERIC_TITLE = "Hospital Management Software & Healthcare Solutions"
 GENERIC_DESC = "Zenohosp is an advanced Hospital Management System"
 APPLY = "--apply" in sys.argv
@@ -41,7 +41,9 @@ def clean(s):
 
 def canonical_for(rel):
     url = SITE + "/" + rel.replace(os.sep, "/")
-    return url[: -len("index.html")] if url.endswith("/index.html") else url
+    if url.endswith("/index.html"):
+        return url[: -len("index.html")]
+    return url[: -len(".html")] + "/" if url.endswith(".html") else url
 
 
 def app_of(rel):

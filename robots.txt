@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zenohosp.com/sitemap.xml
+Sitemap: https://www.zenohosp.com/sitemap.xml

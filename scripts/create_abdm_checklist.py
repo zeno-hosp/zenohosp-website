@@ -21,7 +21,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(BASE, "resources", "best-hospital-management-software-india-2026.html")
 OUT = os.path.join(BASE, "resources", "abdm-compliance-checklist-2026.html")
 
-URL = "https://zenohosp.com/resources/abdm-compliance-checklist-2026.html"
+URL = "https://www.zenohosp.com/resources/abdm-compliance-checklist-2026/"
 TITLE = "ABDM Compliance Checklist for Indian Hospitals (2026) | ZenoHosp"
 DESC = 'Step-by-step ABDM checklist for Indian hospitals: HFR & HPR registration, Milestones M1-M2-M3, ABHA at the front desk, FHIR records, DHIS incentives.'
 H1 = "ABDM Compliance Checklist for Indian Hospitals (2026)"
@@ -93,14 +93,14 @@ article_schema = {
     "datePublished": "2026-07-13", "dateModified": "2026-07-13",
     "author": {"@type": "Organization", "name": "ZenoHosp"},
     "publisher": {"@type": "Organization", "name": "ZenoHosp",
-                  "logo": {"@type": "ImageObject", "url": "https://zenohosp.com/images/zenohosp.svg"}},
+                  "logo": {"@type": "ImageObject", "url": "https://www.zenohosp.com/images/zenohosp.svg"}},
     "mainEntityOfPage": URL,
 }
 breadcrumb_schema = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zenohosp.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://zenohosp.com/resources/"},
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zenohosp.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://www.zenohosp.com/resources/"},
         {"@type": "ListItem", "position": 3, "name": "ABDM Compliance Checklist 2026", "item": URL},
     ],
 }

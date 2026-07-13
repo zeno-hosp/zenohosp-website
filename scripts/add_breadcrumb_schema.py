@@ -13,7 +13,7 @@ Usage:
 import glob, re, os, sys, json, html
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://zenohosp.com"
+SITE = "https://www.zenohosp.com"
 APPLY = "--apply" in sys.argv
 APP_NAMES = {
     "hms": "HMS", "inventory": "Inventory", "asset": "Asset", "ot-room": "OT Room",
@@ -23,7 +23,9 @@ APP_NAMES = {
 
 def url_for(rel):
     u = SITE + "/" + rel.replace(os.sep, "/")
-    return u[: -len("index.html")] if u.endswith("/index.html") else u
+    if u.endswith("/index.html"):
+        return u[: -len("index.html")]
+    return u[: -len(".html")] + "/" if u.endswith(".html") else u
 
 
 def page_name(h):
