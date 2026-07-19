@@ -706,6 +706,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.zenohosp.com/apps/people/docs/biometric-devices/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.zenohosp.com/apps/people/docs/tax-compliance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

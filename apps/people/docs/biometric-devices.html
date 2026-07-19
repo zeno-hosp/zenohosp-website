@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if (/(^|\.)zenohosp\.com$/.test(location.hostname)) {
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-27WDP0T7BZ';
+      document.head.appendChild(gtagScript);
+      gtag('js', new Date());
+      gtag('config', 'G-27WDP0T7BZ');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biometric Device Integration | ZenoHosp People</title>
+  <meta name="description" content="Connect any fingerprint or face-recognition attendance terminal to ZenoHosp People — direct push, LAN connector agent, or CSV import. Vendor-neutral, works with ZKTeco, eSSL, Matrix and more.">
+  <link rel="canonical" href="https://www.zenohosp.com/apps/people/docs/biometric-devices/">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script>
+    function toggleGroup(el) { el.parentElement.classList.toggle('expanded'); }
+  </script>
+  <meta name="theme-color" content="#111827">
+    <meta name="keywords" content="Zenohosp, ZenoHosp, Biometric Attendance Integration, ZKTeco, eSSL, Hospital HR Software, Hospital Management System, HMS">
+
+    <meta property="og:site_name" content="Zenohosp">
+    <meta property="og:title" content="Biometric Device Integration | ZenoHosp People">
+    <meta property="og:description" content="Connect any biometric attendance terminal to ZenoHosp People — vendor-neutral integration via direct push, connector agent, or CSV import.">
+    <meta property="og:type" content="website">
+
+
+  <!-- Brand Identity & Schema Markup -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ZenoHosp",
+  "alternateName": [
+    "ZenoHosp",
+    "Zenohosp",
+    "Zeno Hosp",
+    "ZenoHosp HMS",
+    "zenohosp.com"
+  ],
+  "url": "https://www.zenohosp.com/",
+  "logo": "https://www.zenohosp.com/images/zenohosp-b.svg",
+  "description": "ZenoHosp is a technology corporation and software developer of cloud-based Hospital Management Software (HMS), EMR, clinic POS, and electronic health record systems. ZenoHosp is a software enterprise and is not a drug, medication, or pharmaceutical product.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-8056159395",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/zenohosp",
+    "https://www.instagram.com/zenohosp/",
+    "https://x.com/zenohosp"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ZenoHosp Hospital HR & Payroll Software",
+  "description": "Healthcare-specific workforce, HR, duty roster, and payroll software module by ZenoHosp. Vendor-neutral biometric attendance integration for any fingerprint or face-recognition terminal.",
+  "applicationCategory": "HealthcareBusinessApplication",
+  "operatingSystem": "Web-based, Cloud, On-Premise",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Free demo available for hospitals in India"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZenoHosp",
+    "url": "https://www.zenohosp.com/"
+  },
+  "featureList": [
+    "Vendor-Neutral Biometric Device Integration",
+    "Direct Push / Webhook Attendance Ingestion",
+    "LAN Connector Agent for ZKTeco & eSSL Terminals",
+    "CSV Attendance Log Import with Custom Column Mapping",
+    "Multi-Session Attendance & Automatic Hours Rollup"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.zenohosp.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "People Software",
+      "item": "https://www.zenohosp.com/apps/people/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Biometric Device Integration",
+      "item": "https://www.zenohosp.com/apps/people/docs/biometric-devices/"
+    }
+  ]
+}
+</script>
+  <style>
+    .doc-hero-card table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .doc-hero-card th, .doc-hero-card td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; vertical-align: top; }
+    .doc-hero-card th { background: #f8fafc; font-weight: 600; }
+    .doc-hero-card pre { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 16px 0 24px; }
+    .doc-hero-card pre code { background: none; color: inherit; padding: 0; }
+    .doc-hero-card p code, .doc-hero-card li code, .doc-hero-card td code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+    .doc-callout { background: #f8fff1; border: 1px solid #d1f1ba; border-radius: 8px; padding: 14px 18px; margin: 16px 0 24px; font-size: 14px; }
+  </style>
+</head>
+<body class="doc-page">
+  <nav class="doc-navbar">
+    <div class="doc-nav-left">
+      <a href="/apps/people/index.html" class="doc-logo">
+        <span class="doc-logo-icon">Z</span>
+        ZenoHosp People Help Docs
+      </a>
+      <a href="/apps/people/index.html" class="doc-back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to People</a>
+    </div>
+  </nav>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Employees</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="/apps/people/docs/index.html">Employee Directory</a></li>
+          <li><a href="/apps/people/docs/attendance-leaves.html">Time & Absence</a></li>
+          <li><a href="/apps/people/docs/biometric-devices.html" class="active">Biometric Device Setup</a></li>
+          <li><a href="/apps/people/docs/performance.html">Performance Management</a></li>
+          <li><a href="/apps/people/docs/hr-settings.html">HR & Access Settings</a></li>
+        </ul>
+      </div>
+      <div class="doc-sidebar-group expanded">
+        <div class="doc-sidebar-title" onclick="toggleGroup(this)">Payroll</div>
+        <ul class="doc-sidebar-nav">
+          <li><a href="/apps/people/docs/payroll-ops.html">Payroll Operations</a></li>
+          <li><a href="/apps/people/docs/salary-config.html">Salary Configuration</a></li>
+          <li><a href="/apps/people/docs/loans-advances.html">Advances & Loans</a></li>
+          <li><a href="/apps/people/docs/tax-compliance.html">Tax & Compliance</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="doc-main">
+      <div class="doc-hero-card" style="padding: 32px 48px;">
+        <h1>Biometric Device Integration</h1>
+        <p>Connect any fingerprint or face-recognition attendance terminal to ZenoHosp People — no specific brand required.</p>
+
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+        <h2>How it works</h2>
+        <p>ZenoHosp People is <strong>vendor-neutral</strong>. Your terminal (ZKTeco, eSSL, Matrix, Suprema, Realtime, or anything else) connects through one of three routes, and all three feed the same attendance system. Every punch becomes a sign-in / sign-out session; multiple sessions a day (lunch breaks, ward rounds) are added up automatically, flow into monthly summaries and payroll, and a live check-in shows the employee as <em>checked in</em> across all ZenoHosp apps.</p>
+
+        <table>
+          <tr><th>Your situation</th><th>Route</th><th>Effort</th></tr>
+          <tr><td>Device (or its software) can push data to a web address</td><td><strong>A. Direct push</strong></td><td>Configure one URL on the device</td></tr>
+          <tr><td>Device is on your local network only (most common)</td><td><strong>B. Connector agent</strong></td><td>Run a small program on any PC on that network</td></tr>
+          <tr><td>You just want to upload the device's exported log files</td><td><strong>C. File import</strong></td><td>Upload a CSV whenever you like</td></tr>
+        </table>
+        <p>You can start with <strong>C</strong> today and move to <strong>A</strong> or <strong>B</strong> later — nothing else changes.</p>
+
+        <h2>Before you start: register the device</h2>
+        <ol>
+          <li>Log in to People as a hospital admin and go to <strong>HR → Devices → Register device</strong>.</li>
+          <li>Fill in the name/location, your vendor/model (free text), and the connection type.</li>
+          <li>Choose how the device <strong>identifies employees</strong> (see below).</li>
+          <li>Click <strong>Register device</strong> — a device key (starts with <code>zdk_</code>) is shown <strong>once</strong>. Copy and store it safely; use <strong>Rotate key</strong> if you ever lose it.</li>
+        </ol>
+        <div class="doc-callout">🔑 The device key is a password. Anyone holding it can submit attendance for your hospital. Don't share it by email; rotate it immediately if exposed.</div>
+
+        <h3>How the device identifies employees</h3>
+        <table>
+          <tr><th>Option</th><th>How it works</th><th>When to choose it</th></tr>
+          <tr><td><strong>Employee code</strong> (recommended)</td><td>When enrolling a fingerprint on the terminal, set the person's user ID to their ZenoHosp employee code</td><td>You control enrollment IDs on the device</td></tr>
+          <tr><td><strong>Biometric enrollment ID</strong></td><td>The terminal assigns its own numbers. Enter each employee's number in People: <strong>Employees → edit → Biometric enrollment ID</strong></td><td>The device manages its own numbering</td></tr>
+        </table>
+        <p>If a punch arrives with an unknown ID it is <strong>not lost</strong> — it is recorded as <em>unresolved</em> so you can fix the mapping and re-send.</p>
+
+        <h2>Route A — Direct push</h2>
+        <p>If your terminal supports an HTTP push / webhook / "cloud server" setting (for example ZKTeco ADMS, or your vendor's middleware), point it at:</p>
+        <pre><code>POST https://api-people.zenohosp.com/api/device/attendance/punch
+Header:  X-Device-Key: zdk_your_device_key
+Header:  Content-Type: application/json</code></pre>
+        <p>Request body — one or many punches per request:</p>
+        <pre><code>{
+  "punches": [
+    {
+      "identifier": "ABC-EMP-2026-0001",
+      "timestamp": "2026-07-19T09:03:11+05:30",
+      "direction": "in",
+      "eventId": "terminal7-000123"
+    }
+  ]
+}</code></pre>
+        <table>
+          <tr><th>Field</th><th>Required</th><th>Meaning</th></tr>
+          <tr><td><code>identifier</code></td><td>Yes</td><td>Employee code or enrollment ID (per the device's setting)</td></tr>
+          <tr><td><code>timestamp</code></td><td>Yes</td><td>Punch time, ISO-8601 with timezone offset. A bare time is treated as IST</td></tr>
+          <tr><td><code>direction</code></td><td>Optional</td><td><code>"in"</code> or <code>"out"</code>. Omit if your device doesn't track direction — People infers it</td></tr>
+          <tr><td><code>eventId</code></td><td>Recommended</td><td>The terminal's own record ID — guarantees retries are never double-counted</td></tr>
+        </table>
+        <p>The response reports what happened to each punch (<code>applied</code>, <code>duplicate</code>, <code>unresolved</code>, <code>rejected</code>). <strong>Retries are safe</strong> — if the network drops, send the same batch again and duplicates are skipped automatically.</p>
+
+        <h2>Route B — Connector agent (LAN-only devices)</h2>
+        <p>Most budget terminals sit on the hospital LAN and can't reach the internet. The connector agent is a small program you run on any always-on PC on the same network. It reads punches from the terminal and pushes them to the same address as Route A.</p>
+        <p>We provide a ready-made agent for the <strong>ZKTeco / eSSL</strong> family — ask ZenoHosp support for the <code>attendance-agent</code> package. The agent polls the terminal, <strong>buffers punches locally if the internet is down</strong> and re-sends them later (nothing lost, nothing double-counted), and can be set to start automatically with the PC. For other brands, any integrator can adapt it: it only has to read the terminal and POST the JSON shown in Route A.</p>
+
+        <h2>Route C — File import (no networking at all)</h2>
+        <p>Every terminal can export its punch log (usually CSV via USB or the vendor's PC software). Register a device of type <em>CSV / log import</em> and paste a <strong>column mapping</strong> that describes your file's layout. Example — for a file like:</p>
+        <pre><code>employee_code,timestamp,direction
+ABC-EMP-2026-0001,2026-07-19 09:31:00,IN
+ABC-EMP-2026-0001,2026-07-19 17:37:00,OUT</code></pre>
+        <p>use this mapping (columns counted from 0):</p>
+        <pre><code>{
+  "delimiter": ",",
+  "hasHeader": true,
+  "identifierColumn": 0,
+  "timestampColumn": 1,
+  "timestampFormat": "yyyy-MM-dd HH:mm:ss",
+  "timezone": "Asia/Kolkata",
+  "directionColumn": 2,
+  "directionInValues": ["IN", "0"],
+  "directionOutValues": ["OUT", "1"]
+}</code></pre>
+        <p>Adjust the column numbers, date format and IN/OUT words to match <em>your</em> device's export. If your file has no direction column, simply omit those three lines.</p>
+        <p>Then go to <strong>HR → Import Logs</strong>, choose the device and file, and click <strong>Import</strong>. Re-uploading the same file is harmless — already-imported punches are skipped — so a weekly "export everything, upload everything" routine works perfectly.</p>
+
+        <h2>Verify it's working</h2>
+        <ul>
+          <li><strong>Employee view</strong> — <strong>My Attendance</strong> shows today's session with in/out times; multiple sessions appear as a numbered list.</li>
+          <li><strong>Admin view</strong> — <strong>HR → Attendance</strong> shows <em>Present</em> with a <em>device</em> (or <em>imported</em>) badge.</li>
+          <li><strong>Hours</strong> — the day's hours equal the sum of all sessions and flow into payroll automatically.</li>
+          <li><strong>Suite-wide status</strong> — after a live punch-in, the employee shows as checked in across all ZenoHosp apps.</li>
+        </ul>
+
+        <h2>Troubleshooting</h2>
+        <table>
+          <tr><th>Symptom</th><th>Meaning</th><th>Fix</th></tr>
+          <tr><td><code>HTTP 401</code></td><td>Wrong, missing, or deactivated device key</td><td>Check the <code>X-Device-Key</code> header; rotate the key if lost; check the device is Active</td></tr>
+          <tr><td><code>unresolved</code></td><td>The ID didn't match any employee</td><td>Check the device's "identifies by" setting; fill the employee's Biometric enrollment ID or enroll them by employee code, then re-send</td></tr>
+          <tr><td><code>duplicate</code></td><td>Punch already received earlier</td><td>Nothing to do — this is the double-count protection working</td></tr>
+          <tr><td><code>rejected</code> — bad timestamp</td><td>Date format didn't parse</td><td>Send ISO-8601 (Routes A/B) or fix <code>timestampFormat</code> in the mapping (Route C)</td></tr>
+          <tr><td><code>rejected</code> — future timestamp</td><td>Terminal clock is ahead</td><td>Set the terminal's date/time (punches over 5 min in the future are refused)</td></tr>
+          <tr><td>Employee forgot to punch out</td><td>Session left open</td><td>Closed automatically overnight (capped and flagged for review); admins can correct the day in HR → Attendance</td></tr>
+        </table>
+
+        <h2>Security</h2>
+        <ul>
+          <li><strong>One key per terminal</strong> — a lost key affects only that device.</li>
+          <li><strong>Rotate on staff change</strong> and whenever a key may have been exposed.</li>
+          <li><strong>Instant revoke</strong> — deactivating a device blocks its key immediately.</li>
+          <li>A device key can only submit attendance for your own hospital — it grants no access to any other data.</li>
+        </ul>
+
+        <h2>Buying advice</h2>
+        <p>Any terminal works, but these make setup easier: <strong>push/webhook or "cloud server" support</strong> (e.g. ZKTeco with ADMS) lets you use Route A with no extra software; <strong>Ethernet/Wi-Fi with a vendor SDK</strong> (ZKTeco/eSSL family) works with our ready-made agent; at minimum, <strong>CSV export</strong> means Route C always works. If in doubt, share the model you're considering with ZenoHosp support before purchasing and we'll confirm the best route.</p>
+      </div>
+    </main>
+  </div>
+
+    <demo-modal></demo-modal>
+    <script src="/js/components/demo-modal.js"></script>
+</body>
+</html>
