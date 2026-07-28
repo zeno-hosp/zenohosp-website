@@ -4,8 +4,9 @@
 Uses a facade rather than a raw <iframe>. A YouTube iframe pulls well over a
 megabyte of script and CSS on page load whether or not anyone presses play, and
 this sits high on the homepage — the page whose Core Web Vitals matter most. So
-the section ships a locally hosted 14KB poster and a play button, and the iframe
-is only created on click. Nothing from youtube.com is requested until a visitor
+the section ships a locally hosted poster (44KB WebP, generated from the 1200x675
+brand asset rather than YouTube's 480px thumbnail, which upscaled to mush) and a
+play button, and the iframe is only created on click. Nothing from youtube.com is requested until a visitor
 actually asks for the video.
 
 Also adds VideoObject schema. Google needs name, description, thumbnailUrl and
@@ -47,7 +48,7 @@ SECTION = """
           <picture>
             <source srcset="/images/video-walkthrough-poster.webp" type="image/webp">
             <img src="/images/video-walkthrough-poster.jpg" alt="ZenoHosp platform walkthrough"
-              width="480" height="270" loading="lazy" decoding="async">
+              width="1200" height="675" loading="lazy" decoding="async">
           </picture>
           <span class="video-facade-play" aria-hidden="true">
             <svg viewBox="0 0 68 48" width="68" height="48" focusable="false">
