@@ -351,6 +351,41 @@
   </section>
 
   <!-- Feature 1: Test Orders & Sample Tracking -->
+
+  <!-- Product walkthrough video (scripts/add_video_to_app_pages.py) -->
+  <section class="home-video-section reveal" id="walkthrough">
+    <div class="container">
+      <div class="home-video-header">
+        <h2>See Lab working with the rest of the platform</h2>
+        <p>Test ordered from the EMR, sample tracked, result validated, report delivered — the walkthrough follows it end to end without a paper slip.</p>
+      </div>
+
+      <div class="video-facade" data-video-id="tbBu8-okHTc">
+        <button type="button" class="video-facade-btn"
+          aria-label="Play the ZenoHosp platform walkthrough, 1 minute 46 seconds">
+          <picture>
+            <source srcset="/images/video-walkthrough-poster.webp" type="image/webp">
+            <img src="/images/video-walkthrough-poster.jpg" alt="ZenoHosp platform walkthrough"
+              width="480" height="270" loading="lazy" decoding="async">
+          </picture>
+          <span class="video-facade-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="68" height="48" focusable="false">
+              <path class="video-facade-play-bg"
+                d="M66.52 7.74a8.6 8.6 0 0 0-6.05-6.09C55.08 0 34 0 34 0S12.92 0 7.53 1.65A8.6 8.6 0 0 0 1.48 7.74 90 90 0 0 0 0 24a90 90 0 0 0 1.48 16.26 8.6 8.6 0 0 0 6.05 6.09C12.92 48 34 48 34 48s21.08 0 26.47-1.65a8.6 8.6 0 0 0 6.05-6.09A90 90 0 0 0 68 24a90 90 0 0 0-1.48-16.26z" />
+              <path d="M45 24 27 14v20z" fill="#fff" />
+            </svg>
+          </span>
+          <span class="video-facade-duration" aria-hidden="true">1:46</span>
+        </button>
+      </div>
+
+      <p class="home-video-note">
+        Prefer a live demo on your own data?
+        <a href="/contact-us/index.html">Book a walkthrough with our team</a>.
+      </p>
+    </div>
+  </section>
+
   <section class="lab-feature feature-alt-right reveal" id="features">
     <div class="container">
       <div class="feature-content">
@@ -1021,5 +1056,29 @@
     <demo-modal></demo-modal>
     <script src="/js/components/demo-modal.js"></script>
     <script src="/js/app.js" defer></script>
+
+  <script>
+    // Swap the poster for the real player only when a visitor asks for it, so
+    // no YouTube payload is fetched on page load.
+    (function () {
+      document.querySelectorAll('.video-facade').forEach(function (facade) {
+        var button = facade.querySelector('.video-facade-btn');
+        if (!button) return;
+        button.addEventListener('click', function () {
+          var id = facade.getAttribute('data-video-id');
+          var frame = document.createElement('iframe');
+          frame.src = 'https://www.youtube-nocookie.com/embed/' + id +
+            '?autoplay=1&rel=0&modestbranding=1';
+          frame.title = 'ZenoHosp platform walkthrough';
+          frame.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+          frame.setAttribute('allowfullscreen', '');
+          frame.setAttribute('loading', 'lazy');
+          facade.classList.add('is-playing');
+          facade.replaceChildren(frame);
+          frame.focus();
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
