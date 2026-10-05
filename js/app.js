@@ -570,6 +570,210 @@
     resetTimer();
   }
 
+  function initFloatingVideoPopup() {
+    var path = window.location.pathname.toLowerCase();
+    
+    // Do not show on docs, careers, legal, or contact pages where focused reading / form filling is key
+    if (path.includes('/docs/') || path.includes('/privacy-policy') || path.includes('/terms-of-service') || path.includes('/cookie-policy') || path.includes('/thank-you') || path.includes('/contact-us')) {
+      return;
+    }
+
+    var videoId = 'jpeR7DkQoGI'; // Default: high-impact Zip Discharge hook
+    var videoTitle = 'Why does hospital discharge take half a day?';
+    var isShort = true;
+
+    if (path.includes('/pharmacy')) {
+      videoId = '1YKVAczmq6I';
+      videoTitle = 'Prescription to Pharmacy Sale';
+      isShort = false;
+    } else if (path.includes('/appointments') || path.includes('/hms')) {
+      videoId = 'EQ4B7e3-tN0';
+      videoTitle = 'End Double-Booked Appointments';
+      isShort = false;
+    } else if (path.includes('/lab')) {
+      videoId = 'R7q9IrMpx-0';
+      videoTitle = 'Lab Investigations & Reports';
+      isShort = true;
+    } else if (path.includes('/zip-discharge')) {
+      videoId = 'jpeR7DkQoGI';
+      videoTitle = 'Instant Zip Discharge in Action';
+      isShort = true;
+    }
+
+    var widget = document.createElement('aside');
+    widget.className = 'zeno-video-widget' + (isShort ? ' is-short' : '');
+    widget.setAttribute('aria-label', 'Featured video demonstration');
+
+    var originParam = (window.location.origin && window.location.origin !== 'null') ? '&origin=' + encodeURIComponent(window.location.origin) : '';
+    // Note: mute=1 is required by modern browser autoplay policies so video autoplays immediately without a play button
+    var iframeSrc = 'https://www.youtube.com/embed/' + videoId +
+      '?autoplay=1' +
+      '&mute=1' +
+      '&playsinline=1' +
+      '&controls=0' +
+      '&modestbranding=1' +
+      '&rel=0' +
+      '&iv_load_policy=3' +
+      '&enablejsapi=1' +
+      originParam;
+
+    widget.innerHTML =
+      '<div class="zeno-widget-header">' +
+        '<div class="zeno-widget-badge"><span class="zeno-widget-dot"></span> Live Demo</div>' +
+        '<button class="zeno-widget-close" aria-label="Close video popup" title="Close video">&times;</button>' +
+      '</div>' +
+      '<div class="zeno-widget-media">' +
+        '<iframe ' +
+          'id="zeno-widget-iframe" ' +
+          'src="' + iframeSrc + '" ' +
+          'title="' + videoTitle + '" ' +
+          'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
+          'allowfullscreen>' +
+        '</iframe>' +
+        '<div class="zeno-widget-overlay" role="button" aria-label="Toggle sound" title="Click to toggle sound"></div>' +
+      '</div>' +
+      '<div class="zeno-widget-footer">' +
+        '<div class="zeno-widget-title" title="' + videoTitle + '">' + videoTitle + '</div>' +
+        '<div class="zeno-widget-actions">' +
+          '<button class="zeno-widget-sound-btn" aria-label="Unmute audio">' +
+            '<span class="zeno-sound-icon">🔊</span> <span class="zeno-sound-text">Unmute</span>' +
+          '</button>' +
+          '<a href="/contact-us/index.html" class="zeno-widget-cta-btn">Book Demo &rarr;</a>' +
+        '</div>' +
+      '</div>';
+
+    var style = document.createElement('style');
+    style.textContent =
+      '.zeno-video-widget{position:fixed;bottom:24px;right:24px;z-index:9995;width:290px;background:#11110d;border:1px solid rgba(209,244,112,.35);border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.6),0 0 24px rgba(209,244,112,.12);overflow:hidden;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;opacity:0;transform:translateY(30px) scale(.94);visibility:hidden;transition:opacity .4s cubic-bezier(.16,1,.3,1),transform .4s cubic-bezier(.16,1,.3,1),visibility .4s}' +
+      '.zeno-video-widget.is-visible{opacity:1;transform:translateY(0) scale(1);visibility:visible}' +
+      '.zeno-video-widget.is-short{width:220px}' +
+      '.zeno-widget-header{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#11110d;border-bottom:1px solid rgba(255,255,255,.08)}' +
+      '.zeno-widget-badge{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;color:#fff;letter-spacing:.03em}' +
+      '.zeno-widget-dot{width:7px;height:7px;border-radius:50%;background:#d1f470;box-shadow:0 0 8px #d1f470;animation:zenoPulse 1.8s infinite}' +
+      '@keyframes zenoPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}' +
+      '.zeno-widget-close{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem;line-height:1;transition:background .2s,transform .15s,color .2s}' +
+      '.zeno-widget-close:hover{background:#dc2626;border-color:#dc2626;color:#fff;transform:scale(1.1)}' +
+      '.zeno-widget-media{position:relative;width:100%;background:#000;aspect-ratio:16/9;overflow:hidden}' +
+      '.zeno-video-widget.is-short .zeno-widget-media{aspect-ratio:9/16}' +
+      '.zeno-widget-media iframe{width:100%;height:100%;border:0;display:block}' +
+      '.zeno-widget-overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:2;cursor:pointer}' +
+      '.zeno-widget-footer{padding:10px 12px;background:#11110d}' +
+      '.zeno-widget-title{color:#fff;font-size:.82rem;font-weight:700;line-height:1.35;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
+      '.zeno-widget-actions{display:flex;align-items:center;justify-content:space-between;gap:8px}' +
+      '.zeno-widget-sound-btn{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#e5e5e5;font-size:.72rem;font-weight:600;padding:5px 9px;border-radius:8px;cursor:pointer;transition:background .2s,color .2s}' +
+      '.zeno-widget-sound-btn:hover{background:rgba(209,244,112,.18);color:#d1f470;border-color:rgba(209,244,112,.35)}' +
+      '.zeno-widget-cta-btn{display:inline-flex;align-items:center;background:#d1f470;color:#11110d;font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:8px;text-decoration:none;transition:background .2s,transform .15s}' +
+      '.zeno-widget-cta-btn:hover{background:#e2f995;transform:translateY(-1px)}' +
+      '@media (max-width:768px){.zeno-video-widget{bottom:96px;right:14px;width:210px}.zeno-video-widget.is-short{width:170px}}';
+
+    document.head.appendChild(style);
+    document.body.appendChild(widget);
+
+    var iframe = widget.querySelector('iframe');
+    var overlay = widget.querySelector('.zeno-widget-overlay');
+    var isMuted = true;
+    var userManuallyMuted = false;
+    var soundBtn = widget.querySelector('.zeno-widget-sound-btn');
+    var soundText = widget.querySelector('.zeno-sound-text');
+    var soundIcon = widget.querySelector('.zeno-sound-icon');
+    var closeBtn = widget.querySelector('.zeno-widget-close');
+
+    function sendCommand(func, args) {
+      if (iframe && iframe.contentWindow) {
+        var msg = {
+          event: 'command',
+          func: func,
+          args: args !== undefined ? args : ''
+        };
+        iframe.contentWindow.postMessage(JSON.stringify(msg), '*');
+      }
+    }
+
+    function unmuteAudio() {
+      sendCommand('unMute');
+      sendCommand('setVolume', [100]);
+      sendCommand('playVideo');
+      isMuted = false;
+      if (soundText) soundText.textContent = 'Mute';
+      if (soundIcon) soundIcon.textContent = '🔇';
+      if (soundBtn) soundBtn.setAttribute('aria-label', 'Mute audio');
+    }
+
+    function muteAudio() {
+      sendCommand('mute');
+      isMuted = true;
+      if (soundText) soundText.textContent = 'Unmute';
+      if (soundIcon) soundIcon.textContent = '🔊';
+      if (soundBtn) soundBtn.setAttribute('aria-label', 'Unmute audio');
+    }
+
+    // Toggle mute/unmute on user action
+    function toggleSound(e) {
+      if (e) e.stopPropagation();
+      if (isMuted) {
+        unmuteAudio();
+      } else {
+        muteAudio();
+      }
+    }
+
+    if (soundBtn) {
+      soundBtn.addEventListener('click', toggleSound);
+    }
+
+    if (overlay) {
+      overlay.addEventListener('click', toggleSound);
+    }
+
+    if (iframe) {
+      iframe.addEventListener('load', function () {
+        iframe.contentWindow.postMessage('{"event":"listening"}', '*');
+      });
+    }
+
+    // Handle seamless looping without playlist parameter & detect YouTube events
+    window.addEventListener('message', function (event) {
+      try {
+        var data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+        if (!data) return;
+
+        if (data.event === 'onStateChange') {
+          if (data.info === 0) { // 0 = ended -> seamless loop without playlist controls
+            sendCommand('seekTo', [0, true]);
+            sendCommand('playVideo');
+            if (!isMuted) {
+              sendCommand('unMute');
+            } else {
+              sendCommand('mute');
+            }
+          }
+        }
+      } catch (e) {}
+    });
+
+    // Close / Dismiss: immediately pause, mute and remove
+    function dismiss(e) {
+      if (e) e.stopPropagation();
+      sendCommand('mute');
+      sendCommand('pauseVideo');
+      widget.classList.remove('is-visible');
+      setTimeout(function () {
+        if (widget && widget.parentNode) {
+          widget.parentNode.removeChild(widget);
+        }
+      }, 400);
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', dismiss);
+    }
+
+    // Show with smooth slide-up after brief 600ms delay
+    setTimeout(function () {
+      widget.classList.add('is-visible');
+    }, 600);
+  }
+
   function init() {
     initNavbar();
     initMobileMenu();
@@ -587,6 +791,7 @@
     initDemoModal();
     initAnalyticsTracking();
     initIdlePopup();
+    initFloatingVideoPopup();
   }
 
   window.ZenoApp = {

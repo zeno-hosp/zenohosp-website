@@ -17824,6 +17824,13 @@ zeno-footer {
   box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
 }
 
+.video-facade.is-short {
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  border-radius: 24px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
 .video-facade iframe {
   width: 100%;
   height: 100%;
